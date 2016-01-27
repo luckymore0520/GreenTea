@@ -8,7 +8,7 @@
         <!--活动-->
         <scene sceneID="A6A-sI-KP4">
             <objects>
-                <viewController title="活动" id="nOh-NA-tYL" sceneMemberID="viewController">
+                <viewController title="活动" id="nOh-NA-tYL" customClass="ActivityRootViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I1K-DK-TG8"/>
                         <viewControllerLayoutGuide type="bottom" id="Be5-Eh-BCY"/>
@@ -21,7 +21,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r63-TK-NXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="351"/>
+            <point key="canvasLocation" x="580" y="45"/>
+        </scene>
+        <!--Activity List View Controller-->
+        <scene sceneID="EGf-6O-l5S">
+            <objects>
+                <viewController restorationIdentifier="ActivityListViewController" storyboardIdentifier="ActivityListViewController" id="kHn-Ac-gnc" customClass="ActivityListViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="INU-FE-6Ly"/>
+                        <viewControllerLayoutGuide type="bottom" id="iBP-D7-YRv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T22-7Q-5n2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J2d-Aw-ZtD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iBP-D7-YRv" firstAttribute="top" secondItem="J2d-Aw-ZtD" secondAttribute="bottom" id="2zy-1v-MnC"/>
+                            <constraint firstItem="J2d-Aw-ZtD" firstAttribute="top" secondItem="T22-7Q-5n2" secondAttribute="top" id="CDy-rd-mO2"/>
+                            <constraint firstItem="J2d-Aw-ZtD" firstAttribute="leading" secondItem="T22-7Q-5n2" secondAttribute="leading" id="mQQ-iZ-x3a"/>
+                            <constraint firstAttribute="trailing" secondItem="J2d-Aw-ZtD" secondAttribute="trailing" id="wvL-gw-cWJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="J2d-Aw-ZtD" id="zBE-jk-PKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cql-R0-S4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="33"/>
         </scene>
     </scenes>
 </document>

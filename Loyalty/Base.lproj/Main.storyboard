@@ -10,7 +10,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="efE-z7-yDT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="h72-pn-7k2">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="h72-pn-7k2">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -28,10 +28,10 @@
         <!--ActivityStoryboard-->
         <scene sceneID="uSb-DY-02t">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6KC-mX-Mn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ActivityStoryboard" id="8L3-bN-Pz4" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="LvX-N8-wZP"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6KC-mX-Mn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1253.5" y="7"/>
         </scene>
@@ -55,10 +55,10 @@
         <!--CardStoryboard-->
         <scene sceneID="yYD-GX-vxx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mJ0-XF-beH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="CardStoryboard" id="YLD-sk-2w9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9if-UR-fqc"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJ0-XF-beH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1220" y="657"/>
         </scene>
@@ -82,10 +82,10 @@
         <!--MessageStoryboard-->
         <scene sceneID="sMG-gi-Uqr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Stn-bq-n8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="MessageStoryboard" id="nU4-Yz-gTQ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3zU-Rx-fTZ"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Stn-bq-n8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="571" y="-333"/>
         </scene>
@@ -126,11 +126,11 @@
         <!--UserCenterStoryboard-->
         <scene sceneID="zL6-xn-b4D">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FEB-97-Obk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="UserCenterStoryboard" id="7ir-T8-aBR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="个人" image="个人" selectedImage="个人_选中" id="iVp-Uv-bMn"/>
                     <navigationItem key="navigationItem" id="aic-Pr-WWI"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEB-97-Obk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="571" y="1048"/>
         </scene>

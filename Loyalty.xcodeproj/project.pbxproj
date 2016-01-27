@@ -23,6 +23,16 @@
 		128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027A11C58C2C800C76EA6 /* UIImage.swift */; };
 		128027AA1C58C39100C76EA6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027A91C58C39100C76EA6 /* UIColorExtension.swift */; };
 		128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027AB1C58C41B00C76EA6 /* CustomColor.swift */; };
+		128027AE1C58CAEE00C76EA6 /* ActivityRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027AD1C58CAEE00C76EA6 /* ActivityRootViewController.swift */; };
+		128027B11C58D6AA00C76EA6 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027B01C58D6AA00C76EA6 /* Log.swift */; };
+		128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027B41C58DA2500C76EA6 /* ActivityListViewController.swift */; };
+		128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027B71C58DACD00C76EA6 /* ActivityTableViewCell.swift */; };
+		128027BA1C58DACD00C76EA6 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128027B81C58DACD00C76EA6 /* ActivityTableViewCell.xib */; };
+		128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */; };
+		128027C11C58E19D00C76EA6 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C01C58E19D00C76EA6 /* UITableViewCell.swift */; };
+		128027C71C58E75900C76EA6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C61C58E75900C76EA6 /* Activity.swift */; };
+		128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C81C58F10300C76EA6 /* UIViewController.swift */; };
+		128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027CA1C58F43500C76EA6 /* CellReusable.swift */; };
 		BFF64A03293D1E13F4D1B064 /* Pods_Loyalty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +76,16 @@
 		128027A11C58C2C800C76EA6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Extension/UIImage.swift; sourceTree = "<group>"; };
 		128027A91C58C39100C76EA6 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Vendor/Extension/UIColorExtension.swift; sourceTree = "<group>"; };
 		128027AB1C58C41B00C76EA6 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomColor.swift; path = Extension/CustomColor.swift; sourceTree = "<group>"; };
+		128027AD1C58CAEE00C76EA6 /* ActivityRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityRootViewController.swift; path = Activity/ActivityRootViewController.swift; sourceTree = "<group>"; };
+		128027B01C58D6AA00C76EA6 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Tools/Log.swift; sourceTree = "<group>"; };
+		128027B41C58DA2500C76EA6 /* ActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityListViewController.swift; path = Activity/ActivityListViewController.swift; sourceTree = "<group>"; };
+		128027B71C58DACD00C76EA6 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTableViewCell.swift; path = Activity/Views/ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		128027B81C58DACD00C76EA6 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityTableViewCell.xib; path = Activity/Views/ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityListViewModel.swift; path = Activity/ViewModels/ActivityListViewModel.swift; sourceTree = "<group>"; };
+		128027C01C58E19D00C76EA6 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewCell.swift; path = Extension/UITableViewCell.swift; sourceTree = "<group>"; };
+		128027C61C58E75900C76EA6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Activity/Models/Activity.swift; sourceTree = "<group>"; };
+		128027C81C58F10300C76EA6 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extension/UIViewController.swift; sourceTree = "<group>"; };
+		128027CA1C58F43500C76EA6 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellReusable.swift; path = Protocal/CellReusable.swift; sourceTree = "<group>"; };
 		4C5E4EFABBD3AD50FA90C4C9 /* Pods-Loyalty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.release.xcconfig"; sourceTree = "<group>"; };
 		5529915222D38804DCFF3E14 /* Pods-Loyalty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.debug.xcconfig"; sourceTree = "<group>"; };
 		CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loyalty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,13 +142,9 @@
 		128027171C5604BA00C76EA6 /* Loyalty */ = {
 			isa = PBXGroup;
 			children = (
+				128027AF1C58CB5500C76EA6 /* Section */,
 				128027A51C58C36400C76EA6 /* Vendor */,
 				128027A01C58C2B700C76EA6 /* Extension */,
-				128027951C58BCC000C76EA6 /* Setting */,
-				128027941C58BCB900C76EA6 /* Message */,
-				128027931C58BCAC00C76EA6 /* LoyaltyCards */,
-				128027921C58BCA300C76EA6 /* Activity */,
-				128027911C58BC9900C76EA6 /* Main */,
 				128027461C56079200C76EA6 /* Tools */,
 				128027181C5604BA00C76EA6 /* AppDelegate.swift */,
 				1280271A1C5604BA00C76EA6 /* ViewController.swift */,
@@ -162,6 +178,7 @@
 			children = (
 				128027491C5607C300C76EA6 /* LeanCloudHelper.swift */,
 				1280279E1C58C25F00C76EA6 /* AppearanceTool.swift */,
+				128027B01C58D6AA00C76EA6 /* Log.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -177,7 +194,12 @@
 		128027921C58BCA300C76EA6 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				128027C51C58E74600C76EA6 /* Models */,
+				128027BB1C58DF3E00C76EA6 /* ViewModels */,
+				128027B61C58DAA300C76EA6 /* Views */,
 				1280279C1C58BD9100C76EA6 /* ActivityStoryboard.storyboard */,
+				128027AD1C58CAEE00C76EA6 /* ActivityRootViewController.swift */,
+				128027B41C58DA2500C76EA6 /* ActivityListViewController.swift */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -211,6 +233,8 @@
 			children = (
 				128027A11C58C2C800C76EA6 /* UIImage.swift */,
 				128027AB1C58C41B00C76EA6 /* CustomColor.swift */,
+				128027C01C58E19D00C76EA6 /* UITableViewCell.swift */,
+				128027C81C58F10300C76EA6 /* UIViewController.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -229,6 +253,52 @@
 				128027A91C58C39100C76EA6 /* UIColorExtension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		128027AF1C58CB5500C76EA6 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				128027C21C58E36600C76EA6 /* Protocal */,
+				128027951C58BCC000C76EA6 /* Setting */,
+				128027941C58BCB900C76EA6 /* Message */,
+				128027931C58BCAC00C76EA6 /* LoyaltyCards */,
+				128027921C58BCA300C76EA6 /* Activity */,
+				128027911C58BC9900C76EA6 /* Main */,
+			);
+			name = Section;
+			sourceTree = "<group>";
+		};
+		128027B61C58DAA300C76EA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				128027B71C58DACD00C76EA6 /* ActivityTableViewCell.swift */,
+				128027B81C58DACD00C76EA6 /* ActivityTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		128027BB1C58DF3E00C76EA6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		128027C21C58E36600C76EA6 /* Protocal */ = {
+			isa = PBXGroup;
+			children = (
+				128027CA1C58F43500C76EA6 /* CellReusable.swift */,
+			);
+			name = Protocal;
+			sourceTree = "<group>";
+		};
+		128027C51C58E74600C76EA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				128027C61C58E75900C76EA6 /* Activity.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		2B61B791351F9FB889F6AC3D /* Frameworks */ = {
@@ -357,6 +427,7 @@
 			files = (
 				128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */,
 				128027201C5604BA00C76EA6 /* Assets.xcassets in Resources */,
+				128027BA1C58DACD00C76EA6 /* ActivityTableViewCell.xib in Resources */,
 				128027991C58BD3800C76EA6 /* MessageStoryboard.storyboard in Resources */,
 				1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */,
 				1280279D1C58BD9100C76EA6 /* ActivityStoryboard.storyboard in Resources */,
@@ -434,13 +505,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
+				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
 				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
+				128027B11C58D6AA00C76EA6 /* Log.swift in Sources */,
 				128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */,
+				128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */,
+				128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */,
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
+				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,
 				1280274A1C5607C300C76EA6 /* LeanCloudHelper.swift in Sources */,
+				128027AE1C58CAEE00C76EA6 /* ActivityRootViewController.swift in Sources */,
 				128027AA1C58C39100C76EA6 /* UIColorExtension.swift in Sources */,
+				128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */,
+				128027C11C58E19D00C76EA6 /* UITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
