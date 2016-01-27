@@ -14,6 +14,16 @@
 		128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027211C5604BA00C76EA6 /* LaunchScreen.storyboard */; };
 		1280272E1C5604BA00C76EA6 /* LoyaltyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280272D1C5604BA00C76EA6 /* LoyaltyTests.swift */; };
 		128027391C5604BA00C76EA6 /* LoyaltyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027381C5604BA00C76EA6 /* LoyaltyUITests.swift */; };
+		1280274A1C5607C300C76EA6 /* LeanCloudHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027491C5607C300C76EA6 /* LeanCloudHelper.swift */; };
+		128027971C58BCED00C76EA6 /* UserCenterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027961C58BCED00C76EA6 /* UserCenterStoryboard.storyboard */; };
+		128027991C58BD3800C76EA6 /* MessageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027981C58BD3800C76EA6 /* MessageStoryboard.storyboard */; };
+		1280279B1C58BD6000C76EA6 /* CardStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1280279A1C58BD6000C76EA6 /* CardStoryboard.storyboard */; };
+		1280279D1C58BD9100C76EA6 /* ActivityStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1280279C1C58BD9100C76EA6 /* ActivityStoryboard.storyboard */; };
+		1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280279E1C58C25F00C76EA6 /* AppearanceTool.swift */; };
+		128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027A11C58C2C800C76EA6 /* UIImage.swift */; };
+		128027AA1C58C39100C76EA6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027A91C58C39100C76EA6 /* UIColorExtension.swift */; };
+		128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027AB1C58C41B00C76EA6 /* CustomColor.swift */; };
+		BFF64A03293D1E13F4D1B064 /* Pods_Loyalty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +57,18 @@
 		128027341C5604BA00C76EA6 /* LoyaltyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoyaltyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		128027381C5604BA00C76EA6 /* LoyaltyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyUITests.swift; sourceTree = "<group>"; };
 		1280273A1C5604BA00C76EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		128027491C5607C300C76EA6 /* LeanCloudHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeanCloudHelper.swift; path = Tools/LeanCloudHelper.swift; sourceTree = "<group>"; };
+		128027961C58BCED00C76EA6 /* UserCenterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserCenterStoryboard.storyboard; path = Setting/UserCenterStoryboard.storyboard; sourceTree = "<group>"; };
+		128027981C58BD3800C76EA6 /* MessageStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MessageStoryboard.storyboard; path = Message/MessageStoryboard.storyboard; sourceTree = "<group>"; };
+		1280279A1C58BD6000C76EA6 /* CardStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CardStoryboard.storyboard; path = Cards/CardStoryboard.storyboard; sourceTree = "<group>"; };
+		1280279C1C58BD9100C76EA6 /* ActivityStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ActivityStoryboard.storyboard; path = Activity/ActivityStoryboard.storyboard; sourceTree = "<group>"; };
+		1280279E1C58C25F00C76EA6 /* AppearanceTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppearanceTool.swift; path = Tools/AppearanceTool.swift; sourceTree = "<group>"; };
+		128027A11C58C2C800C76EA6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Extension/UIImage.swift; sourceTree = "<group>"; };
+		128027A91C58C39100C76EA6 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Vendor/Extension/UIColorExtension.swift; sourceTree = "<group>"; };
+		128027AB1C58C41B00C76EA6 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomColor.swift; path = Extension/CustomColor.swift; sourceTree = "<group>"; };
+		4C5E4EFABBD3AD50FA90C4C9 /* Pods-Loyalty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.release.xcconfig"; sourceTree = "<group>"; };
+		5529915222D38804DCFF3E14 /* Pods-Loyalty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.debug.xcconfig"; sourceTree = "<group>"; };
+		CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loyalty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF64A03293D1E13F4D1B064 /* Pods_Loyalty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,8 @@
 				1280272C1C5604BA00C76EA6 /* LoyaltyTests */,
 				128027371C5604BA00C76EA6 /* LoyaltyUITests */,
 				128027161C5604BA00C76EA6 /* Products */,
+				5A8F558AFBD4D8E46BD2BAD2 /* Pods */,
+				2B61B791351F9FB889F6AC3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +122,16 @@
 		128027171C5604BA00C76EA6 /* Loyalty */ = {
 			isa = PBXGroup;
 			children = (
+				128027A51C58C36400C76EA6 /* Vendor */,
+				128027A01C58C2B700C76EA6 /* Extension */,
+				128027951C58BCC000C76EA6 /* Setting */,
+				128027941C58BCB900C76EA6 /* Message */,
+				128027931C58BCAC00C76EA6 /* LoyaltyCards */,
+				128027921C58BCA300C76EA6 /* Activity */,
+				128027911C58BC9900C76EA6 /* Main */,
+				128027461C56079200C76EA6 /* Tools */,
 				128027181C5604BA00C76EA6 /* AppDelegate.swift */,
 				1280271A1C5604BA00C76EA6 /* ViewController.swift */,
-				1280271C1C5604BA00C76EA6 /* Main.storyboard */,
 				1280271F1C5604BA00C76EA6 /* Assets.xcassets */,
 				128027211C5604BA00C76EA6 /* LaunchScreen.storyboard */,
 				128027241C5604BA00C76EA6 /* Info.plist */,
@@ -125,6 +157,97 @@
 			path = LoyaltyUITests;
 			sourceTree = "<group>";
 		};
+		128027461C56079200C76EA6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				128027491C5607C300C76EA6 /* LeanCloudHelper.swift */,
+				1280279E1C58C25F00C76EA6 /* AppearanceTool.swift */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		128027911C58BC9900C76EA6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1280271C1C5604BA00C76EA6 /* Main.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		128027921C58BCA300C76EA6 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				1280279C1C58BD9100C76EA6 /* ActivityStoryboard.storyboard */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		128027931C58BCAC00C76EA6 /* LoyaltyCards */ = {
+			isa = PBXGroup;
+			children = (
+				1280279A1C58BD6000C76EA6 /* CardStoryboard.storyboard */,
+			);
+			name = LoyaltyCards;
+			sourceTree = "<group>";
+		};
+		128027941C58BCB900C76EA6 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				128027981C58BD3800C76EA6 /* MessageStoryboard.storyboard */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		128027951C58BCC000C76EA6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				128027961C58BCED00C76EA6 /* UserCenterStoryboard.storyboard */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		128027A01C58C2B700C76EA6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				128027A11C58C2C800C76EA6 /* UIImage.swift */,
+				128027AB1C58C41B00C76EA6 /* CustomColor.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		128027A51C58C36400C76EA6 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				128027A61C58C36900C76EA6 /* Extension */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		128027A61C58C36900C76EA6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				128027A91C58C39100C76EA6 /* UIColorExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		2B61B791351F9FB889F6AC3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A8F558AFBD4D8E46BD2BAD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5529915222D38804DCFF3E14 /* Pods-Loyalty.debug.xcconfig */,
+				4C5E4EFABBD3AD50FA90C4C9 /* Pods-Loyalty.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1280273D1C5604BA00C76EA6 /* Build configuration list for PBXNativeTarget "Loyalty" */;
 			buildPhases = (
+				27C9F87E0CA25A44D2C27017 /* Check Pods Manifest.lock */,
 				128027111C5604BA00C76EA6 /* Sources */,
 				128027121C5604BA00C76EA6 /* Frameworks */,
 				128027131C5604BA00C76EA6 /* Resources */,
+				615F0E56DA8D4D906C848E26 /* Embed Pods Frameworks */,
+				2E2B179105CD17BF8E2073DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,7 +357,11 @@
 			files = (
 				128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */,
 				128027201C5604BA00C76EA6 /* Assets.xcassets in Resources */,
+				128027991C58BD3800C76EA6 /* MessageStoryboard.storyboard in Resources */,
 				1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */,
+				1280279D1C58BD9100C76EA6 /* ActivityStoryboard.storyboard in Resources */,
+				128027971C58BCED00C76EA6 /* UserCenterStoryboard.storyboard in Resources */,
+				1280279B1C58BD6000C76EA6 /* CardStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +381,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27C9F87E0CA25A44D2C27017 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2E2B179105CD17BF8E2073DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		615F0E56DA8D4D906C848E26 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		128027111C5604BA00C76EA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
+				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
+				128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */,
+				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,
+				1280274A1C5607C300C76EA6 /* LeanCloudHelper.swift in Sources */,
+				128027AA1C58C39100C76EA6 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +578,7 @@
 		};
 		1280273E1C5604BA00C76EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5529915222D38804DCFF3E14 /* Pods-Loyalty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Loyalty/Info.plist;
@@ -406,6 +590,7 @@
 		};
 		1280273F1C5604BA00C76EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5E4EFABBD3AD50FA90C4C9 /* Pods-Loyalty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Loyalty/Info.plist;
@@ -482,6 +667,7 @@
 				1280273F1C5604BA00C76EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		128027401C5604BA00C76EA6 /* Build configuration list for PBXNativeTarget "LoyaltyTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +676,7 @@
 				128027421C5604BA00C76EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		128027431C5604BA00C76EA6 /* Build configuration list for PBXNativeTarget "LoyaltyUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +685,7 @@
 				128027451C5604BA00C76EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
