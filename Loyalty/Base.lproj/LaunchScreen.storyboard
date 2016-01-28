@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -14,14 +14,66 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@2016 GreenTea.nju. All Right Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waW-mz-v6l">
+                                <rect key="frame" x="63" y="531" width="193.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="找到身边的优惠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reM-pe-nRd">
+                                <rect key="frame" x="127" y="466" width="105" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.29411764705882354" green="0.25882352941176467" blue="0.12941176470588234" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="献给喜欢甜品的你" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3M-Ql-ooI">
+                                <rect key="frame" x="127" y="501" width="104" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DashLine" translatesAutoresizingMaskIntoConstraints="NO" id="Nqn-GU-tIr">
+                                <rect key="frame" x="127" y="493" width="130" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="5LX-zY-jFb"/>
+                                    <constraint firstAttribute="width" constant="130" id="UjN-GD-G2M"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-108" translatesAutoresizingMaskIntoConstraints="NO" id="8Fe-Pa-XmJ">
+                                <rect key="frame" x="51" y="463" width="76" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="dR9-8O-ryz"/>
+                                    <constraint firstAttribute="height" constant="60" id="s3I-Ny-IBJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="waW-mz-v6l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4uu-i6-MUa"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="waW-mz-v6l" secondAttribute="bottom" constant="25" id="6ZN-5d-4lh"/>
+                            <constraint firstItem="a3M-Ql-ooI" firstAttribute="leading" secondItem="8Fe-Pa-XmJ" secondAttribute="trailing" id="6vi-E9-zpS"/>
+                            <constraint firstItem="a3M-Ql-ooI" firstAttribute="bottom" secondItem="8Fe-Pa-XmJ" secondAttribute="bottom" constant="-6" id="83w-j0-i6Q"/>
+                            <constraint firstItem="waW-mz-v6l" firstAttribute="top" secondItem="8Fe-Pa-XmJ" secondAttribute="bottom" constant="8" id="G6U-Xf-PRJ"/>
+                            <constraint firstItem="reM-pe-nRd" firstAttribute="top" secondItem="8Fe-Pa-XmJ" secondAttribute="top" constant="3" id="QAS-VG-Nil"/>
+                            <constraint firstItem="Nqn-GU-tIr" firstAttribute="centerY" secondItem="8Fe-Pa-XmJ" secondAttribute="centerY" id="WcV-dX-ktS"/>
+                            <constraint firstItem="Nqn-GU-tIr" firstAttribute="leading" secondItem="8Fe-Pa-XmJ" secondAttribute="trailing" id="bVb-iw-n6a"/>
+                            <constraint firstItem="reM-pe-nRd" firstAttribute="leading" secondItem="8Fe-Pa-XmJ" secondAttribute="trailing" id="dMO-nt-jy6"/>
+                            <constraint firstItem="8Fe-Pa-XmJ" firstAttribute="leading" secondItem="waW-mz-v6l" secondAttribute="leading" constant="-12" id="iAf-ym-YSF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="28" y="355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DashLine" width="1" height="1"/>
+        <image name="Icon-108" width="76" height="60"/>
+    </resources>
 </document>
