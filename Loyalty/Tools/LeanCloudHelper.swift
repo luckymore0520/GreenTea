@@ -19,4 +19,3 @@ func configureLeanCloudWithOptions(launchOptions:[NSObject: AnyObject]?) {
     AVOSCloud.setApplicationId(appId, clientKey: appKey)
     AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
 }
-

@@ -19,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureLeanCloudWithOptions(launchOptions)
         //初始化导航栏和TabBar样式
         configureGlobalAppearce()
+        //初始化界面
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = mainStoryboard.instantiateInitialViewController() as! UITabBarController
+        tabBarController.delegate = self
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.rootViewController = tabBarController
+        self.window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }
@@ -44,7 +52,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+extension AppDelegate: UITabBarControllerDelegate {
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        let index = tabBarController.viewControllers?.indexOf(viewController)
+        if  index == 1 || index == 3  {
+            let isLogin = UserInfoManager.sharedManager.isLogin()
+            if !isLogin {
+                let loginAndRegisterStoryboard = UIStoryboard(name: "LoginAndRegisterStoryboard", bundle: nil)
+                let loginController = loginAndRegisterStoryboard.instantiateInitialViewController() as! UINavigationController
+                tabBarController.presentViewController(loginController, animated: true, completion: nil)
+            }
+            return isLogin
+        }
+        return true
+    }
+    
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        
+    }
 }
 
