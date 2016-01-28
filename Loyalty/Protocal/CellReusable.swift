@@ -14,6 +14,9 @@ protocol CellReusable {
     static func nib() -> UINib!
 }
 
+extension UITableViewCell:CellReusable {}
+extension UICollectionViewCell:CellReusable {}
+
 extension CellReusable where Self:NSObject {
     static func cellIdentifier()->String! {
         let classString : String = NSStringFromClass(self.classForCoder())
@@ -24,3 +27,4 @@ extension CellReusable where Self:NSObject {
         return UINib(nibName: self.cellIdentifier(), bundle: nil)
     }
 }
+

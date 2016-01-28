@@ -7,25 +7,29 @@
 //
 
 import Foundation
-
+import AVOSCloud
 
 enum ActivityType:String{
     case Promotion = "优惠促销";
     case Loyalty = "集点卡";
-
 }
 
-
-struct Shop {
-    var shopName:String
+class Shop: AVObject, AVSubclassing {
+    @NSManaged var shopName:String!
+    static func parseClassName() -> String! {
+        return "Shop"
+    }
 }
 
-struct Activity {
-    var activityType:ActivityType!
-    var imageName:String!
-    var shop:Shop!
-    var likeCount:Int!
-    var startTime:NSTimeInterval!
-    var endTime:NSTimeInterval!
-    var activityDescription:String!
+class Activity: AVObject, AVSubclassing  {
+    @NSManaged var activityTypeString:String?
+    @NSManaged var imageName:String?
+    @NSManaged var shop:Shop?
+    @NSManaged var likeCount:Int32
+    @NSManaged var startTime:NSTimeInterval
+    @NSManaged var endTime:NSTimeInterval
+    @NSManaged var activityDescription:String?
+    static func parseClassName() -> String! {
+        return "Activity"
+    }
 }

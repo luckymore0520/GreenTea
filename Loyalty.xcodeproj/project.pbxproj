@@ -29,7 +29,6 @@
 		128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027B71C58DACD00C76EA6 /* ActivityTableViewCell.swift */; };
 		128027BA1C58DACD00C76EA6 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128027B81C58DACD00C76EA6 /* ActivityTableViewCell.xib */; };
 		128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */; };
-		128027C11C58E19D00C76EA6 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C01C58E19D00C76EA6 /* UITableViewCell.swift */; };
 		128027C71C58E75900C76EA6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C61C58E75900C76EA6 /* Activity.swift */; };
 		128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C81C58F10300C76EA6 /* UIViewController.swift */; };
 		128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027CA1C58F43500C76EA6 /* CellReusable.swift */; };
@@ -82,7 +81,6 @@
 		128027B71C58DACD00C76EA6 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTableViewCell.swift; path = Activity/Views/ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		128027B81C58DACD00C76EA6 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityTableViewCell.xib; path = Activity/Views/ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityListViewModel.swift; path = Activity/ViewModels/ActivityListViewModel.swift; sourceTree = "<group>"; };
-		128027C01C58E19D00C76EA6 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewCell.swift; path = Extension/UITableViewCell.swift; sourceTree = "<group>"; };
 		128027C61C58E75900C76EA6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Activity/Models/Activity.swift; sourceTree = "<group>"; };
 		128027C81C58F10300C76EA6 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extension/UIViewController.swift; sourceTree = "<group>"; };
 		128027CA1C58F43500C76EA6 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellReusable.swift; path = Protocal/CellReusable.swift; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 			children = (
 				128027A11C58C2C800C76EA6 /* UIImage.swift */,
 				128027AB1C58C41B00C76EA6 /* CustomColor.swift */,
-				128027C01C58E19D00C76EA6 /* UITableViewCell.swift */,
 				128027C81C58F10300C76EA6 /* UIViewController.swift */,
 			);
 			name = Extension;
@@ -520,7 +517,6 @@
 				128027AE1C58CAEE00C76EA6 /* ActivityRootViewController.swift in Sources */,
 				128027AA1C58C39100C76EA6 /* UIColorExtension.swift in Sources */,
 				128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */,
-				128027C11C58E19D00C76EA6 /* UITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
