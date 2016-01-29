@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    static func globalGreenColor()->UIColor! {
-        return UIColor(hexString: "8DC584")
+    static func globalGreenColor()->UIColor {
+        return UIColor(hexString: "8DC584")!
     }
     
+    static func globalGrayColor()->UIColor {
+        return UIColor(hexString: "c5c5c5")!
+    }
     
 }
