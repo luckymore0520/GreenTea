@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		121924381C5A4E8D00A3D94E /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924371C5A4E8D00A3D94E /* UserInfoManager.swift */; };
-		1219243C1C5A530F00A3D94E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219243B1C5A530F00A3D94E /* LoginViewController.swift */; };
 		121924511C5A58C300A3D94E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924421C5A58C300A3D94E /* Array.swift */; };
 		121924521C5A58C300A3D94E /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924431C5A58C300A3D94E /* Bool.swift */; };
 		121924531C5A58C300A3D94E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924441C5A58C300A3D94E /* Character.swift */; };
@@ -23,6 +21,10 @@
 		1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219244E1C5A58C300A3D94E /* Sequence.swift */; };
 		1219245D1C5A58C300A3D94E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219244F1C5A58C300A3D94E /* String.swift */; };
 		1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924501C5A58C300A3D94E /* UIColorExtension.swift */; };
+		127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FE81C5B98930091837D /* RegisterViewController.swift */; };
+		127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEA1C5B98B10091837D /* UserInfoManager.swift */; };
+		127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEC1C5B98B80091837D /* LoginViewController.swift */; };
+		127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEE1C5B9BF70091837D /* UIButton.swift */; };
 		128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027181C5604BA00C76EA6 /* AppDelegate.swift */; };
 		1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280271A1C5604BA00C76EA6 /* ViewController.swift */; };
 		1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1280271C1C5604BA00C76EA6 /* Main.storyboard */; };
@@ -69,8 +71,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		121924371C5A4E8D00A3D94E /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoManager.swift; path = LoginAndRegister/UserInfoManager.swift; sourceTree = "<group>"; };
-		1219243B1C5A530F00A3D94E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LoginAndRegister/LoginViewController.swift; sourceTree = "<group>"; };
 		121924421C5A58C300A3D94E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		121924431C5A58C300A3D94E /* Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		121924441C5A58C300A3D94E /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -86,6 +86,10 @@
 		1219244E1C5A58C300A3D94E /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		1219244F1C5A58C300A3D94E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		121924501C5A58C300A3D94E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		127C7FE81C5B98930091837D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = LoginAndRegister/Controller/RegisterViewController.swift; sourceTree = "<group>"; };
+		127C7FEA1C5B98B10091837D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoManager.swift; path = LoginAndRegister/Model/UserInfoManager.swift; sourceTree = "<group>"; };
+		127C7FEC1C5B98B80091837D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LoginAndRegister/Controller/LoginViewController.swift; sourceTree = "<group>"; };
+		127C7FEE1C5B9BF70091837D /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = Extension/UIButton.swift; sourceTree = "<group>"; };
 		128027151C5604BA00C76EA6 /* Loyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loyalty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128027181C5604BA00C76EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1280271A1C5604BA00C76EA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,23 @@
 			);
 			name = ExSwift;
 			path = Vendor/ExSwift;
+			sourceTree = "<group>";
+		};
+		127C7FE61C5B98470091837D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				127C7FEC1C5B98B80091837D /* LoginViewController.swift */,
+				127C7FE81C5B98930091837D /* RegisterViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		127C7FE71C5B985C0091837D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				127C7FEA1C5B98B10091837D /* UserInfoManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		1280270C1C5604BA00C76EA6 = {
@@ -288,6 +309,7 @@
 				128027A11C58C2C800C76EA6 /* UIImage.swift */,
 				128027AB1C58C41B00C76EA6 /* CustomColor.swift */,
 				128027C81C58F10300C76EA6 /* UIViewController.swift */,
+				127C7FEE1C5B9BF70091837D /* UIButton.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -350,9 +372,9 @@
 		128027F11C5A30DD00C76EA6 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				127C7FE71C5B985C0091837D /* Model */,
+				127C7FE61C5B98470091837D /* Controller */,
 				128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */,
-				121924371C5A4E8D00A3D94E /* UserInfoManager.swift */,
-				1219243B1C5A530F00A3D94E /* LoginViewController.swift */,
 			);
 			name = LoginAndRegister;
 			sourceTree = "<group>";
@@ -564,17 +586,19 @@
 			files = (
 				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
 				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
+				127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */,
+				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
 				1219245A1C5A58C300A3D94E /* NSDate.swift in Sources */,
 				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
 				128027B11C58D6AA00C76EA6 /* Log.swift in Sources */,
 				128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */,
-				121924381C5A4E8D00A3D94E /* UserInfoManager.swift in Sources */,
 				121924531C5A58C300A3D94E /* Character.swift in Sources */,
 				128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */,
 				121924561C5A58C300A3D94E /* ExSwift.swift in Sources */,
 				1219245D1C5A58C300A3D94E /* String.swift in Sources */,
+				127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */,
 				1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */,
 				128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */,
 				121924511C5A58C300A3D94E /* Array.swift in Sources */,
@@ -583,9 +607,9 @@
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				121924521C5A58C300A3D94E /* Bool.swift in Sources */,
 				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,
+				127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */,
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,
 				1280274A1C5607C300C76EA6 /* LeanCloudHelper.swift in Sources */,
-				1219243C1C5A530F00A3D94E /* LoginViewController.swift in Sources */,
 				128027AE1C58CAEE00C76EA6 /* ActivityRootViewController.swift in Sources */,
 				121924571C5A58C300A3D94E /* Float.swift in Sources */,
 				121924581C5A58C300A3D94E /* Int.swift in Sources */,

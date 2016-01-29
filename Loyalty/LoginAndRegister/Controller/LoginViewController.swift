@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginButton.setDisableStyle()
         self.setRightButton("注册", selector: Selector("onRegisterButtonClicked"))
         self.setLeftButton("取消", selector: Selector("onCancelButtonClicked"))
         self.updateLoginButtonState()
@@ -56,7 +57,7 @@ extension LoginViewController {
     }
     
     func onRegisterButtonClicked() {
-        
+        self.performSegueWithIdentifier(String(RegisterViewController.classForCoder()), sender: nil)
     }
     
     func onCancelButtonClicked() {
