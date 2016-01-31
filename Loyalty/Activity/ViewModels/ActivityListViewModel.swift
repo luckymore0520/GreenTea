@@ -20,7 +20,7 @@ class ActivityListViewModel: NSObject {
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
         self.activityType = activityType
-        self.tableView?.registerNib(ActivityTableViewCell.nib(), forCellReuseIdentifier: ActivityTableViewCell.cellIdentifier())
+        self.tableView?.registerReusableCell(ActivityTableViewCell)
         self.loadData()
     }
     
@@ -38,7 +38,7 @@ extension ActivityListViewModel: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let tableViewCell = tableView.dequeueReusableCellWithIdentifier(ActivityTableViewCell.cellIdentifier(), forIndexPath: indexPath)
+        let tableViewCell = tableView.dequeueReusableCell(indexPath: indexPath) as ActivityTableViewCell
         return tableViewCell
     }
     
