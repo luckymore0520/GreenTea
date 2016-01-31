@@ -19,8 +19,7 @@ extension UICollectionViewCell:Reusable {}
 
 extension Reusable where Self:NSObject {
     static var reuseIdentifier: String {
-        let classString : String = NSStringFromClass(self.classForCoder())
-        return classString.componentsSeparatedByString(".").last!;
+        return self.description().componentsSeparatedByString(".").last!;
     }
     
     static var nib: UINib? {
