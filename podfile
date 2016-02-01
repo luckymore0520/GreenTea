@@ -4,6 +4,7 @@ target 'Loyalty' do
 pod 'AVOSCloudDynamic'
 pod 'AVOSCloudCrashReportingDynamic'
 pod 'XCGLogger', '~> 3.1.1'
+pod 'PKHUD'
 end
 
 

@@ -76,11 +76,14 @@ extension RegisterViewController {
     }
     
     @IBAction func onRegisterButtonClicked(sender: AnyObject) {
-       UserInfoManager.sharedManager.register(phoneTextField.text!, password: passwordTextField.text!, code: codeTextField.text!) { (result, errorMsg) -> Void in
+        HUDHelper.showLoading()
+        UserInfoManager.sharedManager.register(phoneTextField.text!, password: passwordTextField.text!, code: codeTextField.text!) { (result, errorMsg) -> Void in
+            HUDHelper.removeLoading()
             if (result) {
-
+                self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 log.info(errorMsg)
+                HUDHelper.showText(errorMsg)
             }
         }
     }
@@ -91,14 +94,16 @@ extension RegisterViewController {
     }
     
     @IBAction func onVerifyButtonClicked(sender: UIButton) {
-//        UserInfoManager.sharedManager.requestSMSCode(self.phoneTextField.text!) { (result, errorMsg) -> Void in
-//            if (result) {
-//                
-//            } else {
-//                log.info(errorMsg)
-//            }
-//        }
-        self.startTimer()
+        HUDHelper.showLoading()
+        UserInfoManager.sharedManager.requestSMSCode(self.phoneTextField.text!) { (result, errorMsg) -> Void in
+            HUDHelper.removeLoading()
+            if (result) {
+                self.startTimer()
+            } else {
+                log.info(errorMsg)
+                HUDHelper.showText(errorMsg)
+            }
+        }
     }
 }
 

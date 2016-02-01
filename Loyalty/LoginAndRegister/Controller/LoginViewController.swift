@@ -46,10 +46,13 @@ extension LoginViewController {
 extension LoginViewController {
     @IBAction func onLoginButtonClicked(sender: AnyObject) {
         if let phoneNum = self.phoneTextField.text, password = self.passwordTextField.text {
+            HUDHelper.showLoading()
             UserInfoManager.sharedManager.login(phoneNum, password: password) { (result, errorMsg) -> Void in
+                HUDHelper.removeLoading()
                 if (result) {
                     self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
                 } else {
+                    HUDHelper.showText(errorMsg)
                     log.info(errorMsg)
                 }
             }

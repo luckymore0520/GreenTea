@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1209023D1C5F6C3E00772CBA /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1209023C1C5F6C3E00772CBA /* HUDHelper.swift */; };
 		121924511C5A58C300A3D94E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924421C5A58C300A3D94E /* Array.swift */; };
 		121924521C5A58C300A3D94E /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924431C5A58C300A3D94E /* Bool.swift */; };
 		121924531C5A58C300A3D94E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924441C5A58C300A3D94E /* Character.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1209023C1C5F6C3E00772CBA /* HUDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUDHelper.swift; path = Tools/HUDHelper.swift; sourceTree = "<group>"; };
 		121924421C5A58C300A3D94E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		121924431C5A58C300A3D94E /* Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		121924441C5A58C300A3D94E /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		128027461C56079200C76EA6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1209023C1C5F6C3E00772CBA /* HUDHelper.swift */,
 				128027491C5607C300C76EA6 /* LeanCloudHelper.swift */,
 				1280279E1C58C25F00C76EA6 /* AppearanceTool.swift */,
 				128027B01C58D6AA00C76EA6 /* Log.swift */,
@@ -584,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1209023D1C5F6C3E00772CBA /* HUDHelper.swift in Sources */,
 				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
 				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
 				127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */,

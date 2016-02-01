@@ -21,7 +21,11 @@ class UserInfoManager {
     }
     
     func isLogin() -> Bool {
-        return AVUser.currentUser() != nil
+        if let user = AVUser.currentUser() {
+            return user.isAuthenticated()
+        } else {
+            return false
+        }
     }
     
     func login(phone:String,password:String,completionHandler: (result:Bool, errorMsg:String?) -> Void ) {
@@ -29,10 +33,10 @@ class UserInfoManager {
             completionHandler(result: user != nil , errorMsg: error.localizedDescription)
         }
     }
-    
+        
     func register(phone:String,password:String,code:String,completionHandler: (result:Bool, errorMsg:String?) -> Void ) {
-//        self.verifySMSCode(phone, code: code) { (result, errorMsg) -> Void in
-//            if result {
+        self.verifySMSCode(phone, code: code) { (result, errorMsg) -> Void in
+            if result {
                 let user = AVUser.init()
                 user.username = phone
                 user.password = password
@@ -40,10 +44,10 @@ class UserInfoManager {
                 user.signUpInBackgroundWithBlock({ (success, error) -> Void in
                     completionHandler(result: success, errorMsg: error == nil ? "" : error.localizedDescription)
                 })
-//            } else {
-//                completionHandler(result: result, errorMsg:errorMsg)
-//            }
-//        }
+            } else {
+                completionHandler(result: result, errorMsg:errorMsg)
+            }
+        }
     }
     
     func requestSMSCode(phone:String, completionHandler: (result:Bool, errorMsg:String?) -> Void) {
