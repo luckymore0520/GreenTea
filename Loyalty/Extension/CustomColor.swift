@@ -18,4 +18,8 @@ extension UIColor {
         return UIColor(hexString: "c5c5c5")!
     }
     
+    static func globalTitleBrownColor() -> UIColor {
+        return UIColor(hexString: "4B4221")!
+    }
+    
 }

@@ -109,7 +109,7 @@
         <!--个人-->
         <scene sceneID="h4H-hF-hOG">
             <objects>
-                <navigationController id="DUV-om-rMP" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="DUV-om-rMP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="个人" image="个人" id="Cyp-i2-uup"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yyv-pW-xYc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

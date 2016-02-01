@@ -24,10 +24,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeQ-Zg-tKH" userLabel="密码">
                                         <rect key="frame" x="0.0" y="50" width="320" height="50"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-ma-8tg">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" misplaced="YES" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-ma-8tg">
                                                 <rect key="frame" x="15" y="15" width="16" height="21"/>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dZ6-JG-Qn1">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dZ6-JG-Qn1">
                                                 <rect key="frame" x="39" y="10" width="281" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KWB-t8-5cx"/>
@@ -232,10 +232,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVs-8Z-b9n" userLabel="密码">
                                         <rect key="frame" x="0.0" y="51" width="320" height="50"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="mVR-47-iEz">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" misplaced="YES" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="mVR-47-iEz">
                                                 <rect key="frame" x="15" y="14" width="16" height="21"/>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-do-TyY">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-do-TyY">
                                                 <rect key="frame" x="39" y="10" width="281" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="kpr-Ll-qPz"/>

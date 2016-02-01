@@ -20,6 +20,13 @@ class UserInfoManager {
         return sharedInstance
     }
     
+    func currentUser() -> AVUser? {
+        if self.isLogin() {
+            return AVUser.currentUser()
+        }
+        return nil
+    }
+    
     func isLogin() -> Bool {
         if let user = AVUser.currentUser() {
             return user.isAuthenticated()

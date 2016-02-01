@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1209023D1C5F6C3E00772CBA /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1209023C1C5F6C3E00772CBA /* HUDHelper.swift */; };
+		1209023F1C5F712100772CBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1209023E1C5F712100772CBA /* User.swift */; };
+		120902421C5F76FF00772CBA /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120902411C5F76FF00772CBA /* UserSettingViewController.swift */; };
+		120902461C5F78BC00772CBA /* UserSettingTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120902451C5F78BC00772CBA /* UserSettingTableModel.swift */; };
 		121924511C5A58C300A3D94E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924421C5A58C300A3D94E /* Array.swift */; };
 		121924521C5A58C300A3D94E /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924431C5A58C300A3D94E /* Bool.swift */; };
 		121924531C5A58C300A3D94E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924441C5A58C300A3D94E /* Character.swift */; };
@@ -22,6 +25,10 @@
 		1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219244E1C5A58C300A3D94E /* Sequence.swift */; };
 		1219245D1C5A58C300A3D94E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219244F1C5A58C300A3D94E /* String.swift */; };
 		1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924501C5A58C300A3D94E /* UIColorExtension.swift */; };
+		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
+		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
+		1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */; };
+		1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */; };
 		127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FE81C5B98930091837D /* RegisterViewController.swift */; };
 		127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEA1C5B98B10091837D /* UserInfoManager.swift */; };
 		127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEC1C5B98B80091837D /* LoginViewController.swift */; };
@@ -73,6 +80,9 @@
 
 /* Begin PBXFileReference section */
 		1209023C1C5F6C3E00772CBA /* HUDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUDHelper.swift; path = Tools/HUDHelper.swift; sourceTree = "<group>"; };
+		1209023E1C5F712100772CBA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = LoginAndRegister/Model/User.swift; sourceTree = "<group>"; };
+		120902411C5F76FF00772CBA /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingViewController.swift; path = Setting/Controller/UserSettingViewController.swift; sourceTree = "<group>"; };
+		120902451C5F78BC00772CBA /* UserSettingTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingTableModel.swift; path = Setting/ViewModel/UserSettingTableModel.swift; sourceTree = "<group>"; };
 		121924421C5A58C300A3D94E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		121924431C5A58C300A3D94E /* Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		121924441C5A58C300A3D94E /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -88,6 +98,10 @@
 		1219244E1C5A58C300A3D94E /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		1219244F1C5A58C300A3D94E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		121924501C5A58C300A3D94E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
+		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
+		1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingCellViewModel.swift; path = Setting/ViewModel/UserSettingCellViewModel.swift; sourceTree = "<group>"; };
+		1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingTableViewCell.swift; path = Setting/View/UserSettingTableViewCell.swift; sourceTree = "<group>"; };
 		127C7FE81C5B98930091837D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = LoginAndRegister/Controller/RegisterViewController.swift; sourceTree = "<group>"; };
 		127C7FEA1C5B98B10091837D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoManager.swift; path = LoginAndRegister/Model/UserInfoManager.swift; sourceTree = "<group>"; };
 		127C7FEC1C5B98B80091837D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LoginAndRegister/Controller/LoginViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +168,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120902401C5F76E500772CBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				120902411C5F76FF00772CBA /* UserSettingViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		120902441C5F778900772CBA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				120902451C5F78BC00772CBA /* UserSettingTableModel.swift */,
+				1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		121924411C5A58C300A3D94E /* ExSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +208,14 @@
 			path = Vendor/ExSwift;
 			sourceTree = "<group>";
 		};
+		1254296D1C5F7F1C00D89004 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		127C7FE61C5B98470091837D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				127C7FEA1C5B98B10091837D /* UserInfoManager.swift */,
+				1209023E1C5F712100772CBA /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -301,6 +341,9 @@
 		128027951C58BCC000C76EA6 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				1254296D1C5F7F1C00D89004 /* View */,
+				120902441C5F778900772CBA /* ViewModel */,
+				120902401C5F76E500772CBA /* Controller */,
 				128027961C58BCED00C76EA6 /* UserCenterStoryboard.storyboard */,
 			);
 			name = Setting;
@@ -360,6 +403,8 @@
 			isa = PBXGroup;
 			children = (
 				128027CA1C58F43500C76EA6 /* CellReusable.swift */,
+				125429671C5F7D1400D89004 /* TitlePresentable.swift */,
+				125429691C5F7E1400D89004 /* IconPresentable.swift */,
 			);
 			name = Protocal;
 			sourceTree = "<group>";
@@ -595,22 +640,29 @@
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
 				1219245A1C5A58C300A3D94E /* NSDate.swift in Sources */,
+				120902461C5F78BC00772CBA /* UserSettingTableModel.swift in Sources */,
+				125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */,
 				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
 				128027B11C58D6AA00C76EA6 /* Log.swift in Sources */,
+				1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */,
 				128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */,
 				121924531C5A58C300A3D94E /* Character.swift in Sources */,
 				128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */,
 				121924561C5A58C300A3D94E /* ExSwift.swift in Sources */,
+				1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */,
 				1219245D1C5A58C300A3D94E /* String.swift in Sources */,
 				127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */,
 				1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */,
 				128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */,
 				121924511C5A58C300A3D94E /* Array.swift in Sources */,
 				121924541C5A58C300A3D94E /* Dictionary.swift in Sources */,
+				120902421C5F76FF00772CBA /* UserSettingViewController.swift in Sources */,
 				1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */,
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				121924521C5A58C300A3D94E /* Bool.swift in Sources */,
+				1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */,
 				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,
+				1209023F1C5F712100772CBA /* User.swift in Sources */,
 				127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */,
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,
 				1280274A1C5607C300C76EA6 /* LeanCloudHelper.swift in Sources */,
