@@ -15,22 +15,19 @@ class ActivityListViewModel: NSObject {
     var activityType:ActivityType?
     private var activityList:Array<Activity>?
     
-    func setUp(tableView:UITableView, activityType:ActivityType){
+    required init(tableView:UITableView, activityType:ActivityType){
+        super.init()
         self.tableView = tableView
-        self.tableView?.delegate = self
         self.tableView?.dataSource = self
         self.activityType = activityType
         self.tableView?.registerReusableCell(ActivityTableViewCell)
         self.loadData()
     }
-    
+
     func loadData(){
     }
 }
 
-extension ActivityListViewModel: UITableViewDelegate {
-    
-}
 
 extension ActivityListViewModel: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +39,4 @@ extension ActivityListViewModel: UITableViewDataSource {
         return tableViewCell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 260
-    }
 }

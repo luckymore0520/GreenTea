@@ -11,6 +11,10 @@
 		1209023F1C5F712100772CBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1209023E1C5F712100772CBA /* User.swift */; };
 		120902421C5F76FF00772CBA /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120902411C5F76FF00772CBA /* UserSettingViewController.swift */; };
 		120902461C5F78BC00772CBA /* UserSettingTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120902451C5F78BC00772CBA /* UserSettingTableModel.swift */; };
+		120E2DC61CAD4568001E6DE9 /* StartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DC51CAD4568001E6DE9 /* StartRateView.swift */; };
+		120E2DC91CAD53FB001E6DE9 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DC81CAD53FB001E6DE9 /* ActivityDetailViewController.swift */; };
+		120E2DCB1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DCA1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift */; };
+		120E2DCF1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DCE1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift */; };
 		121924511C5A58C300A3D94E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924421C5A58C300A3D94E /* Array.swift */; };
 		121924521C5A58C300A3D94E /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924431C5A58C300A3D94E /* Bool.swift */; };
 		121924531C5A58C300A3D94E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924441C5A58C300A3D94E /* Character.swift */; };
@@ -83,6 +87,10 @@
 		1209023E1C5F712100772CBA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = LoginAndRegister/Model/User.swift; sourceTree = "<group>"; };
 		120902411C5F76FF00772CBA /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingViewController.swift; path = Setting/Controller/UserSettingViewController.swift; sourceTree = "<group>"; };
 		120902451C5F78BC00772CBA /* UserSettingTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingTableModel.swift; path = Setting/ViewModel/UserSettingTableModel.swift; sourceTree = "<group>"; };
+		120E2DC51CAD4568001E6DE9 /* StartRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartRateView.swift; path = Activity/Views/StartRateView.swift; sourceTree = "<group>"; };
+		120E2DC81CAD53FB001E6DE9 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailViewController.swift; path = Activity/Controller/ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		120E2DCA1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailViewModel.swift; path = Activity/ViewModels/ActivityDetailViewModel.swift; sourceTree = "<group>"; };
+		120E2DCE1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopInfoTableViewCell.swift; path = Activity/Views/ShopInfoTableViewCell.swift; sourceTree = "<group>"; };
 		121924421C5A58C300A3D94E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		121924431C5A58C300A3D94E /* Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		121924441C5A58C300A3D94E /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -183,6 +191,16 @@
 				1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		120E2DC71CAD456C001E6DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				128027AD1C58CAEE00C76EA6 /* ActivityRootViewController.swift */,
+				128027B41C58DA2500C76EA6 /* ActivityListViewController.swift */,
+				120E2DC81CAD53FB001E6DE9 /* ActivityDetailViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		121924411C5A58C300A3D94E /* ExSwift */ = {
@@ -312,12 +330,11 @@
 		128027921C58BCA300C76EA6 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				120E2DC71CAD456C001E6DE9 /* Controller */,
 				128027C51C58E74600C76EA6 /* Models */,
 				128027BB1C58DF3E00C76EA6 /* ViewModels */,
 				128027B61C58DAA300C76EA6 /* Views */,
 				1280279C1C58BD9100C76EA6 /* ActivityStoryboard.storyboard */,
-				128027AD1C58CAEE00C76EA6 /* ActivityRootViewController.swift */,
-				128027B41C58DA2500C76EA6 /* ActivityListViewController.swift */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -387,6 +404,8 @@
 			children = (
 				128027B71C58DACD00C76EA6 /* ActivityTableViewCell.swift */,
 				128027B81C58DACD00C76EA6 /* ActivityTableViewCell.xib */,
+				120E2DC51CAD4568001E6DE9 /* StartRateView.swift */,
+				120E2DCE1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -395,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */,
+				120E2DCA1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -643,6 +663,7 @@
 				120902461C5F78BC00772CBA /* UserSettingTableModel.swift in Sources */,
 				125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */,
 				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
+				120E2DCF1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift in Sources */,
 				128027B11C58D6AA00C76EA6 /* Log.swift in Sources */,
 				1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */,
 				128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */,
@@ -650,6 +671,7 @@
 				128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */,
 				121924561C5A58C300A3D94E /* ExSwift.swift in Sources */,
 				1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */,
+				120E2DC61CAD4568001E6DE9 /* StartRateView.swift in Sources */,
 				1219245D1C5A58C300A3D94E /* String.swift in Sources */,
 				127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */,
 				1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */,
@@ -661,6 +683,8 @@
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				121924521C5A58C300A3D94E /* Bool.swift in Sources */,
 				1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */,
+				120E2DCB1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift in Sources */,
+				120E2DC91CAD53FB001E6DE9 /* ActivityDetailViewController.swift in Sources */,
 				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,
 				1209023F1C5F712100772CBA /* User.swift in Sources */,
 				127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */,

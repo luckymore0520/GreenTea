@@ -16,6 +16,11 @@ enum ActivityType:String{
 
 class Shop: AVObject, AVSubclassing {
     @NSManaged var shopName:String!
+    @NSManaged var rate:NSNumber!
+    @NSManaged var commentCount:NSNumber!
+    @NSManaged var location:NSValue!
+    @NSManaged var locationName:String!
+
     static func parseClassName() -> String! {
         return "Shop"
     }
