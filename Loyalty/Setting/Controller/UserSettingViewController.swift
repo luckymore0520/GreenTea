@@ -63,4 +63,30 @@ extension UserSettingViewController:UITableViewDelegate {
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return UIView(frame: CGRectZero)
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        if let settingCellAction = self.tableViewModel?.settingCellArray[indexPath.section][indexPath.row] {
+            switch settingCellAction {
+            case .Logout:
+                self.tryLogout()
+            default:
+                break
+            }
+        }
+        
+    }
+}
+
+
+extension UserSettingViewController {
+    private func tryLogout(){
+        let alertController = UIAlertController(title: "登出", message: "你确定要退出登录吗？", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
+            UserInfoManager.sharedManager.logout()
+            self.tabBarController?.selectedIndex = 0
+        }))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 }

@@ -236,6 +236,26 @@
                                             <outlet property="nameLabel" destination="vU3-8Z-mMR" id="vCE-uD-QqP"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserSettingLogoutCell" id="4KX-2X-yVg">
+                                        <rect key="frame" x="0.0" y="316" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4KX-2X-yVg" id="TPF-bY-UaH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退出登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lem-Xt-WX2">
+                                                    <rect key="frame" x="158" y="14" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Lem-Xt-WX2" firstAttribute="centerX" secondItem="TPF-bY-UaH" secondAttribute="centerX" id="Vbc-mX-ajg"/>
+                                                <constraint firstItem="Lem-Xt-WX2" firstAttribute="centerY" secondItem="TPF-bY-UaH" secondAttribute="centerY" id="mMm-SP-0K7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="delegate" destination="i4j-bk-iEl" id="kl6-TP-uLi"/>

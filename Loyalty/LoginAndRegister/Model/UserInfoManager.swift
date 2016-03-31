@@ -37,8 +37,13 @@ class UserInfoManager {
     
     func login(phone:String,password:String,completionHandler: (result:Bool, errorMsg:String?) -> Void ) {
         AVUser.logInWithUsernameInBackground(phone, password: password) { (user, error) -> Void in
-            completionHandler(result: user != nil , errorMsg: error.localizedDescription)
+            let errorMsg = error == nil ? nil : error.localizedFailureReason
+            completionHandler(result: user != nil , errorMsg: errorMsg)
         }
+    }
+    
+    func logout(){
+        AVUser.logOut()
     }
         
     func register(phone:String,password:String,code:String,completionHandler: (result:Bool, errorMsg:String?) -> Void ) {

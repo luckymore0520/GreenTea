@@ -9,7 +9,7 @@
 import UIKit
 
 class ActivityRootViewController: UIViewController {
-    let activityTypes = [ActivityType.Promotion, .Loyalty]
+    let activityTypes = [ActivityType.Loyalty, .Promotion]
     var activityViewControllers:[ActivityListViewController]?
     override func viewDidLoad() {
         super.viewDidLoad()

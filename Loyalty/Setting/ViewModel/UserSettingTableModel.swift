@@ -48,6 +48,10 @@ extension UserSettingTableModel:UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.section == self.settingCellArray.count - 1 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("UserSettingLogoutCell")!
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(indexPath: indexPath) as UserSettingTableViewCell;
         let viewModel = UserSettingCellViewModel(type: self.settingCellArray[indexPath.section][indexPath.row])
         cell.configureCell(viewModel)

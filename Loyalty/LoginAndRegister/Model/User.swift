@@ -18,9 +18,9 @@ let kAvatarKey = "Avatar"
 let kUserTypeKey = "userType"
 
 extension AVUser {
-    var avatar:AVFile {
+    var avatar:AVFile? {
         get {
-            return self.objectForKey(kAvatarKey) as! AVFile
+            return self.objectForKey(kAvatarKey) as? AVFile
         }
         set {
             self.setObject(newValue, forKey: kAvatarKey)
