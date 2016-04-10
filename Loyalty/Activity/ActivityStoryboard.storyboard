@@ -8,7 +8,7 @@
         <!--活动-->
         <scene sceneID="A6A-sI-KP4">
             <objects>
-                <viewController title="活动" id="nOh-NA-tYL" customClass="ActivityRootViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="活动" automaticallyAdjustsScrollViewInsets="NO" id="nOh-NA-tYL" customClass="ActivityRootViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I1K-DK-TG8"/>
                         <viewControllerLayoutGuide type="bottom" id="Be5-Eh-BCY"/>
@@ -26,7 +26,7 @@
         <!--Activity Detail View Controller-->
         <scene sceneID="xaE-i3-Nze">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="n2i-yE-Uny" customClass="ActivityDetailViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="n2i-yE-Uny" customClass="ActivityDetailViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AfM-bw-UDt"/>
                         <viewControllerLayoutGuide type="bottom" id="jLi-2N-Omy"/>
@@ -71,7 +71,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="128份评价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-dz-Qq3">
-                                                    <rect key="frame" x="285" y="21" width="57" height="14"/>
+                                                    <rect key="frame" x="285" y="21" width="57" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.30196078431372547" green="0.25882352941176467" blue="0.13333333333333333" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -94,18 +94,37 @@
                                     <outlet property="delegate" destination="n2i-yE-Uny" id="Cah-ox-MLU"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A55-RY-zMw">
+                                <rect key="frame" x="333" y="25" width="27" height="26"/>
+                                <state key="normal" image="分享">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-3r-rjU">
+                                <rect key="frame" x="289" y="24" width="29" height="29"/>
+                                <state key="normal" image="白色收藏">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="白色收藏_选中"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Fo1-VU-YmK" firstAttribute="top" secondItem="sJi-Va-dTD" secondAttribute="top" id="44V-oG-gKA"/>
+                            <constraint firstAttribute="trailing" secondItem="A55-RY-zMw" secondAttribute="trailing" constant="15" id="M3b-Xv-jCW"/>
                             <constraint firstItem="jLi-2N-Omy" firstAttribute="top" secondItem="Fo1-VU-YmK" secondAttribute="bottom" id="MSu-Hs-DM5"/>
                             <constraint firstAttribute="trailing" secondItem="Fo1-VU-YmK" secondAttribute="trailing" id="aGy-vA-qc7"/>
+                            <constraint firstItem="A55-RY-zMw" firstAttribute="leading" secondItem="bBY-3r-rjU" secondAttribute="trailing" constant="15" id="cBd-HG-FnH"/>
+                            <constraint firstItem="A55-RY-zMw" firstAttribute="top" secondItem="sJi-Va-dTD" secondAttribute="top" constant="25" id="dPD-vu-VWR"/>
                             <constraint firstItem="Fo1-VU-YmK" firstAttribute="leading" secondItem="sJi-Va-dTD" secondAttribute="leading" id="pBs-ce-o4t"/>
+                            <constraint firstItem="bBY-3r-rjU" firstAttribute="centerY" secondItem="A55-RY-zMw" secondAttribute="centerY" id="uA5-OI-aE1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kGi-V3-VTe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="shareButton" destination="A55-RY-zMw" id="IbA-zU-Pu5"/>
+                        <outlet property="starButton" destination="bBY-3r-rjU" id="MMm-zp-GuK"/>
                         <outlet property="tableView" destination="Fo1-VU-YmK" id="pFY-C9-nSm"/>
                     </connections>
                 </viewController>
@@ -153,5 +172,8 @@
     </scenes>
     <resources>
         <image name="Coco" width="375" height="198"/>
+        <image name="分享" width="27" height="26"/>
+        <image name="白色收藏" width="29" height="29"/>
+        <image name="白色收藏_选中" width="29" height="29"/>
     </resources>
 </document>

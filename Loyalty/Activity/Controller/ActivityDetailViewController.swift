@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ActivityDetailViewController: UIViewController {
+class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
 
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var activityDetailViewModel:ActivityDetailViewModel?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavigationItems()
         self.activityDetailViewModel = ActivityDetailViewModel(tableView: self.tableView, activity: Activity())
         // Do any additional setup after loading the view.
     }
@@ -24,6 +27,7 @@ class ActivityDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,3 +43,7 @@ class ActivityDetailViewController: UIViewController {
     }
 }
 
+// MARK: - Action
+extension ActivityDetailViewController {
+
+}

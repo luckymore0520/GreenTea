@@ -18,6 +18,10 @@ class ActivityRootViewController: UIViewController {
         self.navigationController?.navigationBar.translucent = false
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = false
+    }
 }
 
 // MARK: - Draw UI
