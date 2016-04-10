@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cartography
 import UIKit
 
 protocol HasHiddenNavigation {
@@ -19,8 +20,13 @@ extension HasHiddenNavigation where Self:UIViewController{
         backButton.viewController = self
         let image = UIImage(named: "nav_back_shadow")
         backButton.setImage(image, forState: UIControlState.Normal)
-        backButton.frame = CGRectMake(15, 25, image?.size.width ?? 0, image?.size.height ?? 0)
         self.view.addSubview(backButton)
+        constrain(backButton, self.view) { backButton, view in
+            backButton.left == view.left + 15
+            backButton.top == view.top + 25
+            backButton.width == image?.size.width ?? 0
+            backButton.height == image?.size.height ?? 0
+        }
         backButton.addTarget(backButton, action: "onBackButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
     }
 }

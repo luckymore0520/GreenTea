@@ -43,6 +43,24 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
     }
 }
 
+extension ActivityDetailViewController:UITableViewDelegate {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return self.activityDetailViewModel?.heightForRowAtIndexPath(indexPath) ?? 0
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.activityDetailViewModel?.heightForHeader(section) ?? 0
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return self.activityDetailViewModel?.viewForHeader(tableView, section: section)
+    }
+}
+
 // MARK: - Action
 extension ActivityDetailViewController {
 

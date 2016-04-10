@@ -22,4 +22,8 @@ extension UIColor {
         return UIColor(hexString: "4B4221")!
     }
     
+    static func globalSectionHeaderColor() -> UIColor {
+        return UIColor(hexString: "4D4222")!
+    }
+    
 }

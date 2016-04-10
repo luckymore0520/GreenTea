@@ -16,7 +16,7 @@ class HUDHelper {
     }
     
     static func removeLoading(){
-        PKHUD.sharedHUD.hide()
+        PKHUD.sharedHUD.hide(animated: true, completion: nil)
     }
     
     static func showText(text:String!){

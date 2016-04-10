@@ -1,20 +1,23 @@
 PODS:
-  - AVOSCloudCrashReportingDynamic (3.2.2):
+  - AVOSCloudCrashReportingDynamic (3.2.7):
     - AVOSCloudDynamic
-  - AVOSCloudDynamic (3.2.2)
-  - PKHUD (2.2.5)
+  - AVOSCloudDynamic (3.2.7)
+  - Cartography (0.6.0)
+  - PKHUD (3.1.0)
   - XCGLogger (3.1.1)
 
 DEPENDENCIES:
   - AVOSCloudCrashReportingDynamic
   - AVOSCloudDynamic
+  - Cartography
   - PKHUD
   - XCGLogger (~> 3.1.1)
 
 SPEC CHECKSUMS:
-  AVOSCloudCrashReportingDynamic: ba496ce6a010bb43cc2a2f6c8086667746e65919
-  AVOSCloudDynamic: de57e0e0221d7d65a21bc87cda6514d505e5015b
-  PKHUD: 15d9db01fb008bb9247c6d785c585f587955b113
+  AVOSCloudCrashReportingDynamic: 603806f916a5e8f201e151ff84d8ad2a17c2b6f5
+  AVOSCloudDynamic: 1a64ed78c897be98d54d75fd4c8cff0a21e9eeb6
+  Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   XCGLogger: e111a313f609432394c3ae378d99511634fd2e3c
 
 COCOAPODS: 0.39.0
