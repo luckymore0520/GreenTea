@@ -10,6 +10,7 @@ import UIKit
 
 class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
 
+    @IBOutlet weak var activityImageView: UIImageView!
     @IBOutlet weak var toolBar: ActivityToolBar!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var starButton: UIButton!
@@ -42,6 +43,19 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    }
+}
+
+extension ActivityDetailViewController:ImageTransitionTargetViewController {
+    var targetImageView:UIImageView {
+        get {
+            return self.activityImageView
+        }
+    }
+    var targetView:UIView {
+        get {
+            return self.view
+        }
     }
 }
 

@@ -39,6 +39,10 @@
 		126E13691CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13681CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift */; };
 		126E136B1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E136A1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift */; };
 		126E136D1CBA793D00A3CDFF /* ActivityToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E136C1CBA793D00A3CDFF /* ActivityToolBar.swift */; };
+		126E13721CBA873800A3CDFF /* NavigationTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13711CBA873800A3CDFF /* NavigationTransitionManager.swift */; };
+		126E13741CBA894500A3CDFF /* ActivityTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13731CBA894500A3CDFF /* ActivityTransitioning.swift */; };
+		126E13761CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13751CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift */; };
+		126E13781CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13771CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift */; };
 		127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FE81C5B98930091837D /* RegisterViewController.swift */; };
 		127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEA1C5B98B10091837D /* UserInfoManager.swift */; };
 		127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEC1C5B98B80091837D /* LoginViewController.swift */; };
@@ -122,6 +126,10 @@
 		126E13681CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailInfoTableViewCell.swift; path = Activity/Views/ActivityDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E136A1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailSectionHeaderTableViewCell.swift; path = Activity/Views/ActivityDetailSectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		126E136C1CBA793D00A3CDFF /* ActivityToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityToolBar.swift; path = Activity/Views/ActivityToolBar.swift; sourceTree = "<group>"; };
+		126E13711CBA873800A3CDFF /* NavigationTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationTransitionManager.swift; path = Main/ViewModel/NavigationTransitionManager.swift; sourceTree = "<group>"; };
+		126E13731CBA894500A3CDFF /* ActivityTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTransitioning.swift; path = Activity/Models/ActivityTransitioning.swift; sourceTree = "<group>"; };
+		126E13751CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTransitionTargetViewController.swift; path = Main/ViewModel/ImageTransitionTargetViewController.swift; sourceTree = "<group>"; };
+		126E13771CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTransitionFromViewController.swift; path = Main/ViewModel/ImageTransitionFromViewController.swift; sourceTree = "<group>"; };
 		127C7FE81C5B98930091837D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = LoginAndRegister/Controller/RegisterViewController.swift; sourceTree = "<group>"; };
 		127C7FEA1C5B98B10091837D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoManager.swift; path = LoginAndRegister/Model/UserInfoManager.swift; sourceTree = "<group>"; };
 		127C7FEC1C5B98B80091837D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LoginAndRegister/Controller/LoginViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +254,17 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		126E13701CBA871400A3CDFF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				126E13711CBA873800A3CDFF /* NavigationTransitionManager.swift */,
+				126E13731CBA894500A3CDFF /* ActivityTransitioning.swift */,
+				126E13751CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift */,
+				126E13771CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		127C7FE61C5B98470091837D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +353,7 @@
 		128027911C58BC9900C76EA6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				126E13701CBA871400A3CDFF /* ViewModel */,
 				1280271C1C5604BA00C76EA6 /* Main.storyboard */,
 			);
 			name = Main;
@@ -675,6 +695,7 @@
 				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
 				127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */,
 				126E136D1CBA793D00A3CDFF /* ActivityToolBar.swift in Sources */,
+				126E13781CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift in Sources */,
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
@@ -682,6 +703,7 @@
 				126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */,
 				120902461C5F78BC00772CBA /* UserSettingTableModel.swift in Sources */,
 				125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */,
+				126E13741CBA894500A3CDFF /* ActivityTransitioning.swift in Sources */,
 				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
 				120E2DCF1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift in Sources */,
 				126E136B1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift in Sources */,
@@ -706,7 +728,9 @@
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				121924521C5A58C300A3D94E /* Bool.swift in Sources */,
 				1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */,
+				126E13761CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift in Sources */,
 				126E13691CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift in Sources */,
+				126E13721CBA873800A3CDFF /* NavigationTransitionManager.swift in Sources */,
 				120E2DCB1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift in Sources */,
 				120E2DC91CAD53FB001E6DE9 /* ActivityDetailViewController.swift in Sources */,
 				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,

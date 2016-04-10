@@ -10,9 +10,10 @@ import UIKit
 
 class ActivityRootViewController: UIViewController {
     let activityTypes = [ActivityType.Loyalty, .Promotion]
-    var activityViewControllers:[ActivityListViewController]?
+    var activityViewControllers:[ActivityListViewController] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.delegate = NavigationTransitionManager.sharedManager
         self.buildTitleView()
         self.buildChildViews()
         self.navigationController?.navigationBar.translucent = false
@@ -36,7 +37,6 @@ extension ActivityRootViewController {
     }
     
     private func buildChildViews(){
-        self.activityViewControllers = []
         for activityType in self.activityTypes {
             let activityViewController = self.storyboard?.instantiateViewControllerWithIdentifier(String(ActivityListViewController.classForCoder())) as! ActivityListViewController
             activityViewController.activityType = activityType
@@ -44,9 +44,16 @@ extension ActivityRootViewController {
             activityViewController.view.hidden = true
             self.view.addSubview(activityViewController.view)
             self.addChildViewController(activityViewController)
-            self.activityViewControllers?.append(activityViewController)
+            self.activityViewControllers.append(activityViewController)
         }
-        self.activityViewControllers![0].view.hidden = false
+        self.activityViewControllers[0].view.hidden = false
+    }
+    
+    func currentViewController() -> ActivityListViewController? {
+        if let segmentControl = self.navigationItem.titleView as? UISegmentedControl {
+            return self.activityViewControllers[segmentControl.selectedSegmentIndex]
+        }
+        return nil
     }
 }
 
@@ -54,9 +61,9 @@ extension ActivityRootViewController {
 extension ActivityRootViewController {
     func onTitleChanged(segmentControl:UISegmentedControl) {
         log.info("\(segmentControl.selectedSegmentIndex)")
-        for activityViewController in self.activityViewControllers! {
+        for activityViewController in activityViewControllers {
             activityViewController.view.hidden = true
         }
-        self.activityViewControllers![segmentControl.selectedSegmentIndex].view.hidden = false
+        activityViewControllers[segmentControl.selectedSegmentIndex].view.hidden = false
     }
 }

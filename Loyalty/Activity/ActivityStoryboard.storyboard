@@ -39,10 +39,39 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fo1-VU-YmK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coco" id="blw-Du-zd5">
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="LAF-mW-RQG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coco" translatesAutoresizingMaskIntoConstraints="NO" id="blw-Du-zd5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A55-RY-zMw">
+                                            <rect key="frame" x="333" y="25" width="27" height="26"/>
+                                            <state key="normal" image="分享">
+                                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-3r-rjU">
+                                            <rect key="frame" x="289" y="24" width="29" height="29"/>
+                                            <state key="normal" image="白色收藏">
+                                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="白色收藏_选中"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="A55-RY-zMw" firstAttribute="top" secondItem="LAF-mW-RQG" secondAttribute="top" constant="25" id="6Hj-Ix-l96"/>
+                                        <constraint firstItem="A55-RY-zMw" firstAttribute="leading" secondItem="bBY-3r-rjU" secondAttribute="trailing" constant="15" id="LFU-8o-NdT"/>
+                                        <constraint firstAttribute="bottom" secondItem="blw-Du-zd5" secondAttribute="bottom" id="Ohb-Fu-gfV"/>
+                                        <constraint firstAttribute="trailing" secondItem="blw-Du-zd5" secondAttribute="trailing" id="Otz-7S-fR7"/>
+                                        <constraint firstItem="blw-Du-zd5" firstAttribute="leading" secondItem="LAF-mW-RQG" secondAttribute="leading" id="PBM-Pc-CYT"/>
+                                        <constraint firstAttribute="trailing" secondItem="A55-RY-zMw" secondAttribute="trailing" constant="15" id="Yip-ss-JKM"/>
+                                        <constraint firstItem="blw-Du-zd5" firstAttribute="top" secondItem="LAF-mW-RQG" secondAttribute="top" id="el4-e7-B6c"/>
+                                        <constraint firstItem="bBY-3r-rjU" firstAttribute="centerY" secondItem="A55-RY-zMw" secondAttribute="centerY" id="mkH-fZ-Qli"/>
+                                    </constraints>
+                                </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="tlp-AF-3sd">
                                     <rect key="frame" x="0.0" y="546" width="375" height="123"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -198,19 +227,6 @@
                                     <outlet property="delegate" destination="n2i-yE-Uny" id="Cah-ox-MLU"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A55-RY-zMw">
-                                <rect key="frame" x="333" y="25" width="27" height="26"/>
-                                <state key="normal" image="分享">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-3r-rjU">
-                                <rect key="frame" x="289" y="24" width="29" height="29"/>
-                                <state key="normal" image="白色收藏">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" image="白色收藏_选中"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-0w-KUU" customClass="ActivityToolBar" customModule="Loyalty" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -224,19 +240,16 @@
                             <constraint firstItem="Fo1-VU-YmK" firstAttribute="top" secondItem="sJi-Va-dTD" secondAttribute="top" id="44V-oG-gKA"/>
                             <constraint firstAttribute="trailing" secondItem="8L5-0w-KUU" secondAttribute="trailing" id="5o4-jx-A5G"/>
                             <constraint firstItem="8L5-0w-KUU" firstAttribute="leading" secondItem="sJi-Va-dTD" secondAttribute="leading" id="FKI-4d-T7A"/>
-                            <constraint firstAttribute="trailing" secondItem="A55-RY-zMw" secondAttribute="trailing" constant="15" id="M3b-Xv-jCW"/>
                             <constraint firstItem="jLi-2N-Omy" firstAttribute="top" secondItem="Fo1-VU-YmK" secondAttribute="bottom" id="MSu-Hs-DM5"/>
                             <constraint firstAttribute="trailing" secondItem="Fo1-VU-YmK" secondAttribute="trailing" id="aGy-vA-qc7"/>
-                            <constraint firstItem="A55-RY-zMw" firstAttribute="leading" secondItem="bBY-3r-rjU" secondAttribute="trailing" constant="15" id="cBd-HG-FnH"/>
-                            <constraint firstItem="A55-RY-zMw" firstAttribute="top" secondItem="sJi-Va-dTD" secondAttribute="top" constant="25" id="dPD-vu-VWR"/>
                             <constraint firstItem="Fo1-VU-YmK" firstAttribute="leading" secondItem="sJi-Va-dTD" secondAttribute="leading" id="pBs-ce-o4t"/>
                             <constraint firstItem="jLi-2N-Omy" firstAttribute="top" secondItem="8L5-0w-KUU" secondAttribute="bottom" id="rpg-o5-d34"/>
-                            <constraint firstItem="bBY-3r-rjU" firstAttribute="centerY" secondItem="A55-RY-zMw" secondAttribute="centerY" id="uA5-OI-aE1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kGi-V3-VTe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="activityImageView" destination="blw-Du-zd5" id="jFZ-CF-0FD"/>
                         <outlet property="shareButton" destination="A55-RY-zMw" id="IbA-zU-Pu5"/>
                         <outlet property="starButton" destination="bBY-3r-rjU" id="MMm-zp-GuK"/>
                         <outlet property="tableView" destination="Fo1-VU-YmK" id="pFY-C9-nSm"/>

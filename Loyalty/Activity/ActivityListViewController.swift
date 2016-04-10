@@ -10,6 +10,7 @@ import UIKit
 
 class ActivityListViewController: UIViewController {
     var activityType:ActivityType?
+    var selectedImageView:UIImageView?
     @IBOutlet weak var tableView: UITableView!
     var activityListViewModel:ActivityListViewModel?
     override func viewDidLoad() {
@@ -40,6 +41,19 @@ class ActivityListViewController: UIViewController {
 
 }
 
+extension ActivityListViewController:ImageTransitionFromViewController {
+    var fromImageView:UIImageView? {
+        get {
+            return self.selectedImageView
+        }
+    }
+    var fromView:UIView {
+        get {
+            return self.parentViewController?.view ?? self.view
+        }
+    }
+}
+
 extension ActivityListViewController:UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 260
@@ -47,6 +61,8 @@ extension ActivityListViewController:UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! ActivityTableViewCell
+        self.selectedImageView = cell.activityImageView
         self.performSegueWithIdentifier("showDetail", sender: indexPath)
     }
 }

@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coco" translatesAutoresizingMaskIntoConstraints="NO" id="2hT-y4-9VV">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coco" translatesAutoresizingMaskIntoConstraints="NO" id="2hT-y4-9VV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="2hT-y4-9VV" secondAttribute="height" multiplier="15:8" id="2YP-kv-EB2"/>
@@ -98,6 +98,9 @@
                     <constraint firstAttribute="trailing" secondItem="2hT-y4-9VV" secondAttribute="trailing" id="zrv-Hf-mAo"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="activityImageView" destination="2hT-y4-9VV" id="8i2-8i-a0u"/>
+            </connections>
             <point key="canvasLocation" x="596.5" y="283"/>
         </tableViewCell>
     </objects>

@@ -10,6 +10,7 @@ import UIKit
 
 class ActivityTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var activityImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
