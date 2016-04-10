@@ -10,6 +10,7 @@ import UIKit
 
 class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
 
+    @IBOutlet weak var toolBar: ActivityToolBar!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -20,6 +21,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
         super.viewDidLoad()
         self.configureNavigationItems()
         self.activityDetailViewModel = ActivityDetailViewModel(tableView: self.tableView, activity: Activity())
+        self.toolBar.activityType = ActivityType.Loyalty
         // Do any additional setup after loading the view.
     }
 
@@ -50,6 +52,10 @@ extension ActivityDetailViewController:UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return self.activityDetailViewModel?.isAbleToSelected(indexPath) ?? true
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

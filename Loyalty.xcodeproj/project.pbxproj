@@ -38,6 +38,7 @@
 		126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */; };
 		126E13691CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13681CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift */; };
 		126E136B1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E136A1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift */; };
+		126E136D1CBA793D00A3CDFF /* ActivityToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E136C1CBA793D00A3CDFF /* ActivityToolBar.swift */; };
 		127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FE81C5B98930091837D /* RegisterViewController.swift */; };
 		127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEA1C5B98B10091837D /* UserInfoManager.swift */; };
 		127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEC1C5B98B80091837D /* LoginViewController.swift */; };
@@ -120,6 +121,7 @@
 		126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTimeInfoTableViewCell.swift; path = Activity/Views/ActivityTimeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E13681CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailInfoTableViewCell.swift; path = Activity/Views/ActivityDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E136A1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailSectionHeaderTableViewCell.swift; path = Activity/Views/ActivityDetailSectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		126E136C1CBA793D00A3CDFF /* ActivityToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityToolBar.swift; path = Activity/Views/ActivityToolBar.swift; sourceTree = "<group>"; };
 		127C7FE81C5B98930091837D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = LoginAndRegister/Controller/RegisterViewController.swift; sourceTree = "<group>"; };
 		127C7FEA1C5B98B10091837D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoManager.swift; path = LoginAndRegister/Model/UserInfoManager.swift; sourceTree = "<group>"; };
 		127C7FEC1C5B98B80091837D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LoginAndRegister/Controller/LoginViewController.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */,
 				126E13681CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift */,
 				126E136A1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift */,
+				126E136C1CBA793D00A3CDFF /* ActivityToolBar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
 				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
 				127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */,
+				126E136D1CBA793D00A3CDFF /* ActivityToolBar.swift in Sources */,
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,

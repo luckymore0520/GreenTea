@@ -20,7 +20,6 @@ class Shop: AVObject, AVSubclassing {
     @NSManaged var commentCount:NSNumber!
     @NSManaged var location:NSValue!
     @NSManaged var locationName:String!
-
     static func parseClassName() -> String! {
         return "Shop"
     }
@@ -34,6 +33,14 @@ class Activity: AVObject, AVSubclassing  {
     @NSManaged var startTime:NSTimeInterval
     @NSManaged var endTime:NSTimeInterval
     @NSManaged var activityDescription:String?
+    
+    var activityType:ActivityType? {
+        get {
+            guard let activityTypeString = self.activityTypeString else { return nil }
+            return ActivityType(rawValue: activityTypeString)
+        }
+    }
+    
     static func parseClassName() -> String! {
         return "Activity"
     }

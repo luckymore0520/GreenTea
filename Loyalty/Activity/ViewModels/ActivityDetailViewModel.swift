@@ -74,6 +74,10 @@ class ActivityDetailViewModel:NSObject {
             return 150
         }
     }
+    
+    func isAbleToSelected(indexPath:NSIndexPath) -> Bool{
+        return rows[indexPath.section][indexPath.row].rawValue <= 1
+    }
 }
 
 extension ActivityDetailViewModel:UITableViewDataSource {

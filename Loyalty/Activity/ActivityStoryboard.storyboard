@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--活动-->
@@ -43,7 +44,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="tlp-AF-3sd">
-                                    <rect key="frame" x="0.0" y="546" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="546" width="375" height="123"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -105,7 +106,7 @@
                                                     <rect key="frame" x="15" y="11" width="9" height="11"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南京市鼓楼区广州路122号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDy-Vt-zr6">
-                                                    <rect key="frame" x="32" y="10" width="141" height="15"/>
+                                                    <rect key="frame" x="32" y="9" width="141" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.30196078431372547" green="0.25882352941176467" blue="0.13333333333333333" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -171,7 +172,7 @@
                                         <rect key="frame" x="0.0" y="511" width="375" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="If8-c0-JGV" id="uhh-Ff-C9H">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="34.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrh-f3-CSr">
@@ -210,16 +211,26 @@
                                 </state>
                                 <state key="selected" image="白色收藏_选中"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-0w-KUU" customClass="ActivityToolBar" customModule="Loyalty" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8L5-0w-KUU" secondAttribute="height" multiplier="15:2" id="n2e-qm-Xf4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Fo1-VU-YmK" firstAttribute="top" secondItem="sJi-Va-dTD" secondAttribute="top" id="44V-oG-gKA"/>
+                            <constraint firstAttribute="trailing" secondItem="8L5-0w-KUU" secondAttribute="trailing" id="5o4-jx-A5G"/>
+                            <constraint firstItem="8L5-0w-KUU" firstAttribute="leading" secondItem="sJi-Va-dTD" secondAttribute="leading" id="FKI-4d-T7A"/>
                             <constraint firstAttribute="trailing" secondItem="A55-RY-zMw" secondAttribute="trailing" constant="15" id="M3b-Xv-jCW"/>
                             <constraint firstItem="jLi-2N-Omy" firstAttribute="top" secondItem="Fo1-VU-YmK" secondAttribute="bottom" id="MSu-Hs-DM5"/>
                             <constraint firstAttribute="trailing" secondItem="Fo1-VU-YmK" secondAttribute="trailing" id="aGy-vA-qc7"/>
                             <constraint firstItem="A55-RY-zMw" firstAttribute="leading" secondItem="bBY-3r-rjU" secondAttribute="trailing" constant="15" id="cBd-HG-FnH"/>
                             <constraint firstItem="A55-RY-zMw" firstAttribute="top" secondItem="sJi-Va-dTD" secondAttribute="top" constant="25" id="dPD-vu-VWR"/>
                             <constraint firstItem="Fo1-VU-YmK" firstAttribute="leading" secondItem="sJi-Va-dTD" secondAttribute="leading" id="pBs-ce-o4t"/>
+                            <constraint firstItem="jLi-2N-Omy" firstAttribute="top" secondItem="8L5-0w-KUU" secondAttribute="bottom" id="rpg-o5-d34"/>
                             <constraint firstItem="bBY-3r-rjU" firstAttribute="centerY" secondItem="A55-RY-zMw" secondAttribute="centerY" id="uA5-OI-aE1"/>
                         </constraints>
                     </view>
@@ -229,6 +240,7 @@
                         <outlet property="shareButton" destination="A55-RY-zMw" id="IbA-zU-Pu5"/>
                         <outlet property="starButton" destination="bBY-3r-rjU" id="MMm-zp-GuK"/>
                         <outlet property="tableView" destination="Fo1-VU-YmK" id="pFY-C9-nSm"/>
+                        <outlet property="toolBar" destination="8L5-0w-KUU" id="iTV-C5-HVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYI-bP-Trm" userLabel="First Responder" sceneMemberID="firstResponder"/>
