@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityViewController" customModule="CityListDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityViewController" customModule="Loyalty" customModuleProvider="target">
             <connections>
                 <outlet property="layoutTopConstraint" destination="lBj-Ja-S86" id="L2j-8c-jip"/>
                 <outlet property="searchBar" destination="g0Y-XM-8Ht" id="OJ8-xc-kuQ"/>
@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="g0Y-XM-8Ht">
-                    <rect key="frame" x="0.0" y="60" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="aGT-EP-bCW"/>
                     </constraints>
@@ -30,7 +30,7 @@
                     </connections>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Qr-zI-UgL">
-                    <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="nLz-T0-LGJ"/>
@@ -43,7 +43,7 @@
                 <constraint firstAttribute="bottom" secondItem="5Qr-zI-UgL" secondAttribute="bottom" id="Gg3-KC-VzC"/>
                 <constraint firstItem="5Qr-zI-UgL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="anX-Yp-PdJ"/>
                 <constraint firstItem="g0Y-XM-8Ht" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kZr-p0-ctb"/>
-                <constraint firstItem="g0Y-XM-8Ht" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="lBj-Ja-S86"/>
+                <constraint firstItem="g0Y-XM-8Ht" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lBj-Ja-S86"/>
                 <constraint firstAttribute="trailing" secondItem="g0Y-XM-8Ht" secondAttribute="trailing" id="nrn-86-32h"/>
                 <constraint firstItem="5Qr-zI-UgL" firstAttribute="top" secondItem="g0Y-XM-8Ht" secondAttribute="bottom" id="sWZ-yw-Qum"/>
                 <constraint firstAttribute="trailing" secondItem="5Qr-zI-UgL" secondAttribute="trailing" id="wIe-cS-egs"/>

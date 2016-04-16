@@ -72,6 +72,7 @@
 		128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C81C58F10300C76EA6 /* UIViewController.swift */; };
 		128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027CA1C58F43500C76EA6 /* CellReusable.swift */; };
 		128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */; };
+		12C7F8321CC25FE000805820 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8311CC25FE000805820 /* UILabel.swift */; };
 		12FF67911CC2527900E7860B /* CityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF676F1CC2527900E7860B /* CityButton.swift */; };
 		12FF67921CC2527900E7860B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67701CC2527900E7860B /* CityViewController.swift */; };
 		12FF67931CC2527900E7860B /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FF67711CC2527900E7860B /* CityViewController.xib */; };
@@ -95,6 +96,7 @@
 		12FF67A51CC2527900E7860B /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF678D1CC2527900E7860B /* PinyinHelper.m */; };
 		12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12FF678E1CC2527900E7860B /* unicode_to_hanyu_pinyin.txt */; };
 		12FF67A71CC2527900E7860B /* ZYPinYinSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67901CC2527900E7860B /* ZYPinYinSearch.m */; };
+		12FF67A91CC25E2700E7860B /* UserDefaultTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67A81CC25E2700E7860B /* UserDefaultTool.swift */; };
 		BFF64A03293D1E13F4D1B064 /* Pods_Loyalty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +191,7 @@
 		128027C81C58F10300C76EA6 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extension/UIViewController.swift; sourceTree = "<group>"; };
 		128027CA1C58F43500C76EA6 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellReusable.swift; path = Protocal/CellReusable.swift; sourceTree = "<group>"; };
 		128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginAndRegisterStoryboard.storyboard; path = LoginAndRegister/LoginAndRegisterStoryboard.storyboard; sourceTree = "<group>"; };
+		12C7F8311CC25FE000805820 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel.swift; path = Extension/UILabel.swift; sourceTree = "<group>"; };
 		12FF676D1CC2521B00E7860B /* Loyalty-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loyalty-Bridge-Header.h"; sourceTree = "<group>"; };
 		12FF676F1CC2527900E7860B /* CityButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityButton.swift; sourceTree = "<group>"; };
 		12FF67701CC2527900E7860B /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +224,7 @@
 		12FF678E1CC2527900E7860B /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
 		12FF678F1CC2527900E7860B /* ZYPinYinSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPinYinSearch.h; sourceTree = "<group>"; };
 		12FF67901CC2527900E7860B /* ZYPinYinSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPinYinSearch.m; sourceTree = "<group>"; };
+		12FF67A81CC25E2700E7860B /* UserDefaultTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultTool.swift; path = Tools/UserDefaultTool.swift; sourceTree = "<group>"; };
 		CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loyalty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB069DFA62890D6FD0CA3DC6 /* Pods-Loyalty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -402,6 +406,7 @@
 				128027491C5607C300C76EA6 /* LeanCloudHelper.swift */,
 				1280279E1C58C25F00C76EA6 /* AppearanceTool.swift */,
 				128027B01C58D6AA00C76EA6 /* Log.swift */,
+				12FF67A81CC25E2700E7860B /* UserDefaultTool.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				128027AB1C58C41B00C76EA6 /* CustomColor.swift */,
 				128027C81C58F10300C76EA6 /* UIViewController.swift */,
 				127C7FEE1C5B9BF70091837D /* UIButton.swift */,
+				12C7F8311CC25FE000805820 /* UILabel.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -802,11 +808,13 @@
 				1219245A1C5A58C300A3D94E /* NSDate.swift in Sources */,
 				126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */,
 				120902461C5F78BC00772CBA /* UserSettingTableModel.swift in Sources */,
+				12FF67A91CC25E2700E7860B /* UserDefaultTool.swift in Sources */,
 				125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */,
 				126E13741CBA894500A3CDFF /* ActivityTransitioning.swift in Sources */,
 				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
 				12FF67A71CC2527900E7860B /* ZYPinYinSearch.m in Sources */,
 				120E2DCF1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift in Sources */,
+				12C7F8321CC25FE000805820 /* UILabel.swift in Sources */,
 				12FF67911CC2527900E7860B /* CityButton.swift in Sources */,
 				126E136B1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift in Sources */,
 				128027B11C58D6AA00C76EA6 /* Log.swift in Sources */,

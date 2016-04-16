@@ -17,6 +17,7 @@ class ActivityRootViewController: UIViewController {
         self.navigationController?.delegate = NavigationTransitionManager.sharedManager
         self.buildTitleView()
         self.buildChildViews()
+        self.setLeftButton(UserDefaultTool.stringForKey(cityKey) ?? "选择城市",imageName: "定位_白", selector: "selectCity")
         self.navigationController?.navigationBar.translucent = false
         locationManager.delegate = self
         locationManager.startLocationCity()
@@ -30,12 +31,26 @@ class ActivityRootViewController: UIViewController {
 
 extension ActivityRootViewController:LocationManagerDelegate {
     func locationCity(cityName: String) {
-        self.setLeftButton(cityName, selector: "selectCity")
+        self.setLeftButton(cityName,imageName: "定位_白", selector: "selectCity")
     }
     
     func selectCity(){
         let cityViewController = CityViewController()
-        self.presentViewController(cityViewController, animated: true, completion: nil)
+        cityViewController.delegate = self
+        let navigationController = UINavigationController(rootViewController: cityViewController)
+        cityViewController.setLeftButton("取消", selector: "cancelSelect")
+        self.presentViewController(navigationController, animated: true, completion: nil)
+    }
+    
+    func cancelSelect(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+extension ActivityRootViewController:CityViewControllerDelegate {
+    func selectCity(city: String) {
+        self.setLeftButton(city,imageName: "定位_白", selector: "selectCity")
+        UserDefaultTool.saveValueForKey(cityKey, value: city)
     }
 }
 
