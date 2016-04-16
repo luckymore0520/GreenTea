@@ -72,6 +72,29 @@
 		128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C81C58F10300C76EA6 /* UIViewController.swift */; };
 		128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027CA1C58F43500C76EA6 /* CellReusable.swift */; };
 		128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */; };
+		12FF67911CC2527900E7860B /* CityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF676F1CC2527900E7860B /* CityButton.swift */; };
+		12FF67921CC2527900E7860B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67701CC2527900E7860B /* CityViewController.swift */; };
+		12FF67931CC2527900E7860B /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FF67711CC2527900E7860B /* CityViewController.xib */; };
+		12FF67941CC2527900E7860B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67721CC2527900E7860B /* CollectionViewCell.swift */; };
+		12FF67951CC2527900E7860B /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FF67731CC2527900E7860B /* CollectionViewCell.xib */; };
+		12FF67961CC2527900E7860B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67741CC2527900E7860B /* LocationManager.swift */; };
+		12FF67971CC2527900E7860B /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12FF67761CC2527900E7860B /* citydict.plist */; };
+		12FF67981CC2527900E7860B /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67771CC2527900E7860B /* SectionView.swift */; };
+		12FF67991CC2527900E7860B /* SectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FF67781CC2527900E7860B /* SectionView.xib */; };
+		12FF679A1CC2527900E7860B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67791CC2527900E7860B /* TableViewCell.swift */; };
+		12FF679B1CC2527900E7860B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FF677A1CC2527900E7860B /* TableViewCell.xib */; };
+		12FF679C1CC2527900E7860B /* TableViewHeadSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF677B1CC2527900E7860B /* TableViewHeadSectionCell.swift */; };
+		12FF679D1CC2527900E7860B /* TableViewHeadSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FF677C1CC2527900E7860B /* TableViewHeadSectionCell.xib */; };
+		12FF679E1CC2527900E7860B /* SpecifyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF677E1CC2527900E7860B /* SpecifyArray.swift */; };
+		12FF679F1CC2527900E7860B /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67811CC2527900E7860B /* ChineseInclude.m */; };
+		12FF67A01CC2527900E7860B /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67831CC2527900E7860B /* ChineseToPinyinResource.m */; };
+		12FF67A11CC2527900E7860B /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67851CC2527900E7860B /* HanyuPinyinOutputFormat.m */; };
+		12FF67A21CC2527900E7860B /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67871CC2527900E7860B /* NSString+PinYin4Cocoa.m */; };
+		12FF67A31CC2527900E7860B /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67891CC2527900E7860B /* PinyinFormatter.m */; };
+		12FF67A41CC2527900E7860B /* PinYinForObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF678B1CC2527900E7860B /* PinYinForObjc.m */; };
+		12FF67A51CC2527900E7860B /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF678D1CC2527900E7860B /* PinyinHelper.m */; };
+		12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12FF678E1CC2527900E7860B /* unicode_to_hanyu_pinyin.txt */; };
+		12FF67A71CC2527900E7860B /* ZYPinYinSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67901CC2527900E7860B /* ZYPinYinSearch.m */; };
 		BFF64A03293D1E13F4D1B064 /* Pods_Loyalty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C9C033EA29EE71654A0E327 /* Pods-Loyalty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.debug.xcconfig"; sourceTree = "<group>"; };
 		1209023C1C5F6C3E00772CBA /* HUDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUDHelper.swift; path = Tools/HUDHelper.swift; sourceTree = "<group>"; };
 		1209023E1C5F712100772CBA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = LoginAndRegister/Model/User.swift; sourceTree = "<group>"; };
 		120902411C5F76FF00772CBA /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingViewController.swift; path = Setting/Controller/UserSettingViewController.swift; sourceTree = "<group>"; };
@@ -165,9 +189,40 @@
 		128027C81C58F10300C76EA6 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extension/UIViewController.swift; sourceTree = "<group>"; };
 		128027CA1C58F43500C76EA6 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellReusable.swift; path = Protocal/CellReusable.swift; sourceTree = "<group>"; };
 		128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginAndRegisterStoryboard.storyboard; path = LoginAndRegister/LoginAndRegisterStoryboard.storyboard; sourceTree = "<group>"; };
-		4C5E4EFABBD3AD50FA90C4C9 /* Pods-Loyalty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.release.xcconfig"; sourceTree = "<group>"; };
-		5529915222D38804DCFF3E14 /* Pods-Loyalty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.debug.xcconfig"; sourceTree = "<group>"; };
+		12FF676D1CC2521B00E7860B /* Loyalty-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loyalty-Bridge-Header.h"; sourceTree = "<group>"; };
+		12FF676F1CC2527900E7860B /* CityButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityButton.swift; sourceTree = "<group>"; };
+		12FF67701CC2527900E7860B /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		12FF67711CC2527900E7860B /* CityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityViewController.xib; sourceTree = "<group>"; };
+		12FF67721CC2527900E7860B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		12FF67731CC2527900E7860B /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		12FF67741CC2527900E7860B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		12FF67761CC2527900E7860B /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		12FF67771CC2527900E7860B /* SectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		12FF67781CC2527900E7860B /* SectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionView.xib; sourceTree = "<group>"; };
+		12FF67791CC2527900E7860B /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		12FF677A1CC2527900E7860B /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		12FF677B1CC2527900E7860B /* TableViewHeadSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHeadSectionCell.swift; sourceTree = "<group>"; };
+		12FF677C1CC2527900E7860B /* TableViewHeadSectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewHeadSectionCell.xib; sourceTree = "<group>"; };
+		12FF677E1CC2527900E7860B /* SpecifyArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecifyArray.swift; sourceTree = "<group>"; };
+		12FF67801CC2527900E7860B /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
+		12FF67811CC2527900E7860B /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
+		12FF67821CC2527900E7860B /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		12FF67831CC2527900E7860B /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		12FF67841CC2527900E7860B /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		12FF67851CC2527900E7860B /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		12FF67861CC2527900E7860B /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		12FF67871CC2527900E7860B /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		12FF67881CC2527900E7860B /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		12FF67891CC2527900E7860B /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		12FF678A1CC2527900E7860B /* PinYinForObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinForObjc.h; sourceTree = "<group>"; };
+		12FF678B1CC2527900E7860B /* PinYinForObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinForObjc.m; sourceTree = "<group>"; };
+		12FF678C1CC2527900E7860B /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		12FF678D1CC2527900E7860B /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		12FF678E1CC2527900E7860B /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		12FF678F1CC2527900E7860B /* ZYPinYinSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPinYinSearch.h; sourceTree = "<group>"; };
+		12FF67901CC2527900E7860B /* ZYPinYinSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPinYinSearch.m; sourceTree = "<group>"; };
 		CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loyalty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB069DFA62890D6FD0CA3DC6 /* Pods-Loyalty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,12 +341,13 @@
 		1280270C1C5604BA00C76EA6 = {
 			isa = PBXGroup;
 			children = (
+				12FF676D1CC2521B00E7860B /* Loyalty-Bridge-Header.h */,
 				128027171C5604BA00C76EA6 /* Loyalty */,
 				1280272C1C5604BA00C76EA6 /* LoyaltyTests */,
 				128027371C5604BA00C76EA6 /* LoyaltyUITests */,
 				128027161C5604BA00C76EA6 /* Products */,
-				5A8F558AFBD4D8E46BD2BAD2 /* Pods */,
 				2B61B791351F9FB889F6AC3D /* Frameworks */,
+				D56630256E0D92DC13DBFF62 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -412,6 +468,8 @@
 		128027A51C58C36400C76EA6 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				12FF676E1CC2527900E7860B /* CityListView */,
+				12FF677F1CC2527900E7860B /* ZYPinYinSearchLib */,
 				121924411C5A58C300A3D94E /* ExSwift */,
 			);
 			name = Vendor;
@@ -485,6 +543,69 @@
 			name = LoginAndRegister;
 			sourceTree = "<group>";
 		};
+		12FF676E1CC2527900E7860B /* CityListView */ = {
+			isa = PBXGroup;
+			children = (
+				12FF676F1CC2527900E7860B /* CityButton.swift */,
+				12FF67701CC2527900E7860B /* CityViewController.swift */,
+				12FF67711CC2527900E7860B /* CityViewController.xib */,
+				12FF67721CC2527900E7860B /* CollectionViewCell.swift */,
+				12FF67731CC2527900E7860B /* CollectionViewCell.xib */,
+				12FF67741CC2527900E7860B /* LocationManager.swift */,
+				12FF67751CC2527900E7860B /* Resource */,
+				12FF67771CC2527900E7860B /* SectionView.swift */,
+				12FF67781CC2527900E7860B /* SectionView.xib */,
+				12FF67791CC2527900E7860B /* TableViewCell.swift */,
+				12FF677A1CC2527900E7860B /* TableViewCell.xib */,
+				12FF677B1CC2527900E7860B /* TableViewHeadSectionCell.swift */,
+				12FF677C1CC2527900E7860B /* TableViewHeadSectionCell.xib */,
+				12FF677D1CC2527900E7860B /* Util */,
+			);
+			name = CityListView;
+			path = Vendor/CityListView;
+			sourceTree = "<group>";
+		};
+		12FF67751CC2527900E7860B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				12FF67761CC2527900E7860B /* citydict.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		12FF677D1CC2527900E7860B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				12FF677E1CC2527900E7860B /* SpecifyArray.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		12FF677F1CC2527900E7860B /* ZYPinYinSearchLib */ = {
+			isa = PBXGroup;
+			children = (
+				12FF67801CC2527900E7860B /* ChineseInclude.h */,
+				12FF67811CC2527900E7860B /* ChineseInclude.m */,
+				12FF67821CC2527900E7860B /* ChineseToPinyinResource.h */,
+				12FF67831CC2527900E7860B /* ChineseToPinyinResource.m */,
+				12FF67841CC2527900E7860B /* HanyuPinyinOutputFormat.h */,
+				12FF67851CC2527900E7860B /* HanyuPinyinOutputFormat.m */,
+				12FF67861CC2527900E7860B /* NSString+PinYin4Cocoa.h */,
+				12FF67871CC2527900E7860B /* NSString+PinYin4Cocoa.m */,
+				12FF67881CC2527900E7860B /* PinyinFormatter.h */,
+				12FF67891CC2527900E7860B /* PinyinFormatter.m */,
+				12FF678A1CC2527900E7860B /* PinYinForObjc.h */,
+				12FF678B1CC2527900E7860B /* PinYinForObjc.m */,
+				12FF678C1CC2527900E7860B /* PinyinHelper.h */,
+				12FF678D1CC2527900E7860B /* PinyinHelper.m */,
+				12FF678E1CC2527900E7860B /* unicode_to_hanyu_pinyin.txt */,
+				12FF678F1CC2527900E7860B /* ZYPinYinSearch.h */,
+				12FF67901CC2527900E7860B /* ZYPinYinSearch.m */,
+			);
+			name = ZYPinYinSearchLib;
+			path = Vendor/ZYPinYinSearchLib;
+			sourceTree = "<group>";
+		};
 		2B61B791351F9FB889F6AC3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,11 +614,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A8F558AFBD4D8E46BD2BAD2 /* Pods */ = {
+		D56630256E0D92DC13DBFF62 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5529915222D38804DCFF3E14 /* Pods-Loyalty.debug.xcconfig */,
-				4C5E4EFABBD3AD50FA90C4C9 /* Pods-Loyalty.release.xcconfig */,
+				0C9C033EA29EE71654A0E327 /* Pods-Loyalty.debug.xcconfig */,
+				DB069DFA62890D6FD0CA3DC6 /* Pods-Loyalty.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -509,12 +630,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1280273D1C5604BA00C76EA6 /* Build configuration list for PBXNativeTarget "Loyalty" */;
 			buildPhases = (
-				27C9F87E0CA25A44D2C27017 /* Check Pods Manifest.lock */,
 				128027111C5604BA00C76EA6 /* Sources */,
 				128027121C5604BA00C76EA6 /* Frameworks */,
 				128027131C5604BA00C76EA6 /* Resources */,
-				615F0E56DA8D4D906C848E26 /* Embed Pods Frameworks */,
-				2E2B179105CD17BF8E2073DD /* Copy Pods Resources */,
+				888E104C9BC79604417235A7 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -609,13 +728,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FF67991CC2527900E7860B /* SectionView.xib in Resources */,
 				128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */,
+				12FF67971CC2527900E7860B /* citydict.plist in Resources */,
 				128027201C5604BA00C76EA6 /* Assets.xcassets in Resources */,
+				12FF67951CC2527900E7860B /* CollectionViewCell.xib in Resources */,
 				128027BA1C58DACD00C76EA6 /* ActivityTableViewCell.xib in Resources */,
+				12FF679D1CC2527900E7860B /* TableViewHeadSectionCell.xib in Resources */,
 				128027991C58BD3800C76EA6 /* MessageStoryboard.storyboard in Resources */,
 				1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */,
 				1280279D1C58BD9100C76EA6 /* ActivityStoryboard.storyboard in Resources */,
+				12FF679B1CC2527900E7860B /* TableViewCell.xib in Resources */,
 				128027971C58BCED00C76EA6 /* UserCenterStoryboard.storyboard in Resources */,
+				12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */,
+				12FF67931CC2527900E7860B /* CityViewController.xib in Resources */,
 				128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */,
 				1280279B1C58BD6000C76EA6 /* CardStoryboard.storyboard in Resources */,
 			);
@@ -638,37 +764,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27C9F87E0CA25A44D2C27017 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2E2B179105CD17BF8E2073DD /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		615F0E56DA8D4D906C848E26 /* Embed Pods Frameworks */ = {
+		888E104C9BC79604417235A7 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -692,12 +788,16 @@
 			files = (
 				1209023D1C5F6C3E00772CBA /* HUDHelper.swift in Sources */,
 				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
+				12FF67A31CC2527900E7860B /* PinyinFormatter.m in Sources */,
 				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
 				127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */,
 				126E136D1CBA793D00A3CDFF /* ActivityToolBar.swift in Sources */,
 				126E13781CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift in Sources */,
+				12FF679F1CC2527900E7860B /* ChineseInclude.m in Sources */,
+				12FF67961CC2527900E7860B /* LocationManager.swift in Sources */,
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
+				12FF67981CC2527900E7860B /* SectionView.swift in Sources */,
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
 				1219245A1C5A58C300A3D94E /* NSDate.swift in Sources */,
 				126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */,
@@ -705,23 +805,31 @@
 				125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */,
 				126E13741CBA894500A3CDFF /* ActivityTransitioning.swift in Sources */,
 				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
+				12FF67A71CC2527900E7860B /* ZYPinYinSearch.m in Sources */,
 				120E2DCF1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift in Sources */,
+				12FF67911CC2527900E7860B /* CityButton.swift in Sources */,
 				126E136B1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift in Sources */,
 				128027B11C58D6AA00C76EA6 /* Log.swift in Sources */,
 				1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */,
 				128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */,
+				12FF679E1CC2527900E7860B /* SpecifyArray.swift in Sources */,
+				12FF679C1CC2527900E7860B /* TableViewHeadSectionCell.swift in Sources */,
 				126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */,
+				12FF67A21CC2527900E7860B /* NSString+PinYin4Cocoa.m in Sources */,
 				121924531C5A58C300A3D94E /* Character.swift in Sources */,
 				128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */,
 				121924561C5A58C300A3D94E /* ExSwift.swift in Sources */,
 				1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */,
 				120E2DC61CAD4568001E6DE9 /* StartRateView.swift in Sources */,
+				12FF67921CC2527900E7860B /* CityViewController.swift in Sources */,
 				1219245D1C5A58C300A3D94E /* String.swift in Sources */,
+				12FF67941CC2527900E7860B /* CollectionViewCell.swift in Sources */,
 				127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */,
 				1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */,
 				128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */,
 				121924511C5A58C300A3D94E /* Array.swift in Sources */,
 				126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */,
+				12FF67A41CC2527900E7860B /* PinYinForObjc.m in Sources */,
 				121924541C5A58C300A3D94E /* Dictionary.swift in Sources */,
 				120902421C5F76FF00772CBA /* UserSettingViewController.swift in Sources */,
 				1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */,
@@ -730,12 +838,16 @@
 				1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */,
 				126E13761CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift in Sources */,
 				126E13691CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift in Sources */,
+				12FF679A1CC2527900E7860B /* TableViewCell.swift in Sources */,
 				126E13721CBA873800A3CDFF /* NavigationTransitionManager.swift in Sources */,
 				120E2DCB1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift in Sources */,
 				120E2DC91CAD53FB001E6DE9 /* ActivityDetailViewController.swift in Sources */,
 				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,
+				12FF67A01CC2527900E7860B /* ChineseToPinyinResource.m in Sources */,
+				12FF67A51CC2527900E7860B /* PinyinHelper.m in Sources */,
 				1209023F1C5F712100772CBA /* User.swift in Sources */,
 				127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */,
+				12FF67A11CC2527900E7860B /* HanyuPinyinOutputFormat.m in Sources */,
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,
 				1280274A1C5607C300C76EA6 /* LeanCloudHelper.swift in Sources */,
 				128027AE1C58CAEE00C76EA6 /* ActivityRootViewController.swift in Sources */,
@@ -838,6 +950,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Loyalty-Bridge-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -875,13 +988,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Loyalty-Bridge-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		1280273E1C5604BA00C76EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5529915222D38804DCFF3E14 /* Pods-Loyalty.debug.xcconfig */;
+			baseConfigurationReference = 0C9C033EA29EE71654A0E327 /* Pods-Loyalty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Loyalty/Info.plist;
@@ -893,7 +1007,7 @@
 		};
 		1280273F1C5604BA00C76EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C5E4EFABBD3AD50FA90C4C9 /* Pods-Loyalty.release.xcconfig */;
+			baseConfigurationReference = DB069DFA62890D6FD0CA3DC6 /* Pods-Loyalty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Loyalty/Info.plist;

@@ -11,17 +11,31 @@ import UIKit
 class ActivityRootViewController: UIViewController {
     let activityTypes = [ActivityType.Loyalty, .Promotion]
     var activityViewControllers:[ActivityListViewController] = []
+    var locationManager = LocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.delegate = NavigationTransitionManager.sharedManager
         self.buildTitleView()
         self.buildChildViews()
         self.navigationController?.navigationBar.translucent = false
+        locationManager.delegate = self
+        locationManager.startLocationCity()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = false
+    }
+}
+
+extension ActivityRootViewController:LocationManagerDelegate {
+    func locationCity(cityName: String) {
+        self.setLeftButton(cityName, selector: "selectCity")
+    }
+    
+    func selectCity(){
+        let cityViewController = CityViewController()
+        self.presentViewController(cityViewController, animated: true, completion: nil)
     }
 }
 
