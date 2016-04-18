@@ -24,7 +24,7 @@ class UserSettingTableModel:NSObject {
     weak var tableView:UITableView?
     init(tableView:UITableView){
         super.init()
-        if let user = UserInfoManager.sharedManager.currentUser() {
+        if let user = UserInfoManager.sharedManager.currentUser {
             if user.userType == UserType.Custume {
                 self.settingCellArray = [[SettingCellType.ChangePassword,.BecomeBusiness],[.ShareApp,.ReviewUs,.FeedBack,.Privacy],[.Logout]]
             } else {

@@ -27,11 +27,9 @@ extension UIViewController {
         return rightButton
     }
     
-    func setLeftButton(var text: String, imageName:String = "", selector:Selector ,  fontSize : CGFloat = UIFont.systemFontSize() )->UIButton {
+    func setLeftButton(text: String, imageName:String = "", selector:Selector ,  fontSize : CGFloat = UIFont.systemFontSize() )->UIButton {
         let leftButton = UIButton.init(frame:CGRectMake(0, 0, 100, 40))
-        if imageName.length > 0 {
-            text = "  "+text
-        }
+        let trueText = imageName.length > 0 ? "  "+text : text
         leftButton.setTitle(text, forState: UIControlState.Normal)
         leftButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         leftButton.addTarget(self, action: selector, forControlEvents: UIControlEvents.TouchUpInside)

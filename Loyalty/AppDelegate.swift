@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //初始化LeanCloud
-        configureLeanCloudWithOptions(launchOptions)
+        LeanCloudHelper.configureLeanCloudWithOptions(launchOptions)
         //初始化导航栏和TabBar样式
         configureGlobalAppearce()
         //初始化界面
@@ -58,7 +58,7 @@ extension AppDelegate: UITabBarControllerDelegate {
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
         let index = tabBarController.viewControllers?.indexOf(viewController)
         if  index == 1 || index == 3  {
-            let isLogin = UserInfoManager.sharedManager.isLogin()
+            let isLogin = UserInfoManager.sharedManager.isLogin
             if !isLogin {
                 let loginAndRegisterStoryboard = UIStoryboard(name: "LoginAndRegisterStoryboard", bundle: nil)
                 let loginController = loginAndRegisterStoryboard.instantiateInitialViewController() as! UINavigationController

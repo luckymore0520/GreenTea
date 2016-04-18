@@ -16,7 +16,6 @@ class CardView: UIView {
     
     
     func renderView(){
-        
         self.collectionViewFlowLayout.itemSize = CGSizeMake(self.loyaltyCoinCollectionView.frame.width / 4.0 , 50)
         self.collectionViewFlowLayout.minimumInteritemSpacing = 0
         self.collectionViewFlowLayout.minimumLineSpacing = 20

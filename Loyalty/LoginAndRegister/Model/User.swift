@@ -14,11 +14,52 @@ enum UserType:String {
     case Business = "Business"
 }
 
-let kAvatarKey = "Avatar"
-let kUserTypeKey = "userType"
+enum Gender:String {
+    case Male = "男"
+    case Female = "女"
+    case Unknown = "未知"
+}
+
+
+let kAvatarKey = "myAvatar" //头像
+let kUserTypeKey = "userType" //用户类型
+let kGenderKey = "sex" //性别
+let kBirthdayKey = "birthday" //生日
+let kcityKey = "currentCity" //城市
 
 extension AVUser {
+    var city:String? {
+        get {
+            return self.objectForKey(kcityKey) as? String
+        }
+        set {
+            self.setObject(newValue, forKey: kcityKey)
+        }
+    }
+    
+    
+    var gender:Gender? {
+        get {
+            return Gender(rawValue: self.objectForKey(kGenderKey) as? String ?? "未知")
+        }
+        set {
+            self.setObject(newValue?.rawValue, forKey: kGenderKey)
+        }
+    }
+
+    
+    
+    var myBirthday:String? {
+        get {
+            return self.objectForKey(kBirthdayKey) as? String
+        }
+        set {
+            self.setObject(newValue, forKey: kBirthdayKey)
+        }
+    }
+    
     var avatar:AVFile? {
+        
         get {
             return self.objectForKey(kAvatarKey) as? AVFile
         }

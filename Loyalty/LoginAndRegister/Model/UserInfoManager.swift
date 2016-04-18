@@ -20,14 +20,14 @@ class UserInfoManager {
         return sharedInstance
     }
     
-    func currentUser() -> AVUser? {
-        if self.isLogin() {
+    var currentUser:AVUser? {
+        if self.isLogin {
             return AVUser.currentUser()
         }
         return nil
     }
     
-    func isLogin() -> Bool {
+    var isLogin:Bool {
         if let user = AVUser.currentUser() {
             return user.isAuthenticated()
         } else {
@@ -37,11 +37,7 @@ class UserInfoManager {
     
     func login(phone:String,password:String,completionHandler: (result:Bool, errorMsg:String?) -> Void ) {
         AVUser.logInWithUsernameInBackground(phone, password: password) { (user, error) -> Void in
-            var errorMsg:String?
-            if error != nil {
-                errorMsg = error.userInfo["error"] as? String ?? "未知错误"
-            }
-            completionHandler(result: user != nil , errorMsg: errorMsg)
+            completionHandler(result: user != nil , errorMsg: NSError.errorMsg(error))
         }
     }
     

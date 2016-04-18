@@ -17,7 +17,6 @@ protocol HasHiddenNavigation {
 extension HasHiddenNavigation where Self:UIViewController{
     func configureNavigationItems(){
         let backButton = BackButton(type: UIButtonType.Custom)
-        backButton.viewController = self
         let image = UIImage(named: "nav_back_shadow")
         backButton.setImage(image, forState: UIControlState.Normal)
         self.view.addSubview(backButton)
@@ -27,13 +26,12 @@ extension HasHiddenNavigation where Self:UIViewController{
             backButton.width == image?.size.width ?? 0
             backButton.height == image?.size.height ?? 0
         }
-        backButton.addTarget(backButton, action: "onBackButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
+        backButton.addTarget(backButton, action: #selector(BackButton.onBackButtonClicked), forControlEvents: UIControlEvents.TouchUpInside)
     }
 }
 
 class BackButton:UIButton {
-    weak var viewController:UIViewController?
     func onBackButtonClicked(){
-        viewController?.navigationController?.popViewControllerAnimated(true)
+        self.viewController()?.navigationController?.popViewControllerAnimated(true)
     }
 }
