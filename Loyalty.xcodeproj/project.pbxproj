@@ -40,6 +40,8 @@
 		125D911E1CC4BF5300AE5F1C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D911D1CC4BF5300AE5F1C /* UIView.swift */; };
 		125D91201CC4C46800AE5F1C /* EditUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D911F1CC4C46800AE5F1C /* EditUserInfoTableViewCell.swift */; };
 		125D91241CC4CB2F00AE5F1C /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91231CC4CB2F00AE5F1C /* ImagePickerManager.swift */; };
+		125D91281CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91261CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift */; };
+		125D91291CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125D91271CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib */; };
 		126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */; };
 		126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */; };
 		126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */; };
@@ -165,6 +167,8 @@
 		125D911D1CC4BF5300AE5F1C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Extension/UIView.swift; sourceTree = "<group>"; };
 		125D911F1CC4C46800AE5F1C /* EditUserInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditUserInfoTableViewCell.swift; path = Setting/View/EditUserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		125D91231CC4CB2F00AE5F1C /* ImagePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePickerManager.swift; path = Tools/ImagePickerManager.swift; sourceTree = "<group>"; };
+		125D91261CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OneRowEditInfoViewController.swift; path = Main/ViewController/OneRowEditInfoViewController.swift; sourceTree = "<group>"; };
+		125D91271CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OneRowEditInfoViewController.xib; path = Main/ViewController/OneRowEditInfoViewController.xib; sourceTree = "<group>"; };
 		126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HasHiddenNavigation.swift; path = Protocal/HasHiddenNavigation.swift; sourceTree = "<group>"; };
 		126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationInfoTableViewCell.swift; path = Activity/Views/LocationInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTimeInfoTableViewCell.swift; path = Activity/Views/ActivityTimeInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -348,6 +352,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		125D91251CC4CDB300AE5F1C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				125D91261CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift */,
+				125D91271CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		126E13701CBA871400A3CDFF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +464,7 @@
 		128027911C58BC9900C76EA6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				125D91251CC4CDB300AE5F1C /* ViewController */,
 				126E13701CBA871400A3CDFF /* ViewModel */,
 				1280271C1C5604BA00C76EA6 /* Main.storyboard */,
 			);
@@ -808,6 +822,7 @@
 				1280279D1C58BD9100C76EA6 /* ActivityStoryboard.storyboard in Resources */,
 				12FF679B1CC2527900E7860B /* TableViewCell.xib in Resources */,
 				128027971C58BCED00C76EA6 /* UserCenterStoryboard.storyboard in Resources */,
+				125D91291CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib in Resources */,
 				12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */,
 				12FF67931CC2527900E7860B /* CityViewController.xib in Resources */,
 				128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */,
@@ -931,6 +946,7 @@
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,
 				1280274A1C5607C300C76EA6 /* LeanCloudHelper.swift in Sources */,
 				128027AE1C58CAEE00C76EA6 /* ActivityRootViewController.swift in Sources */,
+				125D91281CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift in Sources */,
 				121924571C5A58C300A3D94E /* Float.swift in Sources */,
 				121924581C5A58C300A3D94E /* Int.swift in Sources */,
 				121924551C5A58C300A3D94E /* Double.swift in Sources */,

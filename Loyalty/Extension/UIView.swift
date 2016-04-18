@@ -19,7 +19,6 @@ extension UIView {
             return nextResponseView.traverseResponderChainForUIViewController()
         }
         return nil
-        
     }
     
     func viewController()->UIViewController? {

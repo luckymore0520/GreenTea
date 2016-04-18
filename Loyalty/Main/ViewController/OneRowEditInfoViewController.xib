@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneRowEditInfoViewController" customModule="Loyalty" customModuleProvider="target">
+            <connections>
+                <outlet property="editAreaView" destination="Oip-lg-vbV" id="KxX-3g-xII"/>
+                <outlet property="editContentTextField" destination="W8Z-HG-qiY" id="i0f-I9-WY3"/>
+                <outlet property="editTypeLabel" destination="ztc-9M-uhc" id="lou-95-rqi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oip-lg-vbV">
+                    <rect key="frame" x="0.0" y="10" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztc-9M-uhc">
+                            <rect key="frame" x="18" y="13" width="30" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.29411764705882354" green="0.25882352941176467" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18606269492" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="W8Z-HG-qiY">
+                            <rect key="frame" x="64" y="0.0" width="311" height="44"/>
+                            <color key="textColor" red="0.29411764705882354" green="0.25882352941176467" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ztc-9M-uhc" firstAttribute="leading" secondItem="Oip-lg-vbV" secondAttribute="leading" constant="18" id="Dt4-DF-EEK"/>
+                        <constraint firstItem="W8Z-HG-qiY" firstAttribute="leading" secondItem="ztc-9M-uhc" secondAttribute="trailing" constant="16" id="Ixb-H4-jwE"/>
+                        <constraint firstAttribute="bottom" secondItem="W8Z-HG-qiY" secondAttribute="bottom" id="Jye-1G-dFN"/>
+                        <constraint firstItem="W8Z-HG-qiY" firstAttribute="top" secondItem="Oip-lg-vbV" secondAttribute="top" id="LrD-14-5Oz"/>
+                        <constraint firstItem="ztc-9M-uhc" firstAttribute="centerY" secondItem="Oip-lg-vbV" secondAttribute="centerY" id="PxF-ua-rSu"/>
+                        <constraint firstAttribute="trailing" secondItem="W8Z-HG-qiY" secondAttribute="trailing" id="dU6-YX-p9y"/>
+                        <constraint firstAttribute="height" constant="44" id="e5w-nV-gHH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Oip-lg-vbV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2zM-JV-d2Z"/>
+                <constraint firstItem="Oip-lg-vbV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="7Oa-GJ-K19"/>
+                <constraint firstAttribute="trailing" secondItem="Oip-lg-vbV" secondAttribute="trailing" id="aWV-t3-gvC"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="434.5" y="369.5"/>
+        </view>
+    </objects>
+</document>

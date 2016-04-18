@@ -20,6 +20,7 @@ class EditUserInfoTableViewController: UITableViewController,ViewControllerPrese
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNavigationItem()
+        self.fillUserInfo()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,37 +34,37 @@ class EditUserInfoTableViewController: UITableViewController,ViewControllerPrese
     }
     
    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func fillUserInfo(){
+        guard let user = UserInfoManager.sharedManager.currentUser else { return }
+        self.nicknameLabel.text = user.nickname
+        self.genderLabel.text = user.gender?.rawValue
+        self.birthdayLabel.text = user.myBirthday
+        self.cityLabel.text = user.city
+        self.phoneNumLabel.text = user.username
     }
-    */
 
 }
 
 extension EditUserInfoTableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! EditUserInfoTableViewCell
+        let user = UserInfoManager.sharedManager.currentUser
         guard let cellType = cell.cellType else { return }
         switch cellType {
         case .Gender:
             let sexArray = ["男","女"]
             let initialSelection = UserInfoManager.sharedManager.currentUser?.gender?.rawValue == "女" ? 1 : 0
-            self.showActionSheet("请选择性别", selectionArray: sexArray, initialSelection: initialSelection, displayLabel:self.genderLabel, selectionHandler: { (selection) -> () in
-                let user = UserInfoManager.sharedManager.currentUser
+            self.showActionSheet("请选择性别", selectionArray: sexArray, initialSelection: initialSelection, displayLabel:self.genderLabel, selectionHandler: {
+                (selection) -> () in
                 user?.gender = Gender(rawValue: sexArray[selection])
                 user?.saveInBackground()
                 }, origin: cell)
         case .Birthday:
             let datePicker = ActionSheetDatePicker(title: "请选择生日", datePickerMode: UIDatePickerMode.Date, selectedDate: NSDate(), doneBlock: {
+                [unowned self]
                 picker, value, index in
                 let date = value as! NSDate
                 self.birthdayLabel.text = "\(date.year)-\(date.month)-\(date.days)"
-                let user = UserInfoManager.sharedManager.currentUser
                 user?.myBirthday = self.birthdayLabel.text
                 user?.saveInBackground()
                 return
@@ -80,6 +81,15 @@ extension EditUserInfoTableViewController {
         case .Avatar:
             ImagePickerManager.sharedManager.showCameraPicker(self, delegate: self, withEditing: true)
             break;
+        case .Nickname:
+            OneRowEditInfoViewController.jumpTo(self.navigationController, titleName: "编辑昵称", typeName: "昵称", defaultContent: user?.nickname, completionHandler: {
+                [unowned self]
+                (content) in
+                self.nicknameLabel.text = content
+                user?.nickname = content
+                user?.saveInBackground()
+                self.navigationController?.popViewControllerAnimated(true)
+            })
         default:break
         }
     }
