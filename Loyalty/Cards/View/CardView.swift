@@ -10,12 +10,17 @@ import UIKit
 
 class CardView: UIView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var loyaltyCoinCollectionView: UICollectionView!
+    var coinDataSource:LoyaltyCoinDataSource?
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    
+    func renderView(){
+        
+        self.collectionViewFlowLayout.itemSize = CGSizeMake(self.loyaltyCoinCollectionView.frame.width / 4.0 , 50)
+        self.collectionViewFlowLayout.minimumInteritemSpacing = 0
+        self.collectionViewFlowLayout.minimumLineSpacing = 20
+        self.coinDataSource = LoyaltyCoinDataSource(collectionView: loyaltyCoinCollectionView)
     }
-    */
 
 }

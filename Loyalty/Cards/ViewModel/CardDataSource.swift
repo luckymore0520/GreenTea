@@ -12,12 +12,12 @@ import Koloda
 class CardDataSource: KolodaViewDataSource {
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         let cardView = NSBundle.mainBundle().loadNibNamed("CardView", owner: nil, options: nil)[0] as! CardView
-        
+        cardView.renderView()
         return cardView
     }
     
     func kolodaNumberOfCards(koloda: KolodaView) -> UInt {
-        return 20
+        return 6
     }
 }
 

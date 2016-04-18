@@ -34,6 +34,7 @@
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
 		1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */; };
 		1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */; };
+		125D91161CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91151CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift */; };
 		126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */; };
 		126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */; };
 		126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */; };
@@ -153,6 +154,7 @@
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
 		1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingCellViewModel.swift; path = Setting/ViewModel/UserSettingCellViewModel.swift; sourceTree = "<group>"; };
 		1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingTableViewCell.swift; path = Setting/View/UserSettingTableViewCell.swift; sourceTree = "<group>"; };
+		125D91151CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoyaltyCoinDataSource.swift; path = Cards/ViewModel/LoyaltyCoinDataSource.swift; sourceTree = "<group>"; };
 		126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HasHiddenNavigation.swift; path = Protocal/HasHiddenNavigation.swift; sourceTree = "<group>"; };
 		126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationInfoTableViewCell.swift; path = Activity/Views/LocationInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTimeInfoTableViewCell.swift; path = Activity/Views/ActivityTimeInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				12514D291CC46F4500ADCBED /* CardDataSource.swift */,
+				125D91151CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				121924521C5A58C300A3D94E /* Bool.swift in Sources */,
 				1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */,
+				125D91161CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift in Sources */,
 				126E13761CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift in Sources */,
 				126E13691CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift in Sources */,
 				12FF679A1CC2527900E7860B /* TableViewCell.swift in Sources */,

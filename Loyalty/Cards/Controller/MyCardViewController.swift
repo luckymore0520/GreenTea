@@ -12,12 +12,15 @@ import Koloda
 class MyCardViewController: UIViewController {
 
     @IBOutlet weak var kolodaView: KolodaView!
-    
+    @IBOutlet weak var currentNumLabel: UILabel!
+
     var cardDataSource = CardDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.currentNumLabel.text = "\(self.kolodaView.currentCardIndex + 1)/\(self.kolodaView.countOfCards)"
         kolodaView.dataSource = cardDataSource
+        kolodaView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -36,16 +39,14 @@ class MyCardViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension MyCardViewController:KolodaViewDelegate {
+    func koloda(koloda: KolodaView, didShowCardAtIndex index: UInt) {
+        self.currentNumLabel.text = "\(koloda.currentCardIndex + 1)/\(koloda.countOfCards)"
     }
-    */
-
+    
+    func kolodaDidRunOutOfCards(koloda: KolodaView) {
+        koloda.resetCurrentCardIndex()
+    }
 }

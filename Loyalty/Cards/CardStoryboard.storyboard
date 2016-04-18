@@ -32,6 +32,12 @@
                                 <rect key="frame" x="20" y="73" width="280" height="445"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1/36" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB4-K3-7GE">
+                                <rect key="frame" x="139" y="534" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -39,9 +45,11 @@
                             <constraint firstItem="JqI-rt-z7l" firstAttribute="top" secondItem="tGv-VB-F8C" secondAttribute="top" constant="37" id="Fya-3E-OOu"/>
                             <constraint firstItem="gcQ-Y2-z4P" firstAttribute="top" secondItem="ZFH-jU-eiK" secondAttribute="bottom" constant="50" id="MwE-fP-UVn"/>
                             <constraint firstItem="ZFH-jU-eiK" firstAttribute="leading" secondItem="tGv-VB-F8C" secondAttribute="leading" constant="20" id="PiT-SD-yr0"/>
+                            <constraint firstItem="eB4-K3-7GE" firstAttribute="top" secondItem="ZFH-jU-eiK" secondAttribute="bottom" constant="16" id="Sw5-ks-8jn"/>
                             <constraint firstItem="nAM-XM-sMx" firstAttribute="centerY" secondItem="JqI-rt-z7l" secondAttribute="centerY" id="W1u-qr-rjG"/>
                             <constraint firstItem="13m-TA-BPe" firstAttribute="leading" secondItem="tGv-VB-F8C" secondAttribute="leading" id="Zgy-kS-vQT"/>
                             <constraint firstAttribute="trailing" secondItem="JqI-rt-z7l" secondAttribute="trailing" constant="21" id="d3d-af-GMY"/>
+                            <constraint firstItem="eB4-K3-7GE" firstAttribute="centerX" secondItem="ZFH-jU-eiK" secondAttribute="centerX" id="gi9-mQ-7Cg"/>
                             <constraint firstAttribute="trailing" secondItem="ZFH-jU-eiK" secondAttribute="trailing" constant="20" id="inL-Rm-lce"/>
                             <constraint firstItem="gcQ-Y2-z4P" firstAttribute="top" secondItem="13m-TA-BPe" secondAttribute="bottom" id="jtf-bK-YnR"/>
                             <constraint firstItem="ZFH-jU-eiK" firstAttribute="top" secondItem="JqI-rt-z7l" secondAttribute="bottom" constant="7" id="nQy-no-Ost"/>
@@ -50,6 +58,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentNumLabel" destination="eB4-K3-7GE" id="1sN-hv-rR5"/>
                         <outlet property="kolodaView" destination="ZFH-jU-eiK" id="0WA-XA-1OV"/>
                     </connections>
                 </viewController>
