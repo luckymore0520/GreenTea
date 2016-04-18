@@ -37,7 +37,10 @@ class UserInfoManager {
     
     func login(phone:String,password:String,completionHandler: (result:Bool, errorMsg:String?) -> Void ) {
         AVUser.logInWithUsernameInBackground(phone, password: password) { (user, error) -> Void in
-            let errorMsg = error == nil ? nil : error.localizedFailureReason
+            var errorMsg:String?
+            if error != nil {
+                errorMsg = error.userInfo["error"] as? String ?? "未知错误"
+            }
             completionHandler(result: user != nil , errorMsg: errorMsg)
         }
     }
@@ -78,7 +81,7 @@ class UserInfoManager {
 // MARK: - Code Timer
 extension UserInfoManager {
     func countDown()->Int {
-        self.verifyRemainTime--
+        self.verifyRemainTime -= 1
         if (self.verifyRemainTime <= 0) {
             self.verifyRemainTime = kLimitVerifySeconds
             return 0

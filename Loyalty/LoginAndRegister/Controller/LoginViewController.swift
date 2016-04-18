@@ -15,8 +15,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginButton.setDisableStyle()
-        self.setRightButton("注册", selector: Selector("onRegisterButtonClicked"))
-        self.setLeftButton("取消", selector: Selector("onCancelButtonClicked"))
+        self.setRightButton("注册", selector: #selector(LoginViewController.onRegisterButtonClicked))
+        self.setLeftButton("取消", selector: #selector(LoginViewController.onCancelButtonClicked))
         self.updateLoginButtonState()
     }
 

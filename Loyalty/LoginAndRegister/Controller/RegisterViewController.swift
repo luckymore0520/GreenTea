@@ -53,7 +53,7 @@ extension RegisterViewController {
         UserInfoManager.sharedManager.savedPhoneNumber = self.phoneTextField.text
         self.verifyButton.enabled = false
         self.verifyButton.titleLabel?.text = "\(UserInfoManager.sharedManager.verifyRemainTime)s"
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(RegisterViewController.update), userInfo: nil, repeats: true)
     }
     
     func update() {
@@ -98,6 +98,7 @@ extension RegisterViewController {
         UserInfoManager.sharedManager.requestSMSCode(self.phoneTextField.text!) { (result, errorMsg) -> Void in
             HUDHelper.removeLoading()
             if (result) {
+                HUDHelper.showText("短消息已发送")
                 self.startTimer()
             } else {
                 log.info(errorMsg)

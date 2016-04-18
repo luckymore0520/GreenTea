@@ -18,7 +18,6 @@ class MyCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.currentNumLabel.text = "\(self.kolodaView.currentCardIndex + 1)/\(self.kolodaView.countOfCards)"
         kolodaView.dataSource = cardDataSource
         kolodaView.delegate = self
         // Do any additional setup after loading the view.
@@ -27,6 +26,7 @@ class MyCardViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
+        self.currentNumLabel.text = "\(self.kolodaView.currentCardIndex + 1)/\(self.kolodaView.countOfCards)"
     }
     
     override func viewWillDisappear(animated: Bool) {
