@@ -25,15 +25,24 @@ let kAvatarKey = "myAvatar" //头像
 let kUserTypeKey = "userType" //用户类型
 let kGenderKey = "sex" //性别
 let kBirthdayKey = "birthday" //生日
-let kcityKey = "currentCity" //城市
-
+let kCityKey = "currentCity" //城市
+let kNickname = "nickName"
 extension AVUser {
-    var city:String? {
+    var nickname:String? {
         get {
-            return self.objectForKey(kcityKey) as? String
+            return self.objectForKey(kNickname) as? String
         }
         set {
-            self.setObject(newValue, forKey: kcityKey)
+            self.setObject(newValue, forKey: kNickname)
+        }
+    }
+    
+    var city:String? {
+        get {
+            return self.objectForKey(kCityKey) as? String
+        }
+        set {
+            self.setObject(newValue, forKey: kCityKey)
         }
     }
     

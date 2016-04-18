@@ -21,7 +21,7 @@ class LeanCloudHelper {
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
     }
     
-    static func uploadImage(image:UIImage,completionHandler:(file:AVFile,errorMsg:String?) -> Void){
+    static func uploadImage(image:UIImage,completionHandler:(file:AVFile?,errorMsg:String?) -> Void){
         guard let imageData = UIImagePNGRepresentation(image) else { return }
         let file = AVFile(data: imageData)
         file.saveInBackgroundWithBlock { (succeed, error) in
@@ -29,7 +29,7 @@ class LeanCloudHelper {
                 log.info("文件上传成功,地址\(file.url)")
                 completionHandler(file: file, errorMsg: nil)
             } else {
-                
+                completionHandler(file: nil, errorMsg: NSError.errorMsg(error))
             }
         }
     }

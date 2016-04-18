@@ -302,7 +302,7 @@
                         <sections>
                             <tableViewSection id="uEX-cp-ben">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="rYs-uP-QhU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="rYs-uP-QhU" customClass="EditUserInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rYs-uP-QhU" id="NXn-EE-CSW">
@@ -327,12 +327,15 @@
                                                 <constraint firstItem="b0E-SN-VPJ" firstAttribute="leading" secondItem="NXn-EE-CSW" secondAttribute="leading" constant="18" id="fO8-Cc-emC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="cellTypeString" value="头像"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle=" " id="rg6-5J-iPr">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="ZFJ-jO-7IZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="ZFJ-jO-7IZ" customClass="EditUserInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="149" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZFJ-jO-7IZ" id="S6x-N9-Wse">
@@ -359,8 +362,11 @@
                                                 <constraint firstItem="RuZ-4n-D5g" firstAttribute="leading" secondItem="S6x-N9-Wse" secondAttribute="leading" constant="18" id="tfa-AJ-SHo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="cellTypeString" value="昵称"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="xK2-ta-3NE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="xK2-ta-3NE" customClass="EditUserInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="193" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xK2-ta-3NE" id="LfR-Qt-eNb">
@@ -387,8 +393,11 @@
                                                 <constraint firstItem="a6u-wn-Xdw" firstAttribute="leading" secondItem="LfR-Qt-eNb" secondAttribute="leading" constant="18" id="seg-Mb-672"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="cellTypeString" value="性别"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="GGH-Pv-gZm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="GGH-Pv-gZm" customClass="EditUserInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="237" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GGH-Pv-gZm" id="lSW-xt-YbC">
@@ -415,8 +424,11 @@
                                                 <constraint firstItem="fMB-Aw-rBr" firstAttribute="centerY" secondItem="lSW-xt-YbC" secondAttribute="centerY" id="ZjV-AV-PEm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="cellTypeString" value="生日"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="uT5-OZ-Jnq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="uT5-OZ-Jnq" customClass="EditUserInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="281" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uT5-OZ-Jnq" id="GcC-hM-U3e">
@@ -443,12 +455,15 @@
                                                 <constraint firstItem="Avk-WI-PJz" firstAttribute="centerY" secondItem="GcC-hM-U3e" secondAttribute="centerY" id="yne-P8-h01"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="cellTypeString" value="常居地"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle=" " id="mCt-0a-zds">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="QhU-NN-Sqa">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="QhU-NN-Sqa" customClass="EditUserInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="335" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QhU-NN-Sqa" id="C0H-Bf-hwE">
@@ -475,6 +490,9 @@
                                                 <constraint firstItem="3UT-Am-6bE" firstAttribute="centerY" secondItem="C0H-Bf-hwE" secondAttribute="centerY" id="ms4-f7-6sd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="cellTypeString" value="手机"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -485,6 +503,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="个人信息" id="8UV-dQ-a1y"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="b0E-SN-VPJ" id="WUh-UM-Vng"/>
+                        <outlet property="birthdayLabel" destination="ON1-bT-MS5" id="VKi-hz-pVG"/>
+                        <outlet property="cityLabel" destination="Avk-WI-PJz" id="tT7-lr-rBs"/>
+                        <outlet property="genderLabel" destination="x5I-pc-OUz" id="qtP-Ip-GKC"/>
+                        <outlet property="nicknameLabel" destination="fVk-7e-LJd" id="VG5-Kg-qop"/>
+                        <outlet property="phoneNumLabel" destination="cso-RM-y62" id="Tbf-Ns-Iul"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kH-gs-eUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

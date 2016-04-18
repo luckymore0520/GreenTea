@@ -19,7 +19,8 @@ class HUDHelper {
         PKHUD.sharedHUD.hide(animated: true, completion: nil)
     }
     
-    static func showText(text:String!){
+    static func showText(text:String?){
+        guard let text = text else { return }
         PKHUD.sharedHUD.contentView = PKHUDTextView(text: text)
         PKHUD.sharedHUD.show()
     }

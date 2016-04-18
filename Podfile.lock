@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.0.5)
   - AVOSCloudCrashReportingDynamic (3.2.7):
     - AVOSCloudDynamic
   - AVOSCloudDynamic (3.2.7)
@@ -10,6 +11,7 @@ PODS:
   - XCGLogger (3.1.1)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0 (from `https://github.com/skywinder/ActionSheetPicker-3.0.git`)
   - AVOSCloudCrashReportingDynamic
   - AVOSCloudDynamic
   - Cartography
@@ -17,7 +19,17 @@ DEPENDENCIES:
   - PKHUD
   - XCGLogger (~> 3.1.1)
 
+EXTERNAL SOURCES:
+  ActionSheetPicker-3.0:
+    :git: https://github.com/skywinder/ActionSheetPicker-3.0.git
+
+CHECKOUT OPTIONS:
+  ActionSheetPicker-3.0:
+    :commit: 60f64e3adcc86cb2ee20cf96a97d55a0b833fd92
+    :git: https://github.com/skywinder/ActionSheetPicker-3.0.git
+
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
   AVOSCloudCrashReportingDynamic: 603806f916a5e8f201e151ff84d8ad2a17c2b6f5
   AVOSCloudDynamic: 1a64ed78c897be98d54d75fd4c8cff0a21e9eeb6
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
