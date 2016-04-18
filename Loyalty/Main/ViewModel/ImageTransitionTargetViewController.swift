@@ -11,12 +11,19 @@ import UIKit
 
 protocol ImageTransitionTargetViewController {
     var targetImageView:UIImageView { get }
+    var targetImageViewFrame:CGRect { get }
     var targetView:UIView { get }
     func prepareForAnimate()
     func doAnimation(duration:NSTimeInterval, completion:(finished:Bool) -> Void)
 }
 
 extension ImageTransitionTargetViewController {
+    var targetImageViewFrame:CGRect {
+        get {
+            return self.targetImageView.superview?.convertRect(self.targetImageView.frame, toView: self.targetView) ?? self.targetView.frame
+        }
+    }
+    
     func prepareForAnimate() {
         self.targetImageView.alpha = 0
         self.targetView.alpha = 0

@@ -303,4 +303,8 @@ class CityViewController: UIViewController,UISearchDisplayDelegate,UITableViewDe
         self.tableview.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None);
     }
     
+    
+    func cancelSelect(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

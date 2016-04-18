@@ -29,6 +29,7 @@
 		1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219244E1C5A58C300A3D94E /* Sequence.swift */; };
 		1219245D1C5A58C300A3D94E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219244F1C5A58C300A3D94E /* String.swift */; };
 		1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924501C5A58C300A3D94E /* UIColorExtension.swift */; };
+		12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12514D291CC46F4500ADCBED /* CardDataSource.swift */; };
 		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
 		1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */; };
@@ -73,6 +74,11 @@
 		128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027CA1C58F43500C76EA6 /* CellReusable.swift */; };
 		128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */; };
 		12C7F8321CC25FE000805820 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8311CC25FE000805820 /* UILabel.swift */; };
+		12C7F8351CC2689F00805820 /* MyCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8341CC2689F00805820 /* MyCardViewController.swift */; };
+		12C7F8381CC2747E00805820 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8371CC2747E00805820 /* CardView.swift */; };
+		12C7F83A1CC2748D00805820 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C7F8391CC2748D00805820 /* CardView.xib */; };
+		12C7F83D1CC27A6D00805820 /* MoneyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F83B1CC27A6D00805820 /* MoneyCollectionViewCell.swift */; };
+		12C7F83E1CC27A6D00805820 /* MoneyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C7F83C1CC27A6D00805820 /* MoneyCollectionViewCell.xib */; };
 		12FF67911CC2527900E7860B /* CityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF676F1CC2527900E7860B /* CityButton.swift */; };
 		12FF67921CC2527900E7860B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67701CC2527900E7860B /* CityViewController.swift */; };
 		12FF67931CC2527900E7860B /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FF67711CC2527900E7860B /* CityViewController.xib */; };
@@ -142,6 +148,7 @@
 		1219244E1C5A58C300A3D94E /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		1219244F1C5A58C300A3D94E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		121924501C5A58C300A3D94E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		12514D291CC46F4500ADCBED /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardDataSource.swift; path = Cards/ViewModel/CardDataSource.swift; sourceTree = "<group>"; };
 		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
 		1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingCellViewModel.swift; path = Setting/ViewModel/UserSettingCellViewModel.swift; sourceTree = "<group>"; };
@@ -192,6 +199,11 @@
 		128027CA1C58F43500C76EA6 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellReusable.swift; path = Protocal/CellReusable.swift; sourceTree = "<group>"; };
 		128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginAndRegisterStoryboard.storyboard; path = LoginAndRegister/LoginAndRegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		12C7F8311CC25FE000805820 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel.swift; path = Extension/UILabel.swift; sourceTree = "<group>"; };
+		12C7F8341CC2689F00805820 /* MyCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCardViewController.swift; path = Cards/Controller/MyCardViewController.swift; sourceTree = "<group>"; };
+		12C7F8371CC2747E00805820 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Cards/View/CardView.swift; sourceTree = "<group>"; };
+		12C7F8391CC2748D00805820 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardView.xib; path = Cards/View/CardView.xib; sourceTree = "<group>"; };
+		12C7F83B1CC27A6D00805820 /* MoneyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyCollectionViewCell.swift; path = Cards/View/MoneyCollectionViewCell.swift; sourceTree = "<group>"; };
+		12C7F83C1CC27A6D00805820 /* MoneyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MoneyCollectionViewCell.xib; path = Cards/View/MoneyCollectionViewCell.xib; sourceTree = "<group>"; };
 		12FF676D1CC2521B00E7860B /* Loyalty-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loyalty-Bridge-Header.h"; sourceTree = "<group>"; };
 		12FF676F1CC2527900E7860B /* CityButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityButton.swift; sourceTree = "<group>"; };
 		12FF67701CC2527900E7860B /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +315,14 @@
 			);
 			name = ExSwift;
 			path = Vendor/ExSwift;
+			sourceTree = "<group>";
+		};
+		12514D281CC46F2000ADCBED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				12514D291CC46F4500ADCBED /* CardDataSource.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		1254296D1C5F7F1C00D89004 /* View */ = {
@@ -435,6 +455,9 @@
 		128027931C58BCAC00C76EA6 /* LoyaltyCards */ = {
 			isa = PBXGroup;
 			children = (
+				12514D281CC46F2000ADCBED /* ViewModel */,
+				12C7F8361CC2746D00805820 /* View */,
+				12C7F8331CC2688300805820 /* Controller */,
 				1280279A1C58BD6000C76EA6 /* CardStoryboard.storyboard */,
 			);
 			name = LoyaltyCards;
@@ -547,6 +570,25 @@
 				128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */,
 			);
 			name = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		12C7F8331CC2688300805820 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				12C7F8341CC2689F00805820 /* MyCardViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		12C7F8361CC2746D00805820 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12C7F8371CC2747E00805820 /* CardView.swift */,
+				12C7F8391CC2748D00805820 /* CardView.xib */,
+				12C7F83B1CC27A6D00805820 /* MoneyCollectionViewCell.swift */,
+				12C7F83C1CC27A6D00805820 /* MoneyCollectionViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		12FF676E1CC2527900E7860B /* CityListView */ = {
@@ -736,6 +778,8 @@
 			files = (
 				12FF67991CC2527900E7860B /* SectionView.xib in Resources */,
 				128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */,
+				12C7F83A1CC2748D00805820 /* CardView.xib in Resources */,
+				12C7F83E1CC27A6D00805820 /* MoneyCollectionViewCell.xib in Resources */,
 				12FF67971CC2527900E7860B /* citydict.plist in Resources */,
 				128027201C5604BA00C76EA6 /* Assets.xcassets in Resources */,
 				12FF67951CC2527900E7860B /* CollectionViewCell.xib in Resources */,
@@ -799,12 +843,15 @@
 				127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */,
 				126E136D1CBA793D00A3CDFF /* ActivityToolBar.swift in Sources */,
 				126E13781CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift in Sources */,
+				12C7F83D1CC27A6D00805820 /* MoneyCollectionViewCell.swift in Sources */,
 				12FF679F1CC2527900E7860B /* ChineseInclude.m in Sources */,
 				12FF67961CC2527900E7860B /* LocationManager.swift in Sources */,
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
+				12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */,
 				12FF67981CC2527900E7860B /* SectionView.swift in Sources */,
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
+				12C7F8351CC2689F00805820 /* MyCardViewController.swift in Sources */,
 				1219245A1C5A58C300A3D94E /* NSDate.swift in Sources */,
 				126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */,
 				120902461C5F78BC00772CBA /* UserSettingTableModel.swift in Sources */,
@@ -833,6 +880,7 @@
 				1219245D1C5A58C300A3D94E /* String.swift in Sources */,
 				12FF67941CC2527900E7860B /* CollectionViewCell.swift in Sources */,
 				127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */,
+				12C7F8381CC2747E00805820 /* CardView.swift in Sources */,
 				1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */,
 				128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */,
 				121924511C5A58C300A3D94E /* Array.swift in Sources */,

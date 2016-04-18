@@ -26,6 +26,10 @@ class ActivityListViewModel: NSObject {
 
     func loadData(){
     }
+    
+    func estimateHeightForEachRow() -> CGFloat{
+        return ActivityTableViewCell.rowHeight
+    }
 }
 
 

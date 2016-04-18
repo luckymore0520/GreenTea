@@ -23,6 +23,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
         self.configureNavigationItems()
         self.activityDetailViewModel = ActivityDetailViewModel(tableView: self.tableView, activity: Activity())
         self.toolBar.activityType = ActivityType.Loyalty
+        self.tableView.tableHeaderView?.frame = self.targetImageViewFrame
         // Do any additional setup after loading the view.
     }
 
@@ -46,18 +47,6 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
     }
 }
 
-extension ActivityDetailViewController:ImageTransitionTargetViewController {
-    var targetImageView:UIImageView {
-        get {
-            return self.activityImageView
-        }
-    }
-    var targetView:UIView {
-        get {
-            return self.view
-        }
-    }
-}
 
 extension ActivityDetailViewController:UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -84,4 +73,25 @@ extension ActivityDetailViewController:UITableViewDelegate {
 // MARK: - Action
 extension ActivityDetailViewController {
 
+}
+
+// For Animation
+extension ActivityDetailViewController:ImageTransitionTargetViewController {
+    var targetImageView:UIImageView {
+        get {
+            return self.activityImageView
+        }
+    }
+    
+    var targetImageViewFrame: CGRect {
+        get {
+            return CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.width * 8 / 15)
+        }
+    }
+    
+    var targetView:UIView {
+        get {
+            return self.view
+        }
+    }
 }

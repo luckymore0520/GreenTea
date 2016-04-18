@@ -43,7 +43,6 @@ class ActivityTransitioning: NSObject,UIViewControllerAnimatedTransitioning {
         }
         
         containerView.addSubview(imageTransitionTargetViewController.targetView)
-        let targetImageView = imageTransitionTargetViewController.targetImageView
         // draw a snapshot of the imageView
         let absoluteFromImageViewFrame = selectedImageView.superview?.convertRect(selectedImageView.frame, toView: containerView) ?? selectedImageView.frame
         let snapShotImageView = UIImageView(frame: absoluteFromImageViewFrame)
@@ -52,7 +51,7 @@ class ActivityTransitioning: NSObject,UIViewControllerAnimatedTransitioning {
         containerView.addSubview(snapShotImageView)
         snapShotImageView.frame = absoluteFromImageViewFrame
         snapShotImageView.contentMode = selectedImageView.contentMode
-        let absoluteTargetImageViewFrame = targetImageView.superview?.convertRect(targetImageView.frame, toView: containerView) ?? targetImageView.frame
+        let absoluteTargetImageViewFrame = imageTransitionTargetViewController.targetImageViewFrame
         // from view prepare for animation
         imageTransitionTargetViewController.prepareForAnimate()
         // start the first animation

@@ -17,7 +17,7 @@ class ActivityRootViewController: UIViewController {
         self.navigationController?.delegate = NavigationTransitionManager.sharedManager
         self.buildTitleView()
         self.buildChildViews()
-        self.setLeftButton(UserDefaultTool.stringForKey(cityKey) ?? "选择城市",imageName: "定位_白", selector: "selectCity")
+        self.setLeftButton(UserDefaultTool.stringForKey(cityKey) ?? "选择城市",imageName: "定位_白", selector: #selector(ActivityRootViewController.showCityView))
         self.navigationController?.navigationBar.translucent = false
         locationManager.delegate = self
         locationManager.startLocationCity()
@@ -31,25 +31,22 @@ class ActivityRootViewController: UIViewController {
 
 extension ActivityRootViewController:LocationManagerDelegate {
     func locationCity(cityName: String) {
-        self.setLeftButton(cityName,imageName: "定位_白", selector: "selectCity")
+        self.setLeftButton(cityName,imageName: "定位_白", selector: #selector(ActivityRootViewController.showCityView))
     }
     
-    func selectCity(){
+    func showCityView(){
         let cityViewController = CityViewController()
         cityViewController.delegate = self
         let navigationController = UINavigationController(rootViewController: cityViewController)
-        cityViewController.setLeftButton("取消", selector: "cancelSelect")
+        cityViewController.setLeftButton("取消", selector: #selector(CityViewController.cancelSelect))
         self.presentViewController(navigationController, animated: true, completion: nil)
     }
-    
-    func cancelSelect(){
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+
 }
 
 extension ActivityRootViewController:CityViewControllerDelegate {
     func selectCity(city: String) {
-        self.setLeftButton(city,imageName: "定位_白", selector: "selectCity")
+        self.setLeftButton(city,imageName: "定位_白", selector:#selector(ActivityRootViewController.showCityView))
         UserDefaultTool.saveValueForKey(cityKey, value: city)
     }
 }
@@ -60,7 +57,7 @@ extension ActivityRootViewController {
         let segmentControl = UISegmentedControl(items: self.activityTypes.map({
             activity in activity.rawValue
         }))
-        segmentControl.addTarget(self, action: Selector("onTitleChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        segmentControl.addTarget(self, action: #selector(ActivityRootViewController.onTitleChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
         segmentControl.selectedSegmentIndex = 0
         self.navigationItem.titleView = segmentControl
     }

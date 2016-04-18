@@ -10,11 +10,13 @@ import UIKit
 
 class ActivityTableViewCell: UITableViewCell {
 
+    static let rowHeight = UIScreen.mainScreen().bounds.size.width * 8.0 / 15.0 + 60
     @IBOutlet weak var activityImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

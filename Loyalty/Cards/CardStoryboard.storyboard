@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6jE-Lc-HGK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6jE-Lc-HGK">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--卡包-->
         <scene sceneID="Dxa-3n-uTz">
             <objects>
-                <viewController title="卡包" id="6jE-Lc-HGK" sceneMemberID="viewController">
+                <viewController title="卡包" id="6jE-Lc-HGK" customClass="MyCardViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DqN-GU-zIA"/>
                         <viewControllerLayoutGuide type="bottom" id="gcQ-Y2-z4P"/>
@@ -16,12 +16,51 @@
                     <view key="view" contentMode="scaleToFill" id="tGv-VB-F8C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_background" translatesAutoresizingMaskIntoConstraints="NO" id="13m-TA-BPe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqI-rt-z7l">
+                                <rect key="frame" x="270" y="37" width="29" height="29"/>
+                                <state key="normal" image="卡包删除"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAM-XM-sMx">
+                                <rect key="frame" x="233" y="39" width="27" height="26"/>
+                                <state key="normal" image="卡包分享"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFH-jU-eiK" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="20" y="73" width="280" height="445"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="13m-TA-BPe" firstAttribute="top" secondItem="tGv-VB-F8C" secondAttribute="top" id="Afu-Ny-7IA"/>
+                            <constraint firstItem="JqI-rt-z7l" firstAttribute="top" secondItem="tGv-VB-F8C" secondAttribute="top" constant="37" id="Fya-3E-OOu"/>
+                            <constraint firstItem="gcQ-Y2-z4P" firstAttribute="top" secondItem="ZFH-jU-eiK" secondAttribute="bottom" constant="50" id="MwE-fP-UVn"/>
+                            <constraint firstItem="ZFH-jU-eiK" firstAttribute="leading" secondItem="tGv-VB-F8C" secondAttribute="leading" constant="20" id="PiT-SD-yr0"/>
+                            <constraint firstItem="nAM-XM-sMx" firstAttribute="centerY" secondItem="JqI-rt-z7l" secondAttribute="centerY" id="W1u-qr-rjG"/>
+                            <constraint firstItem="13m-TA-BPe" firstAttribute="leading" secondItem="tGv-VB-F8C" secondAttribute="leading" id="Zgy-kS-vQT"/>
+                            <constraint firstAttribute="trailing" secondItem="JqI-rt-z7l" secondAttribute="trailing" constant="21" id="d3d-af-GMY"/>
+                            <constraint firstAttribute="trailing" secondItem="ZFH-jU-eiK" secondAttribute="trailing" constant="20" id="inL-Rm-lce"/>
+                            <constraint firstItem="gcQ-Y2-z4P" firstAttribute="top" secondItem="13m-TA-BPe" secondAttribute="bottom" id="jtf-bK-YnR"/>
+                            <constraint firstItem="ZFH-jU-eiK" firstAttribute="top" secondItem="JqI-rt-z7l" secondAttribute="bottom" constant="7" id="nQy-no-Ost"/>
+                            <constraint firstAttribute="trailing" secondItem="13m-TA-BPe" secondAttribute="trailing" id="rre-RO-Vts"/>
+                            <constraint firstItem="JqI-rt-z7l" firstAttribute="leading" secondItem="nAM-XM-sMx" secondAttribute="trailing" constant="10" id="yRA-1q-TDK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="kolodaView" destination="ZFH-jU-eiK" id="0WA-XA-1OV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xk-J9-byn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="179" y="215"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="card_background" width="750" height="1334"/>
+        <image name="卡包分享" width="27" height="26"/>
+        <image name="卡包删除" width="29" height="29"/>
+    </resources>
 </document>

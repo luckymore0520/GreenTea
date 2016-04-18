@@ -55,8 +55,9 @@ extension ActivityListViewController:ImageTransitionFromViewController {
 }
 
 extension ActivityListViewController:UITableViewDelegate {
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 260
+        return self.activityListViewModel?.estimateHeightForEachRow() ?? 0
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

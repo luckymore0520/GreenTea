@@ -61,7 +61,9 @@ extension UserSettingViewController:UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView(frame: CGRectZero)
+        let view = UIView(frame: CGRectZero)
+        view.backgroundColor = UIColor.clearColor()
+        return view
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
