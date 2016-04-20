@@ -59,6 +59,9 @@ extension UserSettingViewController:UITableViewDelegate {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         if let settingCellAction = self.tableViewModel?.settingCellArray[indexPath.section][indexPath.row] {
             switch settingCellAction {
+            case .BecomeBusiness:
+                let mapViewController = MAMapViewController()
+                self.navigationController?.pushViewController(mapViewController, animated: true)
             case .Logout:
                 self.tryLogout()
             default:

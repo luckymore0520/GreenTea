@@ -12,3 +12,8 @@
 /** 定位*/
 #include <CoreLocation/CLLocationManagerDelegate.h>
 
+/**
+ *  高德地图
+ */
+#import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>

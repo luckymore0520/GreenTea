@@ -12,7 +12,7 @@ pod 'Cartography'
 pod 'Koloda'
 pod 'ActionSheetPicker-3.0', :git => 'https://github.com/skywinder/ActionSheetPicker-3.0.git'
 pod ‘Kingfisher’
-
+pod 'AMapSearch'
 end
 
 post_install do |installer|

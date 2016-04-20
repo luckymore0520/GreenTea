@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //初始化LeanCloud
         LeanCloudHelper.configureLeanCloudWithOptions(launchOptions)
+        AMapTool.configureAMapKit()
         //初始化导航栏和TabBar样式
         configureGlobalAppearce()
         //初始化界面

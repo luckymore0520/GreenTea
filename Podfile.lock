@@ -1,5 +1,6 @@
 PODS:
   - ActionSheetPicker-3.0 (2.0.5)
+  - AMapSearch (3.3.0)
   - AVOSCloudCrashReportingDynamic (3.2.7):
     - AVOSCloudDynamic
   - AVOSCloudDynamic (3.2.7)
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0 (from `https://github.com/skywinder/ActionSheetPicker-3.0.git`)
+  - AMapSearch
   - AVOSCloudCrashReportingDynamic
   - AVOSCloudDynamic
   - Cartography
@@ -32,6 +34,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
+  AMapSearch: cff4faf59c007f7d1f2bae2d7170c3912783981a
   AVOSCloudCrashReportingDynamic: 603806f916a5e8f201e151ff84d8ad2a17c2b6f5
   AVOSCloudDynamic: 1a64ed78c897be98d54d75fd4c8cff0a21e9eeb6
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
