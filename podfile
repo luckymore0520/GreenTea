@@ -13,6 +13,7 @@ pod 'Koloda'
 pod 'ActionSheetPicker-3.0', :git => 'https://github.com/skywinder/ActionSheetPicker-3.0.git'
 pod ‘Kingfisher’
 pod 'AMapSearch'
+pod 'Eureka'
 end
 
 post_install do |installer|

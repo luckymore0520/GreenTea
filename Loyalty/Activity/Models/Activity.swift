@@ -15,11 +15,31 @@ enum ActivityType:String{
 }
 
 class Shop: AVObject, AVSubclassing {
-    @NSManaged var shopName:String!
-    @NSManaged var rate:NSNumber!
-    @NSManaged var commentCount:NSNumber!
-    @NSManaged var location:NSValue!
-    @NSManaged var locationName:String!
+    @NSManaged var shopName:String
+    @NSManaged var rate:NSNumber
+    @NSManaged var commentCount:NSNumber
+    @NSManaged var location:AVGeoPoint
+    @NSManaged var locationName:String
+    @NSManaged var phoneNumber:String
+    @NSManaged var shopDescription:String
+    @NSManaged var avatar:AVFile
+    @NSManaged var user:AVUser
+
+    init(shopName:String,location:CGPoint,locationName:String,phoneNumber:String,description:String,avatar:AVFile){
+        super.init()
+        self.rate = 0
+        self.commentCount = 0
+        self.shopName = shopName
+        self.locationName = locationName
+        self.location = AVGeoPoint(latitude: Double(location.x), longitude: Double(location.y))
+        self.phoneNumber = phoneNumber
+        self.avatar = avatar
+        self.shopDescription = description
+        if let user = UserInfoManager.sharedManager.currentUser {
+            self.user = user
+        }
+    }
+    
     static func parseClassName() -> String! {
         return "Shop"
     }

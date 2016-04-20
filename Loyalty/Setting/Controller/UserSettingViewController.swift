@@ -60,8 +60,9 @@ extension UserSettingViewController:UITableViewDelegate {
         if let settingCellAction = self.tableViewModel?.settingCellArray[indexPath.section][indexPath.row] {
             switch settingCellAction {
             case .BecomeBusiness:
-                let mapViewController = MAMapViewController()
-                self.navigationController?.pushViewController(mapViewController, animated: true)
+                let shopCreationViewController = ShopCreationViewController()
+                shopCreationViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(shopCreationViewController, animated: true)
             case .Logout:
                 self.tryLogout()
             default:

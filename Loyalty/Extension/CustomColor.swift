@@ -18,6 +18,10 @@ extension UIColor {
         return UIColor(hexString: "BFDBBA")!
     }
     
+    static func globalViewColor() -> UIColor {
+        return UIColor(hexString: "F3F3F3")!
+    }
+    
     static func globalLightBlueColor() -> UIColor {
         return UIColor(hexString: "6BD2FB", alpha: 0.5)!
 

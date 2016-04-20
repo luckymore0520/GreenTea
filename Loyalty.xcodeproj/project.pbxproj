@@ -65,6 +65,7 @@
 		126E13741CBA894500A3CDFF /* ActivityTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13731CBA894500A3CDFF /* ActivityTransitioning.swift */; };
 		126E13761CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13751CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift */; };
 		126E13781CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13771CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift */; };
+		12767CC71CC762B800DD0B4F /* ShopCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767CC61CC762B800DD0B4F /* ShopCreationViewController.swift */; };
 		127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FE81C5B98930091837D /* RegisterViewController.swift */; };
 		127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEA1C5B98B10091837D /* UserInfoManager.swift */; };
 		127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEC1C5B98B80091837D /* LoginViewController.swift */; };
@@ -205,6 +206,7 @@
 		126E13731CBA894500A3CDFF /* ActivityTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTransitioning.swift; path = Activity/Models/ActivityTransitioning.swift; sourceTree = "<group>"; };
 		126E13751CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTransitionTargetViewController.swift; path = Main/ViewModel/ImageTransitionTargetViewController.swift; sourceTree = "<group>"; };
 		126E13771CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTransitionFromViewController.swift; path = Main/ViewModel/ImageTransitionFromViewController.swift; sourceTree = "<group>"; };
+		12767CC61CC762B800DD0B4F /* ShopCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCreationViewController.swift; path = Setting/Controller/ShopCreationViewController.swift; sourceTree = "<group>"; };
 		127C7FE81C5B98930091837D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = LoginAndRegister/Controller/RegisterViewController.swift; sourceTree = "<group>"; };
 		127C7FEA1C5B98B10091837D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoManager.swift; path = LoginAndRegister/Model/UserInfoManager.swift; sourceTree = "<group>"; };
 		127C7FEC1C5B98B80091837D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LoginAndRegister/Controller/LoginViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 			children = (
 				120902411C5F76FF00772CBA /* UserSettingViewController.swift */,
 				125D91191CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift */,
+				12767CC61CC762B800DD0B4F /* ShopCreationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1000,6 +1003,7 @@
 				128027AE1C58CAEE00C76EA6 /* ActivityRootViewController.swift in Sources */,
 				125D91281CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift in Sources */,
 				121924571C5A58C300A3D94E /* Float.swift in Sources */,
+				12767CC71CC762B800DD0B4F /* ShopCreationViewController.swift in Sources */,
 				121924581C5A58C300A3D94E /* Int.swift in Sources */,
 				121924551C5A58C300A3D94E /* Double.swift in Sources */,
 				128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */,

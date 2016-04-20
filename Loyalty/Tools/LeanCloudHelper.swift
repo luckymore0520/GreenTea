@@ -19,6 +19,8 @@ class LeanCloudHelper {
         AVOSCloud.setAllLogsEnabled(true)
         AVOSCloud.setApplicationId(appId, clientKey: appKey)
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        Shop.registerSubclass()
+        Activity.registerSubclass()
     }
     
     static func uploadImage(image:UIImage,completionHandler:(file:AVFile?,errorMsg:String?) -> Void){
