@@ -16,18 +16,18 @@ class UserSettingViewController: UIViewController {
     @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var cardCountLabel: UILabel!
     @IBOutlet weak var collectionCountLabel: UILabel!
-    
+    @IBOutlet weak var nicknameLabel: UILabel!
     
     var tableViewModel:UserSettingTableModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.avatarButton.layer.borderColor = UIColor.whiteColor().CGColor
         self.tableViewModel = UserSettingTableModel(tableView: self.tableView)
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.fillUserInfo()
         self.navigationController?.navigationBarHidden = true
     }
     
@@ -36,17 +36,11 @@ class UserSettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func fillUserInfo(){
+        guard let user = UserInfoManager.sharedManager.currentUser else { return }
+        self.avatarButton.setImageWithUrlString(user.avatar?.url)
+        self.nicknameLabel.text = user.nickname
     }
-    */
-
 }
 
 

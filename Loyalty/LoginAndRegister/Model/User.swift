@@ -28,9 +28,9 @@ let kBirthdayKey = "birthday" //生日
 let kCityKey = "currentCity" //城市
 let kNickname = "nickName"
 extension AVUser {
-    var nickname:String? {
+    var nickname:String {
         get {
-            return self.objectForKey(kNickname) as? String
+            return self.objectForKey(kNickname) as? String ?? "请设置昵称"
         }
         set {
             self.setObject(newValue, forKey: kNickname)

@@ -279,6 +279,7 @@
                         <outlet property="cardCountLabel" destination="j5F-Ld-VPU" id="ltY-kt-TtZ"/>
                         <outlet property="collectionCountLabel" destination="xen-fo-XRl" id="eWW-fj-htk"/>
                         <outlet property="commentCountLabel" destination="D6t-ey-P37" id="WeJ-9P-Cku"/>
+                        <outlet property="nicknameLabel" destination="1C1-RW-eVf" id="4Xn-r1-AIL"/>
                         <outlet property="tableView" destination="Za3-qU-kZk" id="1j6-Xs-qcr"/>
                     </connections>
                 </viewController>
