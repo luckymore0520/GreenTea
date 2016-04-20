@@ -22,7 +22,7 @@ class LeanCloudHelper {
     }
     
     static func uploadImage(image:UIImage,completionHandler:(file:AVFile?,errorMsg:String?) -> Void){
-        guard let imageData = UIImagePNGRepresentation(image) else { return }
+        guard let imageData = UIImageJPEGRepresentation(image, 0.5) else { return }
         let file = AVFile(data: imageData)
         file.saveInBackgroundWithBlock { (succeed, error) in
             if succeed {

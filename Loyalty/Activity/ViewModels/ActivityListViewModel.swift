@@ -1,5 +1,5 @@
 //
-//  ActivityListViewModel.swift
+//  ActivityListDataSource.swift
 //  Loyalty
 //
 //  Created by WangKun on 16/1/27.
@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ActivityListViewModel: NSObject {
+class ActivityListDataSource: NSObject {
     var tableView:UITableView?
     var activityType:ActivityType?
     private var activityList:Array<Activity>?
@@ -33,7 +33,7 @@ class ActivityListViewModel: NSObject {
 }
 
 
-extension ActivityListViewModel: UITableViewDataSource {
+extension ActivityListDataSource: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }

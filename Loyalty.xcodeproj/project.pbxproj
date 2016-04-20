@@ -13,7 +13,7 @@
 		120902461C5F78BC00772CBA /* UserSettingTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120902451C5F78BC00772CBA /* UserSettingTableModel.swift */; };
 		120E2DC61CAD4568001E6DE9 /* StartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DC51CAD4568001E6DE9 /* StartRateView.swift */; };
 		120E2DC91CAD53FB001E6DE9 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DC81CAD53FB001E6DE9 /* ActivityDetailViewController.swift */; };
-		120E2DCB1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DCA1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift */; };
+		120E2DCB1CAD54F8001E6DE9 /* ActivityDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DCA1CAD54F8001E6DE9 /* ActivityDetailDataSource.swift */; };
 		120E2DCF1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E2DCE1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift */; };
 		121924511C5A58C300A3D94E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924421C5A58C300A3D94E /* Array.swift */; };
 		121924521C5A58C300A3D94E /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924431C5A58C300A3D94E /* Bool.swift */; };
@@ -42,6 +42,7 @@
 		125D91241CC4CB2F00AE5F1C /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91231CC4CB2F00AE5F1C /* ImagePickerManager.swift */; };
 		125D91281CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91261CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift */; };
 		125D91291CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125D91271CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib */; };
+		125D912B1CC715B200AE5F1C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D912A1CC715B200AE5F1C /* UIImageView.swift */; };
 		126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */; };
 		126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */; };
 		126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */; };
@@ -139,7 +140,7 @@
 		120902451C5F78BC00772CBA /* UserSettingTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingTableModel.swift; path = Setting/ViewModel/UserSettingTableModel.swift; sourceTree = "<group>"; };
 		120E2DC51CAD4568001E6DE9 /* StartRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartRateView.swift; path = Activity/Views/StartRateView.swift; sourceTree = "<group>"; };
 		120E2DC81CAD53FB001E6DE9 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailViewController.swift; path = Activity/Controller/ActivityDetailViewController.swift; sourceTree = "<group>"; };
-		120E2DCA1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailViewModel.swift; path = Activity/ViewModels/ActivityDetailViewModel.swift; sourceTree = "<group>"; };
+		120E2DCA1CAD54F8001E6DE9 /* ActivityDetailDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityDetailDataSource.swift; path = Activity/ViewModels/ActivityDetailDataSource.swift; sourceTree = "<group>"; };
 		120E2DCE1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopInfoTableViewCell.swift; path = Activity/Views/ShopInfoTableViewCell.swift; sourceTree = "<group>"; };
 		121924421C5A58C300A3D94E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		121924431C5A58C300A3D94E /* Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 		125D91231CC4CB2F00AE5F1C /* ImagePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePickerManager.swift; path = Tools/ImagePickerManager.swift; sourceTree = "<group>"; };
 		125D91261CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OneRowEditInfoViewController.swift; path = Main/ViewController/OneRowEditInfoViewController.swift; sourceTree = "<group>"; };
 		125D91271CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OneRowEditInfoViewController.xib; path = Main/ViewController/OneRowEditInfoViewController.xib; sourceTree = "<group>"; };
+		125D912A1CC715B200AE5F1C /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Extension/UIImageView.swift; sourceTree = "<group>"; };
 		126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HasHiddenNavigation.swift; path = Protocal/HasHiddenNavigation.swift; sourceTree = "<group>"; };
 		126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationInfoTableViewCell.swift; path = Activity/Views/LocationInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTimeInfoTableViewCell.swift; path = Activity/Views/ActivityTimeInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -398,8 +400,8 @@
 				1280272C1C5604BA00C76EA6 /* LoyaltyTests */,
 				128027371C5604BA00C76EA6 /* LoyaltyUITests */,
 				128027161C5604BA00C76EA6 /* Products */,
-				2B61B791351F9FB889F6AC3D /* Frameworks */,
 				D56630256E0D92DC13DBFF62 /* Pods */,
+				2B61B791351F9FB889F6AC3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -522,6 +524,7 @@
 				127C7FEE1C5B9BF70091837D /* UIButton.swift */,
 				12C7F8311CC25FE000805820 /* UILabel.swift */,
 				125D911D1CC4BF5300AE5F1C /* UIView.swift */,
+				125D912A1CC715B200AE5F1C /* UIImageView.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -569,7 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */,
-				120E2DCA1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift */,
+				120E2DCA1CAD54F8001E6DE9 /* ActivityDetailDataSource.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -885,6 +888,7 @@
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
 				12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */,
+				125D912B1CC715B200AE5F1C /* UIImageView.swift in Sources */,
 				12FF67981CC2527900E7860B /* SectionView.swift in Sources */,
 				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
 				12C7F8351CC2689F00805820 /* MyCardViewController.swift in Sources */,
@@ -934,7 +938,7 @@
 				126E13691CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift in Sources */,
 				12FF679A1CC2527900E7860B /* TableViewCell.swift in Sources */,
 				126E13721CBA873800A3CDFF /* NavigationTransitionManager.swift in Sources */,
-				120E2DCB1CAD54F8001E6DE9 /* ActivityDetailViewModel.swift in Sources */,
+				120E2DCB1CAD54F8001E6DE9 /* ActivityDetailDataSource.swift in Sources */,
 				120E2DC91CAD53FB001E6DE9 /* ActivityDetailViewController.swift in Sources */,
 				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,
 				12FF67A01CC2527900E7860B /* ChineseToPinyinResource.m in Sources */,

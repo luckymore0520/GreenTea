@@ -15,13 +15,13 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var activityDetailViewModel:ActivityDetailViewModel?
+    var activityDetailDataSource:ActivityDetailDataSource?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNavigationItems()
-        self.activityDetailViewModel = ActivityDetailViewModel(tableView: self.tableView, activity: Activity())
+        self.activityDetailDataSource = ActivityDetailDataSource(tableView: self.tableView, activity: Activity())
         self.toolBar.activityType = ActivityType.Loyalty
         self.tableView.tableHeaderView?.frame = self.targetImageViewFrame
         // Do any additional setup after loading the view.
@@ -50,7 +50,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
 
 extension ActivityDetailViewController:UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return self.activityDetailViewModel?.heightForRowAtIndexPath(indexPath) ?? 0
+        return self.activityDetailDataSource?.heightForRowAtIndexPath(indexPath) ?? 0
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -58,15 +58,15 @@ extension ActivityDetailViewController:UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return self.activityDetailViewModel?.isAbleToSelected(indexPath) ?? true
+        return self.activityDetailDataSource?.isAbleToSelected(indexPath) ?? true
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return self.activityDetailViewModel?.heightForHeader(section) ?? 0
+        return self.activityDetailDataSource?.heightForHeader(section) ?? 0
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return self.activityDetailViewModel?.viewForHeader(tableView, section: section)
+        return self.activityDetailDataSource?.viewForHeader(tableView, section: section)
     }
 }
 

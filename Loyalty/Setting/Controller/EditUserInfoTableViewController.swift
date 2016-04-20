@@ -41,6 +41,7 @@ class EditUserInfoTableViewController: UITableViewController,ViewControllerPrese
         self.birthdayLabel.text = user.myBirthday
         self.cityLabel.text = user.city
         self.phoneNumLabel.text = user.username
+        self.avatarImageView.setImageWithUrlString(user.avatar?.url)
     }
 
 }

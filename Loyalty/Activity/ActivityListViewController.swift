@@ -12,11 +12,11 @@ class ActivityListViewController: UIViewController {
     var activityType:ActivityType?
     var selectedImageView:UIImageView?
     @IBOutlet weak var tableView: UITableView!
-    var activityListViewModel:ActivityListViewModel?
+    var activityListViewModel:ActivityListDataSource?
     override func viewDidLoad() {
         super.viewDidLoad()
         if let activityType = self.activityType {
-            self.activityListViewModel = ActivityListViewModel(tableView:self.tableView, activityType: activityType)
+            self.activityListViewModel = ActivityListDataSource(tableView:self.tableView, activityType: activityType)
         }
         // Do any additional setup after loading the view.
     }

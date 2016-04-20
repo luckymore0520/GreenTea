@@ -1,5 +1,5 @@
 //
-//  ActivityDetailViewModel.swift
+//  ActivityDetailDataSource.swift
 //  Loyalty
 //
 //  Created by WangKun on 16/3/31.
@@ -36,7 +36,7 @@ enum ActivityDetailRowType:Int,TitlePresentable{
     }
 }
 
-class ActivityDetailViewModel:NSObject {
+class ActivityDetailDataSource:NSObject {
     var tableView:UITableView?
     var activity:Activity?
     let rows = ActivityDetailRowType.allTypes()
@@ -80,7 +80,7 @@ class ActivityDetailViewModel:NSObject {
     }
 }
 
-extension ActivityDetailViewModel:UITableViewDataSource {
+extension ActivityDetailDataSource:UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return rows.count
     }

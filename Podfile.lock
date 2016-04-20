@@ -4,6 +4,7 @@ PODS:
     - AVOSCloudDynamic
   - AVOSCloudDynamic (3.2.7)
   - Cartography (0.6.0)
+  - Kingfisher (2.2.2)
   - Koloda (3.0.0):
     - pop (~> 1.0)
   - PKHUD (3.1.0)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - AVOSCloudCrashReportingDynamic
   - AVOSCloudDynamic
   - Cartography
+  - Kingfisher
   - Koloda
   - PKHUD
   - XCGLogger (~> 3.1.1)
@@ -33,6 +35,7 @@ SPEC CHECKSUMS:
   AVOSCloudCrashReportingDynamic: 603806f916a5e8f201e151ff84d8ad2a17c2b6f5
   AVOSCloudDynamic: 1a64ed78c897be98d54d75fd4c8cff0a21e9eeb6
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  Kingfisher: 7e8de5b0cf7b5dc8ec559d193029a0859df93ef1
   Koloda: 315aa5d2ef4138df90c42ee77c18af0727528e6a
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
