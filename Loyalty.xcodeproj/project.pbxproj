@@ -29,6 +29,14 @@
 		1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219244E1C5A58C300A3D94E /* Sequence.swift */; };
 		1219245D1C5A58C300A3D94E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219244F1C5A58C300A3D94E /* String.swift */; };
 		1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121924501C5A58C300A3D94E /* UIColorExtension.swift */; };
+		1221E77E1CC7742E000B364E /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E77C1CC7742E000B364E /* LocationPickerViewController.swift */; };
+		1221E77F1CC7742E000B364E /* LocationPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1221E77D1CC7742E000B364E /* LocationPickerViewController.xib */; };
+		1221E7871CC780F1000B364E /* PointInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E7851CC780F1000B364E /* PointInfoTableViewCell.swift */; };
+		1221E7881CC780F1000B364E /* PointInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1221E7861CC780F1000B364E /* PointInfoTableViewCell.xib */; };
+		1221E78A1CC781BA000B364E /* SubTitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E7891CC781BA000B364E /* SubTitlePresentable.swift */; };
+		1221E78C1CC781FC000B364E /* Checkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E78B1CC781FC000B364E /* Checkable.swift */; };
+		1221E78E1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E78D1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift */; };
+		1221E7901CC78439000B364E /* LocationPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E78F1CC78439000B364E /* LocationPickerDataSource.swift */; };
 		12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12514D291CC46F4500ADCBED /* CardDataSource.swift */; };
 		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
@@ -170,6 +178,14 @@
 		1219244E1C5A58C300A3D94E /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		1219244F1C5A58C300A3D94E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		121924501C5A58C300A3D94E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1221E77C1CC7742E000B364E /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationPickerViewController.swift; path = Main/ViewController/LocationPickerViewController.swift; sourceTree = "<group>"; };
+		1221E77D1CC7742E000B364E /* LocationPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationPickerViewController.xib; path = Main/ViewController/LocationPickerViewController.xib; sourceTree = "<group>"; };
+		1221E7851CC780F1000B364E /* PointInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointInfoTableViewCell.swift; path = Main/View/PointInfoTableViewCell.swift; sourceTree = "<group>"; };
+		1221E7861CC780F1000B364E /* PointInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointInfoTableViewCell.xib; path = Main/View/PointInfoTableViewCell.xib; sourceTree = "<group>"; };
+		1221E7891CC781BA000B364E /* SubTitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubTitlePresentable.swift; path = Protocal/SubTitlePresentable.swift; sourceTree = "<group>"; };
+		1221E78B1CC781FC000B364E /* Checkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checkable.swift; path = Protocal/Checkable.swift; sourceTree = "<group>"; };
+		1221E78D1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointInfoTableViewCellViewModel.swift; path = Main/ViewModel/PointInfoTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		1221E78F1CC78439000B364E /* LocationPickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationPickerDataSource.swift; path = Main/ViewModel/LocationPickerDataSource.swift; sourceTree = "<group>"; };
 		12514D291CC46F4500ADCBED /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardDataSource.swift; path = Cards/ViewModel/CardDataSource.swift; sourceTree = "<group>"; };
 		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
@@ -372,6 +388,15 @@
 			path = Vendor/ExSwift;
 			sourceTree = "<group>";
 		};
+		1221E7801CC77EE1000B364E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1221E7851CC780F1000B364E /* PointInfoTableViewCell.swift */,
+				1221E7861CC780F1000B364E /* PointInfoTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		12514D281CC46F2000ADCBED /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +418,8 @@
 		125D91251CC4CDB300AE5F1C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1221E77C1CC7742E000B364E /* LocationPickerViewController.swift */,
+				1221E77D1CC7742E000B364E /* LocationPickerViewController.xib */,
 				125D91261CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift */,
 				125D91271CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib */,
 			);
@@ -406,6 +433,8 @@
 				126E13731CBA894500A3CDFF /* ActivityTransitioning.swift */,
 				126E13751CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift */,
 				126E13771CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift */,
+				1221E78D1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift */,
+				1221E78F1CC78439000B364E /* LocationPickerDataSource.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -505,6 +534,7 @@
 		128027911C58BC9900C76EA6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1221E7801CC77EE1000B364E /* View */,
 				125D91251CC4CDB300AE5F1C /* ViewController */,
 				126E13701CBA871400A3CDFF /* ViewModel */,
 				1280271C1C5604BA00C76EA6 /* Main.storyboard */,
@@ -624,6 +654,8 @@
 				125429691C5F7E1400D89004 /* IconPresentable.swift */,
 				126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */,
 				125D911B1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift */,
+				1221E7891CC781BA000B364E /* SubTitlePresentable.swift */,
+				1221E78B1CC781FC000B364E /* Checkable.swift */,
 			);
 			name = Protocal;
 			sourceTree = "<group>";
@@ -861,9 +893,11 @@
 			files = (
 				12FF67991CC2527900E7860B /* SectionView.xib in Resources */,
 				128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */,
+				1221E77F1CC7742E000B364E /* LocationPickerViewController.xib in Resources */,
 				12C7F83A1CC2748D00805820 /* CardView.xib in Resources */,
 				12C7F83E1CC27A6D00805820 /* MoneyCollectionViewCell.xib in Resources */,
 				12FF67971CC2527900E7860B /* citydict.plist in Resources */,
+				1221E7881CC780F1000B364E /* PointInfoTableViewCell.xib in Resources */,
 				128027201C5604BA00C76EA6 /* Assets.xcassets in Resources */,
 				12FF67951CC2527900E7860B /* CollectionViewCell.xib in Resources */,
 				128027BA1C58DACD00C76EA6 /* ActivityTableViewCell.xib in Resources */,
@@ -968,18 +1002,23 @@
 				120E2DC61CAD4568001E6DE9 /* StartRateView.swift in Sources */,
 				12FF67921CC2527900E7860B /* CityViewController.swift in Sources */,
 				1219245D1C5A58C300A3D94E /* String.swift in Sources */,
+				1221E78C1CC781FC000B364E /* Checkable.swift in Sources */,
 				12FF67941CC2527900E7860B /* CollectionViewCell.swift in Sources */,
 				127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */,
 				125D912F1CC7260400AE5F1C /* MAMapViewController.swift in Sources */,
+				1221E7871CC780F1000B364E /* PointInfoTableViewCell.swift in Sources */,
 				12C7F8381CC2747E00805820 /* CardView.swift in Sources */,
+				1221E78E1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift in Sources */,
 				1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */,
 				128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */,
 				121924511C5A58C300A3D94E /* Array.swift in Sources */,
+				1221E78A1CC781BA000B364E /* SubTitlePresentable.swift in Sources */,
 				126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */,
 				12FF67A41CC2527900E7860B /* PinYinForObjc.m in Sources */,
 				121924541C5A58C300A3D94E /* Dictionary.swift in Sources */,
 				120902421C5F76FF00772CBA /* UserSettingViewController.swift in Sources */,
 				1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */,
+				1221E7901CC78439000B364E /* LocationPickerDataSource.swift in Sources */,
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				121924521C5A58C300A3D94E /* Bool.swift in Sources */,
 				1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */,
@@ -992,6 +1031,7 @@
 				125D912D1CC7211C00AE5F1C /* AMapTool.swift in Sources */,
 				120E2DC91CAD53FB001E6DE9 /* ActivityDetailViewController.swift in Sources */,
 				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,
+				1221E77E1CC7742E000B364E /* LocationPickerViewController.swift in Sources */,
 				12FF67A01CC2527900E7860B /* ChineseToPinyinResource.m in Sources */,
 				12FF67A51CC2527900E7860B /* PinyinHelper.m in Sources */,
 				125D911A1CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift in Sources */,

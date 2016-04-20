@@ -13,7 +13,6 @@ protocol TitlePresentable {
     var title: String { get }
     var titleColor: UIColor { get }
     func updateTitleLabel(label:UILabel)
-
 }
 
 extension TitlePresentable {

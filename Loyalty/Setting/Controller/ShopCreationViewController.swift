@@ -120,7 +120,8 @@ class ShopCreationViewController: FormViewController {
                     cell.textLabel?.textAlignment = .Right
                     cell.textLabel?.textColor = UIColor.globalGrayColor()
             }.onCellSelection({ (cell, row) in
-                
+                let locationPickerViewController = LocationPickerViewController(nibName: "LocationPickerViewController", bundle: nil)
+                self.navigationController?.pushViewController(locationPickerViewController, animated: true)
             })
             <<< ImageRow(photoKey) {
                 row in

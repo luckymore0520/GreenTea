@@ -9,7 +9,6 @@
 import UIKit
 
 class LocationInfoTableViewCell: UITableViewCell {
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

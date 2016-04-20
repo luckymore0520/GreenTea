@@ -281,7 +281,8 @@ class CityViewController: UIViewController,UISearchDisplayDelegate,UITableViewDe
      搜索结束
     */
     internal func searchDisplayControllerWillEndSearch(controller: UISearchDisplayController){
-        self.layoutTopConstraint.constant = 65;
+        self.layoutTopConstraint.constant = 0;
+        
     }
     
     //shouldReloadTableForSearchString

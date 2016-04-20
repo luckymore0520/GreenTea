@@ -8,6 +8,7 @@
 
 import Foundation
 
+typealias SettingCellPresentable = protocol<TitlePresentable,IconPresentable>
 
 struct UserSettingCellViewModel:SettingCellPresentable {
     var title:String

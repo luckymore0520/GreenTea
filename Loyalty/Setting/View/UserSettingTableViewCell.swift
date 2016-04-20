@@ -8,7 +8,6 @@
 
 import UIKit
 
-typealias SettingCellPresentable = protocol<TitlePresentable,IconPresentable>
 
 class UserSettingTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
