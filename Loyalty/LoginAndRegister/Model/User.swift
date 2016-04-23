@@ -86,3 +86,13 @@ extension AVUser {
         }
     }
 }
+
+extension AVUser {
+    func saveInBackgroundAndChange() {
+        self.saveInBackgroundWithBlock { (success, error) in
+            if success {
+                AVUser.changeCurrentUser(self, save: true)
+            }
+        }
+    }
+}

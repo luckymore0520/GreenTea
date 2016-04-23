@@ -103,6 +103,8 @@
 		128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C81C58F10300C76EA6 /* UIViewController.swift */; };
 		128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027CA1C58F43500C76EA6 /* CellReusable.swift */; };
 		128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */; };
+		12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */; };
+		12C260F11CCBA01300283286 /* WebIconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F01CCBA01300283286 /* WebIconPresentable.swift */; };
 		12C7F8321CC25FE000805820 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8311CC25FE000805820 /* UILabel.swift */; };
 		12C7F8351CC2689F00805820 /* MyCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8341CC2689F00805820 /* MyCardViewController.swift */; };
 		12C7F8381CC2747E00805820 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8371CC2747E00805820 /* CardView.swift */; };
@@ -258,6 +260,8 @@
 		128027C81C58F10300C76EA6 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extension/UIViewController.swift; sourceTree = "<group>"; };
 		128027CA1C58F43500C76EA6 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellReusable.swift; path = Protocal/CellReusable.swift; sourceTree = "<group>"; };
 		128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginAndRegisterStoryboard.storyboard; path = LoginAndRegister/LoginAndRegisterStoryboard.storyboard; sourceTree = "<group>"; };
+		12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoViewModel.swift; path = Setting/ViewModel/UserInfoViewModel.swift; sourceTree = "<group>"; };
+		12C260F01CCBA01300283286 /* WebIconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebIconPresentable.swift; path = Protocal/WebIconPresentable.swift; sourceTree = "<group>"; };
 		12C7F8311CC25FE000805820 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel.swift; path = Extension/UILabel.swift; sourceTree = "<group>"; };
 		12C7F8341CC2689F00805820 /* MyCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCardViewController.swift; path = Cards/Controller/MyCardViewController.swift; sourceTree = "<group>"; };
 		12C7F8371CC2747E00805820 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Cards/View/CardView.swift; sourceTree = "<group>"; };
@@ -351,6 +355,7 @@
 			children = (
 				120902451C5F78BC00772CBA /* UserSettingTableModel.swift */,
 				1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */,
+				12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -656,6 +661,7 @@
 				125D911B1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift */,
 				1221E7891CC781BA000B364E /* SubTitlePresentable.swift */,
 				1221E78B1CC781FC000B364E /* Checkable.swift */,
+				12C260F01CCBA01300283286 /* WebIconPresentable.swift */,
 			);
 			name = Protocal;
 			sourceTree = "<group>";
@@ -984,6 +990,7 @@
 				128027AC1C58C41B00C76EA6 /* CustomColor.swift in Sources */,
 				12FF67A71CC2527900E7860B /* ZYPinYinSearch.m in Sources */,
 				120E2DCF1CAD56B5001E6DE9 /* ShopInfoTableViewCell.swift in Sources */,
+				12C260F11CCBA01300283286 /* WebIconPresentable.swift in Sources */,
 				12C7F8321CC25FE000805820 /* UILabel.swift in Sources */,
 				12FF67911CC2527900E7860B /* CityButton.swift in Sources */,
 				126E136B1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift in Sources */,
@@ -1000,6 +1007,7 @@
 				125D91201CC4C46800AE5F1C /* EditUserInfoTableViewCell.swift in Sources */,
 				1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */,
 				120E2DC61CAD4568001E6DE9 /* StartRateView.swift in Sources */,
+				12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */,
 				12FF67921CC2527900E7860B /* CityViewController.swift in Sources */,
 				1219245D1C5A58C300A3D94E /* String.swift in Sources */,
 				1221E78C1CC781FC000B364E /* Checkable.swift in Sources */,

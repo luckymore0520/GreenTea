@@ -11,18 +11,22 @@ import UIKit
 class UserSettingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    /// Header
-    @IBOutlet weak var avatarButton: UIButton!
+     /// Header
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var cardCountLabel: UILabel!
     @IBOutlet weak var collectionCountLabel: UILabel!
-    @IBOutlet weak var nicknameLabel: UILabel!
+     /// ViewModel
+    var userViewModel:UserInfoViewModel?
+    
     
     var tableViewModel:UserSettingTableModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.avatarButton.layer.borderColor = UIColor.whiteColor().CGColor
+        self.avatarImageView.layer.borderColor = UIColor.whiteColor().CGColor
         self.tableViewModel = UserSettingTableModel(tableView: self.tableView)
+        self.userViewModel = UserInfoViewModel(user: UserInfoManager.sharedManager.currentUser)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -37,9 +41,8 @@ class UserSettingViewController: UIViewController {
     }
     
     func fillUserInfo(){
-        guard let user = UserInfoManager.sharedManager.currentUser else { return }
-        self.avatarButton.setImageWithUrlString(user.avatar?.url)
-        self.nicknameLabel.text = user.nickname
+        self.userViewModel?.updateTitleLabel(self.nicknameLabel)
+        self.userViewModel?.updateImageView(self.avatarImageView)
     }
 }
 

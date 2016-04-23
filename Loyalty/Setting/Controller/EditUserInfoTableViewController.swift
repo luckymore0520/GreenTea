@@ -58,7 +58,7 @@ extension EditUserInfoTableViewController {
             self.showActionSheet("请选择性别", selectionArray: sexArray, initialSelection: initialSelection, displayLabel:self.genderLabel, selectionHandler: {
                 (selection) -> () in
                 user?.gender = Gender(rawValue: sexArray[selection])
-                user?.saveInBackground()
+                user?.saveInBackgroundAndChange()
                 }, origin: cell)
         case .Birthday:
             let datePicker = ActionSheetDatePicker(title: "请选择生日", datePickerMode: UIDatePickerMode.Date, selectedDate: NSDate(), doneBlock: {
@@ -67,7 +67,7 @@ extension EditUserInfoTableViewController {
                 let date = value as! NSDate
                 self.birthdayLabel.text = "\(date.year)-\(date.month)-\(date.days)"
                 user?.myBirthday = self.birthdayLabel.text
-                user?.saveInBackground()
+                user?.saveInBackgroundAndChange()
                 return
                 }, cancelBlock: { ActionStringCancelBlock in return }, origin:self.view)
             datePicker.showActionSheetPicker()
@@ -88,7 +88,7 @@ extension EditUserInfoTableViewController {
                 (content) in
                 self.nicknameLabel.text = content
                 user?.nickname = content
-                user?.saveInBackground()
+                user?.saveInBackgroundAndChange()
                 self.navigationController?.popViewControllerAnimated(true)
             })
         default:break
@@ -115,7 +115,7 @@ extension EditUserInfoTableViewController:ImagePickerDelegate {
                 if let file = file {
                     let user = UserInfoManager.sharedManager.currentUser
                     user?.avatar = file
-                    user?.saveInBackground()
+                    user?.saveInBackgroundAndChange()
                 } else {
                     HUDHelper.showText(errorMsg)
                 }
@@ -129,6 +129,6 @@ extension EditUserInfoTableViewController:CityViewControllerDelegate {
         self.cityLabel.text = city
         let user = UserInfoManager.sharedManager.currentUser
         user?.city = self.cityLabel.text
-        user?.saveInBackground()
+        user?.saveInBackgroundAndChange()
     }
 }
