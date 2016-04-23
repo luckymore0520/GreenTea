@@ -105,6 +105,7 @@
 		128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */; };
 		12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */; };
 		12C260F11CCBA01300283286 /* WebIconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F01CCBA01300283286 /* WebIconPresentable.swift */; };
+		12C260F31CCBAC7600283286 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */; };
 		12C7F8321CC25FE000805820 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8311CC25FE000805820 /* UILabel.swift */; };
 		12C7F8351CC2689F00805820 /* MyCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8341CC2689F00805820 /* MyCardViewController.swift */; };
 		12C7F8381CC2747E00805820 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8371CC2747E00805820 /* CardView.swift */; };
@@ -262,6 +263,7 @@
 		128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginAndRegisterStoryboard.storyboard; path = LoginAndRegister/LoginAndRegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoViewModel.swift; path = Setting/ViewModel/UserInfoViewModel.swift; sourceTree = "<group>"; };
 		12C260F01CCBA01300283286 /* WebIconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebIconPresentable.swift; path = Protocal/WebIconPresentable.swift; sourceTree = "<group>"; };
+		12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTableViewController.swift; path = Main/ViewController/LocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		12C7F8311CC25FE000805820 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel.swift; path = Extension/UILabel.swift; sourceTree = "<group>"; };
 		12C7F8341CC2689F00805820 /* MyCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCardViewController.swift; path = Cards/Controller/MyCardViewController.swift; sourceTree = "<group>"; };
 		12C7F8371CC2747E00805820 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Cards/View/CardView.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				1221E77D1CC7742E000B364E /* LocationPickerViewController.xib */,
 				125D91261CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift */,
 				125D91271CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib */,
+				12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1049,6 +1052,7 @@
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,
 				1280274A1C5607C300C76EA6 /* LeanCloudHelper.swift in Sources */,
 				128027AE1C58CAEE00C76EA6 /* ActivityRootViewController.swift in Sources */,
+				12C260F31CCBAC7600283286 /* LocationSearchTableViewController.swift in Sources */,
 				125D91281CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift in Sources */,
 				121924571C5A58C300A3D94E /* Float.swift in Sources */,
 				12767CC71CC762B800DD0B4F /* ShopCreationViewController.swift in Sources */,

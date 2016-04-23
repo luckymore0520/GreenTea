@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationPickerViewController" customModule="Loyalty" customModuleProvider="target">
             <connections>
                 <outlet property="mapViewLocation" destination="62N-4F-iKZ" id="yJ4-fw-i1I"/>
+                <outlet property="searchTableView" destination="Ega-qj-0uW" id="eih-Zx-aW6"/>
                 <outlet property="tableView" destination="ji4-Xf-thg" id="zFJ-aP-rJq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,36 +18,54 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ji4-Xf-thg">
+                    <rect key="frame" x="0.0" y="404" width="375" height="263"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ega-qj-0uW">
+                    <rect key="frame" x="0.0" y="60" width="375" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="smX-1H-v0V"/>
+                    </constraints>
+                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62N-4F-iKZ" userLabel="MapView">
-                    <rect key="frame" x="0.0" y="44" width="375" height="300"/>
+                    <rect key="frame" x="0.0" y="104" width="375" height="300"/>
                     <color key="backgroundColor" red="0.57432361577181212" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="kWp-MR-nFK"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ji4-Xf-thg">
-                    <rect key="frame" x="0.0" y="344" width="375" height="323"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="edO-1c-DQL"/>
-                    </connections>
-                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="ji4-Xf-thg" firstAttribute="top" secondItem="62N-4F-iKZ" secondAttribute="bottom" id="1aM-9W-FqE"/>
+                <constraint firstAttribute="bottom" secondItem="ji4-Xf-thg" secondAttribute="bottom" id="2mh-Zs-8Zt"/>
                 <constraint firstItem="ji4-Xf-thg" firstAttribute="top" secondItem="62N-4F-iKZ" secondAttribute="bottom" id="4bq-kO-Yad"/>
                 <constraint firstAttribute="trailing" secondItem="62N-4F-iKZ" secondAttribute="trailing" id="BjS-85-P6z"/>
+                <constraint firstItem="62N-4F-iKZ" firstAttribute="top" secondItem="Ega-qj-0uW" secondAttribute="bottom" id="DOd-Rh-7Nq"/>
                 <constraint firstAttribute="trailing" secondItem="ji4-Xf-thg" secondAttribute="trailing" id="Sd6-QC-wh3"/>
+                <constraint firstAttribute="trailing" secondItem="Ega-qj-0uW" secondAttribute="trailing" id="WEe-9q-7BH"/>
+                <constraint firstItem="ji4-Xf-thg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aTN-go-jwg"/>
                 <constraint firstAttribute="bottom" secondItem="ji4-Xf-thg" secondAttribute="bottom" id="bwT-jJ-CHr"/>
                 <constraint firstItem="ji4-Xf-thg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ckK-fD-ypC"/>
+                <constraint firstAttribute="bottom" secondItem="Ega-qj-0uW" secondAttribute="bottom" id="dVf-al-Tu1"/>
                 <constraint firstItem="62N-4F-iKZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="esV-uH-kQH"/>
-                <constraint firstItem="62N-4F-iKZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="m1E-x1-OVZ"/>
+                <constraint firstItem="62N-4F-iKZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="104" id="m1E-x1-OVZ"/>
+                <constraint firstItem="Ega-qj-0uW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p3I-TM-r3i"/>
                 <constraint firstItem="62N-4F-iKZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pZr-wF-NyZ"/>
+                <constraint firstAttribute="trailing" secondItem="ji4-Xf-thg" secondAttribute="trailing" id="uYL-jN-qOA"/>
+                <constraint firstItem="Ega-qj-0uW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="zhE-xO-J1U"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="dVf-al-Tu1"/>
+                    <exclude reference="m1E-x1-OVZ"/>
                     <exclude reference="pZr-wF-NyZ"/>
+                    <exclude reference="2mh-Zs-8Zt"/>
+                    <exclude reference="Sd6-QC-wh3"/>
+                    <exclude reference="aTN-go-jwg"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="403.5" y="185.5"/>
