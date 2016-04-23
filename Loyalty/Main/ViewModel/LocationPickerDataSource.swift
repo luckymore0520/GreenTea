@@ -13,6 +13,8 @@ class LocationPickerDataSource: NSObject,UITableViewDataSource {
     var mapSearch:AMapSearchAPI?
     weak var tableView:UITableView?
     var searchResultArray = []
+    var selectedRow:Int = 0
+
     init(tableView:UITableView,coordinate:CLLocationCoordinate2D) {
         super.init()
         mapSearch = AMapSearchAPI()
@@ -30,9 +32,9 @@ class LocationPickerDataSource: NSObject,UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(indexPath: indexPath) as PointInfoTableViewCell
         let poi = self.searchResultArray[indexPath.row] as? AMapPOI
-        let pointViewModel = PointInfoTableViewCellViewModel(poi: poi, isChecked: indexPath.row == 0)
+        let pointViewModel = PointInfoTableViewCellViewModel(poi: poi, isChecked: indexPath.row == self.selectedRow)
         cell.render(pointViewModel)
-        return UITableViewCell()
+        return cell
     }
     
     func searchAroundLocation(coordinate:CLLocationCoordinate2D){
@@ -42,6 +44,17 @@ class LocationPickerDataSource: NSObject,UITableViewDataSource {
         request.sortrule = 0;
         request.requireExtension = true;
         self.mapSearch?.AMapPOIAroundSearch(request)
+    }
+}
+
+
+// MARK: - PublicFunc
+extension LocationPickerDataSource {
+    func selectRow(indexPath:NSIndexPath){
+        if indexPath.row == self.selectedRow { return }
+        let originIndexPath = NSIndexPath(forRow: self.selectedRow, inSection: 0)
+        self.selectedRow = indexPath.row
+        self.tableView?.reloadRowsAtIndexPaths([originIndexPath,indexPath], withRowAnimation: UITableViewRowAnimation.None)
     }
 }
 

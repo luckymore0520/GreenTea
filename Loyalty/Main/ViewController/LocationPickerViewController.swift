@@ -16,10 +16,12 @@ class LocationPickerViewController: UIViewController {
     var mapSearch:AMapSearchAPI?
     var isLocated:Bool = false
     var pointInfoDataSource:LocationPickerDataSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.translucent = false
         self.view.addSubview(searchViewController.searchBar)
+        self.title = "选择位置"
         self.initMapView()
     }
 
@@ -43,6 +45,12 @@ class LocationPickerViewController: UIViewController {
         }
     }
     
+}
+
+extension LocationPickerViewController:UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.pointInfoDataSource?.selectRow(indexPath)
+    }
 }
 
 extension LocationPickerViewController:MAMapViewDelegate {
