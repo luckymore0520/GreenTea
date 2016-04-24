@@ -12,6 +12,7 @@ import UIKit
 enum SettingCellType:String {
     case ChangePassword = "修改密码"
     case BecomeBusiness = "成为商家"
+    case MyShops = "我的店铺"
     case ShareApp = "分享应用"
     case ReviewUs = "评价我们"
     case FeedBack = "意见反馈"
@@ -28,7 +29,7 @@ class UserSettingTableModel:NSObject {
             if user.userType == UserType.Custume {
                 self.settingCellArray = [[SettingCellType.ChangePassword,.BecomeBusiness],[.ShareApp,.ReviewUs,.FeedBack,.Privacy],[.Logout]]
             } else {
-                self.settingCellArray = [[SettingCellType.ChangePassword,.BecomeBusiness],[.ShareApp,.ReviewUs,.FeedBack,.Privacy],[.Logout]]
+                self.settingCellArray = [[SettingCellType.ChangePassword,.MyShops],[.ShareApp,.ReviewUs,.FeedBack,.Privacy],[.Logout]]
             }
         } else {
             settingCellArray = []

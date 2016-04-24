@@ -30,7 +30,7 @@ extension UIViewController {
     func setLeftButton(text: String, imageName:String = "", selector:Selector ,  fontSize : CGFloat = UIFont.systemFontSize() )->UIButton {
         let leftButton = UIButton.init(frame:CGRectMake(0, 0, 100, 40))
         let trueText = imageName.length > 0 ? "  "+text : text
-        leftButton.setTitle(text, forState: UIControlState.Normal)
+        leftButton.setTitle(trueText, forState: UIControlState.Normal)
         leftButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         leftButton.addTarget(self, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
         leftButton.titleLabel?.font = UIFont.systemFontOfSize(fontSize)
