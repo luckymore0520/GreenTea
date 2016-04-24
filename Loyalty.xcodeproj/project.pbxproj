@@ -106,6 +106,15 @@
 		12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */; };
 		12C260F11CCBA01300283286 /* WebIconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F01CCBA01300283286 /* WebIconPresentable.swift */; };
 		12C260F31CCBAC7600283286 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */; };
+		12C260F51CCCFFEA00283286 /* ShopInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C260F41CCCFFEA00283286 /* ShopInfoTableViewCell.xib */; };
+		12C260F71CCD009F00283286 /* LocationInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C260F61CCD009F00283286 /* LocationInfoTableViewCell.xib */; };
+		12C260F91CCD00DE00283286 /* ActivityDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C260F81CCD00DE00283286 /* ActivityDetailInfoTableViewCell.xib */; };
+		12C260FB1CCD010400283286 /* ActivityTimeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C260FA1CCD010400283286 /* ActivityTimeInfoTableViewCell.xib */; };
+		12C260FD1CCD012300283286 /* ActivityDetailSectionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C260FC1CCD012300283286 /* ActivityDetailSectionHeaderTableViewCell.xib */; };
+		12C261001CCD021200283286 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260FE1CCD021200283286 /* ShopInfoViewController.swift */; };
+		12C261011CCD021200283286 /* ShopInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C260FF1CCD021200283286 /* ShopInfoViewController.xib */; };
+		12C261031CCD03DE00283286 /* ShopInfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C261021CCD03DE00283286 /* ShopInfoDataSource.swift */; };
+		12C261051CCD041B00283286 /* ShopInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C261041CCD041B00283286 /* ShopInfoViewModel.swift */; };
 		12C7F8321CC25FE000805820 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8311CC25FE000805820 /* UILabel.swift */; };
 		12C7F8351CC2689F00805820 /* MyCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8341CC2689F00805820 /* MyCardViewController.swift */; };
 		12C7F8381CC2747E00805820 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F8371CC2747E00805820 /* CardView.swift */; };
@@ -264,6 +273,15 @@
 		12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoViewModel.swift; path = Setting/ViewModel/UserInfoViewModel.swift; sourceTree = "<group>"; };
 		12C260F01CCBA01300283286 /* WebIconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebIconPresentable.swift; path = Protocal/WebIconPresentable.swift; sourceTree = "<group>"; };
 		12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTableViewController.swift; path = Main/ViewController/LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		12C260F41CCCFFEA00283286 /* ShopInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShopInfoTableViewCell.xib; path = Activity/Views/ShopInfoTableViewCell.xib; sourceTree = "<group>"; };
+		12C260F61CCD009F00283286 /* LocationInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationInfoTableViewCell.xib; path = Activity/Views/LocationInfoTableViewCell.xib; sourceTree = "<group>"; };
+		12C260F81CCD00DE00283286 /* ActivityDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityDetailInfoTableViewCell.xib; path = Activity/Views/ActivityDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
+		12C260FA1CCD010400283286 /* ActivityTimeInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityTimeInfoTableViewCell.xib; path = Activity/Views/ActivityTimeInfoTableViewCell.xib; sourceTree = "<group>"; };
+		12C260FC1CCD012300283286 /* ActivityDetailSectionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityDetailSectionHeaderTableViewCell.xib; path = Activity/Views/ActivityDetailSectionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		12C260FE1CCD021200283286 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopInfoViewController.swift; path = Setting/Controller/ShopInfoViewController.swift; sourceTree = "<group>"; };
+		12C260FF1CCD021200283286 /* ShopInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShopInfoViewController.xib; path = Setting/Controller/ShopInfoViewController.xib; sourceTree = "<group>"; };
+		12C261021CCD03DE00283286 /* ShopInfoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopInfoDataSource.swift; path = Setting/ViewModel/ShopInfoDataSource.swift; sourceTree = "<group>"; };
+		12C261041CCD041B00283286 /* ShopInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopInfoViewModel.swift; path = Setting/ViewModel/ShopInfoViewModel.swift; sourceTree = "<group>"; };
 		12C7F8311CC25FE000805820 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel.swift; path = Extension/UILabel.swift; sourceTree = "<group>"; };
 		12C7F8341CC2689F00805820 /* MyCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCardViewController.swift; path = Cards/Controller/MyCardViewController.swift; sourceTree = "<group>"; };
 		12C7F8371CC2747E00805820 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Cards/View/CardView.swift; sourceTree = "<group>"; };
@@ -348,6 +366,8 @@
 				120902411C5F76FF00772CBA /* UserSettingViewController.swift */,
 				125D91191CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift */,
 				12767CC61CC762B800DD0B4F /* ShopCreationViewController.swift */,
+				12C260FE1CCD021200283286 /* ShopInfoViewController.swift */,
+				12C260FF1CCD021200283286 /* ShopInfoViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -358,6 +378,8 @@
 				120902451C5F78BC00772CBA /* UserSettingTableModel.swift */,
 				1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */,
 				12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */,
+				12C261021CCD03DE00283286 /* ShopInfoDataSource.swift */,
+				12C261041CCD041B00283286 /* ShopInfoViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -641,6 +663,11 @@
 				126E13681CBA6F1D00A3CDFF /* ActivityDetailInfoTableViewCell.swift */,
 				126E136A1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift */,
 				126E136C1CBA793D00A3CDFF /* ActivityToolBar.swift */,
+				12C260F41CCCFFEA00283286 /* ShopInfoTableViewCell.xib */,
+				12C260F61CCD009F00283286 /* LocationInfoTableViewCell.xib */,
+				12C260F81CCD00DE00283286 /* ActivityDetailInfoTableViewCell.xib */,
+				12C260FA1CCD010400283286 /* ActivityTimeInfoTableViewCell.xib */,
+				12C260FC1CCD012300283286 /* ActivityDetailSectionHeaderTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -901,8 +928,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				12FF67991CC2527900E7860B /* SectionView.xib in Resources */,
+				12C260FB1CCD010400283286 /* ActivityTimeInfoTableViewCell.xib in Resources */,
+				12C260FD1CCD012300283286 /* ActivityDetailSectionHeaderTableViewCell.xib in Resources */,
 				128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */,
 				1221E77F1CC7742E000B364E /* LocationPickerViewController.xib in Resources */,
+				12C260F51CCCFFEA00283286 /* ShopInfoTableViewCell.xib in Resources */,
 				12C7F83A1CC2748D00805820 /* CardView.xib in Resources */,
 				12C7F83E1CC27A6D00805820 /* MoneyCollectionViewCell.xib in Resources */,
 				12FF67971CC2527900E7860B /* citydict.plist in Resources */,
@@ -913,14 +943,17 @@
 				12FF679D1CC2527900E7860B /* TableViewHeadSectionCell.xib in Resources */,
 				128027991C58BD3800C76EA6 /* MessageStoryboard.storyboard in Resources */,
 				125D91371CC72E0500AE5F1C /* AMap.bundle in Resources */,
+				12C261011CCD021200283286 /* ShopInfoViewController.xib in Resources */,
 				1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */,
 				1280279D1C58BD9100C76EA6 /* ActivityStoryboard.storyboard in Resources */,
+				12C260F91CCD00DE00283286 /* ActivityDetailInfoTableViewCell.xib in Resources */,
 				12FF679B1CC2527900E7860B /* TableViewCell.xib in Resources */,
 				128027971C58BCED00C76EA6 /* UserCenterStoryboard.storyboard in Resources */,
 				125D91291CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib in Resources */,
 				12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */,
 				12FF67931CC2527900E7860B /* CityViewController.xib in Resources */,
 				128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */,
+				12C260F71CCD009F00283286 /* LocationInfoTableViewCell.xib in Resources */,
 				1280279B1C58BD6000C76EA6 /* CardStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1022,11 +1055,14 @@
 				1221E78E1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift in Sources */,
 				1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */,
 				128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */,
+				12C261031CCD03DE00283286 /* ShopInfoDataSource.swift in Sources */,
 				121924511C5A58C300A3D94E /* Array.swift in Sources */,
 				1221E78A1CC781BA000B364E /* SubTitlePresentable.swift in Sources */,
+				12C261051CCD041B00283286 /* ShopInfoViewModel.swift in Sources */,
 				126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */,
 				12FF67A41CC2527900E7860B /* PinYinForObjc.m in Sources */,
 				121924541C5A58C300A3D94E /* Dictionary.swift in Sources */,
+				12C261001CCD021200283286 /* ShopInfoViewController.swift in Sources */,
 				120902421C5F76FF00772CBA /* UserSettingViewController.swift in Sources */,
 				1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */,
 				1221E7901CC78439000B364E /* LocationPickerDataSource.swift in Sources */,

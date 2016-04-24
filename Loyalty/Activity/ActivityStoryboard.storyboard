@@ -73,156 +73,10 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="tlp-AF-3sd">
-                                    <rect key="frame" x="0.0" y="546" width="375" height="123"/>
+                                    <rect key="frame" x="0.0" y="200" width="375" height="123"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ShopInfoTableViewCell" rowHeight="56" id="SmZ-pP-HQm" customClass="ShopInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="228" width="375" height="56"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SmZ-pP-HQm" id="dV4-5t-GdR">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoCo奶茶广州路店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cJ-qu-4BT">
-                                                    <rect key="frame" x="15" y="7" width="129" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.30196078431372547" green="0.25882352941176467" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="128份评价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-dz-Qq3">
-                                                    <rect key="frame" x="285" y="22" width="57" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.30196078431372547" green="0.25882352941176467" blue="0.13333333333333333" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0o-lQ-GTK" customClass="StartRateView" customModule="Loyalty" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="33" width="85" height="15"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="ty4-uo-vHQ"/>
-                                                        <constraint firstAttribute="width" constant="85" id="uBH-w6-2Z9"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HZ-lk-S9Q">
-                                                    <rect key="frame" x="102" y="32" width="37" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.30196078431372547" green="0.25882352941176467" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="PKL-dz-Qq3" secondAttribute="trailing" id="3ON-ba-Hjq"/>
-                                                <constraint firstItem="1cJ-qu-4BT" firstAttribute="top" secondItem="dV4-5t-GdR" secondAttribute="top" constant="6.5" id="570-Sa-vbv"/>
-                                                <constraint firstItem="5HZ-lk-S9Q" firstAttribute="centerY" secondItem="V0o-lQ-GTK" secondAttribute="centerY" id="CIp-ov-lpO"/>
-                                                <constraint firstItem="PKL-dz-Qq3" firstAttribute="centerY" secondItem="dV4-5t-GdR" secondAttribute="centerY" id="JMa-Bk-PRZ"/>
-                                                <constraint firstItem="1cJ-qu-4BT" firstAttribute="leading" secondItem="dV4-5t-GdR" secondAttribute="leading" constant="15" id="Jjl-MI-Ybk"/>
-                                                <constraint firstItem="5HZ-lk-S9Q" firstAttribute="leading" secondItem="V0o-lQ-GTK" secondAttribute="trailing" constant="2" id="eg1-z8-3yv"/>
-                                                <constraint firstItem="V0o-lQ-GTK" firstAttribute="top" secondItem="1cJ-qu-4BT" secondAttribute="bottom" constant="8" id="ptW-O4-JnJ"/>
-                                                <constraint firstItem="V0o-lQ-GTK" firstAttribute="leading" secondItem="1cJ-qu-4BT" secondAttribute="leading" id="wKM-Il-TEU"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LocationInfoTableViewCell" rowHeight="32" id="NF8-sV-lYY" customClass="LocationInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="284" width="375" height="32"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NF8-sV-lYY" id="BFb-AE-ZJQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="31.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="定位" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-yx-mgs">
-                                                    <rect key="frame" x="15" y="11" width="9" height="11"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南京市鼓楼区广州路122号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDy-Vt-zr6">
-                                                    <rect key="frame" x="32" y="9" width="141" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.30196078431372547" green="0.25882352941176467" blue="0.13333333333333333" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="XDy-Vt-zr6" firstAttribute="leading" secondItem="DwQ-yx-mgs" secondAttribute="trailing" constant="8" id="EQl-Vx-ysE"/>
-                                                <constraint firstItem="XDy-Vt-zr6" firstAttribute="centerY" secondItem="DwQ-yx-mgs" secondAttribute="centerY" id="N9V-yH-SIA"/>
-                                                <constraint firstItem="DwQ-yx-mgs" firstAttribute="centerY" secondItem="BFb-AE-ZJQ" secondAttribute="centerY" id="fS1-ht-cpm"/>
-                                                <constraint firstItem="DwQ-yx-mgs" firstAttribute="leading" secondItem="BFb-AE-ZJQ" secondAttribute="leading" constant="15" id="kGB-ga-BVS"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityTimeInfoTableViewCell" rowHeight="45" id="7Lj-ac-B8u" customClass="ActivityTimeInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="316" width="375" height="45"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Lj-ac-B8u" id="tVs-kn-avh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015年1月1日-2015年3月1日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L03-ey-8pO">
-                                                    <rect key="frame" x="15" y="14" width="194" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.30196078431372547" green="0.25882352941176467" blue="0.13333333333333333" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="L03-ey-8pO" firstAttribute="centerY" secondItem="tVs-kn-avh" secondAttribute="centerY" id="9cY-8h-8hz"/>
-                                                <constraint firstItem="L03-ey-8pO" firstAttribute="leading" secondItem="tVs-kn-avh" secondAttribute="leading" constant="15" id="LeR-sY-lNr"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityDetailInfoTableViewCell" rowHeight="150" id="H3U-aV-sNi" customClass="ActivityDetailInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="361" width="375" height="150"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H3U-aV-sNi" id="O1z-aF-hNb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00k-jE-Dqw">
-                                                    <rect key="frame" x="15" y="15" width="342" height="117"/>
-                                                    <string key="text">在活动期间凡购买任意饮品即可享受第二杯半价优惠
-参与优惠的饮品仅在下列类型中生效：
-奶茶三兄弟
-茉香奶茶
-...
-...
-...</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.30196078430000001" green="0.25882352939999997" blue="0.1333333333" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="00k-jE-Dqw" secondAttribute="trailing" constant="18" id="JOz-1q-S8Z"/>
-                                                <constraint firstItem="00k-jE-Dqw" firstAttribute="leading" secondItem="O1z-aF-hNb" secondAttribute="leading" constant="15" id="Lta-wL-flQ"/>
-                                                <constraint firstItem="00k-jE-Dqw" firstAttribute="top" secondItem="O1z-aF-hNb" secondAttribute="top" constant="15" id="vbh-nJ-x0z"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityDetailSectionHeaderTableViewCell" rowHeight="35" id="If8-c0-JGV" customClass="ActivityDetailSectionHeaderTableViewCell" customModule="Loyalty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="511" width="375" height="35"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="If8-c0-JGV" id="uhh-Ff-C9H">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="34.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrh-f3-CSr">
-                                                    <rect key="frame" x="15" y="14" width="60" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <color key="textColor" red="0.30196078431372547" green="0.25882352941176467" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="lrh-f3-CSr" secondAttribute="bottom" constant="3" id="9n9-BR-DNW"/>
-                                                <constraint firstItem="lrh-f3-CSr" firstAttribute="leading" secondItem="uhh-Ff-C9H" secondAttribute="leading" constant="15" id="zss-aD-IvN"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="sectionNameLabel" destination="lrh-f3-CSr" id="DV7-4P-B1y"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="delegate" destination="n2i-yE-Uny" id="Cah-ox-MLU"/>
                                 </connections>
@@ -301,7 +155,6 @@
     <resources>
         <image name="Coco" width="375" height="198"/>
         <image name="分享" width="27" height="26"/>
-        <image name="定位" width="9" height="11"/>
         <image name="白色收藏" width="29" height="29"/>
         <image name="白色收藏_选中" width="29" height="29"/>
     </resources>

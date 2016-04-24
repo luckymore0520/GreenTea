@@ -18,20 +18,28 @@ class UserSettingViewController: UIViewController {
     @IBOutlet weak var cardCountLabel: UILabel!
     @IBOutlet weak var collectionCountLabel: UILabel!
      /// ViewModel
-    var userViewModel:UserInfoViewModel?
+    var userViewModel:UserInfoViewModel? {
+        didSet {
+            self.userViewModel?.updateTitleLabel(self.nicknameLabel)
+            self.userViewModel?.updateImageView(self.avatarImageView)
+        }
+    }
     
     
-    var tableViewModel:UserSettingTableModel?
+    var tableViewModel:UserSettingTableModel? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.avatarImageView.layer.borderColor = UIColor.whiteColor().CGColor
-        self.tableViewModel = UserSettingTableModel(tableView: self.tableView)
-        self.userViewModel = UserInfoViewModel(user: UserInfoManager.sharedManager.currentUser)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.fillUserInfo()
+        self.userViewModel = UserInfoViewModel(user: UserInfoManager.sharedManager.currentUser)
+        self.tableViewModel = UserSettingTableModel(tableView: self.tableView)
         self.navigationController?.navigationBarHidden = true
     }
     
@@ -39,11 +47,7 @@ class UserSettingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func fillUserInfo(){
-        self.userViewModel?.updateTitleLabel(self.nicknameLabel)
-        self.userViewModel?.updateImageView(self.avatarImageView)
-    }
+
 }
 
 

@@ -56,7 +56,7 @@ extension LocationSearchTableViewController {
         request.types = "餐饮服务|生活服务"
         request.sortrule = 0;
         request.keywords = keyword
-        request.city = UserDefaultTool.stringForKey(kCityKey)
+        request.city = UserDefaultTool.stringForKey(cityKey)
         self.mapSearch?.AMapPOIKeywordsSearch(request)
     }
 }

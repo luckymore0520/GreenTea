@@ -9,16 +9,15 @@
 import Foundation
 import AVOSCloud
 
-//https://leancloud.cn/data.html?appid=CzsgRqgwFvkH4YMcFW8xnwr7-gzGzoHsz#/
 let appId = "CzsgRqgwFvkH4YMcFW8xnwr7-gzGzoHsz"
 let appKey = "N0xI0NlMuzjYJWPhU4WCzrUH"
-
 
 class LeanCloudHelper {
     static func configureLeanCloudWithOptions(launchOptions:[NSObject: AnyObject]?) {
         AVOSCloud.setAllLogsEnabled(true)
         AVOSCloud.setApplicationId(appId, clientKey: appKey)
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        User.registerSubclass()
         Shop.registerSubclass()
         Activity.registerSubclass()
     }

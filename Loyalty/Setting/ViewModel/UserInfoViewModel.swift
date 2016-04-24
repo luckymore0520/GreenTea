@@ -15,8 +15,8 @@ typealias UserInfoPresentable = protocol<TitlePresentable,WebIconPresentable>
 struct UserInfoViewModel:UserInfoPresentable {
     var title: String
     var iconName: String
-    init(user: AVUser?) {
-        self.title = user?.nickname ?? ""
+    init(user: User?) {
+        self.title = user?.nickName ?? ""
         self.iconName = user?.avatar?.url ?? ""
     }
 }

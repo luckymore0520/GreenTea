@@ -72,7 +72,8 @@ class ShopCreationViewController: FormViewController {
                 HUDHelper.removeLoading()
                 if success {
                     let user =  UserInfoManager.sharedManager.currentUser
-                    user?.userType = UserType.Business
+                    user?.userTypeString = UserType.Business.rawValue
+                    user?.shop = shop
                     user?.saveInBackgroundAndChange()
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {

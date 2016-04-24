@@ -23,10 +23,11 @@ class Shop: AVObject, AVSubclassing {
     @NSManaged var phoneNumber:String
     @NSManaged var shopDescription:String
     @NSManaged var avatar:AVFile
-    @NSManaged var user:AVUser
+    @NSManaged var userId:String?
 
-    init(shopName:String,location:CGPoint,locationName:String,phoneNumber:String,description:String,avatar:AVFile){
-        super.init()
+    
+    convenience init(shopName:String,location:CGPoint,locationName:String,phoneNumber:String,description:String,avatar:AVFile){
+        self.init()
         self.rate = 0
         self.commentCount = 0
         self.shopName = shopName
@@ -36,12 +37,16 @@ class Shop: AVObject, AVSubclassing {
         self.avatar = avatar
         self.shopDescription = description
         if let user = UserInfoManager.sharedManager.currentUser {
-            self.user = user
+            self.userId = user.username
         }
     }
     
     static func parseClassName() -> String! {
         return "Shop"
+    }
+    
+    var isMine:Bool {
+        return self.userId == UserInfoManager.sharedManager.currentUser?.username
     }
 }
 

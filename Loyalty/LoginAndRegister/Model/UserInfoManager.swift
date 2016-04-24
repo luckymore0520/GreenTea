@@ -15,21 +15,21 @@ class UserInfoManager {
     private static let sharedInstance = UserInfoManager()
     var savedPhoneNumber:String?
     var verifyRemainTime:Int = kLimitVerifySeconds
-
+    
     class var sharedManager : UserInfoManager {
         return sharedInstance
     }
         
-    var currentUser:AVUser? {
+    var currentUser:User? {
         if self.isLogin {
-            let user = AVUser.currentUser()
+            let user = User.currentUser() as User
             return user
         }
         return nil
     }
     
     var isLogin:Bool {
-        if let user = AVUser.currentUser() {
+        if let user = User.currentUser() {
             return user.isAuthenticated()
         } else {
             return false
@@ -37,22 +37,22 @@ class UserInfoManager {
     }
     
     func login(phone:String,password:String,completionHandler: (result:Bool, errorMsg:String?) -> Void ) {
-        AVUser.logInWithUsernameInBackground(phone, password: password) { (user, error) -> Void in
+        User.logInWithUsernameInBackground(phone, password: password) { (user, error) -> Void in
             completionHandler(result: user != nil , errorMsg: NSError.errorMsg(error))
         }
     }
     
     func logout(){
-        AVUser.logOut()
+        User.logOut()
     }
         
     func register(phone:String,password:String,code:String,completionHandler: (result:Bool, errorMsg:String?) -> Void ) {
         self.verifySMSCode(phone, code: code) { (result, errorMsg) -> Void in
             if result {
-                let user = AVUser.init()
+                let user = User.init()
                 user.username = phone
                 user.password = password
-                user.setObject("custume", forKey: "userType")
+                 user.userTypeString = "Custume"
                 user.signUpInBackgroundWithBlock({ (success, error) -> Void in
                     completionHandler(result: success, errorMsg: error == nil ? "" : error.localizedDescription)
                 })

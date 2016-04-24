@@ -21,78 +21,34 @@ enum Gender:String {
 }
 
 
-let kAvatarKey = "myAvatar" //头像
-let kUserTypeKey = "userType" //用户类型
-let kGenderKey = "sex" //性别
-let kBirthdayKey = "birthday" //生日
-let kCityKey = "currentCity" //城市
-let kNickname = "nickName"
-extension AVUser {
-    var nickname:String {
-        get {
-            return self.objectForKey(kNickname) as? String ?? "请设置昵称"
-        }
-        set {
-            self.setObject(newValue, forKey: kNickname)
-        }
+class User:AVUser {
+    @NSManaged var avatar:AVFile?
+    @NSManaged var shop:Shop?
+    @NSManaged var userTypeString:String?
+    @NSManaged var sex:String?
+    @NSManaged var birthday:String?
+    @NSManaged var currentCity:String?
+    @NSManaged var nickName:String?
+
+    override static func parseClassName() -> String! {
+        return "_User"
     }
     
-    var city:String? {
-        get {
-            return self.objectForKey(kCityKey) as? String
-        }
-        set {
-            self.setObject(newValue, forKey: kCityKey)
-        }
-    }
-    
-    
-    var gender:Gender? {
-        get {
-            return Gender(rawValue: self.objectForKey(kGenderKey) as? String ?? "未知")
-        }
-        set {
-            self.setObject(newValue?.rawValue, forKey: kGenderKey)
-        }
+    func gender()->Gender {
+        return Gender(rawValue: self.sex ?? "未知") ?? .Unknown
     }
 
     
-    
-    var myBirthday:String? {
-        get {
-            return self.objectForKey(kBirthdayKey) as? String
-        }
-        set {
-            self.setObject(newValue, forKey: kBirthdayKey)
-        }
-    }
-    
-    var avatar:AVFile? {
-        
-        get {
-            return self.objectForKey(kAvatarKey) as? AVFile
-        }
-        set {
-            self.setObject(newValue, forKey: kAvatarKey)
-        }
-    }
-    
-    var userType:UserType {
-        get {
-            return UserType(rawValue:self.objectForKey(kUserTypeKey) as! String) ?? .Custume
-        }
-        set {
-            self.setObject(newValue.rawValue, forKey: kUserTypeKey)
-        }
+    func userType()->UserType {
+        return UserType(rawValue:self.userTypeString ?? "Custume") ?? .Custume 
     }
 }
 
-extension AVUser {
+extension User {
     func saveInBackgroundAndChange(completion:AVBooleanResultBlock? = nil) {
+        self.fetchWhenSave = true
         self.saveInBackgroundWithBlock { (success, error) in
-            if success {
-                AVUser.changeCurrentUser(self, save: true)
-            }
+            User.changeCurrentUser(self, save: true)
             completion?(success,error)
         }
     }

@@ -36,10 +36,10 @@ class EditUserInfoTableViewController: UITableViewController,ViewControllerPrese
    
     func fillUserInfo(){
         guard let user = UserInfoManager.sharedManager.currentUser else { return }
-        self.nicknameLabel.text = user.nickname
-        self.genderLabel.text = user.gender?.rawValue
-        self.birthdayLabel.text = user.myBirthday
-        self.cityLabel.text = user.city
+        self.nicknameLabel.text = user.nickName
+        self.genderLabel.text = user.sex
+        self.birthdayLabel.text = user.birthday
+        self.cityLabel.text = user.currentCity
         self.phoneNumLabel.text = user.username
         self.avatarImageView.setImageWithUrlString(user.avatar?.url)
     }
@@ -54,10 +54,10 @@ extension EditUserInfoTableViewController {
         switch cellType {
         case .Gender:
             let sexArray = ["男","女"]
-            let initialSelection = UserInfoManager.sharedManager.currentUser?.gender?.rawValue == "女" ? 1 : 0
+            let initialSelection = UserInfoManager.sharedManager.currentUser?.sex == "女" ? 1 : 0
             self.showActionSheet("请选择性别", selectionArray: sexArray, initialSelection: initialSelection, displayLabel:self.genderLabel, selectionHandler: {
                 (selection) -> () in
-                user?.gender = Gender(rawValue: sexArray[selection])
+                user?.sex = sexArray[selection]
                 user?.saveInBackgroundAndChange()
                 }, origin: cell)
         case .Birthday:
@@ -66,7 +66,7 @@ extension EditUserInfoTableViewController {
                 picker, value, index in
                 let date = value as! NSDate
                 self.birthdayLabel.text = "\(date.year)-\(date.month)-\(date.days)"
-                user?.myBirthday = self.birthdayLabel.text
+                user?.birthday = self.birthdayLabel.text
                 user?.saveInBackgroundAndChange()
                 return
                 }, cancelBlock: { ActionStringCancelBlock in return }, origin:self.view)
@@ -83,11 +83,11 @@ extension EditUserInfoTableViewController {
             ImagePickerManager.sharedManager.showCameraPicker(self, delegate: self, withEditing: true)
             break;
         case .Nickname:
-            OneRowEditInfoViewController.jumpTo(self.navigationController, titleName: "编辑昵称", typeName: "昵称", defaultContent: user?.nickname, completionHandler: {
+            OneRowEditInfoViewController.jumpTo(self.navigationController, titleName: "编辑昵称", typeName: "昵称", defaultContent: user?.nickName, completionHandler: {
                 [unowned self]
                 (content) in
                 self.nicknameLabel.text = content
-                user?.nickname = content
+                user?.nickName = content
                 user?.saveInBackgroundAndChange()
                 self.navigationController?.popViewControllerAnimated(true)
             })
@@ -128,7 +128,7 @@ extension EditUserInfoTableViewController:CityViewControllerDelegate {
     func selectCity(city: String) {
         self.cityLabel.text = city
         let user = UserInfoManager.sharedManager.currentUser
-        user?.city = self.cityLabel.text
+        user?.currentCity = self.cityLabel.text
         user?.saveInBackgroundAndChange()
     }
 }
