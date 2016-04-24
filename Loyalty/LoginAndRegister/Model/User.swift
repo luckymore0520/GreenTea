@@ -88,11 +88,12 @@ extension AVUser {
 }
 
 extension AVUser {
-    func saveInBackgroundAndChange() {
+    func saveInBackgroundAndChange(completion:AVBooleanResultBlock? = nil) {
         self.saveInBackgroundWithBlock { (success, error) in
             if success {
                 AVUser.changeCurrentUser(self, save: true)
             }
+            completion?(success,error)
         }
     }
 }

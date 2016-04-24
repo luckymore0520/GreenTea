@@ -12,9 +12,10 @@ import Foundation
 class LocationPickerDataSource: NSObject,UITableViewDataSource {
     var mapSearch:AMapSearchAPI?
     weak var tableView:UITableView?
-    var searchResultArray = []
+    var searchResultArray:[AMapPOI] = []
     var selectedRow:Int = 0
-
+    var loadPoiCompletion:((firstPOI:AMapPOI) -> Void)?
+    
     init(tableView:UITableView,coordinate:CLLocationCoordinate2D) {
         super.init()
         mapSearch = AMapSearchAPI()
@@ -31,7 +32,7 @@ class LocationPickerDataSource: NSObject,UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(indexPath: indexPath) as PointInfoTableViewCell
-        let poi = self.searchResultArray[indexPath.row] as? AMapPOI
+        let poi = self.searchResultArray[indexPath.row]
         let pointViewModel = PointInfoTableViewCellViewModel(poi: poi, isChecked: indexPath.row == self.selectedRow)
         cell.render(pointViewModel)
         return cell
@@ -50,11 +51,13 @@ class LocationPickerDataSource: NSObject,UITableViewDataSource {
 
 // MARK: - PublicFunc
 extension LocationPickerDataSource {
-    func selectRow(indexPath:NSIndexPath){
-        if indexPath.row == self.selectedRow { return }
-        let originIndexPath = NSIndexPath(forRow: self.selectedRow, inSection: 0)
-        self.selectedRow = indexPath.row
-        self.tableView?.reloadRowsAtIndexPaths([originIndexPath,indexPath], withRowAnimation: UITableViewRowAnimation.None)
+    func selectRow(indexPath:NSIndexPath) -> AMapPOI{
+        if indexPath.row != self.selectedRow {
+            let originIndexPath = NSIndexPath(forRow: self.selectedRow, inSection: 0)
+            self.selectedRow = indexPath.row
+            self.tableView?.reloadRowsAtIndexPaths([originIndexPath,indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        }
+        return self.searchResultArray[indexPath.row]
     }
 }
 
@@ -63,7 +66,10 @@ extension LocationPickerDataSource:AMapSearchDelegate {
         if response.pois.count == 0 {
             return
         }
-        self.searchResultArray = response.pois
+        self.searchResultArray = response.pois as? [AMapPOI] ?? []
+        if let completion = self.loadPoiCompletion {
+            completion(firstPOI: self.searchResultArray[0])
+        }
         self.tableView?.reloadData()
     }
 }

@@ -17,6 +17,9 @@ class ShopCreationViewController: FormViewController {
     let locationNameKey = "location"
     let detailKey = "detail"
     let photoKey = "photo"
+    
+    var shopLocation:CLLocationCoordinate2D?
+    var shopAddress:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "创建店铺"
@@ -53,15 +56,31 @@ class ShopCreationViewController: FormViewController {
             HUDHelper.showText("请上传店铺照片")
             return
         }
+        guard let shopAddress = self.shopAddress else {
+            HUDHelper.showText("请选择店铺地址")
+            return
+        }
         HUDHelper.showLoading()
         LeanCloudHelper.uploadImage(photo) { (file, errorMsg) in
-            HUDHelper.removeLoading()
             guard let file = file else {
+                HUDHelper.removeLoading()
                 HUDHelper.showText(errorMsg)
                 return
             }
-            let shop = Shop(shopName: shopName, location: CGPointMake(0, 0), locationName: "南京大学仙林校区", phoneNumber: phoneNumber, description: detail, avatar: file)
-            shop.save()
+            let shop = Shop(shopName: shopName, location: CGPointMake(CGFloat(self.shopLocation?.latitude ?? 0), CGFloat(self.shopLocation?.longitude ?? 0)), locationName: shopAddress, phoneNumber: phoneNumber, description: detail, avatar: file)
+            shop.saveInBackgroundWithBlock({ (success, error) in
+                HUDHelper.removeLoading()
+                if success {
+                    let user =  UserInfoManager.sharedManager.currentUser
+                    user?.userType = UserType.Business
+                    user?.saveInBackgroundAndChange()
+                    self.navigationController?.popViewControllerAnimated(true)
+                } else {
+                    let errorMsg = NSError.errorMsg(error)
+                    HUDHelper.showText(errorMsg)
+                }
+            })
+            
         }
     }
     
@@ -86,7 +105,6 @@ class ShopCreationViewController: FormViewController {
                     cell, row in
                     cell.textField.font = UIFont.systemFontOfSize(14)
                     cell.textField.textAlignment = .Right
-                    cell.textLabel?.textColor = UIColor.globalGrayColor()
             }
             <<< PhoneRow(phoneNumberKey) {
                 row in
@@ -102,7 +120,6 @@ class ShopCreationViewController: FormViewController {
                     cell, row in
                     cell.textField.font = UIFont.systemFontOfSize(14)
                     cell.textField.textAlignment = .Right
-                    cell.textLabel?.textColor = UIColor.globalGrayColor()
             }
             <<< LabelRow(locationNameKey) {
                 row in
@@ -113,14 +130,16 @@ class ShopCreationViewController: FormViewController {
                     cell.textLabel?.font = UIFont.systemFontOfSize(15)
                     cell.tintColor = UIColor.globalTitleBrownColor()
                     cell.accessoryType = .DisclosureIndicator
-                    
-                }.cellUpdate {
-                    cell, row in
-                    cell.textLabel?.font = UIFont.systemFontOfSize(14)
-                    cell.textLabel?.textAlignment = .Right
-                    cell.textLabel?.textColor = UIColor.globalGrayColor()
+                    cell.detailTextLabel?.font = UIFont.systemFontOfSize(14)
             }.onCellSelection({ (cell, row) in
                 let locationPickerViewController = LocationPickerViewController(nibName: "LocationPickerViewController", bundle: nil)
+                locationPickerViewController.pickCompletion = {
+                    [unowned self]
+                    location,address in
+                    self.shopLocation = location
+                    self.shopAddress = address
+                    row.value = address
+                }
                 self.navigationController?.pushViewController(locationPickerViewController, animated: true)
             })
             <<< ImageRow(photoKey) {
@@ -132,14 +151,10 @@ class ShopCreationViewController: FormViewController {
                     cell.selectionStyle = .Default
                     cell.textLabel?.font = UIFont.systemFontOfSize(15)
                     cell.tintColor = UIColor.globalTitleBrownColor()
+                    cell.textLabel?.textAlignment = .Right
                     cell.height = {
                         return 70
                     }
-                }.cellUpdate {
-                    cell, row in
-                    cell.textLabel?.font = UIFont.systemFontOfSize(14)
-                    cell.textLabel?.textAlignment = .Right
-                    cell.textLabel?.textColor = UIColor.globalGrayColor()
                 }
             +++ Section("店铺详情")
             <<< TextAreaRow(detailKey) {
@@ -150,10 +165,9 @@ class ShopCreationViewController: FormViewController {
                     cell.selectionStyle = .None
                     cell.textLabel?.font = UIFont.systemFontOfSize(15)
                     cell.tintColor = UIColor.globalTitleBrownColor()
-                }.cellUpdate {
-                    cell, row in
-                    cell.textView.font = UIFont.systemFontOfSize(14)
-                    cell.textView.textColor = UIColor.globalGrayColor()
-            }
+            }.cellUpdate({ (cell, row) in
+                cell.textView.font = UIFont.systemFontOfSize(14)
+                cell.textView.textColor = UIColor.globalGrayColor()
+            })
     }
 }
