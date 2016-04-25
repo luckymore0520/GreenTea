@@ -38,9 +38,11 @@ class ShopInfoViewController: UIViewController {
     
     static func jumpToShopViewController(shop:Shop?, fromViewController:UINavigationController?){
         guard let shop = shop else { return }
-        let shopViewController = ShopInfoViewController(nibName: "ShopInfoViewController", bundle: nil)
-        shopViewController.shop = shop
-        fromViewController?.pushViewController(shopViewController, animated: true)
+        if shop.isKindOfClass(Shop.classForCoder()) {
+            let shopViewController = ShopInfoViewController(nibName: "ShopInfoViewController", bundle: nil)
+            shopViewController.shop = shop
+            fromViewController?.pushViewController(shopViewController, animated: true)
+        }
     }
 }
 
