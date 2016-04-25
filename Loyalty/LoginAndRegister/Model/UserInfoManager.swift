@@ -15,14 +15,16 @@ class UserInfoManager {
     private static let sharedInstance = UserInfoManager()
     var savedPhoneNumber:String?
     var verifyRemainTime:Int = kLimitVerifySeconds
-    
+    var user:User?
     class var sharedManager : UserInfoManager {
         return sharedInstance
     }
         
     var currentUser:User? {
         if self.isLogin {
-            let user = User.currentUser() as User
+            if self.user == nil {
+                user = User.currentMyUser()
+            }
             return user
         }
         return nil

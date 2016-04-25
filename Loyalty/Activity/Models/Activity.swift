@@ -45,7 +45,7 @@ class Shop: AVObject, AVSubclassing {
         return "Shop"
     }
     
-    var isMine:Bool {
+    func isMine()->Bool {
         return self.userId == UserInfoManager.sharedManager.currentUser?.username
     }
 }

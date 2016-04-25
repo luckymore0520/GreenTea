@@ -72,6 +72,8 @@ extension UserSettingViewController:UITableViewDelegate {
                 self.navigationController?.pushViewController(shopCreationViewController, animated: true)
             case .Logout:
                 self.tryLogout()
+            case .MyShops:
+                ShopInfoViewController.jumpToShopViewController(UserInfoManager.sharedManager.currentUser?.shop, fromViewController: self.navigationController)
             default:
                 break
             }

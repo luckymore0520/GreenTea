@@ -17,8 +17,8 @@ enum ShopInfoRowType:Int,TitlePresentable{
     case ContactInfo;
     case Review;
     static func allTypes(isMyOwnShop:Bool) -> [[ShopInfoRowType]]{
-        return isMyOwnShop ? [[.ShopInfo,.LocationInfo],[.ShopDetailInfo,.ShopActivityInfo],[.ContactInfo] ] :
-            [[.ShopInfo,.LocationInfo],[.ShopDetailInfo] ]
+        return isMyOwnShop ? [[.ShopInfo,.LocationInfo],[.ShopDetailInfo,.ShopActivityInfo],[.ContactInfo],[.Review] ] :
+            [[.ShopInfo,.LocationInfo],[.ShopDetailInfo],[.Review] ]
     }
     
     var title:String {
@@ -50,13 +50,13 @@ class ShopInfoDataSource: NSObject {
         super.init()
         self.shop = shop
         self.tableView = tableView
+        self.tableRowInfo = ShopInfoRowType.allTypes(shop.isMine())
         tableView.dataSource = self
         tableView.registerReusableCell(ShopInfoTableViewCell.self)
         tableView.registerReusableCell(LocationInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityTimeInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailSectionHeaderTableViewCell.self)
-        tableRowInfo = ShopInfoRowType.allTypes(shop.isMine)
     }
 
     func viewForHeader(tableView:UITableView,section:Int) -> UIView? {
@@ -95,7 +95,7 @@ class ShopInfoDataSource: NSObject {
 
 extension ShopInfoDataSource:UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return tableRowInfo.count + 1
+        return tableRowInfo.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -121,8 +121,8 @@ extension ShopInfoDataSource:UITableViewDataSource {
             cell?.accessoryType = .DisclosureIndicator
             cell?.textLabel?.text = "我的活动"
             cell?.tintColor = UIColor.globalTitleBrownColor()
-        default:
-            break
+        case .Review:
+            cell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: "ShopActivityInfo")
         }
         return cell!
     }

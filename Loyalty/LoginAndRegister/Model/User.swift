@@ -45,6 +45,19 @@ class User:AVUser {
 }
 
 extension User {
+    static func currentMyUser()->User {
+        let user = User.currentUser()
+        if let shop = user.shop {
+            if !shop.isKindOfClass(Shop.classForCoder()) {
+                let query = Shop.query()
+                query.getObjectInBackgroundWithId(shop.objectId, block: { (shop, error) in
+                    user.shop = shop as? Shop
+                })
+            }
+        }
+        return user
+    }
+    
     func saveInBackgroundAndChange(completion:AVBooleanResultBlock? = nil) {
         self.fetchWhenSave = true
         self.saveInBackgroundWithBlock { (success, error) in
