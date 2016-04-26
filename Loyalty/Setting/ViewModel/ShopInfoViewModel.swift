@@ -18,6 +18,7 @@ struct ShopInfoViewModel:ShopPresentable {
     var subTitle: String
     var location:String
     var detail: String
+    var activityList:[Activity]?
     init(shop:Shop) {
         self.title = shop.shopName
         self.iconName = shop.avatar.url
@@ -26,5 +27,6 @@ struct ShopInfoViewModel:ShopPresentable {
         self.subTitle = shop.phoneNumber
         self.location = shop.locationName
         self.detail = shop.shopDescription
+        self.activityList = shop.activitys
     }
 }

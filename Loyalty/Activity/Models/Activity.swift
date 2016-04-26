@@ -25,7 +25,7 @@ class Shop: AVObject, AVSubclassing {
     @NSManaged var avatar:AVFile
     @NSManaged var userId:String?
     @NSManaged var activitys:[Activity]?
-
+    
     
     convenience init(shopName:String,location:CGPoint,locationName:String,phoneNumber:String,description:String,avatar:AVFile){
         self.init()
@@ -62,6 +62,8 @@ class Shop: AVObject, AVSubclassing {
 class Activity: AVObject, AVSubclassing  {
     @NSManaged var activityTypeString:String?
     @NSManaged var avatar:AVFile
+    @NSManaged var location:AVGeoPoint
+    @NSManaged var locationName:String
     @NSManaged var shopId:String
     @NSManaged var creatorId:String
     @NSManaged var loyaltyCoinMaxCount:Int
@@ -83,6 +85,8 @@ class Activity: AVObject, AVSubclassing  {
         self.loyaltyCoinMaxCount = loyaltyCoinMaxCount
         self.activityDescription = description
         self.avatar = avatar
+        self.location = shop.location
+        self.locationName = shop.locationName
     }
     
     var activityType:ActivityType? {
@@ -95,4 +99,6 @@ class Activity: AVObject, AVSubclassing  {
     static func parseClassName() -> String! {
         return "Activity"
     }
+    
+    
 }

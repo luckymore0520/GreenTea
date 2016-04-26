@@ -71,6 +71,10 @@
 		12675D651CCF2C5300C56E71 /* ActivityCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D641CCF2C5300C56E71 /* ActivityCreationViewController.swift */; };
 		12675D671CCF31AC00C56E71 /* ActionSheetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D661CCF31AC00C56E71 /* ActionSheetTool.swift */; };
 		12675D6A1CCF3BDC00C56E71 /* MyNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D691CCF3BDC00C56E71 /* MyNSDate.swift */; };
+		12675D6D1CCF440400C56E71 /* SimpleActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D6B1CCF440400C56E71 /* SimpleActivityTableViewCell.swift */; };
+		12675D6E1CCF440400C56E71 /* SimpleActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12675D6C1CCF440400C56E71 /* SimpleActivityTableViewCell.xib */; };
+		12675D701CCF537A00C56E71 /* TagPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D6F1CCF537A00C56E71 /* TagPresentable.swift */; };
+		12675D721CCF827A00C56E71 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D711CCF827A00C56E71 /* ActivityViewModel.swift */; };
 		126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */; };
 		126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */; };
 		126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */; };
@@ -240,6 +244,10 @@
 		12675D641CCF2C5300C56E71 /* ActivityCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityCreationViewController.swift; path = Setting/Controller/ActivityCreationViewController.swift; sourceTree = "<group>"; };
 		12675D661CCF31AC00C56E71 /* ActionSheetTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionSheetTool.swift; path = Tools/ActionSheetTool.swift; sourceTree = "<group>"; };
 		12675D691CCF3BDC00C56E71 /* MyNSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyNSDate.swift; path = Extension/MyNSDate.swift; sourceTree = "<group>"; };
+		12675D6B1CCF440400C56E71 /* SimpleActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleActivityTableViewCell.swift; path = Activity/Views/SimpleActivityTableViewCell.swift; sourceTree = "<group>"; };
+		12675D6C1CCF440400C56E71 /* SimpleActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleActivityTableViewCell.xib; path = Activity/Views/SimpleActivityTableViewCell.xib; sourceTree = "<group>"; };
+		12675D6F1CCF537A00C56E71 /* TagPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagPresentable.swift; path = Protocal/TagPresentable.swift; sourceTree = "<group>"; };
+		12675D711CCF827A00C56E71 /* ActivityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewModel.swift; path = Activity/ViewModels/ActivityViewModel.swift; sourceTree = "<group>"; };
 		126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HasHiddenNavigation.swift; path = Protocal/HasHiddenNavigation.swift; sourceTree = "<group>"; };
 		126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationInfoTableViewCell.swift; path = Activity/Views/LocationInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTimeInfoTableViewCell.swift; path = Activity/Views/ActivityTimeInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -674,6 +682,8 @@
 		128027B61C58DAA300C76EA6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12675D6B1CCF440400C56E71 /* SimpleActivityTableViewCell.swift */,
+				12675D6C1CCF440400C56E71 /* SimpleActivityTableViewCell.xib */,
 				128027B71C58DACD00C76EA6 /* ActivityTableViewCell.swift */,
 				128027B81C58DACD00C76EA6 /* ActivityTableViewCell.xib */,
 				120E2DC51CAD4568001E6DE9 /* StartRateView.swift */,
@@ -697,6 +707,7 @@
 			children = (
 				128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */,
 				120E2DCA1CAD54F8001E6DE9 /* ActivityDetailDataSource.swift */,
+				12675D711CCF827A00C56E71 /* ActivityViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -716,6 +727,7 @@
 				12675D5C1CCEFE3B00C56E71 /* HasHiddenComponent.swift */,
 				12675D5E1CCF00CD00C56E71 /* LocationPresentable.swift */,
 				12675D601CCF063200C56E71 /* DetailPresentable.swift */,
+				12675D6F1CCF537A00C56E71 /* TagPresentable.swift */,
 			);
 			name = Protocal;
 			sourceTree = "<group>";
@@ -975,6 +987,7 @@
 				128027971C58BCED00C76EA6 /* UserCenterStoryboard.storyboard in Resources */,
 				125D91291CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib in Resources */,
 				12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */,
+				12675D6E1CCF440400C56E71 /* SimpleActivityTableViewCell.xib in Resources */,
 				12FF67931CC2527900E7860B /* CityViewController.xib in Resources */,
 				128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */,
 				12C260F71CCD009F00283286 /* LocationInfoTableViewCell.xib in Resources */,
@@ -1039,6 +1052,7 @@
 				12675D631CCF0A4200C56E71 /* MyString.swift in Sources */,
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
+				12675D6D1CCF440400C56E71 /* SimpleActivityTableViewCell.swift in Sources */,
 				12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */,
 				125D912B1CC715B200AE5F1C /* UIImageView.swift in Sources */,
 				12FF67981CC2527900E7860B /* SectionView.swift in Sources */,
@@ -1115,6 +1129,7 @@
 				12FF67A51CC2527900E7860B /* PinyinHelper.m in Sources */,
 				125D911A1CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift in Sources */,
 				1209023F1C5F712100772CBA /* User.swift in Sources */,
+				12675D721CCF827A00C56E71 /* ActivityViewModel.swift in Sources */,
 				127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */,
 				12FF67A11CC2527900E7860B /* HanyuPinyinOutputFormat.m in Sources */,
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,
@@ -1123,6 +1138,7 @@
 				12C260F31CCBAC7600283286 /* LocationSearchTableViewController.swift in Sources */,
 				125D91281CC4CDD400AE5F1C /* OneRowEditInfoViewController.swift in Sources */,
 				121924571C5A58C300A3D94E /* Float.swift in Sources */,
+				12675D701CCF537A00C56E71 /* TagPresentable.swift in Sources */,
 				12767CC71CC762B800DD0B4F /* ShopCreationViewController.swift in Sources */,
 				121924581C5A58C300A3D94E /* Int.swift in Sources */,
 				121924551C5A58C300A3D94E /* Double.swift in Sources */,

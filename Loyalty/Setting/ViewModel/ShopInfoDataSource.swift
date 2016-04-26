@@ -17,7 +17,7 @@ enum ShopInfoRowType:Int,TitlePresentable{
     case ContactInfo;
     case Review;
     static func allTypes(isMyOwnShop:Bool) -> [[ShopInfoRowType]]{
-        return isMyOwnShop ? [[.ShopInfo,.LocationInfo],[.ShopDetailInfo,.ShopActivityInfo],[.ContactInfo],[.Review] ] :
+        return isMyOwnShop ? [[.ShopInfo,.LocationInfo],[.ShopDetailInfo],[.ShopActivityInfo],[.ContactInfo],[.Review] ] :
             [[.ShopInfo,.LocationInfo],[.ShopDetailInfo],[.Review] ]
     }
     
@@ -30,6 +30,8 @@ enum ShopInfoRowType:Int,TitlePresentable{
                 return "联系方式"
             case .Review:
                 return "网友点评"
+            case .ShopActivityInfo:
+                return "我的活动"
             default:
                 return ""
             }
@@ -46,6 +48,7 @@ class ShopInfoDataSource: NSObject {
     weak var tableView:UITableView?
     var shopViewModel:ShopInfoViewModel?
     var tableRowInfo:[[ShopInfoRowType]] = []
+    
     init(shop:Shop, tableView:UITableView) {
         super.init()
         self.shopViewModel = ShopInfoViewModel(shop: shop)
@@ -57,6 +60,7 @@ class ShopInfoDataSource: NSObject {
         tableView.registerReusableCell(ActivityTimeInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailSectionHeaderTableViewCell.self)
+        tableView.registerReusableCell(SimpleActivityTableViewCell.self)
     }
     
     func render(imageView:UIImageView) {
@@ -78,6 +82,9 @@ class ShopInfoDataSource: NSObject {
     }
     
     func heightForRowAtIndexPath(indexPath:NSIndexPath) -> CGFloat {
+        if tableRowInfo[indexPath.section][0] == .ShopActivityInfo {
+            return 90
+        }
         switch tableRowInfo[indexPath.section][indexPath.row] {
         case .ShopInfo:
             return 56
@@ -85,12 +92,12 @@ class ShopInfoDataSource: NSObject {
             return 32
         case .ContactInfo:
             return 45
-        case .ShopActivityInfo:
-            return 45
         case .Review:
             return 50
         case .ShopDetailInfo:
             return 30 + (self.shopViewModel?.detail.minHeight(UIScreen.mainScreen().bounds.width - 30) ?? 0)
+        default:
+            return 0
         }
     }
 }
@@ -104,36 +111,42 @@ extension ShopInfoDataSource:UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section < tableRowInfo.count {
+            if tableRowInfo[section][0] == .ShopActivityInfo {
+                return self.shopViewModel?.activityList?.count ?? 0
+            }
             return tableRowInfo[section].count
         }
         return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let staticRowArray = tableRowInfo[indexPath.section]
+        if staticRowArray[0] == .ShopActivityInfo {
+            let activityCell = tableView.dequeueReusableCell(indexPath: indexPath) as SimpleActivityTableViewCell
+            if let activity = self.shopViewModel?.activityList?[indexPath.row] {
+                activityCell.render(ActivityViewModel(activity: activity))
+            }
+            return activityCell
+        }
         var cell:UITableViewCell?
         switch tableRowInfo[indexPath.section][indexPath.row] {
         case .ShopInfo:
-            let shopInfoCell = tableView.dequeueReusableCell() as ShopInfoTableViewCell
+            let shopInfoCell = tableView.dequeueReusableCell(indexPath: indexPath) as ShopInfoTableViewCell
             shopInfoCell.render(self.shopViewModel)
             cell = shopInfoCell
         case .LocationInfo:
-            let locationInfoCell = tableView.dequeueReusableCell() as LocationInfoTableViewCell
+            let locationInfoCell = tableView.dequeueReusableCell(indexPath: indexPath) as LocationInfoTableViewCell
             locationInfoCell.render(self.shopViewModel)
             cell = locationInfoCell
         case .ContactInfo:
-            let contactInfoCell = tableView.dequeueReusableCell() as ActivityTimeInfoTableViewCell
+            let contactInfoCell = tableView.dequeueReusableCell(indexPath: indexPath) as ActivityTimeInfoTableViewCell
             contactInfoCell.render(self.shopViewModel)
             cell = contactInfoCell
         case .ShopDetailInfo:
-            let detailCell = tableView.dequeueReusableCell() as ActivityDetailInfoTableViewCell
+            let detailCell = tableView.dequeueReusableCell(indexPath: indexPath) as ActivityDetailInfoTableViewCell
             detailCell.render(self.shopViewModel)
             cell = detailCell
-        case .ShopActivityInfo:
-            cell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: "ShopActivityInfo")
-            cell?.accessoryType = .DisclosureIndicator
-            cell?.textLabel?.text = "我的活动"
-            cell?.textLabel?.textColor = UIColor.globalTitleBrownColor()
-        case .Review:
+        default:
             cell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: "ShopActivityInfo")
         }
         return cell!

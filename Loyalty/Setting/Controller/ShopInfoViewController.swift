@@ -21,6 +21,12 @@ class ShopInfoViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.translucent = false
         self.automaticallyAdjustsScrollViewInsets = false
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = false
         guard let shop = self.shop else { return }
         self.shopInfoDataSource = ShopInfoDataSource(shop: shop, tableView: tableView)
         self.shopInfoDataSource?.render(self.shopImageView)
@@ -29,12 +35,6 @@ class ShopInfoViewController: UIViewController {
             self.createActivityButton.hidden = false
             self.setRightButton("", imageName: "编辑_白", selector: #selector(ShopInfoViewController.onEditButtonClicked))
         }
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
