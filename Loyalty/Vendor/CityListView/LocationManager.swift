@@ -52,6 +52,8 @@ class LocationManager: NSObject,CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if(locations.count >= 1){
             let  location:CLLocation = locations[locations.count - 1];
+            UserDefaultTool.saveValueForKey(latituteKey, value: location.coordinate.latitude)
+            UserDefaultTool.saveValueForKey(longituteKey, value: location.coordinate.longitude)
             self.locationManager!.stopUpdatingLocation();
             let geocoder:CLGeocoder = CLGeocoder();
             geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks:[CLPlacemark]?, NSError) -> Void in

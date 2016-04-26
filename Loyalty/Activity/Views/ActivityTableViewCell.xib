@@ -15,18 +15,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coco" translatesAutoresizingMaskIntoConstraints="NO" id="2hT-y4-9VV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="2hT-y4-9VV" secondAttribute="height" multiplier="15:8" id="2YP-kv-EB2"/>
-                            <constraint firstAttribute="height" constant="200" id="gEj-Lo-hlV"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="gEj-Lo-hlV"/>
-                            </mask>
-                        </variation>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CoCo奶茶" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAD-RF-JPy">
                         <rect key="frame" x="147" y="210" width="83" height="22"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
@@ -53,42 +41,26 @@
                         <color key="textColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYa-MX-jYs">
-                        <rect key="frame" x="0.0" y="0.0" width="57" height="23"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="标签" translatesAutoresizingMaskIntoConstraints="NO" id="9Yi-9I-YUQ">
-                                <rect key="frame" x="0.0" y="0.0" width="57" height="23"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免费升级" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-qQ-nDb">
-                                <rect key="frame" x="3" y="6" width="40" height="12"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coco" translatesAutoresizingMaskIntoConstraints="NO" id="2hT-y4-9VV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <constraints>
-                            <constraint firstItem="9Yi-9I-YUQ" firstAttribute="leading" secondItem="OYa-MX-jYs" secondAttribute="leading" id="35e-Yb-QUM"/>
-                            <constraint firstItem="9Yi-9I-YUQ" firstAttribute="top" secondItem="OYa-MX-jYs" secondAttribute="top" id="Pl3-7h-CHH"/>
-                            <constraint firstAttribute="bottom" secondItem="9Yi-9I-YUQ" secondAttribute="bottom" id="Pw9-2l-PvV"/>
-                            <constraint firstItem="VkQ-qQ-nDb" firstAttribute="centerY" secondItem="OYa-MX-jYs" secondAttribute="centerY" id="TOi-kQ-LjI"/>
-                            <constraint firstAttribute="trailing" secondItem="9Yi-9I-YUQ" secondAttribute="trailing" id="cd6-lM-NcH"/>
-                            <constraint firstAttribute="width" constant="57" id="kG1-J8-oEO"/>
-                            <constraint firstAttribute="height" constant="23" id="rC8-se-aWy"/>
-                            <constraint firstItem="VkQ-qQ-nDb" firstAttribute="leading" secondItem="OYa-MX-jYs" secondAttribute="leading" constant="3" id="sQ4-qo-pi6"/>
+                            <constraint firstAttribute="width" secondItem="2hT-y4-9VV" secondAttribute="height" multiplier="15:8" id="2YP-kv-EB2"/>
+                            <constraint firstAttribute="height" constant="200" id="gEj-Lo-hlV"/>
                         </constraints>
-                    </view>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gEj-Lo-hlV"/>
+                            </mask>
+                        </variation>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="zAD-RF-JPy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="1qV-HH-VcC"/>
                     <constraint firstItem="WhW-TO-g4z" firstAttribute="top" secondItem="zAD-RF-JPy" secondAttribute="bottom" id="9cg-Kz-S5d"/>
-                    <constraint firstItem="OYa-MX-jYs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Bjo-z6-s0f"/>
                     <constraint firstItem="tfl-c2-UYs" firstAttribute="centerY" secondItem="Kvq-w0-HD7" secondAttribute="centerY" id="FWy-QE-HVl"/>
                     <constraint firstItem="Kvq-w0-HD7" firstAttribute="top" secondItem="2hT-y4-9VV" secondAttribute="bottom" constant="16" id="Mls-gO-XmX"/>
                     <constraint firstItem="Kvq-w0-HD7" firstAttribute="leading" secondItem="tfl-c2-UYs" secondAttribute="trailing" constant="3" id="XNC-Mt-NPj"/>
                     <constraint firstItem="zAD-RF-JPy" firstAttribute="top" secondItem="2hT-y4-9VV" secondAttribute="bottom" constant="10" id="Z2y-rm-7Gf"/>
-                    <constraint firstItem="OYa-MX-jYs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aht-YB-fzN"/>
                     <constraint firstAttribute="trailing" secondItem="Kvq-w0-HD7" secondAttribute="trailing" constant="10" id="hC9-tn-UmF"/>
                     <constraint firstItem="WhW-TO-g4z" firstAttribute="leading" secondItem="oIV-GU-Mbx" secondAttribute="trailing" constant="2" id="huY-g5-ItN"/>
                     <constraint firstItem="oIV-GU-Mbx" firstAttribute="centerY" secondItem="WhW-TO-g4z" secondAttribute="centerY" id="jqo-iY-BEf"/>
@@ -99,9 +71,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="activityImageView" destination="2hT-y4-9VV" id="8i2-8i-a0u"/>
+                <outlet property="activityImageView" destination="2hT-y4-9VV" id="y0Z-C5-zUs"/>
+                <outlet property="locationLabel" destination="WhW-TO-g4z" id="dzi-xw-Pee"/>
+                <outlet property="nameLabel" destination="zAD-RF-JPy" id="L4D-07-0jj"/>
+                <outlet property="starButton" destination="Kvq-w0-HD7" id="Ccf-Dz-GVh"/>
             </connections>
-            <point key="canvasLocation" x="596.5" y="283"/>
+            <point key="canvasLocation" x="953.5" y="269"/>
         </tableViewCell>
     </objects>
     <resources>
@@ -109,6 +84,5 @@
         <image name="取消收藏" width="19" height="19"/>
         <image name="定位" width="9" height="11"/>
         <image name="收藏" width="19" height="19"/>
-        <image name="标签" width="57" height="23"/>
     </resources>
 </document>

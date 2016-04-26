@@ -10,11 +10,18 @@ import UIKit
 import Foundation
 
 let cityKey = "CITY_KEY"
+let latituteKey = "LATITUTE_KEY"
+let longituteKey = "LONGITUTE_KEY"
 
 class UserDefaultTool {
     
     static func stringForKey(key:String) -> String? {
         let value = UserDefaultTool.valueForKey(key) as? String
+        return value
+    }
+    
+    static func floatForKey(key:String) -> CGFloat? {
+        let value = UserDefaultTool.valueForKey(key) as? CGFloat
         return value
     }
     

@@ -13,7 +13,7 @@ import UIKit
 class ActivityListDataSource: NSObject {
     var tableView:UITableView?
     var activityType:ActivityType?
-    private var activityList:Array<Activity>?
+    var activityList:[Activity]?
     
     required init(tableView:UITableView, activityType:ActivityType){
         super.init()
@@ -25,6 +25,16 @@ class ActivityListDataSource: NSObject {
     }
 
     func loadData(){
+        var point:CGPoint?
+        let latitute = UserDefaultTool.floatForKey(latituteKey)
+        let longitute = UserDefaultTool.floatForKey(longituteKey)
+        if latitute != nil && longitute != nil {
+            point = CGPointMake(latitute!, longitute!)
+        }
+        Activity.query(point, type: self.activityType ?? .Loyalty) { (activities) in
+            self.activityList = activities
+            self.tableView?.reloadData()
+        }
     }
     
     func estimateHeightForEachRow() -> CGFloat{
@@ -35,11 +45,16 @@ class ActivityListDataSource: NSObject {
 
 extension ActivityListDataSource: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return activityList?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableViewCell = tableView.dequeueReusableCell(indexPath: indexPath) as ActivityTableViewCell
+        if let activity = self.activityList?[indexPath.row] {
+            let activityViewModel = ActivityViewModel(activity: activity)
+            tableViewCell.render(activityViewModel)
+        }
+
         return tableViewCell
     }
     

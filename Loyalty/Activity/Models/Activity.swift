@@ -100,5 +100,21 @@ class Activity: AVObject, AVSubclassing  {
         return "Activity"
     }
     
-    
+    static func query(nearGeoPoint:CGPoint?, type:ActivityType, completion:[Activity] -> Void) {
+        let query = Activity.query()
+        query.limit = 10
+        if let nearGeoPoint = nearGeoPoint {
+            query.whereKey("location", nearGeoPoint: AVGeoPoint(latitude: Double(nearGeoPoint.x), longitude: Double(nearGeoPoint.y)))
+        }
+        query.whereKey("activityTypeString", equalTo: type.rawValue)
+        query.findObjectsInBackgroundWithBlock { (activityObject, error) in
+            var activityArray:[Activity] = []
+            for object in activityObject {
+                if let activity = object as? Activity {
+                    activityArray.append(activity)
+                }
+            }
+            completion(activityArray)
+        }
+    }
 }

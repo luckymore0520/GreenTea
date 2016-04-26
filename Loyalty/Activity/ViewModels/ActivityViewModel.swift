@@ -8,17 +8,19 @@
 
 import Foundation
 
-typealias ActivityPresentable = protocol<TitlePresentable,WebIconPresentable,DetailPresentable,TagPresentable>
+typealias ActivityPresentable = protocol<TitlePresentable,WebIconPresentable,DetailPresentable,TagPresentable,LocationPresentable>
 
 struct ActivityViewModel:ActivityPresentable {
     var iconName: String
     var title: String
     var detail: String
     var tagName: String
+    var location: String
     init(activity:Activity){
         self.iconName = activity.avatar.url
         self.title = activity.name
         self.detail = activity.activityDescription ?? ""
         self.tagName = activity.activityType == ActivityType.Loyalty ? "集点卡" : "优惠信息"
+        self.location = activity.locationName
     }
 }
