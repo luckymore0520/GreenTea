@@ -13,6 +13,7 @@ class ShopInfoViewController: UIViewController {
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     var shop:Shop?
+    @IBOutlet weak var createActivityButton: UIButton!
     var shopInfoDataSource:ShopInfoDataSource?
     
     
@@ -25,6 +26,7 @@ class ShopInfoViewController: UIViewController {
         self.shopInfoDataSource?.render(self.shopImageView)
         self.title = shop.isMine() ? "我的店铺" : shop.shopName
         if shop.isMine() {
+            self.createActivityButton.hidden = false
             self.setRightButton("", imageName: "编辑_白", selector: #selector(ShopInfoViewController.onEditButtonClicked))
         }
         // Do any additional setup after loading the view.
@@ -55,6 +57,14 @@ class ShopInfoViewController: UIViewController {
             shopViewController.hidesBottomBarWhenPushed = true
             fromViewController?.pushViewController(shopViewController, animated: true)
         }
+    }
+    
+    
+    @IBAction func onCreateActivityButtonClicked(sender: AnyObject) {
+        let activityCreationViewController = ActivityCreationViewController()
+        activityCreationViewController.shop = self.shop
+        let navigationViewController = UINavigationController(rootViewController: activityCreationViewController)
+        self.presentViewController(navigationViewController, animated: true, completion: nil)
     }
 }
 

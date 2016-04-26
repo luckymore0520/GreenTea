@@ -68,6 +68,9 @@
 		12675D5F1CCF00CD00C56E71 /* LocationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D5E1CCF00CD00C56E71 /* LocationPresentable.swift */; };
 		12675D611CCF063200C56E71 /* DetailPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D601CCF063200C56E71 /* DetailPresentable.swift */; };
 		12675D631CCF0A4200C56E71 /* MyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D621CCF0A4200C56E71 /* MyString.swift */; };
+		12675D651CCF2C5300C56E71 /* ActivityCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D641CCF2C5300C56E71 /* ActivityCreationViewController.swift */; };
+		12675D671CCF31AC00C56E71 /* ActionSheetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D661CCF31AC00C56E71 /* ActionSheetTool.swift */; };
+		12675D6A1CCF3BDC00C56E71 /* MyNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D691CCF3BDC00C56E71 /* MyNSDate.swift */; };
 		126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */; };
 		126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */; };
 		126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */; };
@@ -234,6 +237,9 @@
 		12675D5E1CCF00CD00C56E71 /* LocationPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationPresentable.swift; path = Protocal/LocationPresentable.swift; sourceTree = "<group>"; };
 		12675D601CCF063200C56E71 /* DetailPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPresentable.swift; path = Protocal/DetailPresentable.swift; sourceTree = "<group>"; };
 		12675D621CCF0A4200C56E71 /* MyString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyString.swift; path = Extension/MyString.swift; sourceTree = "<group>"; };
+		12675D641CCF2C5300C56E71 /* ActivityCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityCreationViewController.swift; path = Setting/Controller/ActivityCreationViewController.swift; sourceTree = "<group>"; };
+		12675D661CCF31AC00C56E71 /* ActionSheetTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionSheetTool.swift; path = Tools/ActionSheetTool.swift; sourceTree = "<group>"; };
+		12675D691CCF3BDC00C56E71 /* MyNSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyNSDate.swift; path = Extension/MyNSDate.swift; sourceTree = "<group>"; };
 		126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HasHiddenNavigation.swift; path = Protocal/HasHiddenNavigation.swift; sourceTree = "<group>"; };
 		126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationInfoTableViewCell.swift; path = Activity/Views/LocationInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTimeInfoTableViewCell.swift; path = Activity/Views/ActivityTimeInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -378,6 +384,7 @@
 				12767CC61CC762B800DD0B4F /* ShopCreationViewController.swift */,
 				12C260FE1CCD021200283286 /* ShopInfoViewController.swift */,
 				12C260FF1CCD021200283286 /* ShopInfoViewController.xib */,
+				12675D641CCF2C5300C56E71 /* ActivityCreationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -567,6 +574,7 @@
 				12FF67A81CC25E2700E7860B /* UserDefaultTool.swift */,
 				125D912C1CC7211C00AE5F1C /* AMapTool.swift */,
 				125D912E1CC7260400AE5F1C /* MAMapViewController.swift */,
+				12675D661CCF31AC00C56E71 /* ActionSheetTool.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -635,6 +643,7 @@
 				125D911D1CC4BF5300AE5F1C /* UIView.swift */,
 				125D912A1CC715B200AE5F1C /* UIImageView.swift */,
 				12675D621CCF0A4200C56E71 /* MyString.swift */,
+				12675D691CCF3BDC00C56E71 /* MyNSDate.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1013,6 +1022,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				125D911E1CC4BF5300AE5F1C /* UIView.swift in Sources */,
+				12675D671CCF31AC00C56E71 /* ActionSheetTool.swift in Sources */,
 				125D911C1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift in Sources */,
 				1209023D1C5F6C3E00772CBA /* HUDHelper.swift in Sources */,
 				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
@@ -1051,6 +1061,7 @@
 				1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */,
 				128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */,
 				12FF679E1CC2527900E7860B /* SpecifyArray.swift in Sources */,
+				12675D6A1CCF3BDC00C56E71 /* MyNSDate.swift in Sources */,
 				12FF679C1CC2527900E7860B /* TableViewHeadSectionCell.swift in Sources */,
 				126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */,
 				12FF67A21CC2527900E7860B /* NSString+PinYin4Cocoa.m in Sources */,
@@ -1063,6 +1074,7 @@
 				120E2DC61CAD4568001E6DE9 /* StartRateView.swift in Sources */,
 				12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */,
 				12FF67921CC2527900E7860B /* CityViewController.swift in Sources */,
+				12675D651CCF2C5300C56E71 /* ActivityCreationViewController.swift in Sources */,
 				1219245D1C5A58C300A3D94E /* String.swift in Sources */,
 				1221E78C1CC781FC000B364E /* Checkable.swift in Sources */,
 				12FF67941CC2527900E7860B /* CollectionViewCell.swift in Sources */,

@@ -50,6 +50,8 @@ extension User {
         if let shop = user.shop {
             if !shop.isKindOfClass(Shop.classForCoder()) {
                 let query = Shop.query()
+                query.includeKey("activitys")
+
                 query.getObjectInBackgroundWithId(shop.objectId, block: { (shop, error) in
                     user.shop = shop as? Shop
                 })

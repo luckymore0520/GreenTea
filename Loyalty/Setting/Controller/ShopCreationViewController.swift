@@ -22,7 +22,7 @@ class ShopCreationViewController: FormViewController {
     var shopAddress:String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "创建店铺"
+        self.title = "编辑店铺"
         self.initTableView()
         self.setRightButton("保存", selector: #selector(ShopCreationViewController.save))
         // Do any additional setup after loading the view.

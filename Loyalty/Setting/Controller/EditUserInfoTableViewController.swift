@@ -55,7 +55,7 @@ extension EditUserInfoTableViewController {
         case .Gender:
             let sexArray = ["男","女"]
             let initialSelection = UserInfoManager.sharedManager.currentUser?.sex == "女" ? 1 : 0
-            self.showActionSheet("请选择性别", selectionArray: sexArray, initialSelection: initialSelection, displayLabel:self.genderLabel, selectionHandler: {
+            ActionSheetTool.showActionSheet("请选择性别", selectionArray: sexArray, initialSelection: initialSelection, displayLabel:self.genderLabel, selectionHandler: {
                 (selection) -> () in
                 user?.sex = sexArray[selection]
                 user?.saveInBackgroundAndChange()
@@ -93,15 +93,6 @@ extension EditUserInfoTableViewController {
             })
         default:break
         }
-    }
-    
-    func showActionSheet(title:String!,selectionArray:[String],initialSelection:Int,displayLabel:UILabel, selectionHandler:(selection:Int)->(), origin: UIView){
-        ActionSheetMultipleStringPicker.showPickerWithTitle(title, rows: [selectionArray], initialSelection: [initialSelection]
-            , doneBlock: { picker, values, indexes in
-                let result = values as! Array<Int>
-                selectionHandler(selection: result[0])
-                displayLabel.text = selectionArray[result[0]]
-            }, cancelBlock: { ActionMultipleStringCancelBlock in return }, origin: origin)
     }
 }
 
