@@ -16,13 +16,20 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var activityDetailDataSource:ActivityDetailDataSource?
-    
+    var activity:Activity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNavigationItems()
-        self.activityDetailDataSource = ActivityDetailDataSource(tableView: self.tableView, activity: Activity())
-        self.toolBar.activityType = ActivityType.Loyalty
+        if let activity = self.activity {
+            self.activityDetailDataSource = ActivityDetailDataSource(tableView: self.tableView, activity: activity)
+            self.activityDetailDataSource?.render(self.activityImageView, starButton: self.starButton)
+            activity.queryShopInfo({ (shop) in
+                self.activityDetailDataSource = ActivityDetailDataSource(tableView: self.tableView, activity: activity)
+                self.tableView.reloadData()
+            })
+            self.toolBar.activityType = activity.activityType ?? .Loyalty
+        }
         self.tableView.tableHeaderView?.frame = self.targetImageViewFrame
         // Do any additional setup after loading the view.
     }

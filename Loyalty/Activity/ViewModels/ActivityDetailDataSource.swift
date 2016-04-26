@@ -38,7 +38,7 @@ enum ActivityDetailRowType:Int,TitlePresentable{
 
 class ActivityDetailDataSource:NSObject {
     var tableView:UITableView?
-    var activity:Activity?
+    var activityViewModel:ActivityViewModel?
     let rows = ActivityDetailRowType.allTypes()
     
     required init(tableView:UITableView, activity:Activity){
@@ -50,7 +50,7 @@ class ActivityDetailDataSource:NSObject {
         tableView.registerReusableCell(ActivityTimeInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailSectionHeaderTableViewCell.self)
-        self.activity = activity
+        self.activityViewModel = ActivityViewModel(activity: activity)
     }
     
     func viewForHeader(tableView:UITableView,section:Int) -> UIView? {
@@ -76,8 +76,13 @@ class ActivityDetailDataSource:NSObject {
         case .ActivityTimeInfo:
             return 45
         case .ActivityDetailInfo:
-            return 150
+            return (self.activityViewModel?.detail.minHeight(UIScreen.mainScreen().bounds.width - 30) ?? 0) + 30
         }
+    }
+    
+    func render(imageView:UIImageView, starButton:UIButton) {
+        self.activityViewModel?.updateImageView(imageView)
+        
     }
     
     func isAbleToSelected(indexPath:NSIndexPath) -> Bool{
@@ -98,13 +103,23 @@ extension ActivityDetailDataSource:UITableViewDataSource {
         var cell:UITableViewCell?
         switch rows[indexPath.section][indexPath.row] {
         case .ShopInfo:
-            cell = tableView.dequeueReusableCell() as ShopInfoTableViewCell
+            let shopInfoCell = tableView.dequeueReusableCell() as ShopInfoTableViewCell
+            if let shop = self.activityViewModel?.shop {
+                shopInfoCell.render(ShopInfoViewModel(shop: shop))
+            }
+            cell = shopInfoCell
         case .LocationInfo:
-            cell = tableView.dequeueReusableCell() as LocationInfoTableViewCell
+            let locationCell = tableView.dequeueReusableCell() as LocationInfoTableViewCell
+            locationCell.render(self.activityViewModel)
+            cell = locationCell
         case .ActivityTimeInfo:
-            cell = tableView.dequeueReusableCell() as ActivityTimeInfoTableViewCell
+            let activityTimeCell = tableView.dequeueReusableCell() as ActivityTimeInfoTableViewCell
+            activityTimeCell.render(self.activityViewModel)
+            cell = activityTimeCell
         case .ActivityDetailInfo:
-            cell = tableView.dequeueReusableCell() as ActivityDetailInfoTableViewCell
+            let activityDetailCell = tableView.dequeueReusableCell() as ActivityDetailInfoTableViewCell
+            activityDetailCell.render(self.activityViewModel)
+            cell = activityDetailCell
         }
         return cell!
     }

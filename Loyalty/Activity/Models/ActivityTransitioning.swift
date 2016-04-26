@@ -50,6 +50,7 @@ class ActivityTransitioning: NSObject,UIViewControllerAnimatedTransitioning {
         snapShotImageView.alpha = 0.0
         containerView.addSubview(snapShotImageView)
         snapShotImageView.frame = absoluteFromImageViewFrame
+        snapShotImageView.clipsToBounds = true
         snapShotImageView.contentMode = selectedImageView.contentMode
         let absoluteTargetImageViewFrame = imageTransitionTargetViewController.targetImageViewFrame
         // from view prepare for animation

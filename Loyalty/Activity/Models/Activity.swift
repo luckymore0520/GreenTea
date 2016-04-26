@@ -73,6 +73,7 @@ class Activity: AVObject, AVSubclassing  {
     @NSManaged var endTime:String
     @NSManaged var activityDescription:String?
     
+    var shopInfo:Shop?
     
     convenience init(shop:Shop,name:String,startTime:String,endTime:String,description:String,avatar:AVFile,activityType:String,loyaltyCoinMaxCount:Int) {
         self.init()
@@ -98,6 +99,16 @@ class Activity: AVObject, AVSubclassing  {
     
     static func parseClassName() -> String! {
         return "Activity"
+    }
+    
+    func queryShopInfo(completion:Shop->Void) {
+        let query = Shop.query()
+        query.getObjectInBackgroundWithId(self.shopId) { (shop, error) in
+            if let shop = shop as? Shop {
+                self.shopInfo = shop
+                completion(shop)
+            }
+        }
     }
     
     static func query(nearGeoPoint:CGPoint?, type:ActivityType, completion:[Activity] -> Void) {
