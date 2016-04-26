@@ -26,6 +26,9 @@
                     <constraint firstItem="PZb-lE-xfp" firstAttribute="centerY" secondItem="Zlx-Wl-Nnx" secondAttribute="centerY" id="bFp-HO-MWS"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="PZb-lE-xfp" id="GHG-xX-9QY"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

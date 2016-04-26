@@ -13,7 +13,6 @@ protocol Reusable:class {
     static var reuseIdentifier: String { get }
     static var nib: UINib? { get }
 }
-
 extension UITableViewCell:Reusable {}
 extension UICollectionViewCell:Reusable {}
 

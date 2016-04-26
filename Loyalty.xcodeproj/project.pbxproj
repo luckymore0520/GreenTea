@@ -63,6 +63,11 @@
 		125D91431CC72E5000AE5F1C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D91421CC72E5000AE5F1C /* libz.tbd */; };
 		125D91451CC72E6100AE5F1C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D91441CC72E6100AE5F1C /* libc++.tbd */; };
 		125D91471CC72E6700AE5F1C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D91461CC72E6700AE5F1C /* Security.framework */; };
+		12675D5B1CCEFB2800C56E71 /* StarPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D5A1CCEFB2800C56E71 /* StarPresentable.swift */; };
+		12675D5D1CCEFE3B00C56E71 /* HasHiddenComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D5C1CCEFE3B00C56E71 /* HasHiddenComponent.swift */; };
+		12675D5F1CCF00CD00C56E71 /* LocationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D5E1CCF00CD00C56E71 /* LocationPresentable.swift */; };
+		12675D611CCF063200C56E71 /* DetailPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D601CCF063200C56E71 /* DetailPresentable.swift */; };
+		12675D631CCF0A4200C56E71 /* MyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12675D621CCF0A4200C56E71 /* MyString.swift */; };
 		126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */; };
 		126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */; };
 		126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */; };
@@ -224,6 +229,11 @@
 		125D91421CC72E5000AE5F1C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		125D91441CC72E6100AE5F1C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		125D91461CC72E6700AE5F1C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		12675D5A1CCEFB2800C56E71 /* StarPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarPresentable.swift; path = Protocal/StarPresentable.swift; sourceTree = "<group>"; };
+		12675D5C1CCEFE3B00C56E71 /* HasHiddenComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HasHiddenComponent.swift; path = Protocal/HasHiddenComponent.swift; sourceTree = "<group>"; };
+		12675D5E1CCF00CD00C56E71 /* LocationPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationPresentable.swift; path = Protocal/LocationPresentable.swift; sourceTree = "<group>"; };
+		12675D601CCF063200C56E71 /* DetailPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPresentable.swift; path = Protocal/DetailPresentable.swift; sourceTree = "<group>"; };
+		12675D621CCF0A4200C56E71 /* MyString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyString.swift; path = Extension/MyString.swift; sourceTree = "<group>"; };
 		126E13621CBA655B00A3CDFF /* HasHiddenNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HasHiddenNavigation.swift; path = Protocal/HasHiddenNavigation.swift; sourceTree = "<group>"; };
 		126E13641CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationInfoTableViewCell.swift; path = Activity/Views/LocationInfoTableViewCell.swift; sourceTree = "<group>"; };
 		126E13661CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTimeInfoTableViewCell.swift; path = Activity/Views/ActivityTimeInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -624,6 +634,7 @@
 				12C7F8311CC25FE000805820 /* UILabel.swift */,
 				125D911D1CC4BF5300AE5F1C /* UIView.swift */,
 				125D912A1CC715B200AE5F1C /* UIImageView.swift */,
+				12675D621CCF0A4200C56E71 /* MyString.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -692,6 +703,10 @@
 				1221E7891CC781BA000B364E /* SubTitlePresentable.swift */,
 				1221E78B1CC781FC000B364E /* Checkable.swift */,
 				12C260F01CCBA01300283286 /* WebIconPresentable.swift */,
+				12675D5A1CCEFB2800C56E71 /* StarPresentable.swift */,
+				12675D5C1CCEFE3B00C56E71 /* HasHiddenComponent.swift */,
+				12675D5E1CCF00CD00C56E71 /* LocationPresentable.swift */,
+				12675D601CCF063200C56E71 /* DetailPresentable.swift */,
 			);
 			name = Protocal;
 			sourceTree = "<group>";
@@ -1001,6 +1016,7 @@
 				125D911C1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift in Sources */,
 				1209023D1C5F6C3E00772CBA /* HUDHelper.swift in Sources */,
 				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
+				12675D5F1CCF00CD00C56E71 /* LocationPresentable.swift in Sources */,
 				12FF67A31CC2527900E7860B /* PinyinFormatter.m in Sources */,
 				125D91241CC4CB2F00AE5F1C /* ImagePickerManager.swift in Sources */,
 				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
@@ -1010,6 +1026,7 @@
 				12C7F83D1CC27A6D00805820 /* MoneyCollectionViewCell.swift in Sources */,
 				12FF679F1CC2527900E7860B /* ChineseInclude.m in Sources */,
 				12FF67961CC2527900E7860B /* LocationManager.swift in Sources */,
+				12675D631CCF0A4200C56E71 /* MyString.swift in Sources */,
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
 				12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */,
@@ -1039,6 +1056,7 @@
 				12FF67A21CC2527900E7860B /* NSString+PinYin4Cocoa.m in Sources */,
 				121924531C5A58C300A3D94E /* Character.swift in Sources */,
 				128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */,
+				12675D5D1CCEFE3B00C56E71 /* HasHiddenComponent.swift in Sources */,
 				121924561C5A58C300A3D94E /* ExSwift.swift in Sources */,
 				125D91201CC4C46800AE5F1C /* EditUserInfoTableViewCell.swift in Sources */,
 				1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */,
@@ -1064,10 +1082,12 @@
 				121924541C5A58C300A3D94E /* Dictionary.swift in Sources */,
 				12C261001CCD021200283286 /* ShopInfoViewController.swift in Sources */,
 				120902421C5F76FF00772CBA /* UserSettingViewController.swift in Sources */,
+				12675D5B1CCEFB2800C56E71 /* StarPresentable.swift in Sources */,
 				1219245E1C5A58C300A3D94E /* UIColorExtension.swift in Sources */,
 				1221E7901CC78439000B364E /* LocationPickerDataSource.swift in Sources */,
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				121924521C5A58C300A3D94E /* Bool.swift in Sources */,
+				12675D611CCF063200C56E71 /* DetailPresentable.swift in Sources */,
 				1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */,
 				125D91161CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift in Sources */,
 				126E13761CBA8C3200A3CDFF /* ImageTransitionTargetViewController.swift in Sources */,

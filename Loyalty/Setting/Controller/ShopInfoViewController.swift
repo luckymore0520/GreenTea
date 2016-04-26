@@ -10,6 +10,7 @@ import UIKit
 
 class ShopInfoViewController: UIViewController {
 
+    @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     var shop:Shop?
     var shopInfoDataSource:ShopInfoDataSource?
@@ -21,7 +22,11 @@ class ShopInfoViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         guard let shop = self.shop else { return }
         self.shopInfoDataSource = ShopInfoDataSource(shop: shop, tableView: tableView)
+        self.shopInfoDataSource?.render(self.shopImageView)
         self.title = shop.isMine() ? "我的店铺" : shop.shopName
+        if shop.isMine() {
+            self.setRightButton("", imageName: "编辑_白", selector: #selector(ShopInfoViewController.onEditButtonClicked))
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -35,12 +40,19 @@ class ShopInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
  
+    func onEditButtonClicked(){
+        guard let shop = self.shop else { return }
+        if shop.isMine() {
+            
+        }
+    }
     
     static func jumpToShopViewController(shop:Shop?, fromViewController:UINavigationController?){
         guard let shop = shop else { return }
         if shop.isKindOfClass(Shop.classForCoder()) {
             let shopViewController = ShopInfoViewController(nibName: "ShopInfoViewController", bundle: nil)
             shopViewController.shop = shop
+            shopViewController.hidesBottomBarWhenPushed = true
             fromViewController?.pushViewController(shopViewController, animated: true)
         }
     }

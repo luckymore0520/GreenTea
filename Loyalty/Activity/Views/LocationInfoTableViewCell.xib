@@ -31,6 +31,9 @@
                     <constraint firstItem="8ji-wL-mnb" firstAttribute="centerY" secondItem="sdx-lz-arO" secondAttribute="centerY" id="Y0X-JM-QIC"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="locationLabel" destination="1x4-kM-sWB" id="IXj-aU-KmT"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

@@ -15,9 +15,10 @@ extension UIViewController {
         self.view.endEditing(true)
     }
     
-    func setRightButton(text: String, selector:Selector , fontSize : CGFloat = UIFont.systemFontSize() )->UIButton {
-        let rightButton = UIButton.init(frame: CGRectMake(0, 0, 60, 40))
+    func setRightButton(text: String, imageName:String = "",selector:Selector , fontSize : CGFloat = UIFont.systemFontSize() )->UIButton {
+        let rightButton = UIButton.init(frame: CGRectMake(0, 0, 100, 40))
         rightButton.setTitle(text, forState: UIControlState.Normal)
+        rightButton.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
         rightButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         rightButton.addTarget(self, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
         rightButton.titleLabel?.font = UIFont.systemFontOfSize(fontSize)

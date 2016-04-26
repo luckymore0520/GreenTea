@@ -44,11 +44,11 @@ enum ShopInfoRowType:Int,TitlePresentable{
 
 class ShopInfoDataSource: NSObject {
     weak var tableView:UITableView?
-    var shop:Shop?
+    var shopViewModel:ShopInfoViewModel?
     var tableRowInfo:[[ShopInfoRowType]] = []
     init(shop:Shop, tableView:UITableView) {
         super.init()
-        self.shop = shop
+        self.shopViewModel = ShopInfoViewModel(shop: shop)
         self.tableView = tableView
         self.tableRowInfo = ShopInfoRowType.allTypes(shop.isMine())
         tableView.dataSource = self
@@ -57,6 +57,10 @@ class ShopInfoDataSource: NSObject {
         tableView.registerReusableCell(ActivityTimeInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailSectionHeaderTableViewCell.self)
+    }
+    
+    func render(imageView:UIImageView) {
+        self.shopViewModel?.updateImageView(imageView)
     }
 
     func viewForHeader(tableView:UITableView,section:Int) -> UIView? {
@@ -86,7 +90,7 @@ class ShopInfoDataSource: NSObject {
         case .Review:
             return 50
         case .ShopDetailInfo:
-            return 150
+            return 30 + (self.shopViewModel?.detail.minHeight(UIScreen.mainScreen().bounds.width - 30) ?? 0)
         }
     }
 }
@@ -109,18 +113,26 @@ extension ShopInfoDataSource:UITableViewDataSource {
         var cell:UITableViewCell?
         switch tableRowInfo[indexPath.section][indexPath.row] {
         case .ShopInfo:
-            cell = tableView.dequeueReusableCell() as ShopInfoTableViewCell
+            let shopInfoCell = tableView.dequeueReusableCell() as ShopInfoTableViewCell
+            shopInfoCell.render(self.shopViewModel)
+            cell = shopInfoCell
         case .LocationInfo:
-            cell = tableView.dequeueReusableCell() as LocationInfoTableViewCell
+            let locationInfoCell = tableView.dequeueReusableCell() as LocationInfoTableViewCell
+            locationInfoCell.render(self.shopViewModel)
+            cell = locationInfoCell
         case .ContactInfo:
-            cell = tableView.dequeueReusableCell() as ActivityTimeInfoTableViewCell
+            let contactInfoCell = tableView.dequeueReusableCell() as ActivityTimeInfoTableViewCell
+            contactInfoCell.render(self.shopViewModel)
+            cell = contactInfoCell
         case .ShopDetailInfo:
-            cell = tableView.dequeueReusableCell() as ActivityDetailInfoTableViewCell
+            let detailCell = tableView.dequeueReusableCell() as ActivityDetailInfoTableViewCell
+            detailCell.render(self.shopViewModel)
+            cell = detailCell
         case .ShopActivityInfo:
             cell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: "ShopActivityInfo")
             cell?.accessoryType = .DisclosureIndicator
             cell?.textLabel?.text = "我的活动"
-            cell?.tintColor = UIColor.globalTitleBrownColor()
+            cell?.textLabel?.textColor = UIColor.globalTitleBrownColor()
         case .Review:
             cell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: "ShopActivityInfo")
         }

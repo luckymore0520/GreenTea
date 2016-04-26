@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopInfoViewController" customModule="Loyalty" customModuleProvider="target">
             <connections>
+                <outlet property="shopImageView" destination="KUa-eY-ORX" id="BDT-GQ-JiR"/>
                 <outlet property="tableView" destination="vXi-xx-wLZ" id="R3t-FE-kaS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

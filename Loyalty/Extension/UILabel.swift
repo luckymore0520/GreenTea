@@ -17,4 +17,13 @@ extension UILabel {
         let expectedLabelSize = textNSString.boundingRectWithSize(maximunLabelSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: self.font], context: nil).size
         return expectedLabelSize.width
     }
+    
+    func getMinHeight() -> CGFloat {
+        guard let text = self.text else { return 0 }
+        let textNSString = NSString(string: text)
+        let maximunLabelSize = CGSizeMake(self.frame.width,CGFloat.max)
+        let expectedLabelSize = textNSString.boundingRectWithSize(maximunLabelSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: self.font], context: nil).size
+        return expectedLabelSize.height
+    }
+
 }

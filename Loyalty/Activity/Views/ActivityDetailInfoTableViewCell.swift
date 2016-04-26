@@ -9,6 +9,7 @@
 import UIKit
 
 class ActivityDetailInfoTableViewCell: UITableViewCell {
+    @IBOutlet weak var detailLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +22,7 @@ class ActivityDetailInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func render(detailPresentable:DetailPresentable?) {
+        detailPresentable?.updateDetailLabel(detailLabel)
+    }
 }

@@ -10,6 +10,12 @@ import UIKit
 
 class ShopInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var shopNameLabel: UILabel!
+    @IBOutlet weak var starRateView: StartRateView!
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var reviewCountLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +26,11 @@ class ShopInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func render(shop:ShopPresentable?) {
+        guard let shop = shop else { return }
+        shop.updateTitleLabel(self.shopNameLabel)
+        shop.updateViews(self.starRateView, starLabel: self.startLabel)
+        shop.updateHiddableViews([self.reviewCountLabel])
+        self.accessoryType = shop.shouldHidden ? UITableViewCellAccessoryType.None : .DisclosureIndicator
+    }
 }
