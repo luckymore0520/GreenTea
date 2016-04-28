@@ -17,6 +17,7 @@ class LeanCloudHelper {
         AVOSCloud.setAllLogsEnabled(true)
         AVOSCloud.setApplicationId(appId, clientKey: appKey)
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        Like.registerSubclass()
         User.registerSubclass()
         Shop.registerSubclass()
         Activity.registerSubclass()

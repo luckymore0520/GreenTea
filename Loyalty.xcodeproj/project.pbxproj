@@ -42,6 +42,7 @@
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
 		1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */; };
 		1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */; };
+		125C21C81CD2661C00E8CF01 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C21C71CD2661C00E8CF01 /* Like.swift */; };
 		125D91161CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91151CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift */; };
 		125D911A1CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91191CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift */; };
 		125D911C1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D911B1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift */; };
@@ -215,6 +216,7 @@
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
 		1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingCellViewModel.swift; path = Setting/ViewModel/UserSettingCellViewModel.swift; sourceTree = "<group>"; };
 		1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingTableViewCell.swift; path = Setting/View/UserSettingTableViewCell.swift; sourceTree = "<group>"; };
+		125C21C71CD2661C00E8CF01 /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Like.swift; path = Activity/Models/Like.swift; sourceTree = "<group>"; };
 		125D91151CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoyaltyCoinDataSource.swift; path = Cards/ViewModel/LoyaltyCoinDataSource.swift; sourceTree = "<group>"; };
 		125D91191CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditUserInfoTableViewController.swift; path = Setting/Controller/EditUserInfoTableViewController.swift; sourceTree = "<group>"; };
 		125D911B1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerPresentable.swift; path = Protocal/ViewControllerPresentable.swift; sourceTree = "<group>"; };
@@ -736,6 +738,7 @@
 			isa = PBXGroup;
 			children = (
 				128027C61C58E75900C76EA6 /* Activity.swift */,
+				125C21C71CD2661C00E8CF01 /* Like.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1130,6 +1133,7 @@
 				125D911A1CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift in Sources */,
 				1209023F1C5F712100772CBA /* User.swift in Sources */,
 				12675D721CCF827A00C56E71 /* ActivityViewModel.swift in Sources */,
+				125C21C81CD2661C00E8CF01 /* Like.swift in Sources */,
 				127C7FE91C5B98930091837D /* RegisterViewController.swift in Sources */,
 				12FF67A11CC2527900E7860B /* HanyuPinyinOutputFormat.m in Sources */,
 				128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */,

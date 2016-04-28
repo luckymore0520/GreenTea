@@ -74,6 +74,7 @@ class Activity: AVObject, AVSubclassing  {
     @NSManaged var activityDescription:String?
     
     var shopInfo:Shop?
+    var like:Like?
     
     convenience init(shop:Shop,name:String,startTime:NSDate,endTime:NSDate,description:String,avatar:AVFile,activityType:String,loyaltyCoinMaxCount:Int) {
         self.init()
@@ -99,6 +100,21 @@ class Activity: AVObject, AVSubclassing  {
     
     static func parseClassName() -> String! {
         return "Activity"
+    }
+    
+    func queryIsLikedBySelf(completionHandler:(like:Like?)->Void){
+        if let like = self.like {
+            completionHandler(like: like)
+            return
+        }
+        guard let userId = UserInfoManager.sharedManager.currentUser?.objectId else { return }
+        let query = Like.query()
+        query.whereKey("userId", equalTo: userId)
+        query.whereKey("activityId", equalTo: self.objectId)
+        query.getFirstObjectInBackgroundWithBlock { (object, error) in
+            self.like = object as? Like
+            completionHandler(like: self.like)
+        }
     }
     
     func queryShopInfo(completion:Shop->Void) {

@@ -28,6 +28,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
                 self.activityDetailDataSource = ActivityDetailDataSource(tableView: self.tableView, activity: activity)
                 self.tableView.reloadData()
             })
+            self.updateLikeButton()
             self.toolBar.activityType = activity.activityType ?? .Loyalty
         }
         self.tableView.tableHeaderView?.frame = self.targetImageViewFrame
@@ -45,6 +46,12 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
         // Dispose of any resources that can be recreated.
     }
     
+    func updateLikeButton(){
+        guard let activity = self.activity else { return }
+        activity.queryIsLikedBySelf({ (like) in
+            self.starButton.selected = like != nil
+        })
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -79,7 +86,24 @@ extension ActivityDetailViewController:UITableViewDelegate {
 
 // MARK: - Action
 extension ActivityDetailViewController {
-
+    @IBAction func onStarButtonClicked(sender: AnyObject) {
+        guard let activity = self.activity else { return }
+        activity.queryIsLikedBySelf({ (like) in
+            if let like = like {
+                like.deleteInBackgroundWithBlock({ (deleted, error) in
+                    if deleted {
+                        activity.like = nil
+                    }
+                    self.updateLikeButton()
+                })
+            } else {
+                Like.like(activity, completionHandler: { (like) in
+                    activity.like = like
+                    self.updateLikeButton()
+                })
+             }
+        })
+    }
 }
 
 // For Animation
