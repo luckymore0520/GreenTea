@@ -50,10 +50,8 @@ class ActivityCreationViewController: FormViewController,ViewControllerPresentab
             HUDHelper.showText("请上传活动照片")
             return
         }
-        let startTime = (values[startDateKey] as! NSDate).formateToString("yyyy-MM-dd")
-        let endTime = (values[endDateKey] as! NSDate).formateToString("yyyy-MM-dd")
-        
-        
+        let startTime = values[startDateKey] as! NSDate
+        let endTime = values[endDateKey] as! NSDate
         let loyaltyMaxCount = (values[loyaltyCoinMaxCountKey] as? String)?.toInt() ?? 0
         let activityType = values[activityTypeKey] as! String
         HUDHelper.showLoading()

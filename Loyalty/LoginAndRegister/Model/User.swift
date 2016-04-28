@@ -51,7 +51,6 @@ extension User {
             if !shop.isKindOfClass(Shop.classForCoder()) {
                 let query = Shop.query()
                 query.includeKey("activitys")
-
                 query.getObjectInBackgroundWithId(shop.objectId, block: { (shop, error) in
                     user.shop = shop as? Shop
                 })
@@ -61,7 +60,6 @@ extension User {
     }
     
     func saveInBackgroundAndChange(completion:AVBooleanResultBlock? = nil) {
-        self.fetchWhenSave = true
         self.saveInBackgroundWithBlock { (success, error) in
             User.changeCurrentUser(self, save: true)
             completion?(success,error)

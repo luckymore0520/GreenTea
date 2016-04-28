@@ -69,13 +69,13 @@ class Activity: AVObject, AVSubclassing  {
     @NSManaged var loyaltyCoinMaxCount:Int
     @NSManaged var likeCount:Int
     @NSManaged var name:String
-    @NSManaged var startTime:String
-    @NSManaged var endTime:String
+    @NSManaged var startTime:NSDate
+    @NSManaged var endTime:NSDate
     @NSManaged var activityDescription:String?
     
     var shopInfo:Shop?
     
-    convenience init(shop:Shop,name:String,startTime:String,endTime:String,description:String,avatar:AVFile,activityType:String,loyaltyCoinMaxCount:Int) {
+    convenience init(shop:Shop,name:String,startTime:NSDate,endTime:NSDate,description:String,avatar:AVFile,activityType:String,loyaltyCoinMaxCount:Int) {
         self.init()
         self.activityTypeString = activityType
         self.shopId = shop.objectId
