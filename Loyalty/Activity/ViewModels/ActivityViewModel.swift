@@ -25,6 +25,6 @@ struct ActivityViewModel:ActivityPresentable {
         self.tagName = activity.activityType == ActivityType.Loyalty ? "集点卡" : "优惠信息"
         self.location = activity.locationName
         self.shop = activity.shopInfo
-        self.subTitle = "\(activity.startTime)~\(activity.endTime)"
+        self.subTitle = "\(activity.startTime.formateToString("yyyy.mm.dd"))-\(activity.endTime.formateToString("yyyy.mm.dd"))"
     }
 }
