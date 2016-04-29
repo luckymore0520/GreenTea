@@ -23,6 +23,11 @@ class Like: AVObject, AVSubclassing{
         like.userId = userId
         like.saveInBackgroundWithBlock { (success, error) in
             completionHandler(like: success ? like : nil)
+            if success {
+                activity.likeCount += 1
+                activity.saveInBackground()
+            }
         }
     }
+    
   }

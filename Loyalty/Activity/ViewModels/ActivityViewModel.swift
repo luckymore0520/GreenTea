@@ -8,9 +8,29 @@
 
 import Foundation
 
-typealias ActivityPresentable = protocol<TitlePresentable,WebIconPresentable,DetailPresentable,TagPresentable,LocationPresentable,SubTitlePresentable>
+typealias ActivityDetailPresentable = protocol<TitlePresentable,WebIconPresentable,DetailPresentable,TagPresentable,LocationPresentable,SubTitlePresentable>
 
-struct ActivityViewModel:ActivityPresentable {
+typealias ActivitySimplePresentable = protocol<TitlePresentable,WebIconPresentable,Checkable,LocationPresentable,SubTitlePresentable>
+
+struct ActivitySimpleViewModel:ActivitySimplePresentable {
+    var iconName: String
+    var title: String
+    var location: String
+    var subTitle: String
+    var isChecked: Bool
+    var shop:Shop?
+    init(activity:Activity){
+        self.iconName = activity.avatar.url
+        self.title = activity.name
+        self.location = activity.locationName
+        self.shop = activity.shopInfo
+        self.subTitle = "\(activity.likeCount)"
+        self.isChecked = activity.like != nil
+    }
+
+}
+
+struct ActivityDetaiViewModel:ActivityDetailPresentable {
     var iconName: String
     var title: String
     var detail: String

@@ -72,6 +72,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="activityImageView" destination="2hT-y4-9VV" id="y0Z-C5-zUs"/>
+                <outlet property="likeCountLabel" destination="tfl-c2-UYs" id="zPW-vp-PzO"/>
                 <outlet property="locationLabel" destination="WhW-TO-g4z" id="dzi-xw-Pee"/>
                 <outlet property="nameLabel" destination="zAD-RF-JPy" id="L4D-07-0jj"/>
                 <outlet property="starButton" destination="Kvq-w0-HD7" id="Ccf-Dz-GVh"/>

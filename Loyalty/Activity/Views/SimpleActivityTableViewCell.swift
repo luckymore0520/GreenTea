@@ -23,7 +23,7 @@ class SimpleActivityTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func render(activityPresentable:ActivityPresentable) {
+    func render(activityPresentable:ActivityDetailPresentable) {
         activityPresentable.updateLabel(self.activityTypeLabel)
         activityPresentable.updateImageView(self.activityIconImageView)
         activityPresentable.updateDetailLabel(self.activityDetailLabel)

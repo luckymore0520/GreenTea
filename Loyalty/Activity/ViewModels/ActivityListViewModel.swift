@@ -21,7 +21,6 @@ class ActivityListDataSource: NSObject {
         self.tableView?.dataSource = self
         self.activityType = activityType
         self.tableView?.registerReusableCell(ActivityTableViewCell)
-        self.loadData()
     }
 
     func loadData(){
@@ -51,7 +50,10 @@ extension ActivityListDataSource: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableViewCell = tableView.dequeueReusableCell(indexPath: indexPath) as ActivityTableViewCell
         if let activity = self.activityList?[indexPath.row] {
-            let activityViewModel = ActivityViewModel(activity: activity)
+            activity.queryIsLikedBySelf({ (like) in
+                tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+            })
+            let activityViewModel = ActivitySimpleViewModel(activity: activity)
             tableViewCell.render(activityViewModel)
         }
 

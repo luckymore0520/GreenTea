@@ -124,7 +124,7 @@ extension ShopInfoDataSource:UITableViewDataSource {
         if staticRowArray[0] == .ShopActivityInfo {
             let activityCell = tableView.dequeueReusableCell(indexPath: indexPath) as SimpleActivityTableViewCell
             if let activity = self.shopViewModel?.activityList?[indexPath.row] {
-                activityCell.render(ActivityViewModel(activity: activity))
+                activityCell.render(ActivityDetaiViewModel(activity: activity))
             }
             return activityCell
         }

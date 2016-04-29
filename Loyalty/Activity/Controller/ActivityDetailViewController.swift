@@ -93,6 +93,8 @@ extension ActivityDetailViewController {
                 like.deleteInBackgroundWithBlock({ (deleted, error) in
                     if deleted {
                         activity.like = nil
+                        activity.likeCount -= 1
+                        activity.saveInBackground()
                     }
                     self.updateLikeButton()
                 })

@@ -38,7 +38,7 @@ enum ActivityDetailRowType:Int,TitlePresentable{
 
 class ActivityDetailDataSource:NSObject {
     var tableView:UITableView?
-    var activityViewModel:ActivityViewModel?
+    var activityViewModel:ActivityDetaiViewModel?
     let rows = ActivityDetailRowType.allTypes()
     
     required init(tableView:UITableView, activity:Activity){
@@ -50,7 +50,7 @@ class ActivityDetailDataSource:NSObject {
         tableView.registerReusableCell(ActivityTimeInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailSectionHeaderTableViewCell.self)
-        self.activityViewModel = ActivityViewModel(activity: activity)
+        self.activityViewModel = ActivityDetaiViewModel(activity: activity)
     }
     
     func viewForHeader(tableView:UITableView,section:Int) -> UIView? {

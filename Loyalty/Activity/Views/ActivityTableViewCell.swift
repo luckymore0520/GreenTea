@@ -14,6 +14,7 @@ class ActivityTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var activityImageView: UIImageView!
+    @IBOutlet weak var likeCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,10 +28,12 @@ class ActivityTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func render(activityPresentable:ActivityPresentable) {
+    func render(activityPresentable:ActivitySimplePresentable) {
         activityPresentable.updateImageView(activityImageView)
         activityPresentable.updateTitleLabel(nameLabel)
         activityPresentable.updateLocationLabel(locationLabel)
+        activityPresentable.updateButton(self.starButton)
+        activityPresentable.updateSubTitleLabel(self.likeCountLabel)
     }
     
 }
