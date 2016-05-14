@@ -11,7 +11,7 @@ import Foundation
 typealias PointPresentable = protocol<TitlePresentable,SubTitlePresentable,Checkable>
 
 struct PointInfoTableViewCellViewModel:PointPresentable {
-    var isChecked: Bool
+    var isChecked: Bool?
     var title: String
     var subTitle: String
     init(poi:AMapPOI?,isChecked:Bool = false) {

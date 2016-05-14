@@ -21,6 +21,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNavigationItems()
+        self.configureToolBar()
         if let activity = self.activity {
             self.activityDetailDataSource = ActivityDetailDataSource(tableView: self.tableView, activity: activity)
             self.activityDetailDataSource?.render(self.activityImageView, starButton: self.starButton)
@@ -29,7 +30,6 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
                 self.tableView.reloadData()
             })
             self.updateLikeButton()
-            self.toolBar.activityType = activity.activityType ?? .Loyalty
         }
         self.tableView.tableHeaderView?.frame = self.targetImageViewFrame
         // Do any additional setup after loading the view.
@@ -59,6 +59,39 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+    
+    func configureToolBar(){
+        guard let activity = self.activity else { return }
+        guard let activityType = activity.activityType else { return }
+        let guideHandler = {
+            
+        }
+        let collectHandler = {
+            
+        }
+        let getCodeHandler = {
+            
+        }
+        let exChangeHandler = {
+            
+        }
+        switch activityType {
+        case .Promotion:
+            if activity.isMine {
+                self.toolBar.hidden = true
+            } else {
+                self.toolBar.updateView(imageArray: ["导航"], titleArray: ["导航"], clickHandlers: [guideHandler])
+            }
+            break
+        case .Loyalty:
+            if activity.isMine {
+                self.toolBar.updateView(imageArray: ["集点","兑换"], titleArray: ["集点","兑换"], clickHandlers: [getCodeHandler,exChangeHandler])
+            } else {
+                self.toolBar.updateView(imageArray: ["导航","集点"], titleArray: ["导航","集点"], clickHandlers: [guideHandler,collectHandler])
+            }
+            break
+        }
+    }
 }
 
 
@@ -84,7 +117,7 @@ extension ActivityDetailViewController:UITableViewDelegate {
     }
 }
 
-// MARK: - Action
+// MARK: - Action
 extension ActivityDetailViewController {
     @IBAction func onStarButtonClicked(sender: AnyObject) {
         guard let activity = self.activity else { return }

@@ -32,8 +32,8 @@ class ActivityTableViewCell: UITableViewCell {
         activityPresentable.updateImageView(activityImageView)
         activityPresentable.updateTitleLabel(nameLabel)
         activityPresentable.updateLocationLabel(locationLabel)
-        activityPresentable.updateButton(self.starButton)
-        activityPresentable.updateSubTitleLabel(self.likeCountLabel)
+        activityPresentable.updateButton(starButton)
+        activityPresentable.updateSubTitleLabel(likeCountLabel)
     }
     
 }

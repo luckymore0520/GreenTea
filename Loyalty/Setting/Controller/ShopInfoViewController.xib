@@ -70,6 +70,7 @@
                 <constraint firstAttribute="bottom" secondItem="02l-JO-jqI" secondAttribute="bottom" id="z7w-Tm-9aO"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="90.5" y="362.5"/>
         </view>
     </objects>
     <resources>

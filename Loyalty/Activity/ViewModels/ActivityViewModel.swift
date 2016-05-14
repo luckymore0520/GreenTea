@@ -9,7 +9,6 @@
 import Foundation
 
 typealias ActivityDetailPresentable = protocol<TitlePresentable,WebIconPresentable,DetailPresentable,TagPresentable,LocationPresentable,SubTitlePresentable>
-
 typealias ActivitySimplePresentable = protocol<TitlePresentable,WebIconPresentable,Checkable,LocationPresentable,SubTitlePresentable>
 
 struct ActivitySimpleViewModel:ActivitySimplePresentable {
@@ -17,15 +16,13 @@ struct ActivitySimpleViewModel:ActivitySimplePresentable {
     var title: String
     var location: String
     var subTitle: String
-    var isChecked: Bool
-    var shop:Shop?
+    var isChecked: Bool?
     init(activity:Activity){
         self.iconName = activity.avatar.url
         self.title = activity.name
         self.location = activity.locationName
-        self.shop = activity.shopInfo
         self.subTitle = "\(activity.likeCount)"
-        self.isChecked = activity.like != nil
+        self.isChecked = activity.isLikedByMySelf
     }
 
 }
@@ -45,6 +42,6 @@ struct ActivityDetaiViewModel:ActivityDetailPresentable {
         self.tagName = activity.activityType == ActivityType.Loyalty ? "集点卡" : "优惠信息"
         self.location = activity.locationName
         self.shop = activity.shopInfo
-        self.subTitle = "\(activity.startTime.formateToString("yyyy.mm.dd"))-\(activity.endTime.formateToString("yyyy.mm.dd"))"
+        self.subTitle = "\(activity.startTime.formateToString("yyyy.MM.dd"))-\(activity.endTime.formateToString("yyyy.MM.dd"))"
     }
 }

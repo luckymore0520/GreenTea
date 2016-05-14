@@ -42,6 +42,7 @@ class Shop: AVObject, AVSubclassing {
         }
     }
     
+    // AVSubClassing协议方法，返回对应的表名
     static func parseClassName() -> String! {
         return "Shop"
     }
@@ -49,7 +50,9 @@ class Shop: AVObject, AVSubclassing {
     func isMine()->Bool {
         return self.userId == UserInfoManager.sharedManager.currentUser?.username
     }
-    
+}
+
+extension Shop {
     func addNewActivity(activity:Activity) {
         if self.activitys == nil {
             self.activitys = []
@@ -57,6 +60,7 @@ class Shop: AVObject, AVSubclassing {
         self.activitys?.append(activity)
         self.saveInBackground()
     }
+ 
 }
 
 class Activity: AVObject, AVSubclassing  {
@@ -98,10 +102,16 @@ class Activity: AVObject, AVSubclassing  {
         }
     }
     
+    var isMine:Bool {
+        return self.creatorId == UserInfoManager.sharedManager.currentUser?.username
+    }
+    
     static func parseClassName() -> String! {
         return "Activity"
     }
-    
+}
+
+extension Activity {
     func queryIsLikedBySelf(completionHandler:(like:Like?)->Void){
         if self.isLikedByMySelf != nil {
             completionHandler(like: self.like)
@@ -119,9 +129,12 @@ class Activity: AVObject, AVSubclassing  {
     }
     
     func queryShopInfo(completion:Shop->Void) {
+        //获取shop的查询对象
         let query = Shop.query()
+        //根据shopId查询shop
         query.getObjectInBackgroundWithId(self.shopId) { (shop, error) in
             if let shop = shop as? Shop {
+                //回调
                 self.shopInfo = shop
                 completion(shop)
             }

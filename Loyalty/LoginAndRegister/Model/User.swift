@@ -29,9 +29,19 @@ class User:AVUser {
     @NSManaged var birthday:String?
     @NSManaged var currentCity:String?
     @NSManaged var nickName:String?
-
+    @NSManaged var cards:[Card]?
     override static func parseClassName() -> String! {
         return "_User"
+    }
+    
+    func hasOwnedCard(forActivity:Activity) -> Bool {
+        guard let cards = self.cards else { return false}
+        for card in cards {
+            if card.activity.objectId == forActivity.objectId {
+                return true
+            }
+        }
+        return false
     }
     
     func gender()->Gender {

@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
+//定义协议
 protocol ViewControllerPresentable {
     func configureNavigationItem()
 }
 
+//协议扩展且限定遵循协议的是一个UIViewController
 extension ViewControllerPresentable where Self:UIViewController{
     func configureNavigationItem(){
         let leftButton = CancelButton.init(frame:CGRectMake(0, 0, 100, 40))

@@ -9,17 +9,19 @@
 import Foundation
 
 protocol Checkable {
-    var isChecked: Bool { get }
+    var isChecked: Bool? { get }
     func updateCheckView(view:UIView)
     func updateButton(button:UIButton)
 }
 
 extension Checkable {
     func updateCheckView(view:UIView){
-        view.hidden = !self.isChecked
+        guard let checked = self.isChecked else { return }
+        view.hidden = !checked
     }
     
     func updateButton(button:UIButton){
-        button.selected = self.isChecked
+        guard let checked = self.isChecked else { return }
+        button.selected = checked
     }
 }

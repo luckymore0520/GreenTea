@@ -43,6 +43,8 @@
 		1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */; };
 		1254296F1C5F7F3700D89004 /* UserSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */; };
 		125C21C81CD2661C00E8CF01 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C21C71CD2661C00E8CF01 /* Like.swift */; };
+		125C21CD1CD3550B00E8CF01 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C21CC1CD3550B00E8CF01 /* Card.swift */; };
+		125C21D11CD3587000E8CF01 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C21D01CD3587000E8CF01 /* CardViewModel.swift */; };
 		125D91161CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91151CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift */; };
 		125D911A1CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D91191CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift */; };
 		125D911C1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D911B1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift */; };
@@ -217,6 +219,8 @@
 		1254296B1C5F7E9100D89004 /* UserSettingCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingCellViewModel.swift; path = Setting/ViewModel/UserSettingCellViewModel.swift; sourceTree = "<group>"; };
 		1254296E1C5F7F3700D89004 /* UserSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingTableViewCell.swift; path = Setting/View/UserSettingTableViewCell.swift; sourceTree = "<group>"; };
 		125C21C71CD2661C00E8CF01 /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Like.swift; path = Activity/Models/Like.swift; sourceTree = "<group>"; };
+		125C21CC1CD3550B00E8CF01 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Cards/Model/Card.swift; sourceTree = "<group>"; };
+		125C21D01CD3587000E8CF01 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardViewModel.swift; path = Cards/ViewModel/CardViewModel.swift; sourceTree = "<group>"; };
 		125D91151CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoyaltyCoinDataSource.swift; path = Cards/ViewModel/LoyaltyCoinDataSource.swift; sourceTree = "<group>"; };
 		125D91191CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditUserInfoTableViewController.swift; path = Setting/Controller/EditUserInfoTableViewController.swift; sourceTree = "<group>"; };
 		125D911B1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerPresentable.swift; path = Protocal/ViewControllerPresentable.swift; sourceTree = "<group>"; };
@@ -458,6 +462,7 @@
 			children = (
 				12514D291CC46F4500ADCBED /* CardDataSource.swift */,
 				125D91151CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift */,
+				125C21D01CD3587000E8CF01 /* CardViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -469,6 +474,14 @@
 				125D911F1CC4C46800AE5F1C /* EditUserInfoTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		125C21C91CD3546700E8CF01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				125C21CC1CD3550B00E8CF01 /* Card.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		125D91251CC4CDB300AE5F1C /* ViewController */ = {
@@ -615,6 +628,7 @@
 		128027931C58BCAC00C76EA6 /* LoyaltyCards */ = {
 			isa = PBXGroup;
 			children = (
+				125C21C91CD3546700E8CF01 /* Model */,
 				12514D281CC46F2000ADCBED /* ViewModel */,
 				12C7F8361CC2746D00805820 /* View */,
 				12C7F8331CC2688300805820 /* Controller */,
@@ -1043,6 +1057,7 @@
 				1209023D1C5F6C3E00772CBA /* HUDHelper.swift in Sources */,
 				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
 				12675D5F1CCF00CD00C56E71 /* LocationPresentable.swift in Sources */,
+				125C21D11CD3587000E8CF01 /* CardViewModel.swift in Sources */,
 				12FF67A31CC2527900E7860B /* PinyinFormatter.m in Sources */,
 				125D91241CC4CB2F00AE5F1C /* ImagePickerManager.swift in Sources */,
 				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
@@ -1116,6 +1131,7 @@
 				1221E7901CC78439000B364E /* LocationPickerDataSource.swift in Sources */,
 				1280279F1C58C25F00C76EA6 /* AppearanceTool.swift in Sources */,
 				121924521C5A58C300A3D94E /* Bool.swift in Sources */,
+				125C21CD1CD3550B00E8CF01 /* Card.swift in Sources */,
 				12675D611CCF063200C56E71 /* DetailPresentable.swift in Sources */,
 				1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */,
 				125D91161CC47E2400AE5F1C /* LoyaltyCoinDataSource.swift in Sources */,

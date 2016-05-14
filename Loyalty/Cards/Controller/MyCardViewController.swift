@@ -26,7 +26,11 @@ class MyCardViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
-        self.currentNumLabel.text = "\(self.kolodaView.currentCardIndex + 1)/\(self.kolodaView.countOfCards)"
+        if self.kolodaView.countOfCards > 0 {
+            self.currentNumLabel.text = "\(self.kolodaView.currentCardIndex + 1)/\(self.kolodaView.countOfCards)"
+        } else {
+            self.currentNumLabel.text = ""
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {

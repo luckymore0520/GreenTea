@@ -12,36 +12,45 @@ class ActivityListViewController: UIViewController {
     var activityType:ActivityType?
     var selectedImageView:UIImageView?
     @IBOutlet weak var tableView: UITableView!
-    var activityListViewModel:ActivityListDataSource?
+    var activityListDataSource:ActivityListDataSource?
+    
+    //视图被加载 只执行一次
     override func viewDidLoad() {
         super.viewDidLoad()
         if let activityType = self.activityType {
-            self.activityListViewModel = ActivityListDataSource(tableView:self.tableView, activityType: activityType)
+            self.activityListDataSource = ActivityListDataSource(tableView:self.tableView, activityType: activityType)
         }
         // Do any additional setup after loading the view.
     }
     
+    //视图显示 每次显示在屏幕均会执行一次
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.activityListViewModel?.loadData()
+        self.activityListDataSource?.loadData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             let nextViewController = segue.destinationViewController as? ActivityDetailViewController
             if let indexPath = sender as? NSIndexPath {
-                nextViewController?.activity = self.activityListViewModel?.activityList?[indexPath.row]
+                nextViewController?.activity = self.activityListDataSource?.activityList?[indexPath.row]
             }
         }
     }
 
+}
+
+extension ActivityListViewController:UITableViewDelegate {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return self.activityListDataSource?.estimateHeightForEachRow() ?? 0
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! ActivityTableViewCell
+        self.selectedImageView = cell.activityImageView
+        self.performSegueWithIdentifier("showDetail", sender: indexPath)
+    }
 }
 
 extension ActivityListViewController:ImageTransitionFromViewController {
@@ -57,16 +66,3 @@ extension ActivityListViewController:ImageTransitionFromViewController {
     }
 }
 
-extension ActivityListViewController:UITableViewDelegate {
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return self.activityListViewModel?.estimateHeightForEachRow() ?? 0
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! ActivityTableViewCell
-        self.selectedImageView = cell.activityImageView
-        self.performSegueWithIdentifier("showDetail", sender: indexPath)
-    }
-}
