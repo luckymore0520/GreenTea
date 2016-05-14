@@ -136,6 +136,7 @@
 		12C7F83A1CC2748D00805820 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C7F8391CC2748D00805820 /* CardView.xib */; };
 		12C7F83D1CC27A6D00805820 /* MoneyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7F83B1CC27A6D00805820 /* MoneyCollectionViewCell.swift */; };
 		12C7F83E1CC27A6D00805820 /* MoneyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C7F83C1CC27A6D00805820 /* MoneyCollectionViewCell.xib */; };
+		12E736191CE77C450014BC11 /* GlobalTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E736181CE77C450014BC11 /* GlobalTool.swift */; };
 		12FF67911CC2527900E7860B /* CityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF676F1CC2527900E7860B /* CityButton.swift */; };
 		12FF67921CC2527900E7860B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF67701CC2527900E7860B /* CityViewController.swift */; };
 		12FF67931CC2527900E7860B /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FF67711CC2527900E7860B /* CityViewController.xib */; };
@@ -318,6 +319,7 @@
 		12C7F8391CC2748D00805820 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardView.xib; path = Cards/View/CardView.xib; sourceTree = "<group>"; };
 		12C7F83B1CC27A6D00805820 /* MoneyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyCollectionViewCell.swift; path = Cards/View/MoneyCollectionViewCell.swift; sourceTree = "<group>"; };
 		12C7F83C1CC27A6D00805820 /* MoneyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MoneyCollectionViewCell.xib; path = Cards/View/MoneyCollectionViewCell.xib; sourceTree = "<group>"; };
+		12E736181CE77C450014BC11 /* GlobalTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalTool.swift; path = Tools/GlobalTool.swift; sourceTree = "<group>"; };
 		12FF676D1CC2521B00E7860B /* Loyalty-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loyalty-Bridge-Header.h"; sourceTree = "<group>"; };
 		12FF676F1CC2527900E7860B /* CityButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityButton.swift; sourceTree = "<group>"; };
 		12FF67701CC2527900E7860B /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -598,6 +600,7 @@
 				125D912C1CC7211C00AE5F1C /* AMapTool.swift */,
 				125D912E1CC7260400AE5F1C /* MAMapViewController.swift */,
 				12675D661CCF31AC00C56E71 /* ActionSheetTool.swift */,
+				12E736181CE77C450014BC11 /* GlobalTool.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1065,6 +1068,7 @@
 				126E136D1CBA793D00A3CDFF /* ActivityToolBar.swift in Sources */,
 				126E13781CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift in Sources */,
 				12C7F83D1CC27A6D00805820 /* MoneyCollectionViewCell.swift in Sources */,
+				12E736191CE77C450014BC11 /* GlobalTool.swift in Sources */,
 				12FF679F1CC2527900E7860B /* ChineseInclude.m in Sources */,
 				12FF67961CC2527900E7860B /* LocationManager.swift in Sources */,
 				12675D631CCF0A4200C56E71 /* MyString.swift in Sources */,

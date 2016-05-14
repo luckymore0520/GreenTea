@@ -67,7 +67,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
             
         }
         let collectHandler = {
-            
+            self.collect()
         }
         let getCodeHandler = {
             
@@ -94,6 +94,34 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
     }
 }
 
+// MARK: - ToolBar
+extension ActivityDetailViewController {
+    func collect(){
+        guard let activity = self.activity else { return }
+        guard let user = UserInfoManager.sharedManager.currentUser else {
+            HUDHelper.showText("登录后才能进行集点操作")
+            return
+        }
+        if user.hasOwnedCard(activity) {
+            showCard(activity.objectId)
+        } else {
+            let alertView = UIAlertController(title: "您还没有领取该集点卡，是否现在领取？", message: nil, preferredStyle: .Alert)
+            alertView.addAction(UIAlertAction(title: "领取", style: UIAlertActionStyle.Default, handler: { (action) in
+                HUDHelper.showLoading()
+                Card.obtainNewCard(activity, completionHandler: { (card, errorMsg) in
+                    HUDHelper.removeLoading()
+                    if card != nil {
+                        showCard(activity.objectId)
+                    } else {
+                        HUDHelper.showText(errorMsg)
+                    }
+                })
+            }))
+            alertView.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alertView, animated: false, completion: nil)
+        }
+    }
+}
 
 extension ActivityDetailViewController:UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

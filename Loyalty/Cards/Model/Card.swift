@@ -14,8 +14,29 @@ class Card: AVObject,AVSubclassing {
     @NSManaged var ownerId:String
     @NSManaged var currentCount:Int
     
+    func getFullInfo(){
+        let query = Activity.query()
+        query.getObjectInBackgroundWithId(self.activity.objectId) { (activity, error) in
+            if let activity = activity as? Activity {
+                self.activity = activity
+            }
+        }
+    }
+    
     static func parseClassName() -> String! {
         return "Card"
+    }
+    
+    static func queryCardsOfUser(userName:String,completionHandler:[Card]->Void) {
+        let query = Card.query()
+        query.whereKey("ownerId", equalTo: userName)
+        query.includeKey("activity")
+        query.findObjectsInBackgroundWithBlock { (cards, error) in
+            if cards.count > 0 {
+                let cardList = cards as! [Card]
+                completionHandler(cardList)
+            }
+        }
     }
     
     static func obtainNewCard(activity:Activity, completionHandler:(card:Card?,errorMsg:String?) -> Void) {
@@ -25,10 +46,11 @@ class Card: AVObject,AVSubclassing {
         }
         let card = Card()
         card.activity = activity
-        card.ownerId = user.objectId
+        card.ownerId = user.username
         card.currentCount = 0
         card.saveInBackgroundWithBlock { (success, error) in
             if success {
+                user.addNewCard(card)
                 completionHandler(card: card,errorMsg: nil)
             } else {
                 completionHandler(card: nil, errorMsg: NSError.errorMsg(error))

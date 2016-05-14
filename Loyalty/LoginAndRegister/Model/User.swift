@@ -29,13 +29,19 @@ class User:AVUser {
     @NSManaged var birthday:String?
     @NSManaged var currentCity:String?
     @NSManaged var nickName:String?
-    @NSManaged var cards:[Card]?
+    var cards:[Card]?
     override static func parseClassName() -> String! {
         return "_User"
     }
     
+    func addNewCard(card:Card){
+        if cards == nil { cards = [] }
+        cards?.append(card)
+    }
+    
     func hasOwnedCard(forActivity:Activity) -> Bool {
         guard let cards = self.cards else { return false}
+        
         for card in cards {
             if card.activity.objectId == forActivity.objectId {
                 return true
@@ -65,6 +71,11 @@ extension User {
                     user.shop = shop as? Shop
                 })
             }
+        }
+        if user.cards == nil {
+            Card.queryCardsOfUser(user.username, completionHandler: { (cards) in
+                user.cards = cards
+            })
         }
         return user
     }
