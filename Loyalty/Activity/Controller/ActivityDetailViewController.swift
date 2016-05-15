@@ -64,7 +64,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
         guard let activity = self.activity else { return }
         guard let activityType = activity.activityType else { return }
         let guideHandler = {
-            
+            self.navi()
         }
         let collectHandler = {
             self.collect()
@@ -96,6 +96,13 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
 
 // MARK: - ToolBar
 extension ActivityDetailViewController {
+    func navi(){
+        guard let activity = self.activity else { return }
+        guard let location = activity.shopInfo?.location else { return }
+        guard let locationName = activity.shopInfo?.locationName else { return }
+        AMapTool.naviToPOI(locationName, latitute: location.latitude, longitute: location.longitude)
+    }
+    
     func collect(){
         guard let activity = self.activity else { return }
         guard let user = UserInfoManager.sharedManager.currentUser else {
