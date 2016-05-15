@@ -75,7 +75,7 @@ class Activity: AVObject, AVSubclassing  {
     @NSManaged var name:String
     @NSManaged var startTime:NSDate
     @NSManaged var endTime:NSDate
-    @NSManaged var activityDescription:String?
+    @NSManaged var activityDescription:String
     
     var shopInfo:Shop?
     var like:Like?

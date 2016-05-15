@@ -40,7 +40,8 @@ class CardDataSource: KolodaViewDataSource {
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         let cardView = NSBundle.mainBundle().loadNibNamed("CardView", owner: nil, options: nil)[0] as! CardView
-        cardView.renderView()
+        let card = self.cardList[Int(index)]
+        cardView.renderView(card)
         return cardView
     }
     

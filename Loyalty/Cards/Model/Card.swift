@@ -23,8 +23,28 @@ class Card: AVObject,AVSubclassing {
         }
     }
     
+    var isFull:Bool {
+        return activity.loyaltyCoinMaxCount == self.currentCount
+    }
+    
     static func parseClassName() -> String! {
         return "Card"
+    }
+}
+
+
+extension Card {
+    func collect(code:String, completionHandler:(success:Bool)->Void) {
+        if self.currentCount == self.activity.loyaltyCoinMaxCount {
+            completionHandler(success: false)
+        } else if code == "1111" {
+            self.currentCount += 1
+            self.saveInBackgroundWithBlock({ (success, error) in
+                completionHandler(success: success)
+            })
+        } else {
+            completionHandler(success: false)
+        }
     }
     
     static func queryCardsOfUser(userName:String,completionHandler:[Card]->Void) {
@@ -57,4 +77,5 @@ class Card: AVObject,AVSubclassing {
             }
         }
     }
+
 }

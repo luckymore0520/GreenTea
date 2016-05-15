@@ -18,7 +18,6 @@ class MoneyCollectionViewCell: UICollectionViewCell {
     }
     
     
-
     func updateLabelState(sequence:Int, isCollected:Bool = false) {
         self.coinSequenceLabel.selected = isCollected
         self.coinSequenceLabel.setTitle("\(sequence)", forState: UIControlState.Normal)

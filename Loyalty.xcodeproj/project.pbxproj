@@ -118,6 +118,7 @@
 		128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027C81C58F10300C76EA6 /* UIViewController.swift */; };
 		128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027CA1C58F43500C76EA6 /* CellReusable.swift */; };
 		128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */; };
+		12ADB2971CE8C55F00CD5772 /* RatioPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB2961CE8C55F00CD5772 /* RatioPresentable.swift */; };
 		12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */; };
 		12C260F11CCBA01300283286 /* WebIconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F01CCBA01300283286 /* WebIconPresentable.swift */; };
 		12C260F31CCBAC7600283286 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */; };
@@ -301,6 +302,7 @@
 		128027C81C58F10300C76EA6 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extension/UIViewController.swift; sourceTree = "<group>"; };
 		128027CA1C58F43500C76EA6 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellReusable.swift; path = Protocal/CellReusable.swift; sourceTree = "<group>"; };
 		128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginAndRegisterStoryboard.storyboard; path = LoginAndRegister/LoginAndRegisterStoryboard.storyboard; sourceTree = "<group>"; };
+		12ADB2961CE8C55F00CD5772 /* RatioPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatioPresentable.swift; path = Protocal/RatioPresentable.swift; sourceTree = "<group>"; };
 		12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoViewModel.swift; path = Setting/ViewModel/UserInfoViewModel.swift; sourceTree = "<group>"; };
 		12C260F01CCBA01300283286 /* WebIconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebIconPresentable.swift; path = Protocal/WebIconPresentable.swift; sourceTree = "<group>"; };
 		12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTableViewController.swift; path = Main/ViewController/LocationSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -747,6 +749,7 @@
 				12675D5E1CCF00CD00C56E71 /* LocationPresentable.swift */,
 				12675D601CCF063200C56E71 /* DetailPresentable.swift */,
 				12675D6F1CCF537A00C56E71 /* TagPresentable.swift */,
+				12ADB2961CE8C55F00CD5772 /* RatioPresentable.swift */,
 			);
 			name = Protocal;
 			sourceTree = "<group>";
@@ -1071,6 +1074,7 @@
 				12E736191CE77C450014BC11 /* GlobalTool.swift in Sources */,
 				12FF679F1CC2527900E7860B /* ChineseInclude.m in Sources */,
 				12FF67961CC2527900E7860B /* LocationManager.swift in Sources */,
+				12ADB2971CE8C55F00CD5772 /* RatioPresentable.swift in Sources */,
 				12675D631CCF0A4200C56E71 /* MyString.swift in Sources */,
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,

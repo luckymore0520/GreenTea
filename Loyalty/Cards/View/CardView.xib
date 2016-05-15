@@ -48,12 +48,6 @@
                         <constraint firstAttribute="height" constant="55" id="sqv-4M-f8x"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买一杯集一次点，集满十点即可兑换任意一杯芝麻珍珠奶茶、芝麻红豆抹茶或者桂圆红枣奶茶" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-ut-m7g">
-                    <rect key="frame" x="8" y="194" width="294" height="30.5"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                    <color key="textColor" red="0.29411764709999999" green="0.25882352939999997" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-z1-u9f">
                     <rect key="frame" x="135" y="390" width="40" height="40"/>
                     <state key="normal" image="卡包兑换_不可点"/>
@@ -72,23 +66,39 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-DK-I5q">
+                    <rect key="frame" x="10" y="250" width="290" height="120"/>
+                    <connections>
+                        <action selector="onCollectionViewTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="wys-I5-CiS"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买一杯集一次点，集满十点即可兑换任意一杯芝麻珍珠奶茶、芝麻红豆抹茶或者桂圆红枣奶茶" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-ut-m7g">
+                    <rect key="frame" x="8" y="194" width="294" height="30.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <color key="textColor" red="0.29411764709999999" green="0.25882352939999997" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="cFV-ut-m7g" secondAttribute="trailing" constant="8" id="0yy-FC-DQ9"/>
                 <constraint firstItem="cFV-ut-m7g" firstAttribute="top" secondItem="UqD-3B-LiD" secondAttribute="bottom" constant="1" id="2t6-WI-pB4"/>
                 <constraint firstItem="cFV-ut-m7g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="40h-pC-Rxb"/>
+                <constraint firstItem="fFl-DK-I5q" firstAttribute="width" secondItem="wPU-kf-VFY" secondAttribute="width" id="6Dh-YC-s0l"/>
                 <constraint firstItem="UqD-3B-LiD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Cr2-TX-dpZ"/>
                 <constraint firstAttribute="trailing" secondItem="UqD-3B-LiD" secondAttribute="trailing" id="DNx-Sq-Xo2"/>
                 <constraint firstItem="RlD-L9-IKe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gy3-Ik-Ujm"/>
+                <constraint firstItem="fFl-DK-I5q" firstAttribute="height" secondItem="wPU-kf-VFY" secondAttribute="height" id="chO-EO-ubj"/>
                 <constraint firstItem="UqD-3B-LiD" firstAttribute="bottom" secondItem="RlD-L9-IKe" secondAttribute="bottom" id="fUD-H2-UWh"/>
                 <constraint firstAttribute="bottom" secondItem="dbg-z1-u9f" secondAttribute="bottom" constant="30" id="iTV-2u-mQr"/>
                 <constraint firstItem="dbg-z1-u9f" firstAttribute="top" secondItem="wPU-kf-VFY" secondAttribute="bottom" constant="20" id="qcY-cy-gSH"/>
                 <constraint firstAttribute="trailing" secondItem="RlD-L9-IKe" secondAttribute="trailing" id="sHF-ar-Zd5"/>
+                <constraint firstItem="fFl-DK-I5q" firstAttribute="centerY" secondItem="wPU-kf-VFY" secondAttribute="centerY" id="t2E-sM-ie3"/>
                 <constraint firstItem="dbg-z1-u9f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tf5-Vi-60i"/>
                 <constraint firstItem="wPU-kf-VFY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="vDM-eZ-d1T"/>
                 <constraint firstItem="RlD-L9-IKe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wSU-9o-xZ5"/>
                 <constraint firstAttribute="trailing" secondItem="wPU-kf-VFY" secondAttribute="trailing" constant="10" id="y6x-jk-ALY"/>
+                <constraint firstItem="fFl-DK-I5q" firstAttribute="centerX" secondItem="wPU-kf-VFY" secondAttribute="centerX" id="zPr-EV-XAb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <userDefinedRuntimeAttributes>
@@ -98,7 +108,11 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="collectionViewFlowLayout" destination="cz8-Qp-bFX" id="YlS-qO-a4Q"/>
+                <outlet property="detailLabel" destination="cFV-ut-m7g" id="Uo1-xc-vrK"/>
+                <outlet property="imageView" destination="RlD-L9-IKe" id="8rY-1t-3c2"/>
+                <outlet property="locationLabel" destination="6j6-yj-s2q" id="8o5-qn-Avp"/>
                 <outlet property="loyaltyCoinCollectionView" destination="wPU-kf-VFY" id="iis-fh-0L7"/>
+                <outlet property="nameLabel" destination="lKb-W2-Hc9" id="zy4-hJ-4MM"/>
             </connections>
         </view>
     </objects>
