@@ -119,6 +119,9 @@
 		128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027CA1C58F43500C76EA6 /* CellReusable.swift */; };
 		128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */; };
 		12ADB2971CE8C55F00CD5772 /* RatioPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB2961CE8C55F00CD5772 /* RatioPresentable.swift */; };
+		12ADB29A1CE9515700CD5772 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */; };
+		12ADB29B1CE9515700CD5772 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */; };
+		12ADB29D1CE958FD00CD5772 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB29C1CE958FD00CD5772 /* Coin.swift */; };
 		12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */; };
 		12C260F11CCBA01300283286 /* WebIconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F01CCBA01300283286 /* WebIconPresentable.swift */; };
 		12C260F31CCBAC7600283286 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */; };
@@ -303,6 +306,9 @@
 		128027CA1C58F43500C76EA6 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellReusable.swift; path = Protocal/CellReusable.swift; sourceTree = "<group>"; };
 		128027F41C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginAndRegisterStoryboard.storyboard; path = LoginAndRegister/LoginAndRegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		12ADB2961CE8C55F00CD5772 /* RatioPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatioPresentable.swift; path = Protocal/RatioPresentable.swift; sourceTree = "<group>"; };
+		12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = Cards/Controller/QRCodeViewController.swift; sourceTree = "<group>"; };
+		12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QRCodeViewController.xib; path = Cards/Controller/QRCodeViewController.xib; sourceTree = "<group>"; };
+		12ADB29C1CE958FD00CD5772 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = Cards/Model/Coin.swift; sourceTree = "<group>"; };
 		12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoViewModel.swift; path = Setting/ViewModel/UserInfoViewModel.swift; sourceTree = "<group>"; };
 		12C260F01CCBA01300283286 /* WebIconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebIconPresentable.swift; path = Protocal/WebIconPresentable.swift; sourceTree = "<group>"; };
 		12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTableViewController.swift; path = Main/ViewController/LocationSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -484,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				125C21CC1CD3550B00E8CF01 /* Card.swift */,
+				12ADB29C1CE958FD00CD5772 /* Coin.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -777,6 +784,8 @@
 			isa = PBXGroup;
 			children = (
 				12C7F8341CC2689F00805820 /* MyCardViewController.swift */,
+				12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */,
+				12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1010,6 +1019,7 @@
 				128027971C58BCED00C76EA6 /* UserCenterStoryboard.storyboard in Resources */,
 				125D91291CC4CDD400AE5F1C /* OneRowEditInfoViewController.xib in Resources */,
 				12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */,
+				12ADB29B1CE9515700CD5772 /* QRCodeViewController.xib in Resources */,
 				12675D6E1CCF440400C56E71 /* SimpleActivityTableViewCell.xib in Resources */,
 				12FF67931CC2527900E7860B /* CityViewController.xib in Resources */,
 				128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */,
@@ -1099,6 +1109,7 @@
 				126E136B1CBA71B400A3CDFF /* ActivityDetailSectionHeaderTableViewCell.swift in Sources */,
 				128027B11C58D6AA00C76EA6 /* Log.swift in Sources */,
 				1254296C1C5F7E9100D89004 /* UserSettingCellViewModel.swift in Sources */,
+				12ADB29A1CE9515700CD5772 /* QRCodeViewController.swift in Sources */,
 				128027A21C58C2C800C76EA6 /* UIImage.swift in Sources */,
 				12FF679E1CC2527900E7860B /* SpecifyArray.swift in Sources */,
 				12675D6A1CCF3BDC00C56E71 /* MyNSDate.swift in Sources */,
@@ -1155,6 +1166,7 @@
 				12FF67A01CC2527900E7860B /* ChineseToPinyinResource.m in Sources */,
 				12FF67A51CC2527900E7860B /* PinyinHelper.m in Sources */,
 				125D911A1CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift in Sources */,
+				12ADB29D1CE958FD00CD5772 /* Coin.swift in Sources */,
 				1209023F1C5F712100772CBA /* User.swift in Sources */,
 				12675D721CCF827A00C56E71 /* ActivityViewModel.swift in Sources */,
 				125C21C81CD2661C00E8CF01 /* Like.swift in Sources */,

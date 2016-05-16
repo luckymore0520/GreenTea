@@ -23,7 +23,7 @@ class HUDHelper {
         guard let text = text else { return }
         PKHUD.sharedHUD.contentView = PKHUDTextView(text: text)
         PKHUD.sharedHUD.show()
-        PKHUD.sharedHUD.hide(afterDelay: 0.5, completion: nil)
+        PKHUD.sharedHUD.hide(afterDelay: 1.0, completion: nil)
     }
     
     

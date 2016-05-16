@@ -18,6 +18,7 @@ class CardView: UIView {
     var coinDataSource:LoyaltyCoinDataSource?
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
+    @IBOutlet weak var exchangeButton: UIButton!
     var card:Card?
     
     func renderView(card:Card){
@@ -30,11 +31,13 @@ class CardView: UIView {
         cardViewModel.updateTitleLabel(self.nameLabel)
         cardViewModel.updateDetailLabel(self.detailLabel)
         cardViewModel.updateLocationLabel(self.locationLabel)
+        self.exchangeButton.selected = card.isFull
         self.card = card
     }
     
     func reloadCollectionView(){
         guard let card = self.card else { return }
+        self.exchangeButton.selected = card.isFull
         let cardViewModel = CardViewModel(card: card)
         self.coinDataSource = LoyaltyCoinDataSource(collectionView: loyaltyCoinCollectionView,ratioPresentable: cardViewModel)
         self.loyaltyCoinCollectionView.reloadData()
@@ -69,6 +72,18 @@ class CardView: UIView {
         self.viewController()?.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func onExchangeButtonClicked(sender: AnyObject) {
+        guard let card = self.card else { return }
+        if card.isFull {
+            let qrCodeViewController = QRCodeViewController(contentString: card.objectId)
+            tabBarController()?.view.addSubview(qrCodeViewController.view)
+            tabBarController()?.addChildViewController(qrCodeViewController)
+            qrCodeViewController.view.alpha = 0
+            UIView.animateWithDuration(0.3) {
+                qrCodeViewController.view.alpha = 1.0
+            }
+        }
+    }
 }
 
 

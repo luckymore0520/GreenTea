@@ -29,4 +29,25 @@ extension UIImage {
         UIGraphicsEndImageContext();
         return image;
     }
+    
+    static func createQRForString(qrString: String?) -> UIImage?{
+        if let sureQRString = qrString {
+            let stringData = sureQRString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+            // 创建一个二维码的滤镜
+            guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
+            qrFilter.setValue(stringData, forKey: "inputMessage")
+            qrFilter.setValue("H", forKey: "inputCorrectionLevel")
+            let qrCIImage = qrFilter.outputImage
+            // 创建一个颜色滤镜,黑白色
+            guard let colorFilter = CIFilter(name: "CIFalseColor") else { return nil }
+            colorFilter.setDefaults()
+            colorFilter.setValue(qrCIImage, forKey: "inputImage")
+            colorFilter.setValue(CIColor(red: 0, green: 0, blue: 0), forKey: "inputColor0")
+            colorFilter.setValue(CIColor(red: 1, green: 1, blue: 1), forKey: "inputColor1")
+            // 返回二维码image
+            let codeImage = UIImage(CIImage: colorFilter.outputImage!.imageByApplyingTransform(CGAffineTransformMakeScale(5, 5)))
+            return codeImage
+        }
+        return nil
+    }
 }

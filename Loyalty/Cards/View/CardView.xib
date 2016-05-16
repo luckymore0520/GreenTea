@@ -22,16 +22,16 @@
                     <rect key="frame" x="0.0" y="138" width="310" height="55"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日出茶太" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-W2-Hc9">
-                            <rect key="frame" x="17" y="5" width="68" height="20.5"/>
+                            <rect key="frame" x="17" y="5" width="68" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.29411764705882354" green="0.25882352941176467" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="定位_卡包" translatesAutoresizingMaskIntoConstraints="NO" id="UHL-Za-vo3">
-                            <rect key="frame" x="15" y="27.5" width="20" height="22"/>
+                            <rect key="frame" x="15" y="28" width="20" height="22"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南京市鼓楼区汉口路28号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j6-yj-s2q">
-                            <rect key="frame" x="37" y="28.5" width="146.5" height="16"/>
+                            <rect key="frame" x="37" y="29" width="147" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.29411764705882354" green="0.25882352941176467" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -52,6 +52,9 @@
                     <rect key="frame" x="135" y="390" width="40" height="40"/>
                     <state key="normal" image="卡包兑换_不可点"/>
                     <state key="selected" image="卡包兑换"/>
+                    <connections>
+                        <action selector="onExchangeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zq4-57-z4g"/>
+                    </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wPU-kf-VFY">
                     <rect key="frame" x="10" y="250" width="290" height="120"/>
@@ -73,7 +76,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买一杯集一次点，集满十点即可兑换任意一杯芝麻珍珠奶茶、芝麻红豆抹茶或者桂圆红枣奶茶" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-ut-m7g">
-                    <rect key="frame" x="8" y="194" width="294" height="30.5"/>
+                    <rect key="frame" x="8" y="194" width="294" height="31"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                     <color key="textColor" red="0.29411764709999999" green="0.25882352939999997" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -109,6 +112,7 @@
             <connections>
                 <outlet property="collectionViewFlowLayout" destination="cz8-Qp-bFX" id="YlS-qO-a4Q"/>
                 <outlet property="detailLabel" destination="cFV-ut-m7g" id="Uo1-xc-vrK"/>
+                <outlet property="exchangeButton" destination="dbg-z1-u9f" id="qEG-IE-9Hd"/>
                 <outlet property="imageView" destination="RlD-L9-IKe" id="8rY-1t-3c2"/>
                 <outlet property="locationLabel" destination="6j6-yj-s2q" id="8o5-qn-Avp"/>
                 <outlet property="loyaltyCoinCollectionView" destination="wPU-kf-VFY" id="iis-fh-0L7"/>
