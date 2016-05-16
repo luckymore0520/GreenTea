@@ -122,6 +122,8 @@
 		12ADB29A1CE9515700CD5772 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */; };
 		12ADB29B1CE9515700CD5772 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */; };
 		12ADB29D1CE958FD00CD5772 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB29C1CE958FD00CD5772 /* Coin.swift */; };
+		12ADB29F1CE96C4700CD5772 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12ADB29E1CE96C4700CD5772 /* QRScannerViewController.xib */; };
+		12ADB2A11CE96D1A00CD5772 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB2A01CE96D1A00CD5772 /* QRScannerViewController.swift */; };
 		12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */; };
 		12C260F11CCBA01300283286 /* WebIconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F01CCBA01300283286 /* WebIconPresentable.swift */; };
 		12C260F31CCBAC7600283286 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */; };
@@ -309,6 +311,8 @@
 		12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = Cards/Controller/QRCodeViewController.swift; sourceTree = "<group>"; };
 		12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QRCodeViewController.xib; path = Cards/Controller/QRCodeViewController.xib; sourceTree = "<group>"; };
 		12ADB29C1CE958FD00CD5772 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = Cards/Model/Coin.swift; sourceTree = "<group>"; };
+		12ADB29E1CE96C4700CD5772 /* QRScannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerViewController.xib; sourceTree = "<group>"; };
+		12ADB2A01CE96D1A00CD5772 /* QRScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRScannerViewController.swift; path = Cards/Controller/QRScannerViewController.swift; sourceTree = "<group>"; };
 		12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoViewModel.swift; path = Setting/ViewModel/UserInfoViewModel.swift; sourceTree = "<group>"; };
 		12C260F01CCBA01300283286 /* WebIconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebIconPresentable.swift; path = Protocal/WebIconPresentable.swift; sourceTree = "<group>"; };
 		12C260F21CCBAC7600283286 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTableViewController.swift; path = Main/ViewController/LocationSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -783,9 +787,11 @@
 		12C7F8331CC2688300805820 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				12ADB29E1CE96C4700CD5772 /* QRScannerViewController.xib */,
 				12C7F8341CC2689F00805820 /* MyCardViewController.swift */,
 				12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */,
 				12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */,
+				12ADB2A01CE96D1A00CD5772 /* QRScannerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1021,6 +1027,7 @@
 				12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */,
 				12ADB29B1CE9515700CD5772 /* QRCodeViewController.xib in Resources */,
 				12675D6E1CCF440400C56E71 /* SimpleActivityTableViewCell.xib in Resources */,
+				12ADB29F1CE96C4700CD5772 /* QRScannerViewController.xib in Resources */,
 				12FF67931CC2527900E7860B /* CityViewController.xib in Resources */,
 				128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */,
 				12C260F71CCD009F00283286 /* LocationInfoTableViewCell.xib in Resources */,
@@ -1167,6 +1174,7 @@
 				12FF67A51CC2527900E7860B /* PinyinHelper.m in Sources */,
 				125D911A1CC4BD1700AE5F1C /* EditUserInfoTableViewController.swift in Sources */,
 				12ADB29D1CE958FD00CD5772 /* Coin.swift in Sources */,
+				12ADB2A11CE96D1A00CD5772 /* QRScannerViewController.swift in Sources */,
 				1209023F1C5F712100772CBA /* User.swift in Sources */,
 				12675D721CCF827A00C56E71 /* ActivityViewModel.swift in Sources */,
 				125C21C81CD2661C00E8CF01 /* Like.swift in Sources */,

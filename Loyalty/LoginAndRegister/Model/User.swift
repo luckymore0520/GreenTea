@@ -39,6 +39,20 @@ class User:AVUser {
         cards?.append(card)
     }
     
+    func exchangeCard(cardId:String){
+        guard let cards = self.cards else { return }
+        var deletedIndex = -1
+        for i in 0...cards.count-1 {
+            let card = cards[i]
+            if card.objectId == cardId {
+                deletedIndex = i
+            }
+        }
+        if deletedIndex >= 0 {
+            self.cards?.removeAtIndex(deletedIndex)
+        }
+    }
+    
     func hasOwnedCard(forActivity:Activity) -> Bool {
         guard let cards = self.cards else { return false}
         

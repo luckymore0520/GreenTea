@@ -73,7 +73,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
             self.getCode()
         }
         let exChangeHandler = {
-            
+            self.exchange()
         }
         switch activityType {
         case .Promotion:
@@ -96,7 +96,10 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
 
 // MARK: - ToolBar
 extension ActivityDetailViewController {
-    
+    func exchange(){
+        let qrScannerViewController = QRScannerViewController(nibName: "QRScannerViewController", bundle: nil)
+        self.navigationController?.pushViewController(qrScannerViewController, animated: true)
+    }
     func getCode(){
         guard let activity = self.activity else { return }
         if activity.isMine {

@@ -11,6 +11,9 @@ import UIKit
 class QRCodeViewController: UIViewController {
     var contentString:String?
     @IBOutlet weak var qrImageView: UIImageView!
+    var isExchanged:Bool = false
+    var timer:NSTimer?
+    
     
     convenience init(contentString:String){
         self.init(nibName: "QRCodeViewController", bundle: nil)
@@ -21,15 +24,40 @@ class QRCodeViewController: UIViewController {
         super.viewDidLoad()
         self.qrImageView.image = UIImage.createQRForString(self.contentString)
         self.view.backgroundColor = UIColor.clearColor()
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(QRCodeViewController.testIsExchanged), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+        timer = nil
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    func testIsExchanged(){
+        if isExchanged { return }
+        guard let contentString = self.contentString else { return }
+        Card.queryCardWithId(contentString) { (card) in
+            if card == nil {
+                UserInfoManager.sharedManager.currentUser?.exchangeCard(contentString)
+                NSNotificationCenter.defaultCenter().postNotificationName("RELOADCARDS", object: nil)
+                self.isExchanged = true
+                self.timer?.invalidate()
+                self.timer = nil
+                let alertController = UIAlertController(title: "兑换成功", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "关闭", style: .Default, handler: { (alert) in
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.onCloseButtonClicked("")
+                    });
+                }))
+                self.presentViewController(alertController, animated: true, completion: nil)            }
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -40,7 +68,7 @@ class QRCodeViewController: UIViewController {
     }
     */
     @IBAction func onExchangeSucceedButtonClicked(sender: AnyObject) {
-        
+        self.testIsExchanged()
     }
 
     @IBAction func onCloseButtonClicked(sender: AnyObject) {

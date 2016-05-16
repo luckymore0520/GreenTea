@@ -20,20 +20,31 @@ class MyCardViewController: UIViewController {
         super.viewDidLoad()
         kolodaView.dataSource = cardDataSource
         kolodaView.delegate = self
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MyCardViewController.reloadData), name: "RELOADCARDS", object: nil)
         // Do any additional setup after loading the view.
     }
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
+        self.reloadData()
+    }
+    
+    func reloadData(){
         self.cardDataSource.reloadData()
+        self.kolodaView.reloadData()
         if self.kolodaView.countOfCards > 0 {
             self.currentNumLabel.text = "\(self.kolodaView.currentCardIndex + 1)/\(self.kolodaView.countOfCards)"
         } else {
             self.currentNumLabel.text = ""
         }
+
     }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.kolodaView.reloadData()

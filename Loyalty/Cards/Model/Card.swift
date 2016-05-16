@@ -52,6 +52,18 @@ extension Card {
         }
     }
     
+    static func queryCardWithId(objectId:String, completionHandler:Card?->Void) {
+        let query = Card.query()
+        query.includeKey("activity")
+        query.getObjectInBackgroundWithId(objectId) { (card, error) in
+            if let card = card as? Card {
+                completionHandler(card)
+            } else {
+                completionHandler(nil)
+            }
+        }
+    }
+    
     static func queryCardsOfUser(userName:String,completionHandler:[Card]->Void) {
         let query = Card.query()
         query.whereKey("ownerId", equalTo: userName)
