@@ -21,6 +21,7 @@ class LeanCloudHelper {
     }
     
     static func registerSubClass(){
+        Coin.registerSubclass()
         Card.registerSubclass()
         Like.registerSubclass()
         User.registerSubclass()

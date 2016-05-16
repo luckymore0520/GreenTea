@@ -70,7 +70,7 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
             self.collect()
         }
         let getCodeHandler = {
-            
+            self.getCode()
         }
         let exChangeHandler = {
             
@@ -96,6 +96,21 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
 
 // MARK: - ToolBar
 extension ActivityDetailViewController {
+    
+    func getCode(){
+        guard let activity = self.activity else { return }
+        if activity.isMine {
+            HUDHelper.showLoading()
+            Coin.requestNewCoin(activity, completionHandler: { (code, errorMsg) in
+                HUDHelper.removeLoading()
+                guard let code = code else {
+                    HUDHelper.showAlert(errorMsg)
+                    return }
+                HUDHelper.showAlert("您的集点码为:\n\(code)")
+            })
+        }
+    }
+    
     func navi(){
         guard let activity = self.activity else { return }
         guard let location = activity.shopInfo?.location else { return }

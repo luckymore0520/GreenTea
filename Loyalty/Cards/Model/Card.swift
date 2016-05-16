@@ -37,13 +37,18 @@ extension Card {
     func collect(code:String, completionHandler:(success:Bool)->Void) {
         if self.currentCount == self.activity.loyaltyCoinMaxCount {
             completionHandler(success: false)
-        } else if code == "1111" {
-            self.currentCount += 1
-            self.saveInBackgroundWithBlock({ (success, error) in
-                completionHandler(success: success)
-            })
         } else {
-            completionHandler(success: false)
+            Coin.checkCode(self.activity, code: code, completionHandler: { (success) in
+                if success {
+                    self.currentCount += 1
+                    self.saveInBackgroundWithBlock({ (success, error) in
+                        completionHandler(success: success)
+                    })
+                } else {
+                    completionHandler(success: false)
+                }
+            })
+            
         }
     }
     

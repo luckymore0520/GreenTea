@@ -26,5 +26,12 @@ class HUDHelper {
         PKHUD.sharedHUD.hide(afterDelay: 1.0, completion: nil)
     }
     
-    
+    static func showAlert(text:String?, viewController:UIViewController? = nil) {
+        guard let text = text else { return }
+        let alertController = UIAlertController(title: text, message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "关闭", style: .Default, handler: { (alert) in
+            
+        }))
+        (viewController ?? tabBarController())?.presentViewController(alertController, animated: true, completion: nil)
+    }
 }
