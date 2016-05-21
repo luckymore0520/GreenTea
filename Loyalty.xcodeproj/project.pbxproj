@@ -37,6 +37,13 @@
 		1221E78C1CC781FC000B364E /* Checkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E78B1CC781FC000B364E /* Checkable.swift */; };
 		1221E78E1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E78D1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift */; };
 		1221E7901CC78439000B364E /* LocationPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221E78F1CC78439000B364E /* LocationPickerDataSource.swift */; };
+		12502C011CF0350600504BE4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C001CF0350600504BE4 /* Comment.swift */; };
+		12502C041CF0357D00504BE4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C021CF0357D00504BE4 /* CommentCell.swift */; };
+		12502C051CF0357D00504BE4 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12502C031CF0357D00504BE4 /* CommentCell.xib */; };
+		12502C081CF03D4900504BE4 /* PublishCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C061CF03D4900504BE4 /* PublishCommentViewController.swift */; };
+		12502C091CF03D4900504BE4 /* PublishCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12502C071CF03D4900504BE4 /* PublishCommentViewController.xib */; };
+		12502C0B1CF0464000504BE4 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0A1CF0464000504BE4 /* CommentViewModel.swift */; };
+		12502C0D1CF04B3D00504BE4 /* CountPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0C1CF04B3D00504BE4 /* CountPresentable.swift */; };
 		12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12514D291CC46F4500ADCBED /* CardDataSource.swift */; };
 		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
@@ -220,6 +227,13 @@
 		1221E78B1CC781FC000B364E /* Checkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checkable.swift; path = Protocal/Checkable.swift; sourceTree = "<group>"; };
 		1221E78D1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointInfoTableViewCellViewModel.swift; path = Main/ViewModel/PointInfoTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		1221E78F1CC78439000B364E /* LocationPickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationPickerDataSource.swift; path = Main/ViewModel/LocationPickerDataSource.swift; sourceTree = "<group>"; };
+		12502C001CF0350600504BE4 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Activity/Models/Comment.swift; sourceTree = "<group>"; };
+		12502C021CF0357D00504BE4 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentCell.swift; path = Activity/Views/CommentCell.swift; sourceTree = "<group>"; };
+		12502C031CF0357D00504BE4 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentCell.xib; path = Activity/Views/CommentCell.xib; sourceTree = "<group>"; };
+		12502C061CF03D4900504BE4 /* PublishCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublishCommentViewController.swift; path = Activity/Controller/PublishCommentViewController.swift; sourceTree = "<group>"; };
+		12502C071CF03D4900504BE4 /* PublishCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PublishCommentViewController.xib; path = Activity/Controller/PublishCommentViewController.xib; sourceTree = "<group>"; };
+		12502C0A1CF0464000504BE4 /* CommentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentViewModel.swift; path = Activity/ViewModels/CommentViewModel.swift; sourceTree = "<group>"; };
+		12502C0C1CF04B3D00504BE4 /* CountPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountPresentable.swift; path = Protocal/CountPresentable.swift; sourceTree = "<group>"; };
 		12514D291CC46F4500ADCBED /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardDataSource.swift; path = Cards/ViewModel/CardDataSource.swift; sourceTree = "<group>"; };
 		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
@@ -435,6 +449,8 @@
 				128027AD1C58CAEE00C76EA6 /* ActivityRootViewController.swift */,
 				128027B41C58DA2500C76EA6 /* ActivityListViewController.swift */,
 				120E2DC81CAD53FB001E6DE9 /* ActivityDetailViewController.swift */,
+				12502C061CF03D4900504BE4 /* PublishCommentViewController.swift */,
+				12502C071CF03D4900504BE4 /* PublishCommentViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -730,6 +746,8 @@
 				12C260F81CCD00DE00283286 /* ActivityDetailInfoTableViewCell.xib */,
 				12C260FA1CCD010400283286 /* ActivityTimeInfoTableViewCell.xib */,
 				12C260FC1CCD012300283286 /* ActivityDetailSectionHeaderTableViewCell.xib */,
+				12502C021CF0357D00504BE4 /* CommentCell.swift */,
+				12502C031CF0357D00504BE4 /* CommentCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -740,6 +758,7 @@
 				128027BE1C58E10400C76EA6 /* ActivityListViewModel.swift */,
 				120E2DCA1CAD54F8001E6DE9 /* ActivityDetailDataSource.swift */,
 				12675D711CCF827A00C56E71 /* ActivityViewModel.swift */,
+				12502C0A1CF0464000504BE4 /* CommentViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -761,6 +780,7 @@
 				12675D601CCF063200C56E71 /* DetailPresentable.swift */,
 				12675D6F1CCF537A00C56E71 /* TagPresentable.swift */,
 				12ADB2961CE8C55F00CD5772 /* RatioPresentable.swift */,
+				12502C0C1CF04B3D00504BE4 /* CountPresentable.swift */,
 			);
 			name = Protocal;
 			sourceTree = "<group>";
@@ -770,6 +790,7 @@
 			children = (
 				128027C61C58E75900C76EA6 /* Activity.swift */,
 				125C21C71CD2661C00E8CF01 /* Like.swift */,
+				12502C001CF0350600504BE4 /* Comment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1007,6 +1028,7 @@
 				128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */,
 				1221E77F1CC7742E000B364E /* LocationPickerViewController.xib in Resources */,
 				12C260F51CCCFFEA00283286 /* ShopInfoTableViewCell.xib in Resources */,
+				12502C091CF03D4900504BE4 /* PublishCommentViewController.xib in Resources */,
 				12C7F83A1CC2748D00805820 /* CardView.xib in Resources */,
 				12C7F83E1CC27A6D00805820 /* MoneyCollectionViewCell.xib in Resources */,
 				12FF67971CC2527900E7860B /* citydict.plist in Resources */,
@@ -1020,6 +1042,7 @@
 				12C261011CCD021200283286 /* ShopInfoViewController.xib in Resources */,
 				1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */,
 				1280279D1C58BD9100C76EA6 /* ActivityStoryboard.storyboard in Resources */,
+				12502C051CF0357D00504BE4 /* CommentCell.xib in Resources */,
 				12C260F91CCD00DE00283286 /* ActivityDetailInfoTableViewCell.xib in Resources */,
 				12FF679B1CC2527900E7860B /* TableViewCell.xib in Resources */,
 				128027971C58BCED00C76EA6 /* UserCenterStoryboard.storyboard in Resources */,
@@ -1137,16 +1160,19 @@
 				1221E78C1CC781FC000B364E /* Checkable.swift in Sources */,
 				12FF67941CC2527900E7860B /* CollectionViewCell.swift in Sources */,
 				127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */,
+				12502C081CF03D4900504BE4 /* PublishCommentViewController.swift in Sources */,
 				125D912F1CC7260400AE5F1C /* MAMapViewController.swift in Sources */,
 				1221E7871CC780F1000B364E /* PointInfoTableViewCell.swift in Sources */,
 				12C7F8381CC2747E00805820 /* CardView.swift in Sources */,
 				1221E78E1CC782CA000B364E /* PointInfoTableViewCellViewModel.swift in Sources */,
 				1219245C1C5A58C300A3D94E /* Sequence.swift in Sources */,
 				128027B51C58DA2500C76EA6 /* ActivityListViewController.swift in Sources */,
+				12502C0B1CF0464000504BE4 /* CommentViewModel.swift in Sources */,
 				12C261031CCD03DE00283286 /* ShopInfoDataSource.swift in Sources */,
 				121924511C5A58C300A3D94E /* Array.swift in Sources */,
 				1221E78A1CC781BA000B364E /* SubTitlePresentable.swift in Sources */,
 				12C261051CCD041B00283286 /* ShopInfoViewModel.swift in Sources */,
+				12502C011CF0350600504BE4 /* Comment.swift in Sources */,
 				126E13671CBA6F0B00A3CDFF /* ActivityTimeInfoTableViewCell.swift in Sources */,
 				12FF67A41CC2527900E7860B /* PinYinForObjc.m in Sources */,
 				121924541C5A58C300A3D94E /* Dictionary.swift in Sources */,
@@ -1168,6 +1194,7 @@
 				120E2DCB1CAD54F8001E6DE9 /* ActivityDetailDataSource.swift in Sources */,
 				125D912D1CC7211C00AE5F1C /* AMapTool.swift in Sources */,
 				120E2DC91CAD53FB001E6DE9 /* ActivityDetailViewController.swift in Sources */,
+				12502C041CF0357D00504BE4 /* CommentCell.swift in Sources */,
 				128027BF1C58E10400C76EA6 /* ActivityListViewModel.swift in Sources */,
 				1221E77E1CC7742E000B364E /* LocationPickerViewController.swift in Sources */,
 				12FF67A01CC2527900E7860B /* ChineseToPinyinResource.m in Sources */,
@@ -1190,6 +1217,7 @@
 				12767CC71CC762B800DD0B4F /* ShopCreationViewController.swift in Sources */,
 				121924581C5A58C300A3D94E /* Int.swift in Sources */,
 				121924551C5A58C300A3D94E /* Double.swift in Sources */,
+				12502C0D1CF04B3D00504BE4 /* CountPresentable.swift in Sources */,
 				128027C91C58F10300C76EA6 /* UIViewController.swift in Sources */,
 				1219245B1C5A58C300A3D94E /* Range.swift in Sources */,
 			);

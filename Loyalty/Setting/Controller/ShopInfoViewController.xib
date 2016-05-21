@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopInfoViewController" customModule="Loyalty" customModuleProvider="target">
             <connections>
-                <outlet property="createActivityButton" destination="02l-JO-jqI" id="wZP-gx-jpe"/>
                 <outlet property="shopImageView" destination="KUa-eY-ORX" id="BDT-GQ-JiR"/>
                 <outlet property="tableView" destination="vXi-xx-wLZ" id="R3t-FE-kaS"/>
+                <outlet property="toolBar" destination="Omf-94-3rE" id="FIT-C6-fu9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,28 +47,24 @@
                         <outlet property="delegate" destination="-1" id="vVm-My-Gas"/>
                     </connections>
                 </tableView>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02l-JO-jqI">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omf-94-3rE" customClass="ActivityToolBar" customModule="Loyalty" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
-                    <color key="backgroundColor" red="0.74901960784313726" green="0.85882352941176465" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="fze-JZ-ByU"/>
+                        <constraint firstAttribute="height" constant="50" id="cp6-oi-WyD"/>
+                        <constraint firstAttribute="width" secondItem="Omf-94-3rE" secondAttribute="height" multiplier="15:2" id="pSs-SQ-mAZ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <state key="normal" title="  发布活动" image="发布活动"/>
-                    <connections>
-                        <action selector="onCreateActivityButtonClicked:" destination="-1" eventType="touchUpInside" id="lRf-yc-e5a"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="02l-JO-jqI" secondAttribute="trailing" id="3do-9W-Tn2"/>
                 <constraint firstItem="vXi-xx-wLZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4uK-Sx-kPL"/>
+                <constraint firstAttribute="trailing" secondItem="Omf-94-3rE" secondAttribute="trailing" id="90j-i8-0Ob"/>
+                <constraint firstAttribute="bottom" secondItem="Omf-94-3rE" secondAttribute="bottom" id="EMp-2Y-j8n"/>
                 <constraint firstAttribute="trailing" secondItem="vXi-xx-wLZ" secondAttribute="trailing" id="IFc-DS-k9X"/>
-                <constraint firstItem="02l-JO-jqI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J2n-gh-Hrc"/>
                 <constraint firstAttribute="bottom" secondItem="vXi-xx-wLZ" secondAttribute="bottom" id="Qaj-5W-ChZ"/>
                 <constraint firstItem="vXi-xx-wLZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SOd-df-WFy"/>
-                <constraint firstAttribute="bottom" secondItem="02l-JO-jqI" secondAttribute="bottom" id="z7w-Tm-9aO"/>
+                <constraint firstItem="Omf-94-3rE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VXM-Qj-nLN"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="90.5" y="362.5"/>
@@ -75,6 +72,5 @@
     </objects>
     <resources>
         <image name="Mock_Shop" width="375" height="225"/>
-        <image name="发布活动" width="24" height="23"/>
     </resources>
 </document>

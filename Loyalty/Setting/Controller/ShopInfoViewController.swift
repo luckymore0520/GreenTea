@@ -13,14 +13,14 @@ class ShopInfoViewController: UIViewController {
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     var shop:Shop?
-    @IBOutlet weak var createActivityButton: UIButton!
     var shopInfoDataSource:ShopInfoDataSource?
-    
+    @IBOutlet weak var toolBar: ActivityToolBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.translucent = false
         self.automaticallyAdjustsScrollViewInsets = false
+        self.reloadComments()
         // Do any additional setup after loading the view.
     }
     
@@ -32,9 +32,14 @@ class ShopInfoViewController: UIViewController {
         self.shopInfoDataSource?.render(self.shopImageView)
         self.title = shop.isMine() ? "我的店铺" : shop.shopName
         if shop.isMine() {
-            self.createActivityButton.hidden = false
+            self.toolBar.updateView(imageArray: ["发布活动"], titleArray: ["发布活动"], clickHandlers: [{
+                    self.onCreateActivityButtonClicked()
+                }])
             self.setRightButton("", imageName: "编辑_白", selector: #selector(ShopInfoViewController.onEditButtonClicked))
         } else {
+            self.toolBar.updateView(imageArray: ["发布活动"], titleArray: ["评价"], clickHandlers: [{
+                self.onPublishCommentButtonClicked()
+                }])
             self.setRightButton("", imageName: "打电话", selector: #selector(ShopInfoViewController.onCallButtonClicked))
         }
     }
@@ -42,6 +47,20 @@ class ShopInfoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func reloadComments(){
+        guard let shop = self.shop else { return }
+        Comment.queryComment(shop.objectId) { (comment) in
+            shop.comments = comment ?? []
+            self.reloadDate()
+        }
+    }
+    
+    func reloadDate(){
+        guard let shop = self.shop else { return }
+        self.shopInfoDataSource = ShopInfoDataSource(shop: shop, tableView: tableView)
+        self.tableView.reloadData()
     }
     
     func onCallButtonClicked(){
@@ -69,8 +88,23 @@ class ShopInfoViewController: UIViewController {
         }
     }
     
+    func onPublishCommentButtonClicked(replyId:String? = nil, replyName:String? = nil) {
+        PublishCommentViewController.startPublish(self, withRate: replyName == nil) { (content, rate) in
+            guard let shop = self.shop else { return}
+            HUDHelper.showLoading()
+            Comment.publishComment(shop, rate:rate, replyId: replyId, replyName: replyName, content: content, completionHandler: { (success, errorMsg) in
+                HUDHelper.removeLoading()
+                if success {
+                    HUDHelper.showText("发布成功")
+                    self.reloadComments()
+                } else {
+                    HUDHelper.showText(errorMsg)
+                }
+            })
+        }
+    }
     
-    @IBAction func onCreateActivityButtonClicked(sender: AnyObject) {
+    func onCreateActivityButtonClicked() {
         let activityCreationViewController = ActivityCreationViewController()
         activityCreationViewController.shop = self.shop
         let navigationViewController = UINavigationController(rootViewController: activityCreationViewController)
@@ -92,6 +126,8 @@ extension ShopInfoViewController:UITableViewDelegate {
             default:
                 break
             }
+        } else if let comment = object as? Comment {
+            self.onPublishCommentButtonClicked(comment.userId,replyName:comment.userNickname)
         }
     }
     

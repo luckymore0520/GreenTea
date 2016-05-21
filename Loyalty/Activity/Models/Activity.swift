@@ -16,8 +16,8 @@ enum ActivityType:String{
 
 class Shop: AVObject, AVSubclassing {
     @NSManaged var shopName:String
-    @NSManaged var rate:NSNumber
-    @NSManaged var commentCount:NSNumber
+    @NSManaged var rate:Double
+    @NSManaged var commentCount:Int
     @NSManaged var location:AVGeoPoint
     @NSManaged var locationName:String
     @NSManaged var phoneNumber:String
@@ -26,6 +26,7 @@ class Shop: AVObject, AVSubclassing {
     @NSManaged var userId:String?
     @NSManaged var activitys:[Activity]?
     
+    var comments:[Comment] = []
     
     convenience init(shopName:String,location:CGPoint,locationName:String,phoneNumber:String,description:String,avatar:AVFile){
         self.init()
@@ -53,6 +54,16 @@ class Shop: AVObject, AVSubclassing {
 }
 
 extension Shop {
+    func rate(rate:Int, completionHandler:(success:Bool, errorMsg:String?) ->Void) {
+        if rate == 0 { return }
+        let newRate = (self.rate * Double(self.commentCount) + Double(rate)) / Double(self.commentCount + 1)
+        self.rate = newRate
+        self.commentCount += 1
+        self.saveInBackgroundWithBlock { (success, error) in
+            completionHandler(success: success, errorMsg: NSError.errorMsg(error))
+        }
+    }
+    
     func addNewActivity(activity:Activity) {
         if self.activitys == nil {
             self.activitys = []

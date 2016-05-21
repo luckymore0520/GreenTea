@@ -7,11 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ShopInfoTableViewCell" rowHeight="56" id="Ig9-mH-j1Z" customClass="ShopInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopInfoTableViewCell" rowHeight="56" id="Ig9-mH-j1Z" customClass="ShopInfoTableViewCell" customModule="Loyalty" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ig9-mH-j1Z" id="45G-Us-yF1">
-                <rect key="frame" x="0.0" y="0.0" width="342" height="56"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoCo奶茶广州路店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap0-05-4Jb">
@@ -34,7 +34,7 @@
                         <color key="textColor" red="0.30196078430000001" green="0.25882352939999997" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="128份评价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zf-Hl-cQD">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="128份评价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zf-Hl-cQD">
                         <rect key="frame" x="285" y="21" width="57" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.30196078430000001" green="0.25882352939999997" blue="0.1333333333" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -47,7 +47,7 @@
                     <constraint firstItem="nbu-oc-a2u" firstAttribute="leading" secondItem="ga5-Vo-vEk" secondAttribute="trailing" constant="2" id="KXc-qd-4SC"/>
                     <constraint firstItem="nbu-oc-a2u" firstAttribute="centerY" secondItem="ga5-Vo-vEk" secondAttribute="centerY" id="PtM-Ov-bnZ"/>
                     <constraint firstItem="Ap0-05-4Jb" firstAttribute="top" secondItem="45G-Us-yF1" secondAttribute="top" constant="6.5" id="bFD-AD-u8W"/>
-                    <constraint firstAttribute="trailing" secondItem="8Zf-Hl-cQD" secondAttribute="trailing" id="jAY-xY-E6M"/>
+                    <constraint firstAttribute="trailing" secondItem="8Zf-Hl-cQD" secondAttribute="trailing" constant="5" id="jAY-xY-E6M"/>
                     <constraint firstItem="Ap0-05-4Jb" firstAttribute="leading" secondItem="45G-Us-yF1" secondAttribute="leading" constant="15" id="rQJ-Gn-O0i"/>
                     <constraint firstItem="8Zf-Hl-cQD" firstAttribute="centerY" secondItem="45G-Us-yF1" secondAttribute="centerY" id="vHf-qd-MO3"/>
                 </constraints>

@@ -30,7 +30,7 @@ class ShopInfoTableViewCell: UITableViewCell {
         guard let shop = shop else { return }
         shop.updateTitleLabel(self.shopNameLabel)
         shop.updateViews(self.starRateView, starLabel: self.startLabel)
+        shop.updateCountLabel(reviewCountLabel)
         shop.updateHiddableViews([self.reviewCountLabel])
-        self.accessoryType = shop.shouldHidden ? UITableViewCellAccessoryType.None : .DisclosureIndicator
     }
 }

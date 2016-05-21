@@ -14,10 +14,10 @@ let unselectedStarImageName = "starUnselected"
 
 class StartRateView: UIView {
     var numberOfStars:Int = defaultStarNum
-    var allowInCompleteStar: Bool = true
+    var allowInCompleteStar: Bool = false
     var unselectedStarView: UIView?
     var selectedStarView: UIView?
-    var percentOfStar:CGFloat = 1.0 {
+    var percentOfStar:Double = 1.0 {
         didSet {
             self.setNeedsLayout()
         }
@@ -39,7 +39,11 @@ class StartRateView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.selectedStarView?.frame = CGRectMake(0, 0, self.bounds.size.width * self.percentOfStar, self.bounds.size.height)
+        self.selectedStarView?.frame = CGRectMake(0, 0, self.bounds.size.width * CGFloat(self.percentOfStar), self.bounds.size.height)
+    }
+    
+    func currentStar()->Int {
+        return Int(percentOfStar * Double(numberOfStars))
     }
  }
 
@@ -62,6 +66,7 @@ extension StartRateView {
         for i in 0..<self.numberOfStars {
             let starImageView = UIImageView(image: UIImage(named: imageName))
             starImageView.frame = CGRectMake(CGFloat(i) * width, 0, width, height)
+            starImageView.contentMode = UIViewContentMode.ScaleAspectFit
             starView.addSubview(starImageView)
         }
         return starView
@@ -71,14 +76,15 @@ extension StartRateView {
 // MARK: - Action
 extension StartRateView {
     private func addGesture(){
-        if self.changable {
-            let gesture = UITapGestureRecognizer(target: self, action: "onRateViewTapped:")
-            gesture.numberOfTapsRequired = 1
-            self.addGestureRecognizer(gesture)
-        }
+        let gesture = UITapGestureRecognizer(target: self, action: "onRateViewTapped:")
+        gesture.numberOfTapsRequired = 1
+        self.addGestureRecognizer(gesture)
     }
     
     func onRateViewTapped(gesture:UITapGestureRecognizer){
+        if !self.changable {
+            return
+        }
         let tapPoint = gesture.locationInView(self)
         let xOffset = tapPoint.x
         let actualStarScore = xOffset / self.bounds.size.width * CGFloat(self.numberOfStars)
@@ -89,6 +95,6 @@ extension StartRateView {
         } else if percentOfStar > 1 {
             percentOfStar = 1
         }
-        self.percentOfStar = percentOfStar
+        self.percentOfStar = Double(percentOfStar)
     }
 }

@@ -39,7 +39,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ue-4Q-1Td" userLabel="ScanView">
                     <rect key="frame" x="54" y="150" width="213" height="213"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_line" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-hb-t4V">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="qrcode_line" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-hb-t4V">
                             <rect key="frame" x="0.0" y="0.0" width="213" height="16"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_corner_lt" translatesAutoresizingMaskIntoConstraints="NO" id="edC-Eo-nu7">

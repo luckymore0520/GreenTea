@@ -61,6 +61,7 @@ class ShopInfoDataSource: NSObject {
         tableView.registerReusableCell(ActivityDetailInfoTableViewCell.self)
         tableView.registerReusableCell(ActivityDetailSectionHeaderTableViewCell.self)
         tableView.registerReusableCell(SimpleActivityTableViewCell.self)
+        tableView.registerReusableCell(CommentCell.self)
     }
     
     func render(imageView:UIImageView) {
@@ -70,6 +71,7 @@ class ShopInfoDataSource: NSObject {
     func viewForHeader(tableView:UITableView,section:Int) -> UIView? {
         if section == 0 { return nil }
         let cell = tableView.dequeueReusableCell() as ActivityDetailSectionHeaderTableViewCell
+        cell.backgroundColor = UIColor.globalViewColor()
         let sectionType = tableRowInfo[section][0]
         if sectionType.title.length > 0 {
             cell.render(sectionType)
@@ -85,6 +87,12 @@ class ShopInfoDataSource: NSObject {
         if tableRowInfo[indexPath.section][0] == .ShopActivityInfo {
             return 90
         }
+        if tableRowInfo[indexPath.section][0] == .Review {
+            if let comment = self.shopViewModel?.comments[indexPath.row] {
+                return 70 - (comment.replyName == nil ? 0 : 15) + comment.content.minHeight(UIScreen.mainScreen().bounds.size.width - 74)
+            }
+            return 0
+        }
         switch tableRowInfo[indexPath.section][indexPath.row] {
         case .ShopInfo:
             return 56
@@ -92,8 +100,6 @@ class ShopInfoDataSource: NSObject {
             return 32
         case .ContactInfo:
             return 45
-        case .Review:
-            return 50
         case .ShopDetailInfo:
             return 30 + (self.shopViewModel?.detail.minHeight(UIScreen.mainScreen().bounds.width - 30) ?? 0)
         default:
@@ -105,6 +111,9 @@ class ShopInfoDataSource: NSObject {
         let staticRowArray = tableRowInfo[indexPath.section]
         if staticRowArray[0] == .ShopActivityInfo {
             return self.shopViewModel?.activityList?[indexPath.row]
+        }
+        if tableRowInfo[indexPath.section][0] == .Review {
+            return self.shopViewModel?.comments[indexPath.row]
         }
         return  tableRowInfo[indexPath.section][indexPath.row]
     }
@@ -122,6 +131,9 @@ extension ShopInfoDataSource:UITableViewDataSource {
             if tableRowInfo[section][0] == .ShopActivityInfo {
                 return self.shopViewModel?.activityList?.count ?? 0
             }
+            if tableRowInfo[section][0] == .Review {
+                return self.shopViewModel?.comments.count ?? 0
+            }
             return tableRowInfo[section].count
         }
         return 0
@@ -135,6 +147,13 @@ extension ShopInfoDataSource:UITableViewDataSource {
                 activityCell.render(ActivityDetaiViewModel(activity: activity))
             }
             return activityCell
+        }
+        if tableRowInfo[indexPath.section][0] == .Review {
+            let commentCell = tableView.dequeueReusableCell(indexPath: indexPath) as CommentCell
+            if let comment = self.shopViewModel?.comments[indexPath.row] {
+                commentCell.render(CommentViewModel(comment: comment))
+            }
+            return commentCell
         }
         var cell:UITableViewCell?
         switch tableRowInfo[indexPath.section][indexPath.row] {
