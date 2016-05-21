@@ -100,6 +100,14 @@ class ShopInfoDataSource: NSObject {
             return 0
         }
     }
+    
+    func objectForRowAtIndexPath(indexPath:NSIndexPath) -> Any? {
+        let staticRowArray = tableRowInfo[indexPath.section]
+        if staticRowArray[0] == .ShopActivityInfo {
+            return self.shopViewModel?.activityList?[indexPath.row]
+        }
+        return  tableRowInfo[indexPath.section][indexPath.row]
+    }
 }
 
 

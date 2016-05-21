@@ -15,8 +15,10 @@ class ActivityToolBar: UIView {
         super.init(coder:aDecoder)
     }
 
+    //传入按钮颜色的数组（提供默认参数）、图片数组、按钮标题数组以及回调数组
     func updateView(colorArray:[UIColor] = [UIColor.globalLightGreenColor(),UIColor.globalLightBlueColor()],imageArray:[String]!,titleArray:[String]!, clickHandlers:[()->Void]) {
         var buttonArray:[UIButton] = []
+        let buttonWidth = self.frame.size.width / CGFloat(titleArray.count)
         for i in 0...imageArray.count-1 {
             let button = UIButton(type: UIButtonType.Custom)
             button.setImage(UIImage(named: imageArray[i]), forState: UIControlState.Normal)
@@ -26,29 +28,12 @@ class ActivityToolBar: UIView {
             button.tag = i
             button.addTarget(self, action: #selector(ActivityToolBar.onButtonClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             buttonArray.append(button)
-        }
-        if imageArray.count == 1 {
-            constrain(buttonArray[0],self) {
-                button, view in
-                button.left == view.left
+            constrain(button,self) {
+                button,view in
+                button.left == view.left + buttonWidth * CGFloat(i)
                 button.top == view.top
                 button.height == view.height
-                button.width == view.width
-            }
-        } else {
-            constrain(buttonArray[0],self) {
-                button, view in
-                button.left == view.left
-                button.top == view.top
-                button.height == view.height
-                button.width == view.width / 2.0
-            }
-            constrain(buttonArray[1],self) {
-                button, view in
-                button.right == view.right
-                button.top == view.top
-                button.height == view.height
-                button.width == view.width / 2.0
+                button.width == buttonWidth
             }
         }
         self.clickHandlers = clickHandlers

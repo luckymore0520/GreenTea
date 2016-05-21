@@ -92,6 +92,14 @@ class ActivityDetailViewController: UIViewController,HasHiddenNavigation {
             break
         }
     }
+    
+    static func jumpTo(activity:Activity, navigationController:UINavigationController?) {
+        let storyboard = UIStoryboard(name: "ActivityStoryboard", bundle: nil)
+        if let activityDetailViewController = storyboard.instantiateViewControllerWithIdentifier("ActivityDetailViewController") as? ActivityDetailViewController {
+            activityDetailViewController.activity = activity
+            navigationController?.pushViewController(activityDetailViewController, animated: true)
+        }
+    }
 }
 
 // MARK: - ToolBar
@@ -155,6 +163,19 @@ extension ActivityDetailViewController:UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if let row = self.activityDetailDataSource?.rows[indexPath.section][indexPath.row] {
+            switch row {
+            case .ShopInfo:
+                ShopInfoViewController.jumpToShopViewController(self.activity?.shopInfo, fromViewController: self.navigationController)
+                break
+            case .LocationInfo:
+                self.navi()
+                break
+            default:
+                break;
+            }
+        }
+        
     }
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {

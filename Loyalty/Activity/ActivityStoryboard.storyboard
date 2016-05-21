@@ -27,7 +27,7 @@
         <!--Activity Detail View Controller-->
         <scene sceneID="xaE-i3-Nze">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="n2i-yE-Uny" customClass="ActivityDetailViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityDetailViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="n2i-yE-Uny" customClass="ActivityDetailViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AfM-bw-UDt"/>
                         <viewControllerLayoutGuide type="bottom" id="jLi-2N-Omy"/>

@@ -34,12 +34,22 @@ class ShopInfoViewController: UIViewController {
         if shop.isMine() {
             self.createActivityButton.hidden = false
             self.setRightButton("", imageName: "编辑_白", selector: #selector(ShopInfoViewController.onEditButtonClicked))
+        } else {
+            self.setRightButton("", imageName: "打电话", selector: #selector(ShopInfoViewController.onCallButtonClicked))
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func onCallButtonClicked(){
+        guard let phoneNumber = self.shop?.phoneNumber else { return }
+        let callCommentString = "tel://\(phoneNumber)"
+        if let url = NSURL(string: callCommentString) {
+            UIApplication.sharedApplication().openURL(url)
+        }
     }
  
     func onEditButtonClicked(){
@@ -69,6 +79,22 @@ class ShopInfoViewController: UIViewController {
 }
 
 extension ShopInfoViewController:UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        let object = self.shopInfoDataSource?.objectForRowAtIndexPath(indexPath)
+        if let activity = object as? Activity {
+            ActivityDetailViewController.jumpTo(activity, navigationController: self.navigationController)
+        } else if let rowType = object as? ShopInfoRowType {
+            switch rowType {
+            case .LocationInfo:
+                guard let shop = self.shop else { return }
+                AMapTool.naviToPOI(shop.locationName, latitute: shop.location.latitude, longitute: shop.location.longitude)
+            default:
+                break
+            }
+        }
+    }
+    
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return self.shopInfoDataSource?.heightForHeader(section) ?? 0
     }

@@ -131,11 +131,13 @@ extension Activity {
     func queryShopInfo(completion:Shop->Void) {
         //获取shop的查询对象
         let query = Shop.query()
+        query.includeKey("activitys")
         //根据shopId查询shop
         query.getObjectInBackgroundWithId(self.shopId) { (shop, error) in
             if let shop = shop as? Shop {
                 //回调
                 self.shopInfo = shop
+                
                 completion(shop)
             }
         }
