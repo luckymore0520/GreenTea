@@ -51,6 +51,9 @@
                                             <state key="normal" image="分享">
                                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="onShareButtonClicked:" destination="n2i-yE-Uny" eventType="touchUpInside" id="3jQ-OC-MX4"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-3r-rjU">
                                             <rect key="frame" x="289" y="23" width="29" height="29"/>

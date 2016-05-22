@@ -23,10 +23,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqI-rt-z7l">
                                 <rect key="frame" x="270" y="37" width="29" height="29"/>
                                 <state key="normal" image="卡包删除"/>
+                                <connections>
+                                    <action selector="onDeleteButtonClicked:" destination="6jE-Lc-HGK" eventType="touchUpInside" id="PCq-5u-BUn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAM-XM-sMx">
                                 <rect key="frame" x="233" y="39" width="27" height="26"/>
                                 <state key="normal" image="卡包分享"/>
+                                <connections>
+                                    <action selector="onShareButtonClicked:" destination="6jE-Lc-HGK" eventType="touchUpInside" id="Xdo-R4-6ll"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFH-jU-eiK" customClass="KolodaView" customModule="Koloda">
                                 <rect key="frame" x="20" y="73" width="280" height="445"/>

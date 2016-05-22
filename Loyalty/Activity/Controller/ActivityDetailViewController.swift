@@ -193,6 +193,18 @@ extension ActivityDetailViewController:UITableViewDelegate {
 
 // MARK: - Action
 extension ActivityDetailViewController {
+    @IBAction func onShareButtonClicked(sender: AnyObject) {
+        guard let activity = self.activity else { return }
+
+        var activityItems:[AnyObject] = ["\(activity.locationName)正在进行活动：\(activity.name)"]
+        if let image = self.activityImageView.image {
+            activityItems.append(image)
+        }
+        let activityShareController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        self.presentViewController(activityShareController, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func onStarButtonClicked(sender: AnyObject) {
         guard let activity = self.activity else { return }
         activity.queryIsLikedBySelf({ (like) in

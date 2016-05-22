@@ -37,7 +37,7 @@ class MyCardViewController: UIViewController {
     
     func reloadData(){
         self.cardDataSource.reloadData()
-        self.kolodaView.reloadData()
+        self.kolodaView.resetCurrentCardIndex()
         if self.kolodaView.countOfCards > 0 {
             self.currentNumLabel.text = "\(self.kolodaView.currentCardIndex + 1)/\(self.kolodaView.countOfCards)"
         } else {
@@ -66,6 +66,31 @@ class MyCardViewController: UIViewController {
             self.kolodaView.resetCurrentCardIndex()
         }
 
+    }
+}
+
+extension MyCardViewController {
+    @IBAction func onDeleteButtonClicked(sender: AnyObject) {
+        let alertController = UIAlertController(title: "你确定要删除这张集点卡吗？", message: nil, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "确定", style: .Default, handler: { (action) in
+            let card = self.cardDataSource.cardList[self.kolodaView.currentCardIndex]
+            UserInfoManager.sharedManager.currentUser?.exchangeCard(card.objectId)
+            card.delete()
+            self.reloadData()
+        }))
+        alertController.addAction(UIAlertAction(title: "取消", style: .Cancel, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func onShareButtonClicked(sender: AnyObject) {
+        let cardView = kolodaView.viewForCardAtIndex(kolodaView.currentCardIndex) as? CardView
+        let card = self.cardDataSource.cardList[kolodaView.currentCardIndex]
+        var activityItems:[AnyObject] = ["我在\"\(card.activity.name)\"活动中已经集齐了\(card.currentCount)个点！"]
+        if let image = cardView?.imageView.image {
+            activityItems.append(image)
+        }
+        let activityShareController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        self.presentViewController(activityShareController, animated: true, completion: nil)
     }
 }
 
