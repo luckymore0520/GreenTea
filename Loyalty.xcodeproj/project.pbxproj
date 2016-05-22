@@ -44,6 +44,7 @@
 		12502C091CF03D4900504BE4 /* PublishCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12502C071CF03D4900504BE4 /* PublishCommentViewController.xib */; };
 		12502C0B1CF0464000504BE4 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0A1CF0464000504BE4 /* CommentViewModel.swift */; };
 		12502C0D1CF04B3D00504BE4 /* CountPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0C1CF04B3D00504BE4 /* CountPresentable.swift */; };
+		12502C0F1CF19B0300504BE4 /* ActivitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0E1CF19B0300504BE4 /* ActivitySearchViewController.swift */; };
 		12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12514D291CC46F4500ADCBED /* CardDataSource.swift */; };
 		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
@@ -234,6 +235,7 @@
 		12502C071CF03D4900504BE4 /* PublishCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PublishCommentViewController.xib; path = Activity/Controller/PublishCommentViewController.xib; sourceTree = "<group>"; };
 		12502C0A1CF0464000504BE4 /* CommentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentViewModel.swift; path = Activity/ViewModels/CommentViewModel.swift; sourceTree = "<group>"; };
 		12502C0C1CF04B3D00504BE4 /* CountPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountPresentable.swift; path = Protocal/CountPresentable.swift; sourceTree = "<group>"; };
+		12502C0E1CF19B0300504BE4 /* ActivitySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivitySearchViewController.swift; path = Activity/Controller/ActivitySearchViewController.swift; sourceTree = "<group>"; };
 		12514D291CC46F4500ADCBED /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardDataSource.swift; path = Cards/ViewModel/CardDataSource.swift; sourceTree = "<group>"; };
 		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				120E2DC81CAD53FB001E6DE9 /* ActivityDetailViewController.swift */,
 				12502C061CF03D4900504BE4 /* PublishCommentViewController.swift */,
 				12502C071CF03D4900504BE4 /* PublishCommentViewController.xib */,
+				12502C0E1CF19B0300504BE4 /* ActivitySearchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1116,6 +1119,7 @@
 				12FF67961CC2527900E7860B /* LocationManager.swift in Sources */,
 				12ADB2971CE8C55F00CD5772 /* RatioPresentable.swift in Sources */,
 				12675D631CCF0A4200C56E71 /* MyString.swift in Sources */,
+				12502C0F1CF19B0300504BE4 /* ActivitySearchViewController.swift in Sources */,
 				127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */,
 				121924591C5A58C300A3D94E /* NSArray.swift in Sources */,
 				12675D6D1CCF440400C56E71 /* SimpleActivityTableViewCell.swift in Sources */,

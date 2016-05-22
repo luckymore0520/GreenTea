@@ -10,6 +10,13 @@ import UIKit
 
 class ActivityListViewController: UIViewController {
     var activityType:ActivityType?
+    var keyword:String? {
+        didSet {
+            if let dataSource = self.activityListDataSource {
+                dataSource.search(keyword)
+            }
+        }
+    }
     var selectedImageView:UIImageView?
     @IBOutlet weak var tableView: UITableView!
     var activityListDataSource:ActivityListDataSource?
@@ -19,6 +26,9 @@ class ActivityListViewController: UIViewController {
         super.viewDidLoad()
         if let activityType = self.activityType {
             self.activityListDataSource = ActivityListDataSource(tableView:self.tableView, activityType: activityType)
+        }
+        if let keyword = self.keyword {
+            self.activityListDataSource = ActivityListDataSource(tableView: self.tableView, keyword: keyword)
         }
         // Do any additional setup after loading the view.
     }

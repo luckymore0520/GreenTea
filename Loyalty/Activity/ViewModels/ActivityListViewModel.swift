@@ -22,15 +22,36 @@ class ActivityListDataSource: NSObject {
         self.activityType = activityType
         self.tableView?.registerReusableCell(ActivityTableViewCell)
     }
+    
+    required init(tableView:UITableView, keyword:String){
+        super.init()
+        self.tableView = tableView
+        self.tableView?.dataSource = self
+        self.tableView?.registerReusableCell(ActivityTableViewCell)
+        self.search(keyword)
+    }
 
     func loadData(){
-        var point:CGPoint?
-        let latitute = UserDefaultTool.floatForKey(latituteKey)
-        let longitute = UserDefaultTool.floatForKey(longituteKey)
-        if latitute != nil && longitute != nil {
-            point = CGPointMake(latitute!, longitute!)
+        if let activityType = self.activityType {
+            var point:CGPoint?
+            let latitute = UserDefaultTool.floatForKey(latituteKey)
+            let longitute = UserDefaultTool.floatForKey(longituteKey)
+            if latitute != nil && longitute != nil {
+                point = CGPointMake(latitute!, longitute!)
+            }
+            Activity.query(point, type: activityType) { (activities) in
+                self.activityList = activities
+                self.tableView?.reloadData()
+            }
         }
-        Activity.query(point, type: self.activityType ?? .Loyalty) { (activities) in
+    }
+    
+    func search(keyword:String?) {
+        guard let keyword = keyword else { return }
+        if keyword.length == 0 {
+            return
+        }
+        Activity.query(keyword) { (activities) in
             self.activityList = activities
             self.tableView?.reloadData()
         }
@@ -50,9 +71,12 @@ extension ActivityListDataSource: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableViewCell = tableView.dequeueReusableCell(indexPath: indexPath) as ActivityTableViewCell
         if let activity = self.activityList?[indexPath.row] {
-            activity.queryIsLikedBySelf({ (like) in
-                tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
-            })
+            if self.activityType != nil {
+                activity.queryIsLikedBySelf({ (like) in
+                    tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+                })
+
+            }
             let activityViewModel = ActivitySimpleViewModel(activity: activity)
             tableViewCell.render(activityViewModel)
         }

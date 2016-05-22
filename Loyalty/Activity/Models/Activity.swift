@@ -154,6 +154,27 @@ extension Activity {
         }
     }
     
+    
+    static func query(keyword:String,completion:[Activity] -> Void) {
+        let nameQuery = Activity.query()
+        nameQuery.whereKey("name", containsString: keyword)
+        
+        let contentQuery = Activity.query()
+        contentQuery.whereKey("activityDescription", containsString: keyword)
+        
+        let locationNameQuery = Activity.query()
+        locationNameQuery.whereKey("locationName", containsString: keyword)
+        let query = AVQuery.orQueryWithSubqueries([nameQuery,contentQuery,locationNameQuery])
+        query.findObjectsInBackgroundWithBlock { (activityObject, error) in
+            var activityArray:[Activity] = []
+            for object in activityObject {
+                if let activity = object as? Activity {
+                    activityArray.append(activity)
+                }
+            }
+            completion(activityArray)
+        }
+    }
     static func query(nearGeoPoint:CGPoint?, type:ActivityType, completion:[Activity] -> Void) {
         let query = Activity.query()
         query.limit = 10

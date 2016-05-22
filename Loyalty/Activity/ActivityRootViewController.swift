@@ -12,22 +12,36 @@ class ActivityRootViewController: UIViewController {
     let activityTypes = [ActivityType.Loyalty, .Promotion]
     var activityViewControllers:[ActivityListViewController] = []
     var locationManager = LocationManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.delegate = NavigationTransitionManager.sharedManager
         self.buildTitleView()
         self.buildChildViews()
         self.setLeftButton(UserDefaultTool.stringForKey(cityKey) ?? "选择城市",imageName: "定位_白", selector: #selector(ActivityRootViewController.showCityView))
+        self.setRightButton("", imageName: "搜索", selector: #selector(ActivityRootViewController.onSearchButtonClicked))
         self.navigationController?.navigationBar.translucent = false
         locationManager.delegate = self
         locationManager.startLocationCity()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = false
     }
+    
+    func onSearchButtonClicked(){
+        let searchViewController = ActivitySearchViewController()
+        let navigationController = UINavigationController(rootViewController: searchViewController)
+        self.presentViewController(navigationController, animated: true, completion: nil)
+    }
+    
+
+
 }
+
+
 
 extension ActivityRootViewController:LocationManagerDelegate {
     func locationCity(cityName: String) {
