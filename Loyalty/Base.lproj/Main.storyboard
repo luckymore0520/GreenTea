@@ -92,7 +92,7 @@
         <!--消息-->
         <scene sceneID="cFH-Rc-lFR">
             <objects>
-                <navigationController id="ej5-5L-nA3" sceneMemberID="viewController">
+                <navigationController title="消息" id="ej5-5L-nA3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="消息" id="xqN-Md-AGG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rAL-4b-wkh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

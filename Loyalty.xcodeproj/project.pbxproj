@@ -45,6 +45,8 @@
 		12502C0B1CF0464000504BE4 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0A1CF0464000504BE4 /* CommentViewModel.swift */; };
 		12502C0D1CF04B3D00504BE4 /* CountPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0C1CF04B3D00504BE4 /* CountPresentable.swift */; };
 		12502C0F1CF19B0300504BE4 /* ActivitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0E1CF19B0300504BE4 /* ActivitySearchViewController.swift */; };
+		12502C121CF1A34000504BE4 /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C111CF1A34000504BE4 /* MessageListTableViewController.swift */; };
+		12502C141CF1A47300504BE4 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */; };
 		12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12514D291CC46F4500ADCBED /* CardDataSource.swift */; };
 		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
@@ -236,6 +238,8 @@
 		12502C0A1CF0464000504BE4 /* CommentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentViewModel.swift; path = Activity/ViewModels/CommentViewModel.swift; sourceTree = "<group>"; };
 		12502C0C1CF04B3D00504BE4 /* CountPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountPresentable.swift; path = Protocal/CountPresentable.swift; sourceTree = "<group>"; };
 		12502C0E1CF19B0300504BE4 /* ActivitySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivitySearchViewController.swift; path = Activity/Controller/ActivitySearchViewController.swift; sourceTree = "<group>"; };
+		12502C111CF1A34000504BE4 /* MessageListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageListTableViewController.swift; path = Message/Controller/MessageListTableViewController.swift; sourceTree = "<group>"; };
+		12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageDetailViewController.swift; path = Message/Controller/MessageDetailViewController.swift; sourceTree = "<group>"; };
 		12514D291CC46F4500ADCBED /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardDataSource.swift; path = Cards/ViewModel/CardDataSource.swift; sourceTree = "<group>"; };
 		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
@@ -490,6 +494,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		12502C101CF1A18800504BE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				12502C111CF1A34000504BE4 /* MessageListTableViewController.swift */,
+				12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		12514D281CC46F2000ADCBED /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +688,7 @@
 		128027941C58BCB900C76EA6 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				12502C101CF1A18800504BE4 /* Controller */,
 				128027981C58BD3800C76EA6 /* MessageStoryboard.storyboard */,
 			);
 			name = Message;
@@ -1111,6 +1125,7 @@
 				125D91241CC4CB2F00AE5F1C /* ImagePickerManager.swift in Sources */,
 				128027C71C58E75900C76EA6 /* Activity.swift in Sources */,
 				127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */,
+				12502C141CF1A47300504BE4 /* MessageDetailViewController.swift in Sources */,
 				126E136D1CBA793D00A3CDFF /* ActivityToolBar.swift in Sources */,
 				126E13781CBA8E7100A3CDFF /* ImageTransitionFromViewController.swift in Sources */,
 				12C7F83D1CC27A6D00805820 /* MoneyCollectionViewCell.swift in Sources */,
@@ -1149,6 +1164,7 @@
 				12675D6A1CCF3BDC00C56E71 /* MyNSDate.swift in Sources */,
 				12FF679C1CC2527900E7860B /* TableViewHeadSectionCell.swift in Sources */,
 				126E13651CBA6B1900A3CDFF /* LocationInfoTableViewCell.swift in Sources */,
+				12502C121CF1A34000504BE4 /* MessageListTableViewController.swift in Sources */,
 				12FF67A21CC2527900E7860B /* NSString+PinYin4Cocoa.m in Sources */,
 				121924531C5A58C300A3D94E /* Character.swift in Sources */,
 				128027B91C58DACD00C76EA6 /* ActivityTableViewCell.swift in Sources */,
