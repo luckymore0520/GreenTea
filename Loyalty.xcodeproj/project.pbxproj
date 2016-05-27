@@ -49,6 +49,7 @@
 		12502C141CF1A47300504BE4 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */; };
 		12502C2C1CF89E0000504BE4 /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C2B1CF89E0000504BE4 /* CircularLoaderView.swift */; };
 		12502C2E1CF89FF700504BE4 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 12502C2D1CF89FF700504BE4 /* AMap.bundle */; };
+		12502C301CF8A10C00504BE4 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12502C2F1CF8A10C00504BE4 /* QRScannerViewController.xib */; };
 		12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12514D291CC46F4500ADCBED /* CardDataSource.swift */; };
 		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
@@ -132,7 +133,6 @@
 		12ADB29A1CE9515700CD5772 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */; };
 		12ADB29B1CE9515700CD5772 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */; };
 		12ADB29D1CE958FD00CD5772 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB29C1CE958FD00CD5772 /* Coin.swift */; };
-		12ADB29F1CE96C4700CD5772 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12ADB29E1CE96C4700CD5772 /* QRScannerViewController.xib */; };
 		12ADB2A11CE96D1A00CD5772 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADB2A01CE96D1A00CD5772 /* QRScannerViewController.swift */; };
 		12C260EF1CCB9F9F00283286 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */; };
 		12C260F11CCBA01300283286 /* WebIconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C260F01CCBA01300283286 /* WebIconPresentable.swift */; };
@@ -242,6 +242,7 @@
 		12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageDetailViewController.swift; path = Message/Controller/MessageDetailViewController.swift; sourceTree = "<group>"; };
 		12502C2B1CF89E0000504BE4 /* CircularLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularLoaderView.swift; path = Main/View/CircularLoaderView.swift; sourceTree = "<group>"; };
 		12502C2D1CF89FF700504BE4 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Vendor/AMap.bundle; sourceTree = "<group>"; };
+		12502C2F1CF8A10C00504BE4 /* QRScannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QRScannerViewController.xib; path = Cards/Controller/QRScannerViewController.xib; sourceTree = "<group>"; };
 		12514D291CC46F4500ADCBED /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardDataSource.swift; path = Cards/ViewModel/CardDataSource.swift; sourceTree = "<group>"; };
 		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
@@ -331,7 +332,6 @@
 		12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = Cards/Controller/QRCodeViewController.swift; sourceTree = "<group>"; };
 		12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QRCodeViewController.xib; path = Cards/Controller/QRCodeViewController.xib; sourceTree = "<group>"; };
 		12ADB29C1CE958FD00CD5772 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = Cards/Model/Coin.swift; sourceTree = "<group>"; };
-		12ADB29E1CE96C4700CD5772 /* QRScannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerViewController.xib; sourceTree = "<group>"; };
 		12ADB2A01CE96D1A00CD5772 /* QRScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRScannerViewController.swift; path = Cards/Controller/QRScannerViewController.swift; sourceTree = "<group>"; };
 		12C260EE1CCB9F9F00283286 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoViewModel.swift; path = Setting/ViewModel/UserInfoViewModel.swift; sourceTree = "<group>"; };
 		12C260F01CCBA01300283286 /* WebIconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebIconPresentable.swift; path = Protocal/WebIconPresentable.swift; sourceTree = "<group>"; };
@@ -825,7 +825,7 @@
 		12C7F8331CC2688300805820 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				12ADB29E1CE96C4700CD5772 /* QRScannerViewController.xib */,
+				12502C2F1CF8A10C00504BE4 /* QRScannerViewController.xib */,
 				12C7F8341CC2689F00805820 /* MyCardViewController.swift */,
 				12ADB2981CE9515700CD5772 /* QRCodeViewController.swift */,
 				12ADB2991CE9515700CD5772 /* QRCodeViewController.xib */,
@@ -1053,6 +1053,7 @@
 				128027201C5604BA00C76EA6 /* Assets.xcassets in Resources */,
 				12FF67951CC2527900E7860B /* CollectionViewCell.xib in Resources */,
 				128027BA1C58DACD00C76EA6 /* ActivityTableViewCell.xib in Resources */,
+				12502C301CF8A10C00504BE4 /* QRScannerViewController.xib in Resources */,
 				12FF679D1CC2527900E7860B /* TableViewHeadSectionCell.xib in Resources */,
 				12502C2E1CF89FF700504BE4 /* AMap.bundle in Resources */,
 				128027991C58BD3800C76EA6 /* MessageStoryboard.storyboard in Resources */,
@@ -1067,7 +1068,6 @@
 				12FF67A61CC2527900E7860B /* unicode_to_hanyu_pinyin.txt in Resources */,
 				12ADB29B1CE9515700CD5772 /* QRCodeViewController.xib in Resources */,
 				12675D6E1CCF440400C56E71 /* SimpleActivityTableViewCell.xib in Resources */,
-				12ADB29F1CE96C4700CD5772 /* QRScannerViewController.xib in Resources */,
 				12FF67931CC2527900E7860B /* CityViewController.xib in Resources */,
 				128027F51C5A315F00C76EA6 /* LoginAndRegisterStoryboard.storyboard in Resources */,
 				12C260F71CCD009F00283286 /* LocationInfoTableViewCell.xib in Resources */,
