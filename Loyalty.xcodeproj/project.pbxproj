@@ -48,6 +48,7 @@
 		12502C121CF1A34000504BE4 /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C111CF1A34000504BE4 /* MessageListTableViewController.swift */; };
 		12502C141CF1A47300504BE4 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */; };
 		12502C2C1CF89E0000504BE4 /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C2B1CF89E0000504BE4 /* CircularLoaderView.swift */; };
+		12502C2E1CF89FF700504BE4 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 12502C2D1CF89FF700504BE4 /* AMap.bundle */; };
 		12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12514D291CC46F4500ADCBED /* CardDataSource.swift */; };
 		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
@@ -68,7 +69,6 @@
 		125D912D1CC7211C00AE5F1C /* AMapTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D912C1CC7211C00AE5F1C /* AMapTool.swift */; };
 		125D912F1CC7260400AE5F1C /* MAMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D912E1CC7260400AE5F1C /* MAMapViewController.swift */; };
 		125D91351CC72DD500AE5F1C /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D91341CC72DD500AE5F1C /* MAMapKit.framework */; };
-		125D91371CC72E0500AE5F1C /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 125D91361CC72E0500AE5F1C /* AMap.bundle */; };
 		125D91391CC72E1E00AE5F1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D91381CC72E1E00AE5F1C /* CoreGraphics.framework */; };
 		125D913B1CC72E2A00AE5F1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D913A1CC72E2A00AE5F1C /* QuartzCore.framework */; };
 		125D913D1CC72E3300AE5F1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D913C1CC72E3300AE5F1C /* CoreLocation.framework */; };
@@ -241,6 +241,7 @@
 		12502C111CF1A34000504BE4 /* MessageListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageListTableViewController.swift; path = Message/Controller/MessageListTableViewController.swift; sourceTree = "<group>"; };
 		12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageDetailViewController.swift; path = Message/Controller/MessageDetailViewController.swift; sourceTree = "<group>"; };
 		12502C2B1CF89E0000504BE4 /* CircularLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularLoaderView.swift; path = Main/View/CircularLoaderView.swift; sourceTree = "<group>"; };
+		12502C2D1CF89FF700504BE4 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Vendor/AMap.bundle; sourceTree = "<group>"; };
 		12514D291CC46F4500ADCBED /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardDataSource.swift; path = Cards/ViewModel/CardDataSource.swift; sourceTree = "<group>"; };
 		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
@@ -261,7 +262,6 @@
 		125D912C1CC7211C00AE5F1C /* AMapTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMapTool.swift; path = Tools/AMapTool.swift; sourceTree = "<group>"; };
 		125D912E1CC7260400AE5F1C /* MAMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MAMapViewController.swift; path = Tools/MAMapViewController.swift; sourceTree = "<group>"; };
 		125D91341CC72DD500AE5F1C /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
-		125D91361CC72E0500AE5F1C /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		125D91381CC72E1E00AE5F1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		125D913A1CC72E2A00AE5F1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		125D913C1CC72E3300AE5F1C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -578,7 +578,6 @@
 		1280270C1C5604BA00C76EA6 = {
 			isa = PBXGroup;
 			children = (
-				125D91361CC72E0500AE5F1C /* AMap.bundle */,
 				12FF676D1CC2521B00E7860B /* Loyalty-Bridge-Header.h */,
 				128027171C5604BA00C76EA6 /* Loyalty */,
 				1280272C1C5604BA00C76EA6 /* LoyaltyTests */,
@@ -724,6 +723,7 @@
 		128027A51C58C36400C76EA6 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				12502C2D1CF89FF700504BE4 /* AMap.bundle */,
 				12FF676E1CC2527900E7860B /* CityListView */,
 				12FF677F1CC2527900E7860B /* ZYPinYinSearchLib */,
 				121924411C5A58C300A3D94E /* ExSwift */,
@@ -1054,8 +1054,8 @@
 				12FF67951CC2527900E7860B /* CollectionViewCell.xib in Resources */,
 				128027BA1C58DACD00C76EA6 /* ActivityTableViewCell.xib in Resources */,
 				12FF679D1CC2527900E7860B /* TableViewHeadSectionCell.xib in Resources */,
+				12502C2E1CF89FF700504BE4 /* AMap.bundle in Resources */,
 				128027991C58BD3800C76EA6 /* MessageStoryboard.storyboard in Resources */,
-				125D91371CC72E0500AE5F1C /* AMap.bundle in Resources */,
 				12C261011CCD021200283286 /* ShopInfoViewController.xib in Resources */,
 				1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */,
 				1280279D1C58BD9100C76EA6 /* ActivityStoryboard.storyboard in Resources */,
