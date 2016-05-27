@@ -53,10 +53,9 @@ extension LocationSearchTableViewController {
     func searchLocation(keyword:String?){
         guard let keyword = keyword else { return }
         let request = AMapPOIKeywordsSearchRequest()
-        request.types = "餐饮服务|生活服务"
         request.sortrule = 0;
         request.keywords = keyword
-        request.city = UserDefaultTool.stringForKey(cityKey)
+        request.city = UserDefaultTool.stringForKey(cityKey)?.stringByReplacingOccurrencesOfString("市", withString: "")
         self.mapSearch?.AMapPOIKeywordsSearch(request)
     }
 }

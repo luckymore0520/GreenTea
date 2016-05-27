@@ -42,6 +42,7 @@ class ActivityListDataSource: NSObject {
             Activity.query(point, type: activityType) { (activities) in
                 self.activityList = activities
                 self.tableView?.reloadData()
+                NSNotificationCenter.defaultCenter().postNotificationName(LOAD_KEY, object: nil)
             }
         }
     }

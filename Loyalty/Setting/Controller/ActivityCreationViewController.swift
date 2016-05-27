@@ -178,7 +178,7 @@ class ActivityCreationViewController: FormViewController,ViewControllerPresentab
                     cell.tintColor = UIColor.globalTitleBrownColor()
                     cell.textLabel?.textAlignment = .Right
             }
-            +++ Section("店铺详情")
+            +++ Section("活动详情")
             <<< TextAreaRow(detailKey) {
                 row in
                 row.title = nil

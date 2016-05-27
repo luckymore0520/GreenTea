@@ -47,6 +47,7 @@
 		12502C0F1CF19B0300504BE4 /* ActivitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C0E1CF19B0300504BE4 /* ActivitySearchViewController.swift */; };
 		12502C121CF1A34000504BE4 /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C111CF1A34000504BE4 /* MessageListTableViewController.swift */; };
 		12502C141CF1A47300504BE4 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */; };
+		12502C2C1CF89E0000504BE4 /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12502C2B1CF89E0000504BE4 /* CircularLoaderView.swift */; };
 		12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12514D291CC46F4500ADCBED /* CardDataSource.swift */; };
 		125429681C5F7D1400D89004 /* TitlePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429671C5F7D1400D89004 /* TitlePresentable.swift */; };
 		1254296A1C5F7E1400D89004 /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125429691C5F7E1400D89004 /* IconPresentable.swift */; };
@@ -104,7 +105,6 @@
 		127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEC1C5B98B80091837D /* LoginViewController.swift */; };
 		127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEE1C5B9BF70091837D /* UIButton.swift */; };
 		128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027181C5604BA00C76EA6 /* AppDelegate.swift */; };
-		1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280271A1C5604BA00C76EA6 /* ViewController.swift */; };
 		1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1280271C1C5604BA00C76EA6 /* Main.storyboard */; };
 		128027201C5604BA00C76EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280271F1C5604BA00C76EA6 /* Assets.xcassets */; };
 		128027231C5604BA00C76EA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128027211C5604BA00C76EA6 /* LaunchScreen.storyboard */; };
@@ -240,6 +240,7 @@
 		12502C0E1CF19B0300504BE4 /* ActivitySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivitySearchViewController.swift; path = Activity/Controller/ActivitySearchViewController.swift; sourceTree = "<group>"; };
 		12502C111CF1A34000504BE4 /* MessageListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageListTableViewController.swift; path = Message/Controller/MessageListTableViewController.swift; sourceTree = "<group>"; };
 		12502C131CF1A47300504BE4 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageDetailViewController.swift; path = Message/Controller/MessageDetailViewController.swift; sourceTree = "<group>"; };
+		12502C2B1CF89E0000504BE4 /* CircularLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularLoaderView.swift; path = Main/View/CircularLoaderView.swift; sourceTree = "<group>"; };
 		12514D291CC46F4500ADCBED /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardDataSource.swift; path = Cards/ViewModel/CardDataSource.swift; sourceTree = "<group>"; };
 		125429671C5F7D1400D89004 /* TitlePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitlePresentable.swift; path = Protocal/TitlePresentable.swift; sourceTree = "<group>"; };
 		125429691C5F7E1400D89004 /* IconPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconPresentable.swift; path = Protocal/IconPresentable.swift; sourceTree = "<group>"; };
@@ -298,7 +299,6 @@
 		127C7FEE1C5B9BF70091837D /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = Extension/UIButton.swift; sourceTree = "<group>"; };
 		128027151C5604BA00C76EA6 /* Loyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loyalty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128027181C5604BA00C76EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1280271A1C5604BA00C76EA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1280271D1C5604BA00C76EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1280271F1C5604BA00C76EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		128027221C5604BA00C76EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -488,6 +488,7 @@
 		1221E7801CC77EE1000B364E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				12502C2B1CF89E0000504BE4 /* CircularLoaderView.swift */,
 				1221E7851CC780F1000B364E /* PointInfoTableViewCell.swift */,
 				1221E7861CC780F1000B364E /* PointInfoTableViewCell.xib */,
 			);
@@ -607,7 +608,6 @@
 				128027A01C58C2B700C76EA6 /* Extension */,
 				128027461C56079200C76EA6 /* Tools */,
 				128027181C5604BA00C76EA6 /* AppDelegate.swift */,
-				1280271A1C5604BA00C76EA6 /* ViewController.swift */,
 				1280271F1C5604BA00C76EA6 /* Assets.xcassets */,
 				128027211C5604BA00C76EA6 /* LaunchScreen.storyboard */,
 				128027241C5604BA00C76EA6 /* Info.plist */,
@@ -1119,6 +1119,7 @@
 				125D911C1CC4BD8B00AE5F1C /* ViewControllerPresentable.swift in Sources */,
 				1209023D1C5F6C3E00772CBA /* HUDHelper.swift in Sources */,
 				128027CB1C58F43500C76EA6 /* CellReusable.swift in Sources */,
+				12502C2C1CF89E0000504BE4 /* CircularLoaderView.swift in Sources */,
 				12675D5F1CCF00CD00C56E71 /* LocationPresentable.swift in Sources */,
 				125C21D11CD3587000E8CF01 /* CardViewModel.swift in Sources */,
 				12FF67A31CC2527900E7860B /* PinyinFormatter.m in Sources */,
@@ -1141,7 +1142,6 @@
 				12514D2A1CC46F4500ADCBED /* CardDataSource.swift in Sources */,
 				125D912B1CC715B200AE5F1C /* UIImageView.swift in Sources */,
 				12FF67981CC2527900E7860B /* SectionView.swift in Sources */,
-				1280271B1C5604BA00C76EA6 /* ViewController.swift in Sources */,
 				12C7F8351CC2689F00805820 /* MyCardViewController.swift in Sources */,
 				1219245A1C5A58C300A3D94E /* NSDate.swift in Sources */,
 				126E13631CBA655B00A3CDFF /* HasHiddenNavigation.swift in Sources */,

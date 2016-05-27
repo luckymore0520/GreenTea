@@ -41,9 +41,10 @@ class LocationPickerDataSource: NSObject,UITableViewDataSource {
     func searchAroundLocation(coordinate:CLLocationCoordinate2D){
         let request = AMapPOIAroundSearchRequest()
         request.location = AMapGeoPoint.locationWithLatitude(CGFloat(coordinate.latitude), longitude: CGFloat(coordinate.longitude))
-        request.types = "餐饮服务|生活服务"
+        request.types = "餐饮服务|购物服务"
         request.sortrule = 0;
         request.requireExtension = true;
+        request.offset = 100;
         self.mapSearch?.AMapPOIAroundSearch(request)
     }
 }

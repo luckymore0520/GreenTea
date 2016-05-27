@@ -8,10 +8,14 @@
 
 import UIKit
 
+
+let LOAD_KEY = "LOAD_COMPLETED"
+
 class ActivityRootViewController: UIViewController {
     let activityTypes = [ActivityType.Loyalty, .Promotion]
     var activityViewControllers:[ActivityListViewController] = []
     var locationManager = LocationManager()
+    var progressIndicatorView: CircularLoaderView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +27,12 @@ class ActivityRootViewController: UIViewController {
         self.navigationController?.navigationBar.translucent = false
         locationManager.delegate = self
         locationManager.startLocationCity()
-        
+        self.progressIndicatorView = CircularLoaderView(frame: CGRectZero)
+        self.navigationController?.view.addSubview(self.progressIndicatorView!)
+        self.progressIndicatorView?.frame = UIScreen.mainScreen().bounds
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ActivityRootViewController.onContentLoaded), name: LOAD_KEY, object: nil)
     }
+
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,8 +45,17 @@ class ActivityRootViewController: UIViewController {
         self.presentViewController(navigationController, animated: true, completion: nil)
     }
     
-
-
+    func onContentLoaded(){
+        if let progressIndicatorView = self.progressIndicatorView {
+            progressIndicatorView.progress += 0.5
+            if progressIndicatorView.progress == 1.0 {
+                progressIndicatorView.reveal()
+                progressIndicatorView.removeFromSuperview()
+                self.progressIndicatorView = nil
+                NSNotificationCenter.defaultCenter().removeObserver(self)
+            }
+        }
+    }
 }
 
 

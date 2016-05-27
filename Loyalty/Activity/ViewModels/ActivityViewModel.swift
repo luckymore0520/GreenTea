@@ -24,7 +24,6 @@ struct ActivitySimpleViewModel:ActivitySimplePresentable {
         self.subTitle = "\(activity.likeCount)"
         self.isChecked = activity.isLikedByMySelf
     }
-
 }
 
 struct ActivityDetaiViewModel:ActivityDetailPresentable {
