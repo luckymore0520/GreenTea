@@ -11,5 +11,5 @@ import Foundation
 
 protocol RatioPresentable {
     var currentCount:Int { get }
-    var totolCount:Int { get }
+    var totalCount:Int { get }
 }

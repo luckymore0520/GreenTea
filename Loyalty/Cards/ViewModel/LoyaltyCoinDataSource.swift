@@ -10,10 +10,10 @@ import UIKit
 
 class LoyaltyCoinDataSource: NSObject,RatioPresentable {
     var currentCount: Int
-    var totolCount: Int
+    var totalCount: Int
     init(collectionView:UICollectionView,ratioPresentable:RatioPresentable) {
         self.currentCount = ratioPresentable.currentCount
-        self.totolCount = ratioPresentable.totolCount
+        self.totalCount = ratioPresentable.totalCount
         super.init()
         collectionView.dataSource = self
         collectionView.registerReusableCell(MoneyCollectionViewCell.self)
@@ -28,7 +28,7 @@ extension LoyaltyCoinDataSource:UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.totolCount
+        return self.totalCount
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
