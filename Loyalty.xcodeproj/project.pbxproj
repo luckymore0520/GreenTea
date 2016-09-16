@@ -69,7 +69,6 @@
 		125D912B1CC715B200AE5F1C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D912A1CC715B200AE5F1C /* UIImageView.swift */; };
 		125D912D1CC7211C00AE5F1C /* AMapTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D912C1CC7211C00AE5F1C /* AMapTool.swift */; };
 		125D912F1CC7260400AE5F1C /* MAMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D912E1CC7260400AE5F1C /* MAMapViewController.swift */; };
-		125D91351CC72DD500AE5F1C /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D91341CC72DD500AE5F1C /* MAMapKit.framework */; };
 		125D91391CC72E1E00AE5F1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D91381CC72E1E00AE5F1C /* CoreGraphics.framework */; };
 		125D913B1CC72E2A00AE5F1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D913A1CC72E2A00AE5F1C /* QuartzCore.framework */; };
 		125D913D1CC72E3300AE5F1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D913C1CC72E3300AE5F1C /* CoreLocation.framework */; };
@@ -105,6 +104,7 @@
 		127C7FEB1C5B98B10091837D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEA1C5B98B10091837D /* UserInfoManager.swift */; };
 		127C7FED1C5B98B80091837D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEC1C5B98B80091837D /* LoginViewController.swift */; };
 		127C7FEF1C5B9BF70091837D /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C7FEE1C5B9BF70091837D /* UIButton.swift */; };
+		127DDB5E1D8B93BE007B5D3C /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127DDB5D1D8B93BE007B5D3C /* MAMapKit.framework */; };
 		128027191C5604BA00C76EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128027181C5604BA00C76EA6 /* AppDelegate.swift */; };
 		1280271E1C5604BA00C76EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1280271C1C5604BA00C76EA6 /* Main.storyboard */; };
 		128027201C5604BA00C76EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280271F1C5604BA00C76EA6 /* Assets.xcassets */; };
@@ -262,7 +262,6 @@
 		125D912A1CC715B200AE5F1C /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Extension/UIImageView.swift; sourceTree = "<group>"; };
 		125D912C1CC7211C00AE5F1C /* AMapTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMapTool.swift; path = Tools/AMapTool.swift; sourceTree = "<group>"; };
 		125D912E1CC7260400AE5F1C /* MAMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MAMapViewController.swift; path = Tools/MAMapViewController.swift; sourceTree = "<group>"; };
-		125D91341CC72DD500AE5F1C /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		125D91381CC72E1E00AE5F1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		125D913A1CC72E2A00AE5F1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		125D913C1CC72E3300AE5F1C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -298,6 +297,7 @@
 		127C7FEA1C5B98B10091837D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoManager.swift; path = LoginAndRegister/Model/UserInfoManager.swift; sourceTree = "<group>"; };
 		127C7FEC1C5B98B80091837D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LoginAndRegister/Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		127C7FEE1C5B9BF70091837D /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = Extension/UIButton.swift; sourceTree = "<group>"; };
+		127DDB5D1D8B93BE007B5D3C /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = Loyalty/Vendor/MAMapKit.framework; sourceTree = "<group>"; };
 		128027151C5604BA00C76EA6 /* Loyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loyalty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128027181C5604BA00C76EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1280271D1C5604BA00C76EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -396,13 +396,13 @@
 			files = (
 				125D91471CC72E6700AE5F1C /* Security.framework in Frameworks */,
 				125D91451CC72E6100AE5F1C /* libc++.tbd in Frameworks */,
+				127DDB5E1D8B93BE007B5D3C /* MAMapKit.framework in Frameworks */,
 				125D91431CC72E5000AE5F1C /* libz.tbd in Frameworks */,
 				125D91411CC72E4800AE5F1C /* SystemConfiguration.framework in Frameworks */,
 				125D913F1CC72E4100AE5F1C /* CoreTelephony.framework in Frameworks */,
 				125D913D1CC72E3300AE5F1C /* CoreLocation.framework in Frameworks */,
 				125D913B1CC72E2A00AE5F1C /* QuartzCore.framework in Frameworks */,
 				125D91391CC72E1E00AE5F1C /* CoreGraphics.framework in Frameworks */,
-				125D91351CC72DD500AE5F1C /* MAMapKit.framework in Frameworks */,
 				BFF64A03293D1E13F4D1B064 /* Pods_Loyalty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -911,6 +911,7 @@
 		2B61B791351F9FB889F6AC3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				127DDB5D1D8B93BE007B5D3C /* MAMapKit.framework */,
 				125D91461CC72E6700AE5F1C /* Security.framework */,
 				125D91441CC72E6100AE5F1C /* libc++.tbd */,
 				125D91421CC72E5000AE5F1C /* libz.tbd */,
@@ -919,7 +920,6 @@
 				125D913C1CC72E3300AE5F1C /* CoreLocation.framework */,
 				125D913A1CC72E2A00AE5F1C /* QuartzCore.framework */,
 				125D91381CC72E1E00AE5F1C /* CoreGraphics.framework */,
-				125D91341CC72DD500AE5F1C /* MAMapKit.framework */,
 				CB093EE9375969490990D8C2 /* Pods_Loyalty.framework */,
 			);
 			name = Frameworks;
@@ -1003,6 +1003,7 @@
 				TargetAttributes = {
 					128027141C5604BA00C76EA6 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8TFRSK2PAE;
 					};
 					128027281C5604BA00C76EA6 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1382,14 +1383,18 @@
 			baseConfigurationReference = 0C9C033EA29EE71654A0E327 /* Pods-Loyalty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Loyalty/Vendor",
 				);
 				INFOPLIST_FILE = Loyalty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nju.edu.luckymore.Loyalty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1398,14 +1403,18 @@
 			baseConfigurationReference = DB069DFA62890D6FD0CA3DC6 /* Pods-Loyalty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Loyalty/Vendor",
 				);
 				INFOPLIST_FILE = Loyalty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nju.edu.luckymore.Loyalty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

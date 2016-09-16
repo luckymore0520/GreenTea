@@ -76,7 +76,6 @@ extension ActivityListDataSource: UITableViewDataSource {
                 activity.queryIsLikedBySelf({ (like) in
                     tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
                 })
-
             }
             let activityViewModel = ActivitySimpleViewModel(activity: activity)
             tableViewCell.render(activityViewModel)
