@@ -30,7 +30,7 @@ My Graduation Design. An App about loyalty card.
 
 # Blog
 
-[http://blog.luckymore.wang/2016/09/16/Graduation-Design-Green-Tea/]()
+[http://blog.luckymore.wang/2016/09/16/Graduation-Design-Green-Tea/](http://blog.luckymore.wang/2016/09/16/Graduation-Design-Green-Tea/)
 
 
 # Paper
